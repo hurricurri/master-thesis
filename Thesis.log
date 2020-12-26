@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.26)  26 DEC 2020 19:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.26)  26 DEC 2020 20:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -576,13 +576,6 @@ Package pdftex.def Info: images/3boxes.png  used on input line 11.
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 12.
 
-> \OT1/cmr/m/n/10.95 .
-<recently read> \font 
-                      
-l.16 ...t the underlying state of the\showthe\font
-                                                   system fixes all measurem...
-
-
 [2 <./images/3boxes.png>] [3] [4]
 <images/hvm.png, id=267, 569.12625pt x 365.86688pt>
 File: images/hvm.png Graphic file (type png)
@@ -915,7 +908,7 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Thesis.pdf (80 pages, 1747834 bytes).
+Output written on Thesis.pdf (80 pages, 1747831 bytes).
 PDF statistics:
  1148 PDF objects out of 1200 (max. 8388607)
  956 compressed objects within 10 object streams
