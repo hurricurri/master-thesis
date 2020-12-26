@@ -1,0 +1,38 @@
+\contentsline {chapter}{Abstract}{i}{dummy.1}%
+\vspace {1em}
+\contentsline {chapter}{Acknowledgements}{ii}{dummy.2}%
+\vspace {1em}
+\contentsline {chapter}{\numberline {1}Kochen-Specker contextuality}{1}{chapter.4}%
+\contentsline {section}{\numberline {1.1}Introductory example\\ Specker's three boxes}{1}{section.5}%
+\contentsline {section}{\numberline {1.2}The Kochen-Specker Theorem, informally}{3}{section.8}%
+\contentsline {section}{\numberline {1.3}Outline}{3}{section.10}%
+\contentsline {section}{\numberline {1.4}General framework of hidden variable models}{4}{section.11}%
+\contentsline {section}{\numberline {1.5}Measurements in quantum mechanics}{6}{section.14}%
+\contentsline {section}{\numberline {1.6}Defining KS non-contextuality}{7}{section.17}%
+\contentsline {section}{\numberline {1.7}Formal statement and proof of the KS Theorem}{13}{section.34}%
+\contentsline {section}{\numberline {1.8}Algebraic proof in four dimensions}{16}{section.41}%
+\contentsline {section}{\numberline {1.9}Local causality and Bell's Theorem\\ Locality as an instance of KS}{18}{section.44}%
+\contentsline {section}{\numberline {1.10}State-dependent KS contextuality\\ The KCBS inequality and odd n-cycle scenarios}{26}{section.58}%
+\contentsline {chapter}{\numberline {2}CSW graph-theoretic approach to quantum correlations}{31}{chapter.67}%
+\contentsline {section}{\numberline {2.1}Generic correlation experiments in the CSW framework}{31}{section.69}%
+\contentsline {section}{\numberline {2.2}The exclusivity graph of a correlation experiment}{35}{section.76}%
+\contentsline {section}{\numberline {2.3}Hierarchical structure of correlations}{35}{section.79}%
+\contentsline {section}{\numberline {2.4}What about unsharp measurements?}{39}{section.84}%
+\contentsline {section}{\numberline {2.5}Complications that arise without space-like separation}{39}{section.86}%
+\contentsline {chapter}{\numberline {3}Self-testing}{43}{chapter.87}%
+\contentsline {chapter}{\numberline {4}Self-testing via KS non-contextuality inequalities}{50}{chapter.100}%
+\contentsline {section}{\numberline {4.1}Preceding results}{50}{section.101}%
+\contentsline {section}{\numberline {4.2}Assumptions}{54}{section.108}%
+\contentsline {section}{\numberline {4.3}Sequential measurements and the memory assumption}{56}{section.114}%
+\contentsline {subsection}{\numberline {4.3.1}Setting and preliminary considerations}{57}{subsection.116}%
+\contentsline {subsection}{\numberline {4.3.2}Input-output processes as information transducers}{58}{subsection.117}%
+\contentsline {subsection}{\numberline {4.3.3}Memory-optimal classical simulation of quantum correlations}{60}{subsection.122}%
+\contentsline {subsection}{\numberline {4.3.4}Classical simulations dissipate heat}{62}{subsection.125}%
+\contentsline {chapter}{\numberline {5}A revised notion of classicality \\ Spekkens non-contextuality}{66}{chapter.133}%
+\contentsline {section}{\numberline {5.1}Outcome determinism for unsharp measurements (ODUM)}{66}{section.134}%
+\contentsline {section}{\numberline {5.2}Operational approach due to Spekkens}{67}{section.135}%
+\contentsline {section}{\numberline {5.3}Spekkens non-contextuality inequalities \\ KCBS revisited}{72}{section.139}%
+\vspace {2em}
+\contentsline {chapter}{\numberline {A}An Appendix}{74}{appendix.141}%
+\vspace {2em}
+\contentsline {chapter}{Bibliography}{75}{dummy.142}%

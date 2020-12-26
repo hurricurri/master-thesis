@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:export-filename="/home/user/bitmap.png"
+   inkscape:export-xdpi="96.279999"
+   inkscape:export-ydpi="96.279999"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="transducer.svg">
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4066"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4060"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <linearGradient
+       id="linearGradient3187"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ff5555;stop-opacity:1;"
+         offset="0"
+         id="stop3185" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="122.43916 : 79.094642 : 1"
+       inkscape:vp_y="-147.37417 : -0.18179033 : 0"
+       inkscape:vp_z="120.4975 : 33.449092 : 1"
+       inkscape:persp3d-origin="174.62782 : 25.209037 : 1"
+       id="perspective815" />
+    <meshgradient
+       inkscape:collect="always"
+       id="meshgradient2844"
+       gradientUnits="userSpaceOnUse"
+       x="281.94026"
+       y="176.03149">
+      <meshrow
+         id="meshrow2846">
+        <meshpatch
+           id="meshpatch2848">
+          <stop
+             path="c 0.495782,-0.495782  1.2996,-0.495782  1.79539,0"
+             style="stop-color:#000000;stop-opacity:1"
+             id="stop2850" />
+          <stop
+             path="c 0.495782,0.495782  0.495782,1.2996  0,1.79539"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop2852" />
+          <stop
+             path="c -0.495782,0.495782  -1.2996,0.495782  -1.79539,0"
+             style="stop-color:#000000;stop-opacity:1"
+             id="stop2854" />
+          <stop
+             path="c -0.495782,-0.495782  -0.495782,-1.2996  0,-1.79539"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop2856" />
+        </meshpatch>
+      </meshrow>
+    </meshgradient>
+    <meshgradient
+       inkscape:collect="always"
+       id="meshgradient2989"
+       gradientUnits="userSpaceOnUse"
+       x="281.94026"
+       y="176.03149">
+      <meshrow
+         id="meshrow3001">
+        <meshpatch
+           id="meshpatch2999">
+          <stop
+             id="stop2991"
+             style="stop-color:#000000;stop-opacity:1"
+             path="c 0.495782,-0.495782  1.2996,-0.495782  1.79539,0" />
+          <stop
+             id="stop2993"
+             style="stop-color:#ffffff;stop-opacity:1"
+             path="c 0.495782,0.495782  0.495782,1.2996  0,1.79539" />
+          <stop
+             id="stop2995"
+             style="stop-color:#000000;stop-opacity:1"
+             path="c -0.495782,0.495782  -1.2996,0.495782  -1.79539,0" />
+          <stop
+             id="stop2997"
+             style="stop-color:#ffffff;stop-opacity:1"
+             path="c -0.495782,-0.495782  -0.495782,-1.2996  0,-1.79539" />
+        </meshpatch>
+      </meshrow>
+    </meshgradient>
+    <meshgradient
+       inkscape:collect="always"
+       id="meshgradient3024"
+       gradientUnits="userSpaceOnUse"
+       x="281.94026"
+       y="176.03149">
+      <meshrow
+         id="meshrow3036">
+        <meshpatch
+           id="meshpatch3034">
+          <stop
+             path="c 0.495782,-0.495782  1.2996,-0.495782  1.79539,0"
+             style="stop-color:#000000;stop-opacity:1"
+             id="stop3026" />
+          <stop
+             path="c 0.495782,0.495782  0.495782,1.2996  0,1.79539"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop3028" />
+          <stop
+             path="c -0.495782,0.495782  -1.2996,0.495782  -1.79539,0"
+             style="stop-color:#000000;stop-opacity:1"
+             id="stop3030" />
+          <stop
+             path="c -0.495782,-0.495782  -0.495782,-1.2996  0,-1.79539"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop3032" />
+        </meshpatch>
+      </meshrow>
+    </meshgradient>
+    <meshgradient
+       inkscape:collect="always"
+       id="meshgradient3130"
+       gradientUnits="userSpaceOnUse"
+       x="282.50388"
+       y="147.32907"
+       gradientTransform="matrix(1.6,0,0,1.6,-390.31062,-97.409001)">
+      <meshrow
+         id="meshrow3132">
+        <meshpatch
+           id="meshpatch3134">
+          <stop
+             path="c 7.08264,0  14.1653,0  21.2479,0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop3136" />
+          <stop
+             path="c 0,4.81085  0,9.6217  0,14.4326"
+             style="stop-color:#80b3ff;stop-opacity:1"
+             id="stop3138" />
+          <stop
+             path="c -7.08264,0  -14.1653,0  -21.2479,0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop3140" />
+          <stop
+             path="c 0,-4.81085  0,-9.6217  0,-14.4326"
+             style="stop-color:#80b3ff;stop-opacity:1"
+             id="stop3142" />
+        </meshpatch>
+      </meshrow>
+    </meshgradient>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-2"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4066-0"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="344.73795"
+     inkscape:cy="664.61386"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-global="false"
+     inkscape:window-width="1208"
+     inkscape:window-height="656"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     showguides="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.8194437px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="257.17499"
+       y="191.69582"
+       id="text4838"><tspan
+         sodipodi:role="line"
+         id="tspan4836"
+         x="257.17499"
+         y="199.49896"
+         style="font-size:4.23333311px;stroke-width:0.26458332" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.8194437px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="309.05606"
+       y="185.82643"
+       id="text4842-7"><tspan
+         sodipodi:role="line"
+         id="tspan4840-6"
+         x="309.05606"
+         y="193.62958"
+         style="font-size:4.23333311px;stroke-width:0.26458332" /></text>
+    <rect
+       style="opacity:1;fill:#ffd42a;fill-opacity:1;fill-rule:nonzero;stroke:#6d630e;stroke-width:0.48939452;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3279"
+       width="47.286507"
+       height="13.661748"
+       x="4.208724"
+       y="140.39467"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <g
+       id="g3573-3-0"
+       transform="matrix(1.6,0,0,1.6,-85.801319,-10.443978)"
+       style="fill:#000000;fill-opacity:1"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g3571-6-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path3569-1-3"
+           d="m 465.44,422.04 v 0.04 0.03 0.03 0.04 0.03 0.02 0.03 0.03 l -0.01,0.03 v 0.02 0.03 0.02 0.02 l -0.01,0.03 v 0.02 0.02 l -0.01,0.02 v 0.01 l -0.01,0.04 -0.01,0.03 -0.02,0.03 -0.01,0.03 -0.02,0.02 -0.02,0.02 -0.02,0.02 -0.03,0.02 -0.02,0.01 -0.03,0.01 -0.03,0.01 -0.04,0.01 -0.04,0.01 -0.04,0.01 h -0.02 -0.02 -0.03 l -0.02,0.01 h -0.03 -0.02 -0.03 -0.03 -0.03 -0.03 -0.03 -0.03 -0.03 -0.04 -0.03 -0.04 -0.04 -0.03 C 462.77,421.2 460,421.2 459.5,421.2 h -0.42 v -1.09 h 0.42 c 0.58,0 2.19,0.06 3.64,0.68 v -12.45 c 0,-0.77 0,-1.05 -2.64,-1.05 h -1.25 v -1.09 c 1.38,0.09 3.6,0.09 5.04,0.09 1.45,0 3.67,0 5.03,-0.09 v 1.09 h -1.24 c -2.64,0 -2.64,0.28 -2.64,1.05 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;fill-opacity:1;stroke-width:0" /></g>    </g>
+    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:#010101;stroke-width:0.48000002;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1015"
+       width="84.666664"
+       height="54.42857"
+       x="51.398911"
+       y="125.17768"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <rect
+       style="opacity:1;fill:#808080;fill-opacity:0.90196078;fill-rule:nonzero;stroke:#040404;stroke-width:0.67434752;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98000004"
+       id="rect1015-3"
+       width="84.524948"
+       height="29.520782"
+       x="264.3085"
+       y="217.36414"
+       transform="matrix(1,0,-0.86214708,0.50665808,0,0)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <rect
+       style="opacity:1;fill:#a0a0a0;fill-opacity:1;fill-rule:nonzero;stroke:#040404;stroke-width:0.51178169;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98000004"
+       id="rect1015-6"
+       width="29.47788"
+       height="54.420246"
+       x="159.02155"
+       y="207.2348"
+       transform="matrix(0.8564847,-0.51617241,0,1,0,0)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <rect
+       style="opacity:1;fill:#adadad;fill-opacity:1;fill-rule:nonzero;stroke:#010101;stroke-width:0.31113377;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2832"
+       width="36.571339"
+       height="25.452923"
+       x="60.408283"
+       y="137.24399"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <g
+       id="g2777"
+       transform="matrix(1.6,0,0,1.6,-386.47916,-115.4764)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999">
+      <circle
+         r="1.6704345"
+         cy="176.92915"
+         cx="282.83798"
+         id="path2716"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#010101;stroke-width:0.30000001;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:transform-center-y="-3.2072343"
+         inkscape:transform-center-x="1.4699824"
+         r="1.2695302"
+         cy="176.92918"
+         cx="282.83795"
+         id="path2728"
+         style="opacity:1;fill:url(#meshgradient2844);fill-opacity:1;fill-rule:nonzero;stroke:#010101;stroke-width:0.2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g2777-7"
+       transform="matrix(1.6,0,0,1.6,-373.84684,-115.4764)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999">
+      <circle
+         r="1.6704345"
+         cy="176.92915"
+         cx="282.83798"
+         id="path2716-0"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#010101;stroke-width:0.30000001;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:transform-center-y="-3.2072343"
+         inkscape:transform-center-x="1.4699824"
+         r="1.2695302"
+         cy="176.92918"
+         cx="282.83795"
+         id="path2728-9"
+         style="opacity:1;fill:url(#meshgradient2989);fill-opacity:1;fill-rule:nonzero;stroke:#010101;stroke-width:0.2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g2777-7-3"
+       transform="matrix(1.6,0,0,1.6,-361.21454,-115.4764)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999">
+      <circle
+         r="1.6704345"
+         cy="176.92915"
+         cx="282.83798"
+         id="path2716-0-6"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#010101;stroke-width:0.30000001;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:transform-center-y="-3.2072343"
+         inkscape:transform-center-x="1.4699824"
+         r="1.2695302"
+         cy="176.92918"
+         cx="282.83795"
+         id="path2728-9-0"
+         style="opacity:1;fill:url(#meshgradient3024);fill-opacity:1;fill-rule:nonzero;stroke:#010101;stroke-width:0.2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <rect
+       style="opacity:1;fill:url(#meshgradient3130);fill-opacity:1;fill-rule:nonzero;stroke:#353535;stroke-width:0.48000002;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2712"
+       width="33.996681"
+       height="23.092087"
+       x="61.695591"
+       y="138.31752"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#6d630e;stroke-width:0.42333332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 15.587591,140.55109 -0.05472,13.25818"
+       id="path3285-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#6d630e;stroke-width:0.42333332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 26.276759,140.65692 -0.05472,13.25817"
+       id="path3285-6-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#6d630e;stroke-width:0.42333332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 37.495143,140.65688 -0.05472,13.25818"
+       id="path3285-6-2-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#6d630e;stroke-width:0.42333332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 48.501831,140.44524 -0.05472,13.25817"
+       id="path3285-6-2-6-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <rect
+       style="opacity:1;fill:#ffd42a;fill-opacity:1;fill-rule:nonzero;stroke:#6d630e;stroke-width:0.53041112;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3279-7"
+       width="55.712158"
+       height="13.620732"
+       x="146.3483"
+       y="139.41733"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#6d630e;stroke-width:0.42333332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 157.65729,139.45698 -0.0547,13.25818"
+       id="path3285-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#6d630e;stroke-width:0.42333332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 169.13668,139.5532 -0.0547,13.25818"
+       id="path3285-6-20"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#6d630e;stroke-width:0.42333332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 179.82583,139.65903 -0.0547,13.25817"
+       id="path3285-6-2-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#6d630e;stroke-width:0.42333332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 191.04423,139.659 -0.0547,13.25817"
+       id="path3285-6-2-6-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <g
+       id="g3501"
+       transform="matrix(1.6,0,0,1.6,-128.73166,-10.575978)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="content"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path3498"
+           d="m 470.49,414.17 v 0.18 0.21 l -0.01,0.24 v 0.25 l -0.02,0.28 -0.01,0.3 -0.03,0.32 -0.03,0.32 -0.05,0.34 -0.05,0.35 -0.07,0.36 -0.07,0.37 -0.1,0.36 -0.11,0.37 -0.12,0.37 -0.14,0.36 -0.17,0.36 -0.18,0.36 -0.2,0.34 -0.23,0.33 -0.25,0.31 -0.27,0.3 -0.15,0.15 -0.16,0.14 -0.16,0.13 -0.16,0.13 -0.18,0.12 -0.18,0.12 -0.19,0.11 -0.2,0.1 -0.2,0.1 -0.22,0.09 -0.22,0.08 -0.23,0.08 -0.23,0.06 -0.25,0.06 -0.25,0.05 -0.27,0.05 -0.27,0.03 -0.28,0.02 -0.29,0.02 h -0.3 v -0.83 c 1.84,0 3.17,-0.93 3.65,-2.68 0.36,-1.27 0.36,-3.35 0.36,-4.82 0,-1.68 0,-3.7 -0.37,-5.2 -0.66,-2.42 -2.64,-2.78 -3.64,-2.78 v 0 c -0.92,0 -3.02,0.31 -3.64,2.83 -0.35,1.34 -0.38,3.12 -0.38,5.15 0,1.85 0,3.57 0.41,4.99 0.62,2.09 2.55,2.51 3.61,2.51 v 0.83 c -6.5,0 -6.5,-6.83 -6.5,-8.62 0,-1.81 0,-8.52 6.5,-8.52 6.5,0 6.5,6.71 6.5,8.52 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>    </g>
+    <g
+       id="g3573"
+       transform="matrix(1.6,0,0,1.6,-118.00822,-10.443978)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g3571"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path3569"
+           d="m 465.44,422.04 v 0.04 0.03 0.03 0.04 0.03 0.02 0.03 0.03 l -0.01,0.03 v 0.02 0.03 0.02 0.02 l -0.01,0.03 v 0.02 0.02 l -0.01,0.02 v 0.01 l -0.01,0.04 -0.01,0.03 -0.02,0.03 -0.01,0.03 -0.02,0.02 -0.02,0.02 -0.02,0.02 -0.03,0.02 -0.02,0.01 -0.03,0.01 -0.03,0.01 -0.04,0.01 -0.04,0.01 -0.04,0.01 h -0.02 -0.02 -0.03 l -0.02,0.01 h -0.03 -0.02 -0.03 -0.03 -0.03 -0.03 -0.03 -0.03 -0.03 -0.04 -0.03 -0.04 -0.04 -0.03 C 462.77,421.2 460,421.2 459.5,421.2 h -0.42 v -1.09 h 0.42 c 0.58,0 2.19,0.06 3.64,0.68 v -12.45 c 0,-0.77 0,-1.05 -2.64,-1.05 h -1.25 v -1.09 c 1.38,0.09 3.6,0.09 5.04,0.09 1.45,0 3.67,0 5.03,-0.09 v 1.09 h -1.24 c -2.64,0 -2.64,0.28 -2.64,1.05 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>    </g>
+    <g
+       id="g3501-5"
+       transform="matrix(1.6,0,0,1.6,-96.177479,-10.575978)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="content-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path3498-2"
+           d="m 470.49,414.17 v 0.18 0.21 l -0.01,0.24 v 0.25 l -0.02,0.28 -0.01,0.3 -0.03,0.32 -0.03,0.32 -0.05,0.34 -0.05,0.35 -0.07,0.36 -0.07,0.37 -0.1,0.36 -0.11,0.37 -0.12,0.37 -0.14,0.36 -0.17,0.36 -0.18,0.36 -0.2,0.34 -0.23,0.33 -0.25,0.31 -0.27,0.3 -0.15,0.15 -0.16,0.14 -0.16,0.13 -0.16,0.13 -0.18,0.12 -0.18,0.12 -0.19,0.11 -0.2,0.1 -0.2,0.1 -0.22,0.09 -0.22,0.08 -0.23,0.08 -0.23,0.06 -0.25,0.06 -0.25,0.05 -0.27,0.05 -0.27,0.03 -0.28,0.02 -0.29,0.02 h -0.3 v -0.83 c 1.84,0 3.17,-0.93 3.65,-2.68 0.36,-1.27 0.36,-3.35 0.36,-4.82 0,-1.68 0,-3.7 -0.37,-5.2 -0.66,-2.42 -2.64,-2.78 -3.64,-2.78 v 0 c -0.92,0 -3.02,0.31 -3.64,2.83 -0.35,1.34 -0.38,3.12 -0.38,5.15 0,1.85 0,3.57 0.41,4.99 0.62,2.09 2.55,2.51 3.61,2.51 v 0.83 c -6.5,0 -6.5,-6.83 -6.5,-8.62 0,-1.81 0,-8.52 6.5,-8.52 6.5,0 6.5,6.71 6.5,8.52 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>    </g>
+    <g
+       id="g3573-2"
+       transform="matrix(1.6,0,0,1.6,35.731495,-11.342004)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g3571-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path3569-9"
+           d="m 465.44,422.04 v 0.04 0.03 0.03 0.04 0.03 0.02 0.03 0.03 l -0.01,0.03 v 0.02 0.03 0.02 0.02 l -0.01,0.03 v 0.02 0.02 l -0.01,0.02 v 0.01 l -0.01,0.04 -0.01,0.03 -0.02,0.03 -0.01,0.03 -0.02,0.02 -0.02,0.02 -0.02,0.02 -0.03,0.02 -0.02,0.01 -0.03,0.01 -0.03,0.01 -0.04,0.01 -0.04,0.01 -0.04,0.01 h -0.02 -0.02 -0.03 l -0.02,0.01 h -0.03 -0.02 -0.03 -0.03 -0.03 -0.03 -0.03 -0.03 -0.03 -0.04 -0.03 -0.04 -0.04 -0.03 C 462.77,421.2 460,421.2 459.5,421.2 h -0.42 v -1.09 h 0.42 c 0.58,0 2.19,0.06 3.64,0.68 v -12.45 c 0,-0.77 0,-1.05 -2.64,-1.05 h -1.25 v -1.09 c 1.38,0.09 3.6,0.09 5.04,0.09 1.45,0 3.67,0 5.03,-0.09 v 1.09 h -1.24 c -2.64,0 -2.64,0.28 -2.64,1.05 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>    </g>
+    <g
+       id="g3573-7"
+       transform="matrix(1.6,0,0,1.6,13.580183,-11.342004)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g3571-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path3569-6"
+           d="m 465.44,422.04 v 0.04 0.03 0.03 0.04 0.03 0.02 0.03 0.03 l -0.01,0.03 v 0.02 0.03 0.02 0.02 l -0.01,0.03 v 0.02 0.02 l -0.01,0.02 v 0.01 l -0.01,0.04 -0.01,0.03 -0.02,0.03 -0.01,0.03 -0.02,0.02 -0.02,0.02 -0.02,0.02 -0.03,0.02 -0.02,0.01 -0.03,0.01 -0.03,0.01 -0.04,0.01 -0.04,0.01 -0.04,0.01 h -0.02 -0.02 -0.03 l -0.02,0.01 h -0.03 -0.02 -0.03 -0.03 -0.03 -0.03 -0.03 -0.03 -0.03 -0.04 -0.03 -0.04 -0.04 -0.03 C 462.77,421.2 460,421.2 459.5,421.2 h -0.42 v -1.09 h 0.42 c 0.58,0 2.19,0.06 3.64,0.68 v -12.45 c 0,-0.77 0,-1.05 -2.64,-1.05 h -1.25 v -1.09 c 1.38,0.09 3.6,0.09 5.04,0.09 1.45,0 3.67,0 5.03,-0.09 v 1.09 h -1.24 c -2.64,0 -2.64,0.28 -2.64,1.05 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>    </g>
+    <g
+       id="g3501-5-3"
+       transform="matrix(1.6,0,0,1.6,24.756647,-11.474004)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="content-9-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path3498-2-9"
+           d="m 470.49,414.17 v 0.18 0.21 l -0.01,0.24 v 0.25 l -0.02,0.28 -0.01,0.3 -0.03,0.32 -0.03,0.32 -0.05,0.34 -0.05,0.35 -0.07,0.36 -0.07,0.37 -0.1,0.36 -0.11,0.37 -0.12,0.37 -0.14,0.36 -0.17,0.36 -0.18,0.36 -0.2,0.34 -0.23,0.33 -0.25,0.31 -0.27,0.3 -0.15,0.15 -0.16,0.14 -0.16,0.13 -0.16,0.13 -0.18,0.12 -0.18,0.12 -0.19,0.11 -0.2,0.1 -0.2,0.1 -0.22,0.09 -0.22,0.08 -0.23,0.08 -0.23,0.06 -0.25,0.06 -0.25,0.05 -0.27,0.05 -0.27,0.03 -0.28,0.02 -0.29,0.02 h -0.3 v -0.83 c 1.84,0 3.17,-0.93 3.65,-2.68 0.36,-1.27 0.36,-3.35 0.36,-4.82 0,-1.68 0,-3.7 -0.37,-5.2 -0.66,-2.42 -2.64,-2.78 -3.64,-2.78 v 0 c -0.92,0 -3.02,0.31 -3.64,2.83 -0.35,1.34 -0.38,3.12 -0.38,5.15 0,1.85 0,3.57 0.41,4.99 0.62,2.09 2.55,2.51 3.61,2.51 v 0.83 c -6.5,0 -6.5,-6.83 -6.5,-8.62 0,-1.81 0,-8.52 6.5,-8.52 6.5,0 6.5,6.71 6.5,8.52 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>    </g>
+    <g
+       id="g3501-5-4"
+       transform="matrix(1.6,0,0,1.6,46.907943,-11.474004)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="content-9-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path3498-2-8"
+           d="m 470.49,414.17 v 0.18 0.21 l -0.01,0.24 v 0.25 l -0.02,0.28 -0.01,0.3 -0.03,0.32 -0.03,0.32 -0.05,0.34 -0.05,0.35 -0.07,0.36 -0.07,0.37 -0.1,0.36 -0.11,0.37 -0.12,0.37 -0.14,0.36 -0.17,0.36 -0.18,0.36 -0.2,0.34 -0.23,0.33 -0.25,0.31 -0.27,0.3 -0.15,0.15 -0.16,0.14 -0.16,0.13 -0.16,0.13 -0.18,0.12 -0.18,0.12 -0.19,0.11 -0.2,0.1 -0.2,0.1 -0.22,0.09 -0.22,0.08 -0.23,0.08 -0.23,0.06 -0.25,0.06 -0.25,0.05 -0.27,0.05 -0.27,0.03 -0.28,0.02 -0.29,0.02 h -0.3 v -0.83 c 1.84,0 3.17,-0.93 3.65,-2.68 0.36,-1.27 0.36,-3.35 0.36,-4.82 0,-1.68 0,-3.7 -0.37,-5.2 -0.66,-2.42 -2.64,-2.78 -3.64,-2.78 v 0 c -0.92,0 -3.02,0.31 -3.64,2.83 -0.35,1.34 -0.38,3.12 -0.38,5.15 0,1.85 0,3.57 0.41,4.99 0.62,2.09 2.55,2.51 3.61,2.51 v 0.83 c -6.5,0 -6.5,-6.83 -6.5,-8.62 0,-1.81 0,-8.52 6.5,-8.52 6.5,0 6.5,6.71 6.5,8.52 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>    </g>
+    <g
+       id="g3501-5-4-4"
+       transform="matrix(1.6,0,0,1.6,57.684247,-11.474004)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="content-9-7-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path3498-2-8-0"
+           d="m 470.49,414.17 v 0.18 0.21 l -0.01,0.24 v 0.25 l -0.02,0.28 -0.01,0.3 -0.03,0.32 -0.03,0.32 -0.05,0.34 -0.05,0.35 -0.07,0.36 -0.07,0.37 -0.1,0.36 -0.11,0.37 -0.12,0.37 -0.14,0.36 -0.17,0.36 -0.18,0.36 -0.2,0.34 -0.23,0.33 -0.25,0.31 -0.27,0.3 -0.15,0.15 -0.16,0.14 -0.16,0.13 -0.16,0.13 -0.18,0.12 -0.18,0.12 -0.19,0.11 -0.2,0.1 -0.2,0.1 -0.22,0.09 -0.22,0.08 -0.23,0.08 -0.23,0.06 -0.25,0.06 -0.25,0.05 -0.27,0.05 -0.27,0.03 -0.28,0.02 -0.29,0.02 h -0.3 v -0.83 c 1.84,0 3.17,-0.93 3.65,-2.68 0.36,-1.27 0.36,-3.35 0.36,-4.82 0,-1.68 0,-3.7 -0.37,-5.2 -0.66,-2.42 -2.64,-2.78 -3.64,-2.78 v 0 c -0.92,0 -3.02,0.31 -3.64,2.83 -0.35,1.34 -0.38,3.12 -0.38,5.15 0,1.85 0,3.57 0.41,4.99 0.62,2.09 2.55,2.51 3.61,2.51 v 0.83 c -6.5,0 -6.5,-6.83 -6.5,-8.62 0,-1.81 0,-8.52 6.5,-8.52 6.5,0 6.5,6.71 6.5,8.52 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>    </g>
+    <g
+       id="g3573-3"
+       transform="matrix(1.6,0,0,1.6,-106.75524,-10.443978)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g3571-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path3569-1"
+           d="m 465.44,422.04 v 0.04 0.03 0.03 0.04 0.03 0.02 0.03 0.03 l -0.01,0.03 v 0.02 0.03 0.02 0.02 l -0.01,0.03 v 0.02 0.02 l -0.01,0.02 v 0.01 l -0.01,0.04 -0.01,0.03 -0.02,0.03 -0.01,0.03 -0.02,0.02 -0.02,0.02 -0.02,0.02 -0.03,0.02 -0.02,0.01 -0.03,0.01 -0.03,0.01 -0.04,0.01 -0.04,0.01 -0.04,0.01 h -0.02 -0.02 -0.03 l -0.02,0.01 h -0.03 -0.02 -0.03 -0.03 -0.03 -0.03 -0.03 -0.03 -0.03 -0.04 -0.03 -0.04 -0.04 -0.03 C 462.77,421.2 460,421.2 459.5,421.2 h -0.42 v -1.09 h 0.42 c 0.58,0 2.19,0.06 3.64,0.68 v -12.45 c 0,-0.77 0,-1.05 -2.64,-1.05 h -1.25 v -1.09 c 1.38,0.09 3.6,0.09 5.04,0.09 1.45,0 3.67,0 5.03,-0.09 v 1.09 h -1.24 c -2.64,0 -2.64,0.28 -2.64,1.05 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.63999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 6.9160389,119.75829 37.7170881,-0.2992"
+       id="path4055"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.60908765;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-2)"
+       d="m 165.32686,119.77135 32.02793,-0.31936"
+       id="path4055-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:14.11110973px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.42333332"
+       x="102.87269"
+       y="136.06772"
+       id="text4842"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999"><tspan
+         sodipodi:role="line"
+         id="tspan4840"
+         x="102.87269"
+         y="136.06772"
+         style="font-size:6.77333307px;stroke-width:0.42333332">memory</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:14.11110973px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.42333332"
+       x="16.972446"
+       y="115.67002"
+       id="text4842-5"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999"><tspan
+         sodipodi:role="line"
+         id="tspan4840-69"
+         x="16.972446"
+         y="115.67002"
+         style="font-size:6.77333307px;stroke-width:0.42333332">input</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:14.11110973px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.42333332"
+       x="169.27652"
+       y="115.47484"
+       id="text4842-5-3"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999"><tspan
+         sodipodi:role="line"
+         id="tspan4840-69-7"
+         x="169.27652"
+         y="115.47484"
+         style="font-size:6.77333307px;stroke-width:0.42333332">output</tspan></text>
+    <rect
+       style="opacity:1;fill:#ffd42a;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.16;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2820-3"
+       width="35.267136"
+       height="22.990463"
+       x="98.997467"
+       y="139.81244"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <rect
+       style="opacity:1;fill:#5aa02c;fill-opacity:1;fill-rule:nonzero;stroke:#010101;stroke-width:0.16;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2820"
+       width="35.267136"
+       height="22.990463"
+       x="98.997467"
+       y="138.54251"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <rect
+       style="opacity:0.98999999;fill:#4a4a4a;fill-opacity:1;fill-rule:nonzero;stroke:#010101;stroke-width:0.16;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4728-5"
+       width="9.0993767"
+       height="19.259377"
+       x="100.86302"
+       y="140.48163"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <rect
+       style="opacity:0.98999999;fill:#4a4a49;fill-opacity:1;fill-rule:nonzero;stroke:#010101;stroke-width:0.16;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4728-5-5"
+       width="9.0993767"
+       height="19.259377"
+       x="112.08138"
+       y="140.48163"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <rect
+       style="opacity:0.98999999;fill:#4a4a48;fill-opacity:1;fill-rule:nonzero;stroke:#010101;stroke-width:0.16;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4728-5-4"
+       width="9.0993767"
+       height="19.259377"
+       x="123.29969"
+       y="140.48163"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 100.21535,161.52018 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 101.67056,161.52018 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 106.03619,161.52018 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 107.4914,161.52018 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5-3-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 110.40181,161.52018 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5-3-5-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 108.9466,161.52018 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5-3-5-6-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 104.58098,161.52018 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5-3-5-6-2-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 103.12577,161.52018 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5-3-5-6-2-9-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 111.76442,161.54664 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 113.21963,161.54664 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 117.58525,161.54664 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5-3-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 119.04046,161.54664 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5-3-5-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 121.95087,161.54664 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5-3-5-6-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 120.49566,161.54664 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5-3-5-6-2-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 116.13004,161.54664 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5-3-5-6-2-9-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 114.67483,161.54664 c -0.0298,1.21786 -0.0298,1.21786 -0.0298,1.21786"
+       id="path2940-5-3-5-6-2-9-1-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 123.26122,161.52255 c -0.0298,1.21785 -0.0298,1.21785 -0.0298,1.21785"
+       id="path2940-26"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 124.71643,161.52255 c -0.0298,1.21785 -0.0298,1.21785 -0.0298,1.21785"
+       id="path2940-5-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 129.08206,161.52255 c -0.0298,1.21785 -0.0298,1.21785 -0.0298,1.21785"
+       id="path2940-5-3-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 130.53726,161.52255 c -0.0298,1.21785 -0.0298,1.21785 -0.0298,1.21785"
+       id="path2940-5-3-5-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 133.44769,161.52255 c -0.0298,1.21785 -0.0298,1.21785 -0.0298,1.21785"
+       id="path2940-5-3-5-6-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 131.99247,161.52255 c -0.0298,1.21785 -0.0298,1.21785 -0.0298,1.21785"
+       id="path2940-5-3-5-6-2-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 127.62685,161.52255 c -0.0298,1.21785 -0.0298,1.21785 -0.0298,1.21785"
+       id="path2940-5-3-5-6-2-9-02"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 126.17164,161.52255 c -0.0298,1.21785 -0.0298,1.21785 -0.0298,1.21785"
+       id="path2940-5-3-5-6-2-9-1-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <rect
+       style="opacity:0.43600003;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:#010101;stroke-width:0.16433504;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2820-7"
+       width="35.262798"
+       height="24.256128"
+       x="98.787994"
+       y="138.54462"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.16;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3199"
+       width="0.9921875"
+       height="0.238125"
+       x="160.96199"
+       y="109.63578"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.11777709;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3199-5"
+       width="0.73295605"
+       height="0.17466357"
+       x="120.60666"
+       y="-153.95862"
+       transform="matrix(0.06872084,0.99763593,-0.99768557,0.06799628,0,0)"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.16;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3216"
+       width="0.77641797"
+       height="0.093544334"
+       x="135.74422"
+       y="179.93167"
+       inkscape:export-filename="/home/user/Downloads/figures/transducer.png"
+       inkscape:export-xdpi="96.279999"
+       inkscape:export-ydpi="96.279999" />
+  </g>
+</svg>
