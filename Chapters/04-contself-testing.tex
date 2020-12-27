@@ -36,7 +36,7 @@ Then
 where $\|A\|_F=\operatorname{tr}(A^{\dag}A)$ is the Frobenius norm.
 \end{lemma}
 
-\begin{lemma}[CITE]
+\begin{lemma}
 \label{lem:closegramdecomp}
 Let $\Tilde{X}$ and $X^*$ $\in S_{+}^{\thinspace n}$ be two positive semi-definite matrices, $\epsilon$-close in Frobenius distance:
 \begin{equation*}
@@ -44,17 +44,170 @@ Let $\Tilde{X}$ and $X^*$ $\in S_{+}^{\thinspace n}$ be two positive semi-defini
 \end{equation*}
 Let $\{\vert \Tilde{u}_i \rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ and $\{\vert u_i\rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ be Gram decompositions of $\Tilde{X}$ and $X^*$, respectively. Then there exists a $d\times d$ unitary matrix $U$ such that
 \begin{equation*}
-    \|\vert \Tilde{u}_i\rangle - U \vert u_i\rangle\|_2 \leq \sqrt{n\epsilon},
+    \|\vert \Tilde{u}_i\rangle - U \vert u_i\rangle\|_2 \leq \mathcal{O}(\epsilon),
 \end{equation*}
 for all $i\in\{1,\dots,n\}$
 \end{lemma}
 
-We will omit the proofs of Lemmas \ref{lem:kcbsunique} and \ref{lem:epssuboptgram}, as they do not provide much conceptual insight, and offer only a few comments. We include the proof of Lemma \ref{lem:closegramdecomp}, as CITE proves only a weaker version for $d=n$, but implicitly uses the stronger statement of Lemma \ref{lem:closegramdecomp}.
+We will omit the proofs of Lemmas \ref{lem:kcbsunique} and \ref{lem:epssuboptgram}, as they do not provide much conceptual insight, and offer only a few comments. We include the proof of Lemma \ref{lem:closegramdecomp}, as CITE proves only a weaker version for $d=n$, but implicitly uses the stronger statement of Lemma \ref{lem:closegramdecomp}. Furthermore, the proof we present establishes a tighter error bound of the order $\mathcal{O}(\epsilon)$, compared to $\mathcal{O}(\sqrt{\epsilon})$ in CITE.
 
 The proof of Lemma \ref{lem:kcbsunique} utilizes SDP duality theory and shows a sufficient condition for the unicity of $X^*_n$ to be satisfied by explicit construction. It applies only to the class of odd $n$-cycle scenarios, as it makes use of the cyclic exclusivity constraints that enter the Lovász SDP \ref{eqn:lovaszsdp}. Lemma \ref{lem:epssuboptgram} is a general result for the optimization problem \ref{eqn:lovaszsdp}, and as such applies to arbitrary exclusivity graphs. Like Lemma \ref{lem:kcbsunique}, the proof of Lemma \ref{lem:epssuboptgram} makes heavy use of SDP duality. 
 
 \begin{proof}\emph{(of Lemma \ref{lem:closegramdecomp})}\hfill\break
+The proof is in large parts a generalization of the proof of Theorem 7.3.11 in CITE, which only considers the noise-less case $\epsilon=0$, and for the most part adopt their notation. 
+
 Define $A$, $B$ $\in\mathbb{C}^{n,d}$ as the matrices that have $\{\vert u_i\rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ and $\{\vert \Tilde{u}_i \rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ as rows, respectively. The Gram matrices $\Tilde{X}$ and $X^*$ are then given by $X^*=AA^{\dag}$ and $\Tilde{X}=BB^{\dag}$. 
+
+Let $\mathbb{C}^{d,n}\ni A^\dag = V\Sigma W^\dag$ be a singular value decomposition (SVD) of $A^\dag$, $V\in\mathbb{C}^{d,d}$ and $W\in\mathbb{C}^{n,n}$ being unitary matrices, and $\Sigma$ a rectangular diagonal matrix containing the singular values of $A^\dag$. By definition, 
+\begin{equation*}
+AA^\dag=(A^\dag)^{\dag} A^{\dag} = W\Sigma^\dag\Sigma W^\dag = W\Lambda W^\dag,
+\end{equation*} where we have defined $\mathbb{C}^{n,n}\ni\Lambda\coloneqq\Sigma^\dag\Sigma$. Denote the positive singular values of $A^\dag$, ordered according to magnitude, by $\sigma_1 \geq \dots \geq \sigma_r > 0$, where $r$ is the rank of $A^\dag$. Note that $A$ and $A^{\dag}$ have identical singular values. As acting with permutation matrices on $V$, $W^{\dag}$ preserves unitarity, we can w.l.o.g\ assume
+\begin{equation*}
+\Lambda = 
+\begin{pmatrix}
+\sigma_1^2 & & & \\
+& \ddots & & \\
+& & \sigma_r^2 & \\
+& & & 0_{n-r}\\
+\end{pmatrix},
+\end{equation*}
+where empty spaces indicate zero entries.
+Further, let
+\begin{equation*}
+\Sigma_r = 
+\begin{pmatrix}
+\sigma_1 & &\\
+& \ddots & & \\
+& & \sigma_r\\
+\end{pmatrix}\in\mathbb{C}^{r,r}
+\end{equation*} and partition $W\in\mathbb{C}^{n,n}$ like $(W_1\thinspace W_2)$, with $W_1\in\mathbb{C}^{n,r}$ and $W_2\in\mathbb{C}^{n,n-r}$. Theorem 7.3.2 in CITE implies that there exists an isometry $V_1\in\mathbb{C}^{d,r}$ such that 
+\begin{equation*}
+A^{\dag}=V_1\Sigma_r W_1^{\dag}.
+\end{equation*}
+By definition,
+\begin{equation*}
+(B^{\dag})^{\dag}B^{\dag}=\Tilde{X}\stackrel{\epsilon}{\approx}X^*=W\Lambda W^{\dag}.
+\end{equation*}
+Let 
+\begin{equation*}
+D\coloneqq\Sigma_r\oplus\mathbb{1}_{n-r}\in\mathbb{C}^{n,n}
+\end{equation*} be the $n\times n$ diagonal matrix with diagonal entries corresponding to the non-zero singular values of $A^{\dag}$. The remaining $n-r$ diagonal entries are set to $1$, such that $D$ is invertible. Further, define
+\begin{equation*}
+X\coloneqq B^{\dag} W D^{-1}\in\mathbb{C}^{d,n}.
+\end{equation*}
+We partition $X$ like $X=(\Tilde{V_2}\thinspace Z)$, where $\Tilde{V_2}\in\mathbb{C}^{d,r}$.
+It follows that
+\begin{alignat*}{2}
+X^{\dag}X & = D^{-1}W^{\dag}BB^{\dag}WD^{-1} && \\[0.2em]
+& = D^{-1}W^{\dag}AA^{\dag}WD^{-1} && +D^{-1}W^{\dag}(BB^{\dag}-AA^{\dag})WD^{-1} \\[0.2em]
+& = D^{-1}\Lambda D^{-1} && + D^{-1}W^{\dag}(\Tilde{X}-X^*)WD^{-1} \\[0.2em]
+& =
+\begin{pmatrix}
+\mathbb{1}_r & \\
+& 0_{n-r}
+\end{pmatrix} && + D^{-1}W^{\dag}(\Tilde{X}-X^*)WD^{-1}.
+\end{alignat*}
+Therefore,
+\begin{equation*}
+X^{\dag}X=
+\begin{pmatrix}
+\Tilde{V}_2^{\dag}\\
+Z^{\dag}
+\end{pmatrix}
+\begin{pmatrix}
+\Tilde{V}_2 & Z
+\end{pmatrix} =
+\begin{pmatrix}
+\Tilde{V}_2^{\dag}\Tilde{V}_2 & * \\
+* & Z^{\dag}Z
+\end{pmatrix}
+= 
+\begin{pmatrix}
+\mathbb{1}_r & \\
+& 0_{n-r}
+\end{pmatrix} + D^{-1}W^{\dag}(\Tilde{X}-X^*)WD^{-1}.
+\end{equation*}
+We now aim to bound the Frobenius distance
+\begin{equation*}
+\left\|
+\begin{pmatrix}
+\Tilde{V}_2^{\dag}\Tilde{V}_2 & * \\
+* & Z^{\dag}Z
+\end{pmatrix}
+-
+\begin{pmatrix}
+\mathbb{1}_r & \\
+& 0_{n-r}
+\end{pmatrix}
+\right\|_F.
+\end{equation*}
+As the Frobenius norm is submultiplicative, i.e. $\|AB\|_F\leq\|A\|_F\|B\|_F$, we find
+\begin{equation*}
+\left\|
+\begin{pmatrix}
+\Tilde{V}_2^{\dag}\Tilde{V}_2 & * \\
+* & Z^{\dag}Z
+\end{pmatrix}
+-
+\begin{pmatrix}
+\mathbb{1}_r & \\
+& 0_{n-r}
+\end{pmatrix}
+\right\|_F\;\leq\;\|D^{-1}\|^{\textstyle ^2}_F\;\|\Tilde{X}-X^{*}\|_F\; \leq\; \epsilon\thinspace\|D^{-1}\|_F^{\textstyle ^2}\;\stackrel{(\bigtriangleup)}{\leq}\;\epsilon\thinspace \frac{n}{\sigma_{\text{min}}^2}\thinspace,
+\end{equation*}
+provided that the smallest singular value $\sigma_{\text{min}}\leq 1$. For the KCBS scenario, $n=5+1$, $\sigma_{\text{min}}=\frac{1}{2}(\sqrt{5}-1)\approx 0.618$. The inequality $(\bigtriangleup)$ holds because
+\begin{equation*}
+\|D^{-1}\|_F^{\textstyle ^2} = \left(\sqrt{\sum_{i=1}^r \frac{1}{\sigma_i^2}+(n-r)}\;\right)^2=\sum_{i=1}^r\frac{1}{\sigma_i^2}+(n-r)\leq\frac{n}{\sigma_{\text{min}}^2}\thinspace. 
+\end{equation*}
+Therefore,
+\begin{align*}
+& \|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F\leq\;\epsilon\frac{n}{\sigma_{\text{min}}^2} \\[0.5em]
+& \|Z\|_F \stackrel{(\square)}{\leq} \|Z^{\dag}Z\|_F \leq \epsilon\frac{n}{\sigma_{\text{min}}^2},
+\end{align*}
+where the inequality $(\square)$ holds because $\|A\|_F\geq\operatorname{tr}(A)$ in general. 
+
+We now generalize the result of Theorem 7.3.2 in CITE. Concretely, we want to show that $B^{\dag}$, obeying $(B^{\dag})^{\dag}B^{\dag}\approx X^* = W\Lambda W^{\dag}$, can be approximately written like $B^{\dag}\approx V_2\Sigma_rW_1^{\dag}$, where $V_2\in\mathbb{C}^{d,r}$ is a unitary matrix.
+By definition, $X=B^{\dag}WD^{-1}$, and hence
+\begin{equation*}
+B^{\dag}=XDW^{\dag} = 
+\begin{pmatrix}
+\Tilde{V}_2 & Z
+\end{pmatrix}
+\begin{pmatrix}
+\Sigma_r &\\
+& \mathbb{1}_{n-r}
+\end{pmatrix}
+\begin{pmatrix}
+W_1^{\dag} \\ W_2^{\dag}
+\end{pmatrix} = 
+\begin{pmatrix}
+\Tilde{V}_2 \Sigma_r & Z
+\end{pmatrix}
+\begin{pmatrix}
+W_1^{\dag} \\ W_2^{\dag}
+\end{pmatrix} = \Tilde{V}_2\Sigma_r W_1^{\dag} + ZW_2^{\dag}
+\end{equation*}
+Unitaries leave the Frobenius norm invariant, as $\|A\|_F^{\textstyle ^2}=\sum_k\|Ae_k\|_2^{\textstyle ^2} = \sum_k \|UAe_k\|_2^{\textstyle ^2}=\|UA\|_F^{\textstyle ^2}\thinspace$, where $U$ is a unitary. Therefore,
+\begin{equation*}
+\|B^{\dag}-\Tilde{V}_2\Sigma_r W_1^{\dag}\|_F=\|ZW_2^{\dag}\|_F=\|Z\|_F\leq\epsilon \frac{n}{\sigma_{\text{min}}^2}.
+\end{equation*}
+It remains to show that $\Tilde{V}_2$ is approximately isometric, which follows from the previously derived bound $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\epsilon\frac{n}{\sigma_{\text{min}}^2}$, as we will now prove:
+
+Consider a SVD of $\Tilde{V}_2$,
+\begin{equation*}
+\Tilde{V}_2 = S\Tilde{\Sigma}T^{\dag},
+\end{equation*} and define $V_2$ as the isometry
+\begin{equation*}
+V_2\coloneqq S \begin{pmatrix} \mathbb{1}_r \\ 0_{d-r,r} \end{pmatrix} T^{\dag}.
+\end{equation*} $V_2$ is isometric because
+\begin{equation*}
+V_2^{\dag}V_2=T\begin{pmatrix} \mathbb{1}_r & 0_{r,d-r} \end{pmatrix} \begin{pmatrix} \mathbb{1}_r \\ 0_{d-r,r} \end{pmatrix} T^{\dag}=T\thinspace \mathbb{1}_r \thinspace T^{\dag} = \mathbb{1}_r,
+\end{equation*}
+and the Frobenius distance to $\Tilde{V}_2$ is
+\begin{equation*}
+\|\Tilde{V}_2-V_2\|_F = \left\|S\left[\Tilde{\Sigma}-\begin{pmatrix}
+\mathbb{1}_r \\ 0_{d-r,r}\end{pmatrix}\right]T^{\dag}\right\|_F = \|\|_F
+\end{equation*}
 \end{proof}
 
 Having distilled the main proof components into three auxiliary theorems, Lemmas \ref{lem:kcbsunique}-\ref{lem:closegramdecomp}, we will now demonstrate that these imply the desired self-testing result. CITE for the most part omits these final proof steps. Section \ref{sec:kscontass} will provide an in-depth discussion about all of the assumptions that go into the self-testing protocol.
@@ -70,10 +223,10 @@ Let $n\geq5$ be an odd integer. The only quantum model $\ket{\Psi}$, $\{\Pi_i\}_
 Furthermore, all quantum models $\ket{\Psi}$, $\{\Pi_i\}_{i=1}^n$ compatible with an $\epsilon$-suboptimal violation of \ref{eqn:oddncycleclass}, i.e.\
 \begin{equation*}
     \sum_{i=0}^n \abs{\langle \Psi \vert \Pi_i \vert \Psi \rangle}^2> B_q(\mathcal{G}_{ex}^{(n)})-\epsilon\thinspace ,
-\end{equation*}where $B_q(\mathcal{G}_{ex}^{(n)})$ is the quantum supremum \ref{eqn:ncyclequsup}, are $\mathcal{O}(\sqrt{\epsilon})$ close in 2-norm to \ref{eqn:ncycleideal}, up to a global isometry:
+\end{equation*}where $B_q(\mathcal{G}_{ex}^{(n)})$ is the quantum supremum \ref{eqn:ncyclequsup}, are $\mathcal{O}(\epsilon)$ close in 2-norm to \ref{eqn:ncycleideal}, up to a global isometry:
 \begin{align*}
-    \exists \emph{ isometry } V & : \| \ket{\Psi} - V \vert u_0^{(n)}\rangle \|_2 \thinspace\leq\thinspace \mathcal{O}(\sqrt{\epsilon})\\[0.7em]
-    \forall i\in\{1,\dots,n\} & : \| \Pi_i \ket{\Psi} - V \vert u_i^{(n)} \rangle \langle u_i^{(n)} \vert \thinspace \vert u_0^{(n)} \rangle \| \leq \mathcal{O}(\sqrt{\epsilon})
+    \exists \emph{ isometry } V & : \| \ket{\Psi} - V \vert u_0^{(n)}\rangle \|_2 \thinspace\leq\thinspace \mathcal{O}(\epsilon)\\[0.7em]
+    \forall i\in\{1,\dots,n\} & : \| \Pi_i \ket{\Psi} - V \vert u_i^{(n)} \rangle \langle u_i^{(n)} \vert \thinspace \vert u_0^{(n)} \rangle \| \leq \mathcal{O}(\epsilon)
 \end{align*}
 \end{theorem}
 
@@ -108,7 +261,7 @@ Lemma \ref{lem:closegramdecomp} implies that
 \label{eqn:selftestinginterm}
 \begin{split}
     \forall\thinspace i\in\{0,\dots,n\},\; \exists \text{ unitary } U\in\mathbb{C}^{d,d}: \; & \| \langle \mathbf{\Tilde{u}}_i^{(n)} \vert \mathbf{\Tilde{u}}_0^{(n)} \rangle \vert \mathbf{\Tilde{u}}_i^{(n)} \rangle - \langle \mathbf{u}_i^{(n)} \vert \mathbf{u}_0^{(n)} \rangle \thinspace U\vert \mathbf{u}_i^{(n)}\rangle\|_2 \\[0.3em]
-    = \thinspace & \| \langle \Tilde{u}_i^{(n)} \vert \Tilde{u}_0^{(n)} \rangle \vert \Tilde{u}_i^{(n)} \rangle - \langle u_i^{(n)} \vert u_0^{(n)} \rangle \thinspace \mathcal{J}^{-1}UV^{'} \vert u_i^{(n)}\rangle\|_2 \leq \mathcal{O}(\sqrt{\epsilon})
+    = \thinspace & \| \langle \Tilde{u}_i^{(n)} \vert \Tilde{u}_0^{(n)} \rangle \vert \Tilde{u}_i^{(n)} \rangle - \langle u_i^{(n)} \vert u_0^{(n)} \rangle \thinspace \mathcal{J}^{-1}UV^{'} \vert u_i^{(n)}\rangle\|_2 \leq \mathcal{O}(\epsilon)
 \end{split}
 \end{align}
 
