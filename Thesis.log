@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.26)  27 DEC 2020 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.26)  27 DEC 2020 23:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -742,90 +742,95 @@ Chapter 4.
 ------------------------------------------------------------------------------
 [50
 
-] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60]
-<images/transducer.png, id=844, 566.115pt x 201.00093pt>
+] [51] [52] [53] [54]
+Overfull \hbox (6.79388pt too wide) detected at line 237
+[]
+ []
+
+[55] [56] [57] [58] [59] [60] [61]
+<images/transducer.png, id=848, 566.115pt x 201.00093pt>
 File: images/transducer.png Graphic file (type png)
 <use images/transducer.png>
-Package pdftex.def Info: images/transducer.png  used on input line 342.
+Package pdftex.def Info: images/transducer.png  used on input line 390.
 (pdftex.def)             Requested size: 317.52426pt x 112.74069pt.
- [61] [62 <./images/transducer.png>]
-<images/n=5,mnts=1.png, id=862, 567.11874pt x 532.99126pt>
+ [62] [63 <./images/transducer.png>]
+<images/n=5,mnts=1.png, id=866, 567.11874pt x 532.99126pt>
 File: images/n=5,mnts=1.png Graphic file (type png)
 <use images/n=5,mnts=1.png>
-Package pdftex.def Info: images/n=5,mnts=1.png  used on input line 378.
+Package pdftex.def Info: images/n=5,mnts=1.png  used on input line 426.
 (pdftex.def)             Requested size: 181.44391pt x 170.52002pt.
-<images/n=5,mnts=3.png, id=863, 665.48625pt x 615.29875pt>
+<images/n=5,mnts=3.png, id=867, 665.48625pt x 615.29875pt>
 File: images/n=5,mnts=3.png Graphic file (type png)
 <use images/n=5,mnts=3.png>
-Package pdftex.def Info: images/n=5,mnts=3.png  used on input line 384.
+Package pdftex.def Info: images/n=5,mnts=3.png  used on input line 432.
 (pdftex.def)             Requested size: 181.44391pt x 167.75713pt.
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 376--387
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 424--435
 []$[]$  $[]$ 
  []
 
-<images/n=5,mnts=5.png, id=864, 699.61375pt x 626.34pt>
+<images/n=5,mnts=5.png, id=868, 699.61375pt x 626.34pt>
 File: images/n=5,mnts=5.png Graphic file (type png)
 <use images/n=5,mnts=5.png>
-Package pdftex.def Info: images/n=5,mnts=5.png  used on input line 390.
+Package pdftex.def Info: images/n=5,mnts=5.png  used on input line 438.
 (pdftex.def)             Requested size: 181.44391pt x 162.4336pt.
-<images/n=5,mnts=10.png, id=865, 659.46375pt x 620.3175pt>
+<images/n=5,mnts=10.png, id=869, 659.46375pt x 620.3175pt>
 File: images/n=5,mnts=10.png Graphic file (type png)
 <use images/n=5,mnts=10.png>
-Package pdftex.def Info: images/n=5,mnts=10.png  used on input line 396.
+Package pdftex.def Info: images/n=5,mnts=10.png  used on input line 444.
 (pdftex.def)             Requested size: 181.44391pt x 170.66829pt.
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 388--399
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 436--447
 []$[]$  $[]$ 
  []
 
-[63] [64 <./images/n=5,mnts=1.png> <./images/n=5,mnts=3.png> <./images/n=5,mnts
+[64] [65 <./images/n=5,mnts=1.png> <./images/n=5,mnts=3.png> <./images/n=5,mnts
 =5.png> <./images/n=5,mnts=10.png>]
-<images/allentropies.png, id=882, 462.528pt x 346.896pt>
+<images/allentropies.png, id=886, 462.528pt x 346.896pt>
 File: images/allentropies.png Graphic file (type png)
 <use images/allentropies.png>
-Package pdftex.def Info: images/allentropies.png  used on input line 413.
+Package pdftex.def Info: images/allentropies.png  used on input line 461.
 (pdftex.def)             Requested size: 272.1676pt x 204.13754pt.
-<images/memorycost.png, id=883, 462.528pt x 346.896pt>
+<images/memorycost.png, id=887, 462.528pt x 346.896pt>
 File: images/memorycost.png Graphic file (type png)
 <use images/memorycost.png>
-Package pdftex.def Info: images/memorycost.png  used on input line 419.
+Package pdftex.def Info: images/memorycost.png  used on input line 467.
 (pdftex.def)             Requested size: 272.1676pt x 204.13754pt.
- [65 <./images/allentropies.png> <./images/memorycost.png>] [66]
-<images/erasedbits.png, id=900, 462.528pt x 346.896pt>
+ [66 <./images/allentropies.png> <./images/memorycost.png>] [67]
+<images/erasedbits.png, id=904, 462.528pt x 346.896pt>
 File: images/erasedbits.png Graphic file (type png)
 <use images/erasedbits.png>
-Package pdftex.def Info: images/erasedbits.png  used on input line 458.
+Package pdftex.def Info: images/erasedbits.png  used on input line 506.
 (pdftex.def)             Requested size: 272.1676pt x 204.13754pt.
-) (./Chapters/05-spekkenscont.tex [67] [68 <./images/erasedbits.png>]
+) (./Chapters/05-spekkenscont.tex [68] [69 <./images/erasedbits.png>]
 Chapter 5.
 ------------------------------------------------------------------------------
  5 A revised notion of classicality \\ Spekkens non-contextuality
 ------------------------------------------------------------------------------
-[69
+[70
 
-] [70] [71] [72] [73] [74]
-<images/kcbsspekkens.png, id=956, 803.25093pt x 805.50937pt>
+] [71] [72] [73] [74] [75]
+<images/kcbsspekkens.png, id=960, 803.25093pt x 805.50937pt>
 File: images/kcbsspekkens.png Graphic file (type png)
 <use images/kcbsspekkens.png>
 Package pdftex.def Info: images/kcbsspekkens.png  used on input line 84.
 (pdftex.def)             Requested size: 453.60808pt x 454.8924pt.
-) (./Appendices/AppendixA.tex [75] [76 <./images/kcbsspekkens.png>]
+) (./Appendices/AppendixA.tex [76] [77 <./images/kcbsspekkens.png>]
 Appendix A.
 ------------------------------------------------------------------------------
  A An Appendix
 ------------------------------------------------------------------------------
-) [77
+) [78
 
 ]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-(./Thesis.bbl) [78
+(./Thesis.bbl) [79
 
 
 ]
-<declaration-originality.pdf, id=978, 597.55246pt x 845.07718pt>
+<declaration-originality.pdf, id=982, 597.55246pt x 845.07718pt>
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf>
 Package pdftex.def Info: declaration-originality.pdf  used on input line 105.
@@ -834,7 +839,7 @@ File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf>
 Package pdftex.def Info: declaration-originality.pdf  used on input line 105.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-<declaration-originality.pdf, id=981, page=1, 597.55246pt x 845.07718pt>
+<declaration-originality.pdf, id=985, page=1, 597.55246pt x 845.07718pt>
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
@@ -860,7 +865,7 @@ File: declaration-originality.pdf Graphic file (type pdf)
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
  105.
 (pdftex.def)             Requested size: 598.18013pt x 845.96486pt.
- [79 <./declaration-originality.pdf>]
+ [80 <./declaration-originality.pdf>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
  (./Thesis.aux)
@@ -875,9 +880,9 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
  ) 
 Here is how much of TeX's memory you used:
- 14808 strings out of 482555
- 217151 string characters out of 5952144
- 502583 words of memory out of 5000000
+ 14809 strings out of 482555
+ 217158 string characters out of 5952144
+ 501583 words of memory out of 5000000
  29932 multiletter control sequences out of 15000+600000
  553998 words of font info for 107 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -910,10 +915,10 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Thesis.pdf (84 pages, 1772841 bytes).
+Output written on Thesis.pdf (85 pages, 1776603 bytes).
 PDF statistics:
- 1173 PDF objects out of 1200 (max. 8388607)
- 976 compressed objects within 10 object streams
- 229 named destinations out of 1000 (max. 500000)
+ 1178 PDF objects out of 1200 (max. 8388607)
+ 980 compressed objects within 10 object streams
+ 230 named destinations out of 1000 (max. 500000)
  433 words of extra memory for PDF output out of 10000 (max. 10000000)
 

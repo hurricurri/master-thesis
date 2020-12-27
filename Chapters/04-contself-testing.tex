@@ -206,8 +206,56 @@ V_2^{\dag}V_2=T\begin{pmatrix} \mathbb{1}_r & 0_{r,d-r} \end{pmatrix} \begin{pma
 and the Frobenius distance to $\Tilde{V}_2$ is
 \begin{equation*}
 \|\Tilde{V}_2-V_2\|_F = \left\|S\left[\Tilde{\Sigma}-\begin{pmatrix}
-\mathbb{1}_r \\ 0_{d-r,r}\end{pmatrix}\right]T^{\dag}\right\|_F = \|\|_F
+\mathbb{1}_r \\ 0_{d-r,r}\end{pmatrix}\right]T^{\dag}\right\|_F=\operatorname{tr}\left(\left[\Tilde{\Sigma}^{\dag}-\begin{pmatrix} \mathbb{1}_r & 0_{r,d-r}\end{pmatrix}\right]\left[\Tilde{\Sigma}-\begin{pmatrix} \mathbb{1}_r \\ 0_{d-r,r}\end{pmatrix}\right]\right)
 \end{equation*}
+Now, let $r'$ be the rank of $\Tilde{V}_2$, and $\Tilde{\sigma_1}\geq\dots\Tilde{\sigma}_{r'}>0$ the non-zero singular values of $\Tilde{V}_2$. Again, w.l.o.g.\
+\begin{equation*}
+\Tilde{\Sigma}^{\dag}=
+\begin{pmatrix}
+\Tilde{\sigma}^2_1 &&& \\
+&\ddots&& \\
+&&\Tilde{\sigma}^2_{r'}& \\
+&&&0_{r-r'}\\[0.1em]
+\multicolumn{4}{c}{0_{d-r,r}}
+\end{pmatrix}.
+\end{equation*}
+Hence, $\|\Tilde{V}_2-V_2\|_F$ can be re-written like
+\begin{align*}
+\|\Tilde{V}_2-V_2\|_F=\operatorname{tr}\left(
+\begin{pmatrix}
+\Tilde{\sigma}_1^2&&&\\
+&\ddots&&\\
+&&\Tilde{\sigma}_{r'}^2&\\
+&&& 0_{r-r'}
+\end{pmatrix} -2
+\begin{pmatrix}
+\Tilde{\sigma}_1&&&\\
+&\ddots&&\\
+&&\Tilde{\sigma}_{r'}&\\
+&&& 0_{r-r'}
+\end{pmatrix}+\mathbb{1}_r\right) & =\sum_{i=1}^{r'}(\Tilde{\sigma}_i^2-2\Tilde{\sigma}_i+1)\\ & =\sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2.
+\end{align*}
+The condition $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\epsilon\frac{n}{\sigma_{\text{min}}^2}$ implies
+\begin{align*}
+\left\|T
+\begin{pmatrix}
+\Tilde{\sigma}_1^2&&& \\
+&\ddots&& \\
+&&\Tilde{\sigma}_{r'}^2& \\
+&&&0_{r-r'}
+\end{pmatrix}T^{\dag}-\mathbb{1}_r\right\|_F & =\sum_{i=1}^{r'}(\Tilde{\sigma}_i^4-2\Tilde{\sigma}_i^2+1) + (r-r') \\
+& = \sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2(\Tilde{\sigma}_i+1)^2 + (r-r')\leq \epsilon\frac{n}{\sigma_{\text{min}}^2},
+\end{align*}
+which in particular implies that for $\epsilon<\frac{\sigma_{\text{min}}^2}{n}$ the rank of $\Tilde{V}_2$ must match that of $A^{\dag}$, i.e. $r=r'$. Furthermore, we find that
+\begin{equation*}
+\|\Tilde{V}_2-V_2\|_F = \sum_{i=1}^r(\Tilde{\sigma_i}-1)^2\leq\epsilon\frac{n}{\sigma_{\text{min}}^2}\thinspace.
+\end{equation*}
+This gives us the desired intermediate result:
+\begin{align*}
+\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \|B^{\dag}-\Tilde{V_2}\Sigma_r W_1^{\dag}\|_F + \|(\Tilde{V}_2-V_2)\Sigma_r W_1^{\dag}\|_F & \leq \epsilon\frac{n}{\sigma_{\text{min}}^2}+\epsilon\frac{n}{\sigma_{\text{min}}^2}\|\Sigma_r\|_F\\
+& \leq \epsilon\frac{n}{\sigma_{\text{min}}^2}(1+\sqrt{n}\sigma_{\text{max}}),
+\end{align*}
+where $\sigma_{\text{max}}$ is the maximum non-zero singular value of $A^{\dag}$.
 \end{proof}
 
 Having distilled the main proof components into three auxiliary theorems, Lemmas \ref{lem:kcbsunique}-\ref{lem:closegramdecomp}, we will now demonstrate that these imply the desired self-testing result. CITE for the most part omits these final proof steps. Section \ref{sec:kscontass} will provide an in-depth discussion about all of the assumptions that go into the self-testing protocol.

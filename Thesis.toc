@@ -22,17 +22,17 @@
 \contentsline {chapter}{\numberline {3}Self-testing}{43}{chapter.87}%
 \contentsline {chapter}{\numberline {4}Self-testing via KS non-contextuality inequalities}{50}{chapter.100}%
 \contentsline {section}{\numberline {4.1}Preceding results}{50}{section.101}%
-\contentsline {section}{\numberline {4.2}Assumptions}{57}{section.108}%
-\contentsline {section}{\numberline {4.3}Sequential measurements and the memory assumption}{58}{section.114}%
-\contentsline {subsection}{\numberline {4.3.1}Setting and preliminary considerations}{60}{subsection.116}%
-\contentsline {subsection}{\numberline {4.3.2}Input-output processes as information transducers}{61}{subsection.117}%
-\contentsline {subsection}{\numberline {4.3.3}Memory-optimal classical simulation of quantum correlations}{63}{subsection.122}%
-\contentsline {subsection}{\numberline {4.3.4}Classical simulations dissipate heat}{66}{subsection.125}%
-\contentsline {chapter}{\numberline {5}A revised notion of classicality \\ Spekkens non-contextuality}{69}{chapter.133}%
-\contentsline {section}{\numberline {5.1}Outcome determinism for unsharp measurements (ODUM)}{69}{section.134}%
-\contentsline {section}{\numberline {5.2}Operational approach due to Spekkens}{70}{section.135}%
-\contentsline {section}{\numberline {5.3}Spekkens non-contextuality inequalities \\ KCBS revisited}{75}{section.139}%
+\contentsline {section}{\numberline {4.2}Assumptions}{58}{section.108}%
+\contentsline {section}{\numberline {4.3}Sequential measurements and the memory assumption}{59}{section.114}%
+\contentsline {subsection}{\numberline {4.3.1}Setting and preliminary considerations}{61}{subsection.116}%
+\contentsline {subsection}{\numberline {4.3.2}Input-output processes as information transducers}{62}{subsection.117}%
+\contentsline {subsection}{\numberline {4.3.3}Memory-optimal classical simulation of quantum correlations}{64}{subsection.122}%
+\contentsline {subsection}{\numberline {4.3.4}Classical simulations dissipate heat}{67}{subsection.125}%
+\contentsline {chapter}{\numberline {5}A revised notion of classicality \\ Spekkens non-contextuality}{70}{chapter.133}%
+\contentsline {section}{\numberline {5.1}Outcome determinism for unsharp measurements (ODUM)}{70}{section.134}%
+\contentsline {section}{\numberline {5.2}Operational approach due to Spekkens}{71}{section.135}%
+\contentsline {section}{\numberline {5.3}Spekkens non-contextuality inequalities \\ KCBS revisited}{76}{section.139}%
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}An Appendix}{77}{appendix.141}%
+\contentsline {chapter}{\numberline {A}An Appendix}{78}{appendix.141}%
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{78}{dummy.142}%
+\contentsline {chapter}{Bibliography}{79}{dummy.142}%
