@@ -1,0 +1,18 @@
+\begin{table}[h!]
+\begin{tabular}{|| l l l l l ||}
+\hline
+\multicolumn{3}{|| c}{Orthogonal triad} & Other rays & The first ray is green because of \\ [0.5ex]
+\hline\hline\rule{0pt}{3ex}\break
+\textbf{001} & 100 & 010 & 110 1$\bar{1}$0 & choice of z axis \\
+\textbf{101} & $\bar{1}01$ & \textit{010} & & choice of x vs -x \\ 
+\textbf{011} & $0\bar{1}1$ & \textit{100} & & choice of y vs -y \\
+$\mathbf{1\bar{1}2}$ & $\bar{1}12$ & $\mathit{110}$ & $\bar{2}$01 021& choice of x vs y \\
+\textbf{102} & $\mathit{\bar{2}01}$ & $\mathit{010}$ & $\bar{2}$11 & orthogonality to second and third rays \\
+\textbf{211} & $\mathit{0\bar{1}1}$ & $\mathit{\bar{2}11}$ & $\bar{1}$02 & orthogonality to second and third rays \\ 
+\textbf{201} & $\mathit{010}$ & $\mathit{\bar{1}02}$ & $\bar{1}\bar{1}$2 & orthogonality to second and third rays \\
+\textbf{112} & $\mathit{1\bar{1}0}$ & $\mathit{\bar{1}\bar{1}2}$ & $0\bar{2}$1 & orthogonality to second and third rays \\
+\textbf{012} & $\mathit{100}$ & $\mathit{0\bar{2}1}$ & 1$\bar{2}$1 & orthogonality to second and third rays \\
+\textbf{121} & $\mathit{\bar{1}01}$ & $\mathit{1\bar{2}1}$ & 0$\bar{1}$2 & orthogonality to second and third rays \\ [1ex] 
+\hline 
+\end{tabular} 
+\end{table}

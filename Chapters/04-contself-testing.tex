@@ -54,14 +54,14 @@ We will omit the proofs of Lemmas \ref{lem:kcbsunique} and \ref{lem:epssuboptgra
 The proof of Lemma \ref{lem:kcbsunique} utilizes SDP duality theory and shows a sufficient condition for the unicity of $X^*_n$ to be satisfied by explicit construction. It applies only to the class of odd $n$-cycle scenarios, as it makes use of the cyclic exclusivity constraints that enter the Lovász SDP \ref{eqn:lovaszsdp}. Lemma \ref{lem:epssuboptgram} is a general result for the optimization problem \ref{eqn:lovaszsdp}, and as such applies to arbitrary exclusivity graphs. Like Lemma \ref{lem:kcbsunique}, the proof of Lemma \ref{lem:epssuboptgram} makes heavy use of SDP duality. 
 
 \begin{proof}\emph{(of Lemma \ref{lem:closegramdecomp})}\hfill\break
-The proof is in large parts a generalization of the proof of Theorem 7.3.11 in CITE, which only considers the noise-less case $\epsilon=0$, and for the most part adopt their notation. 
+The proof is a generalization of the proof of Theorem 7.3.11 in CITE, which only considers the noise-less case $\epsilon=0$, and we for the most part will adopt their notation. 
 
-Define $A$, $B$ $\in\mathbb{C}^{n,d}$ as the matrices that have $\{\vert u_i\rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ and $\{\vert \Tilde{u}_i \rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ as rows, respectively. The Gram matrices $\Tilde{X}$ and $X^*$ are then given by $X^*=AA^{\dag}$ and $\Tilde{X}=BB^{\dag}$. 
+Define $A$, $B$ $\in\mathbb{C}^{n,d}$ as the matrices with rows $\{\vert u_i\rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ and $\{\vert \Tilde{u}_i \rangle\}_{i=1}^n\subset\mathbb{C}^{d}$, respectively. The Gram matrices $\Tilde{X}$ and $X^*$ are given by $X^*=AA^{\dag}$ and $\Tilde{X}=BB^{\dag}$. 
 
-Let $\mathbb{C}^{d,n}\ni A^\dag = V\Sigma W^\dag$ be a singular value decomposition (SVD) of $A^\dag$, $V\in\mathbb{C}^{d,d}$ and $W\in\mathbb{C}^{n,n}$ being unitary matrices, and $\Sigma$ a rectangular diagonal matrix containing the singular values of $A^\dag$. By definition, 
+Let $A^\dag = V\Sigma W^\dag$ be a singular value decomposition (SVD) of $A^\dag$, $V\in\mathbb{C}^{d,d}$ and $W\in\mathbb{C}^{n,n}$ being unitary matrices, and $\Sigma$ a rectangular diagonal matrix containing the singular values of $A^\dag$. By definition, 
 \begin{equation*}
-AA^\dag=(A^\dag)^{\dag} A^{\dag} = W\Sigma^\dag\Sigma W^\dag = W\Lambda W^\dag,
-\end{equation*} where we have defined $\mathbb{C}^{n,n}\ni\Lambda\coloneqq\Sigma^\dag\Sigma$. Denote the positive singular values of $A^\dag$, ordered according to magnitude, by $\sigma_1 \geq \dots \geq \sigma_r > 0$, where $r$ is the rank of $A^\dag$. Note that $A$ and $A^{\dag}$ have identical singular values. As acting with permutation matrices on $V$, $W^{\dag}$ preserves unitarity, we can w.l.o.g\ assume
+X^*=AA^\dag=(A^\dag)^{\dag} A^{\dag} = W\Sigma^\dag\Sigma W^\dag = W\Lambda W^\dag,
+\end{equation*} where we have defined $\mathbb{C}^{n,n}\ni\Lambda\coloneqq\Sigma^\dag\Sigma$. Denote the non-zero singular values of $A^\dag$, ordered according to magnitude, by $\sigma_1 \geq \dots \geq \sigma_r > 0$, where $r$ is the rank of $A^\dag$. Note that $A$ and $A^{\dag}$ have identical singular values. As acting with permutation matrices on $V$, $W^{\dag}$ preserves unitarity, we can w.l.o.g\ assume
 \begin{equation*}
 \Lambda = 
 \begin{pmatrix}
@@ -80,10 +80,15 @@ Further, let
 & \ddots & & \\
 & & \sigma_r\\
 \end{pmatrix}\in\mathbb{C}^{r,r}
-\end{equation*} and partition $W\in\mathbb{C}^{n,n}$ like $(W_1\thinspace W_2)$, with $W_1\in\mathbb{C}^{n,r}$ and $W_2\in\mathbb{C}^{n,n-r}$. Theorem 7.3.2 in CITE implies that there exists an isometry $V_1\in\mathbb{C}^{d,r}$ such that 
+\end{equation*} and partition $W\in\mathbb{C}^{n,n}$ like 
+$\begin{pmatrix}
+W_1 & W_2
+\end{pmatrix}$, with $W_1\in\mathbb{C}^{n,r}$ and $W_2\in\mathbb{C}^{n,n-r}$. Theorem 7.3.2 in CITE implies that there exists an isometry $V_1\in\mathbb{C}^{d,r}$ such that 
 \begin{equation*}
 A^{\dag}=V_1\Sigma_r W_1^{\dag}.
 \end{equation*}
+The first step towards proving Lemma \ref{lem:closegramdecomp} is to generalize the result of Theorem 7.3.2 in CITE. Concretely, we want to show that $B^{\dag}$, obeying $(B^{\dag})^{\dag}B^{\dag}\approx X^* = W\Lambda W^{\dag}$, can be approximately written like $B^{\dag}\approx V_2\Sigma_rW_1^{\dag}$, where $V_2\in\mathbb{C}^{d,r}$ is an isometry:
+
 By definition,
 \begin{equation*}
 (B^{\dag})^{\dag}B^{\dag}=\Tilde{X}\stackrel{\epsilon}{\approx}X^*=W\Lambda W^{\dag}.
@@ -95,7 +100,10 @@ D\coloneqq\Sigma_r\oplus\mathbb{1}_{n-r}\in\mathbb{C}^{n,n}
 \begin{equation*}
 X\coloneqq B^{\dag} W D^{-1}\in\mathbb{C}^{d,n}.
 \end{equation*}
-We partition $X$ like $X=(\Tilde{V_2}\thinspace Z)$, where $\Tilde{V_2}\in\mathbb{C}^{d,r}$.
+We partition $X$ like $X=
+\begin{pmatrix}
+\Tilde{V_2} &  Z
+\end{pmatrix}$, where $\Tilde{V_2}\in\mathbb{C}^{d,r}$.
 It follows that
 \begin{alignat*}{2}
 X^{\dag}X & = D^{-1}W^{\dag}BB^{\dag}WD^{-1} && \\[0.2em]
@@ -155,18 +163,18 @@ As the Frobenius norm is submultiplicative, i.e. $\|AB\|_F\leq\|A\|_F\|B\|_F$, w
 \end{pmatrix}
 \right\|_F\;\leq\;\|D^{-1}\|^{\textstyle ^2}_F\;\|\Tilde{X}-X^{*}\|_F\; \leq\; \epsilon\thinspace\|D^{-1}\|_F^{\textstyle ^2}\;\stackrel{(\bigtriangleup)}{\leq}\;\epsilon\thinspace \frac{n}{\sigma_{\text{min}}^2}\thinspace,
 \end{equation*}
-provided that the smallest singular value $\sigma_{\text{min}}\leq 1$. For the KCBS scenario, $n=5+1$, $\sigma_{\text{min}}=\frac{1}{2}(\sqrt{5}-1)\approx 0.618$. The inequality $(\bigtriangleup)$ holds because
+provided that the smallest singular value $\sigma_{\text{min}}\leq 1$. For the KCBS scenario, $n=5+1$, we find $\sigma^2_{\text{min}}=\frac{1}{2}(\sqrt{5}-1)\approx 0.618$. The inequality $(\bigtriangleup)$ holds because
 \begin{equation*}
 \|D^{-1}\|_F^{\textstyle ^2} = \left(\sqrt{\sum_{i=1}^r \frac{1}{\sigma_i^2}+(n-r)}\;\right)^2=\sum_{i=1}^r\frac{1}{\sigma_i^2}+(n-r)\leq\frac{n}{\sigma_{\text{min}}^2}\thinspace. 
 \end{equation*}
 Therefore,
-\begin{align*}
-& \|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F\leq\;\epsilon\frac{n}{\sigma_{\text{min}}^2} \\[0.5em]
-& \|Z\|_F \stackrel{(\square)}{\leq} \|Z^{\dag}Z\|_F \leq \epsilon\frac{n}{\sigma_{\text{min}}^2},
-\end{align*}
+\begin{alignat*}{2}
+& \|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F\leq\;\epsilon\frac{n}{\sigma_{\text{min}}^2} && \text{ and}\\[0.5em]
+& \|Z\|_F \stackrel{(\square)}{\leq} \|Z^{\dag}Z\|_F \leq \epsilon\frac{n}{\sigma_{\text{min}}^2}&&,
+\end{alignat*}
 where the inequality $(\square)$ holds because $\|A\|_F\geq\operatorname{tr}(A)$ in general. 
 
-We now generalize the result of Theorem 7.3.2 in CITE. Concretely, we want to show that $B^{\dag}$, obeying $(B^{\dag})^{\dag}B^{\dag}\approx X^* = W\Lambda W^{\dag}$, can be approximately written like $B^{\dag}\approx V_2\Sigma_rW_1^{\dag}$, where $V_2\in\mathbb{C}^{d,r}$ is a unitary matrix.
+
 By definition, $X=B^{\dag}WD^{-1}$, and hence
 \begin{equation*}
 B^{\dag}=XDW^{\dag} = 
@@ -203,7 +211,7 @@ V_2\coloneqq S \begin{pmatrix} \mathbb{1}_r \\ 0_{d-r,r} \end{pmatrix} T^{\dag}.
 \begin{equation*}
 V_2^{\dag}V_2=T\begin{pmatrix} \mathbb{1}_r & 0_{r,d-r} \end{pmatrix} \begin{pmatrix} \mathbb{1}_r \\ 0_{d-r,r} \end{pmatrix} T^{\dag}=T\thinspace \mathbb{1}_r \thinspace T^{\dag} = \mathbb{1}_r,
 \end{equation*}
-and the Frobenius distance to $\Tilde{V}_2$ is
+and its Frobenius distance to $\Tilde{V}_2$ is
 \begin{equation*}
 \|\Tilde{V}_2-V_2\|_F = \left\|S\left[\Tilde{\Sigma}-\begin{pmatrix}
 \mathbb{1}_r \\ 0_{d-r,r}\end{pmatrix}\right]T^{\dag}\right\|_F=\operatorname{tr}\left(\left[\Tilde{\Sigma}^{\dag}-\begin{pmatrix} \mathbb{1}_r & 0_{r,d-r}\end{pmatrix}\right]\left[\Tilde{\Sigma}-\begin{pmatrix} \mathbb{1}_r \\ 0_{d-r,r}\end{pmatrix}\right]\right)
@@ -212,16 +220,16 @@ Now, let $r'$ be the rank of $\Tilde{V}_2$, and $\Tilde{\sigma_1}\geq\dots\Tilde
 \begin{equation*}
 \Tilde{\Sigma}^{\dag}=
 \begin{pmatrix}
-\Tilde{\sigma}^2_1 &&& \\
+\Tilde{\sigma}_1 &&& \\
 &\ddots&& \\
-&&\Tilde{\sigma}^2_{r'}& \\
+&&\Tilde{\sigma}_{r'}& \\
 &&&0_{r-r'}\\[0.1em]
 \multicolumn{4}{c}{0_{d-r,r}}
 \end{pmatrix}.
 \end{equation*}
 Hence, $\|\Tilde{V}_2-V_2\|_F$ can be re-written like
 \begin{align*}
-\|\Tilde{V}_2-V_2\|_F=\operatorname{tr}\left(
+\|\Tilde{V}_2-V_2\|_F & =\operatorname{tr}\left(
 \begin{pmatrix}
 \Tilde{\sigma}_1^2&&&\\
 &\ddots&&\\
@@ -233,7 +241,7 @@ Hence, $\|\Tilde{V}_2-V_2\|_F$ can be re-written like
 &\ddots&&\\
 &&\Tilde{\sigma}_{r'}&\\
 &&& 0_{r-r'}
-\end{pmatrix}+\mathbb{1}_r\right) & =\sum_{i=1}^{r'}(\Tilde{\sigma}_i^2-2\Tilde{\sigma}_i+1)\\ & =\sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2.
+\end{pmatrix}+\mathbb{1}_r\right)\\[0.5em] &  =\sum_{i=1}^{r'}(\Tilde{\sigma}_i^2-2\Tilde{\sigma}_i+1) + (r-r') =\sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2+(r-r').
 \end{align*}
 The condition $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\epsilon\frac{n}{\sigma_{\text{min}}^2}$ implies
 \begin{align*}
@@ -244,18 +252,50 @@ The condition $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\epsilon\fra
 &&\Tilde{\sigma}_{r'}^2& \\
 &&&0_{r-r'}
 \end{pmatrix}T^{\dag}-\mathbb{1}_r\right\|_F & =\sum_{i=1}^{r'}(\Tilde{\sigma}_i^4-2\Tilde{\sigma}_i^2+1) + (r-r') \\
-& = \sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2(\Tilde{\sigma}_i+1)^2 + (r-r')\leq \epsilon\frac{n}{\sigma_{\text{min}}^2},
+& = \sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2(\Tilde{\sigma}_i+1)^2 + (r-r')\leq \epsilon\frac{n}{\sigma_{\text{min}}^2}\;,
 \end{align*}
-which in particular implies that for $\epsilon<\frac{\sigma_{\text{min}}^2}{n}$ the rank of $\Tilde{V}_2$ must match that of $A^{\dag}$, i.e. $r=r'$. Furthermore, we find that
+which in particular implies that, for $\epsilon<\frac{\sigma_{\text{min}}^2}{n}$, the rank of $\Tilde{V}_2$ must match that of $A^{\dag}$, i.e. $r=r'$. Additionally, $\Tilde{V}_2$ is approximately isometric:
 \begin{equation*}
 \|\Tilde{V}_2-V_2\|_F = \sum_{i=1}^r(\Tilde{\sigma_i}-1)^2\leq\epsilon\frac{n}{\sigma_{\text{min}}^2}\thinspace.
 \end{equation*}
-This gives us the desired intermediate result:
+Together, this gives us the desired intermediate result:
 \begin{align*}
-\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \|B^{\dag}-\Tilde{V_2}\Sigma_r W_1^{\dag}\|_F + \|(\Tilde{V}_2-V_2)\Sigma_r W_1^{\dag}\|_F & \leq \epsilon\frac{n}{\sigma_{\text{min}}^2}+\epsilon\frac{n}{\sigma_{\text{min}}^2}\|\Sigma_r\|_F\\
-& \leq \epsilon\frac{n}{\sigma_{\text{min}}^2}(1+\sqrt{n}\sigma_{\text{max}}),
+\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \|B^{\dag}-\Tilde{V_2}\Sigma_r W_1^{\dag}\|_F + \|(\Tilde{V}_2-V_2)\Sigma_r W_1^{\dag}\|_F & \leq \epsilon\frac{n}{\sigma_{\text{min}}^2}+\epsilon\frac{n}{\sigma_{\text{min}}^2}\|\Sigma_r\|_F\\[0.5em]
+& \leq \epsilon\frac{n}{\sigma_{\text{min}}^2}(1+\sqrt{n}\thinspace\sigma_{\text{max}}),
 \end{align*}
-where $\sigma_{\text{max}}$ is the maximum non-zero singular value of $A^{\dag}$.
+where $\sigma_{\text{max}}$ is the maximum singular value of $A^{\dag}$. For the KCBS scenario, $n=5+1$, $\sigma_{\text{max}}=\sqrt{2}$, and consequently $\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \kappa\epsilon$, where $\kappa \approx 43.34$.
+
+To recap, we have just shown that
+\begin{align*}
+A^{\dag} & =V_1\Sigma_r W_1^{\dag} \\[0.3em]
+B^{\dag} & \stackrel{\mathcal{O}(\epsilon)}{\approx} V_2\Sigma_r W_1^{\dag},
+\end{align*}
+where $V_2$ is an isometry. The next proof step is to show that there exists a unitary $U\in\mathbb{C}^{d,d}$ such that $B^{\dag}\approx U A^{\dag}$.
+
+According to Theorem 2.1.18 in CITE, there exists a unitary $U\in\mathbb{C}^{d,d}$ such that $V_2=UV_1$. This unitary $U$ also relates the matrices $B^{\dag}$ and $A^{\dag}$, as
+\begin{equation*}
+B^{\dag}\stackrel{\mathcal{O}(\epsilon)}{\approx}V_2\Sigma_r W_1^{\dag}= UV_1\Sigma_r W_1^{\dag}=UA^{\dag}.
+\end{equation*} 
+Finally, we can use this result to bound the distance between the two Gram decompositions $\{u_i\}_{i=1}^n$ and $\{\Tilde{u}_i\}_{i=1}^n$, and thereby conclude the proof:
+\begin{align*}
+\|B^{\dag}-UA^{\dag}\|_F&=\|
+\begin{pmatrix}
+\Tilde{u}_1 \;| & \dots & |\; \Tilde{u}_n
+\end{pmatrix}-U
+\begin{pmatrix}
+u_1 \;| & \dots &  | \; u_n
+\end{pmatrix} \|_F \\[0.3em]
+& = \|
+\begin{pmatrix}
+\Tilde{u}_1-U u_1\; | &\dots& |\;\Tilde{u}_n-U u_n
+\end{pmatrix}
+\|_F\leq\mathcal{O}(\epsilon),
+\end{align*}
+where vertical lines delimit columns.
+Since the Frobenius norm of an $n\times m$ matrix is just the two norm of the $(n\cdot m)$-long vector containing all matrix entries, we have
+\begin{equation*}
+\forall i\in\{1,\dots,n\}: \|\Tilde{u}_i-U u_i\|_2 \leq \mathcal{O}(\epsilon).
+\end{equation*}
 \end{proof}
 
 Having distilled the main proof components into three auxiliary theorems, Lemmas \ref{lem:kcbsunique}-\ref{lem:closegramdecomp}, we will now demonstrate that these imply the desired self-testing result. CITE for the most part omits these final proof steps. Section \ref{sec:kscontass} will provide an in-depth discussion about all of the assumptions that go into the self-testing protocol.
@@ -338,7 +378,7 @@ The following is an as comprehensive as possible list of explicit or implicit as
     \begin{itemize}
         \item system not disturbed between measurements
         \item each measurement device is used only once
-        \item information carrying capacity of the unknown system does not exceed ``simulatable" bound
+        \item information carrying capacity of the unknown system does not exceed ``simulable" bound
         \item alternatively: Landauer's principle, ability to detect Landauer heat of the order $k_B T$ per measurement
     \end{itemize}
 \end{enumerate}
