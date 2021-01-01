@@ -33,7 +33,9 @@
 \contentsline {section}{\numberline {5.2}Operational approach due to Spekkens}{72}{section.135}%
 \contentsline {section}{\numberline {5.3}Spekkens non-contextuality inequalities \\ KCBS revisited}{77}{section.139}%
 \contentsline {chapter}{\numberline {6}Two protocols based on Spekkens contextuality}{78}{chapter.140}%
+\contentsline {section}{\numberline {6.1}Self-testing from approximately operationally equivalent preparations and bounded memory}{78}{section.141}%
+\contentsline {subsection}{\numberline {6.1.1}Step 6a: Certifying quantumness}{80}{subsection.152}%
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}An Appendix}{79}{appendix.141}%
+\contentsline {chapter}{\numberline {A}An Appendix}{81}{appendix.153}%
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{80}{dummy.142}%
+\contentsline {chapter}{Bibliography}{82}{dummy.154}%

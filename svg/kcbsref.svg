@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -15,38 +13,39 @@
    sodipodi:docname="kcbsref.svg"
    viewBox="0 0 1122.5197 793.70083"
    version="1.0"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    width="297mm"
    height="210mm">
   <sodipodi:namedview
      id="namedview12152"
      fit-margin-left="0"
-     inkscape:zoom="0.50981697"
+     inkscape:zoom="1.5658199"
      borderopacity="1"
      inkscape:current-layer="svg36957"
-     inkscape:cx="617.97445"
+     inkscape:cx="763.9039"
      inkscape:guide-bbox="true"
-     inkscape:window-maximized="0"
+     inkscape:window-maximized="1"
      showgrid="false"
      fit-margin-right="0"
      showguides="true"
      bordercolor="#666666"
-     inkscape:window-x="72"
+     inkscape:window-x="0"
      guidetolerance="10"
      objecttolerance="10"
-     inkscape:window-y="27"
+     inkscape:window-y="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1208"
+     inkscape:window-width="1280"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      pagecolor="#ffffff"
      gridtolerance="10"
-     inkscape:cy="343.88496"
+     inkscape:cy="470.56946"
      inkscape:window-height="656"
      fit-margin-top="0"
      inkscape:snap-global="false"
      inkscape:lockguides="true"
-     units="mm" />
+     units="mm"
+     inkscape:document-rotation="0" />
   <defs
      id="defs36959">
     <linearGradient
@@ -438,7 +437,7 @@
      cy="532.82288"
      rx="167.77586"
      ry="47.144295"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002" />
   <ellipse
@@ -650,7 +649,8 @@
          style="fill:#000000;stroke-width:0"
          inkscape:connector-curvature="0"
          id="path6272"
-         d="m 493.7,411.87 0.01,0.03 0.02,0.04 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.02 0.01,0.02 0.01,0.02 v 0.02 l 0.01,0.02 v 0.02 l 0.01,0.01 v 0.02 0.01 l 0.01,0.02 v 0.01 0.02 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0 0.01 0.01 0 c 0,0.18 -0.07,0.3 -0.14,0.47 l -5.33,11.31 c -0.17,0.4 -0.33,0.68 -0.75,0.68 -0.38,0 -0.7,-0.33 -0.7,-0.71 0,-0.17 0.07,-0.29 0.15,-0.47 l 5.3,-11.28 -5.28,-11.22 c -0.17,-0.34 -0.17,-0.5 -0.17,-0.54 0,-0.38 0.32,-0.71 0.7,-0.71 0.39,0 0.59,0.32 0.75,0.63 z" /></g>  </g>
+         d="m 493.7,411.87 0.01,0.03 0.02,0.04 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.02 0.01,0.02 0.01,0.02 v 0.02 l 0.01,0.02 v 0.02 l 0.01,0.01 v 0.02 0.01 l 0.01,0.02 v 0.01 0.02 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0 0.01 0.01 0 c 0,0.18 -0.07,0.3 -0.14,0.47 l -5.33,11.31 c -0.17,0.4 -0.33,0.68 -0.75,0.68 -0.38,0 -0.7,-0.33 -0.7,-0.71 0,-0.17 0.07,-0.29 0.15,-0.47 l 5.3,-11.28 -5.28,-11.22 c -0.17,-0.34 -0.17,-0.5 -0.17,-0.54 0,-0.38 0.32,-0.71 0.7,-0.71 0.39,0 0.59,0.32 0.75,0.63 z" /></g>
+  </g>
   <g
      id="g6315"
      transform="matrix(3.7795276,0,0,3.7795276,-290.00198,284.39627)"
@@ -681,7 +681,8 @@
          id="path6311"
          d="m 493.7,411.87 0.01,0.03 0.02,0.04 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.02 0.01,0.02 0.01,0.02 v 0.02 l 0.01,0.02 v 0.02 l 0.01,0.01 v 0.02 0.01 l 0.01,0.02 v 0.01 0.02 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0 0.01 0.01 0 c 0,0.18 -0.07,0.3 -0.14,0.47 l -5.33,11.31 c -0.17,0.4 -0.33,0.68 -0.75,0.68 -0.38,0 -0.7,-0.33 -0.7,-0.71 0,-0.17 0.07,-0.29 0.15,-0.47 l 5.3,-11.28 -5.28,-11.22 c -0.17,-0.34 -0.17,-0.5 -0.17,-0.54 0,-0.38 0.32,-0.71 0.7,-0.71 0.39,0 0.59,0.32 0.75,0.63 z"
          inkscape:connector-curvature="0"
-         style="fill:#000000;stroke-width:0" /></g>  </g>
+         style="fill:#000000;stroke-width:0" /></g>
+  </g>
   <g
      id="g6347"
      transform="matrix(3.7795276,0,0,3.7795276,173.37186,163.35994)"
@@ -712,7 +713,8 @@
          id="path6343"
          d="m 493.7,411.87 0.01,0.03 0.02,0.04 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.02 0.01,0.02 0.01,0.02 v 0.02 l 0.01,0.02 v 0.02 l 0.01,0.01 v 0.02 0.01 l 0.01,0.02 v 0.01 0.02 0.01 0.01 0.01 l 0.01,0.01 v 0.01 0.01 0.01 0 0.01 0.01 0 c 0,0.18 -0.07,0.3 -0.14,0.47 l -5.33,11.31 c -0.17,0.4 -0.33,0.68 -0.75,0.68 -0.38,0 -0.7,-0.33 -0.7,-0.71 0,-0.17 0.07,-0.29 0.15,-0.47 l 5.3,-11.28 -5.28,-11.22 c -0.17,-0.34 -0.17,-0.5 -0.17,-0.54 0,-0.38 0.32,-0.71 0.7,-0.71 0.39,0 0.59,0.32 0.75,0.63 z"
          inkscape:connector-curvature="0"
-         style="fill:#000000;stroke-width:0" /></g>  </g>
+         style="fill:#000000;stroke-width:0" /></g>
+  </g>
   <ellipse
      style="opacity:1;fill:none;fill-opacity:1;stroke:#989898;stroke-width:1.418;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4.254,1.418;stroke-dashoffset:0;stroke-opacity:1"
      id="path6493"
@@ -728,7 +730,7 @@
      d="M 749.75436,407.10438 V 531.84331"
      id="path968-2"
      inkscape:connector-curvature="0"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002" />
   <path
@@ -737,7 +739,7 @@
      sodipodi:nodetypes="csc"
      style="fill:none;stroke:#989898;stroke-width:2.5;stroke-opacity:1"
      inkscape:connector-curvature="0"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002" />
   <path
@@ -746,7 +748,7 @@
      style="fill:none;stroke:#000000;stroke-width:2.5"
      inkscape:connector-curvature="0"
      d="m 920.33796,533.36469 c 0,26.705 -75.771,48.354 -169.24,48.354 -93.468,0 -169.24,-21.649 -169.24,-48.354"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002" />
   <path
@@ -765,7 +767,7 @@
      inkscape:randomized="0"
      d="M 63.499994,23.345237 75.790005,50.647962 81.956677,21.376318 59.788065,41.501819 89.53266,38.321237 63.541693,23.456756 75.758191,50.762692 81.863503,21.450437 59.669119,41.507016 89.433376,38.255527 Z"
      transform="matrix(-7.5109551,-0.23424418,0.72242332,-1.7732299,1282.5901,509.69241)"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002" />
   <path
@@ -773,7 +775,7 @@
      d="M 751.57212,534.64615 684.5382,456.80414"
      id="path964-6"
      inkscape:connector-curvature="0"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002" />
   <path
@@ -781,7 +783,7 @@
      d="M 639.28026,423.86377 752.24193,531.60463"
      id="path966-0"
      inkscape:connector-curvature="0"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002" />
   <path
@@ -789,7 +791,7 @@
      d="m 819.47984,457.35644 -70.37759,74.00187"
      id="path970-6"
      inkscape:connector-curvature="0"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002" />
   <path
@@ -797,7 +799,7 @@
      d="M 746.74028,533.27505 862.16589,425.14036"
      id="path974-2"
      inkscape:connector-curvature="0"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002" />
   <circle
@@ -806,7 +808,7 @@
      cx="749.23938"
      cy="530.1615"
      r="5.1068397"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002" />
   <ellipse
@@ -816,13 +818,13 @@
      cy="429.39786"
      rx="116.60956"
      ry="28.536221"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002" />
   <g
      id="g6450-8"
      transform="matrix(2.5780626,0,0,2.5780626,414.75556,220.95027)"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002">
     <g
@@ -853,11 +855,12 @@
          id="path6446-2"
          d="m 517.34,411.87 0.02,0.03 0.01,0.04 0.01,0.03 0.02,0.03 0.01,0.02 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.02 v 0.02 l 0.01,0.02 0.01,0.02 v 0.02 l 0.01,0.02 v 0.01 0.02 l 0.01,0.01 v 0.02 0.01 l 0.01,0.02 v 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0 0.01 0.01 0 c 0,0.18 -0.06,0.3 -0.14,0.47 l -5.33,11.31 c -0.17,0.4 -0.33,0.68 -0.75,0.68 -0.37,0 -0.7,-0.33 -0.7,-0.71 0,-0.17 0.08,-0.29 0.16,-0.47 l 5.29,-11.28 -5.28,-11.22 c -0.17,-0.34 -0.17,-0.5 -0.17,-0.54 0,-0.38 0.33,-0.71 0.7,-0.71 0.39,0 0.6,0.32 0.75,0.63 z"
          inkscape:connector-curvature="0"
-         style="fill:#ff0000;stroke:#ff0000;stroke-width:0" /></g>  </g>
+         style="fill:#ff0000;stroke:#ff0000;stroke-width:0" /></g>
+  </g>
   <g
      transform="matrix(2.7179267,0,0,2.7179267,642.72319,129.95262)"
      id="g6516-3"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002">
     <g
@@ -888,11 +891,12 @@
          style="fill:#ff0000;stroke:#ff0000;stroke-width:0"
          inkscape:connector-curvature="0"
          id="path6512-2"
-         d="m 517.34,411.87 0.02,0.03 0.01,0.04 0.01,0.03 0.02,0.03 0.01,0.02 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.02 v 0.02 l 0.01,0.02 0.01,0.02 v 0.02 l 0.01,0.02 v 0.01 0.02 l 0.01,0.01 v 0.02 0.01 l 0.01,0.02 v 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0 0.01 0.01 0 c 0,0.18 -0.06,0.3 -0.14,0.47 l -5.33,11.31 c -0.17,0.4 -0.33,0.68 -0.75,0.68 -0.37,0 -0.7,-0.33 -0.7,-0.71 0,-0.17 0.08,-0.29 0.16,-0.47 l 5.29,-11.28 -5.28,-11.22 c -0.17,-0.34 -0.17,-0.5 -0.17,-0.54 0,-0.38 0.33,-0.71 0.7,-0.71 0.39,0 0.6,0.32 0.75,0.63 z" /></g>  </g>
+         d="m 517.34,411.87 0.02,0.03 0.01,0.04 0.01,0.03 0.02,0.03 0.01,0.02 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.02 v 0.02 l 0.01,0.02 0.01,0.02 v 0.02 l 0.01,0.02 v 0.01 0.02 l 0.01,0.01 v 0.02 0.01 l 0.01,0.02 v 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0 0.01 0.01 0 c 0,0.18 -0.06,0.3 -0.14,0.47 l -5.33,11.31 c -0.17,0.4 -0.33,0.68 -0.75,0.68 -0.37,0 -0.7,-0.33 -0.7,-0.71 0,-0.17 0.08,-0.29 0.16,-0.47 l 5.29,-11.28 -5.28,-11.22 c -0.17,-0.34 -0.17,-0.5 -0.17,-0.54 0,-0.38 0.33,-0.71 0.7,-0.71 0.39,0 0.6,0.32 0.75,0.63 z" /></g>
+  </g>
   <g
      id="g6588-8"
      transform="matrix(2.7398113,0,0,2.7398113,338.48664,127.55558)"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002">
     <g
@@ -923,11 +927,12 @@
          id="path6584-1"
          d="m 517.34,411.87 0.02,0.03 0.01,0.04 0.01,0.03 0.02,0.03 0.01,0.02 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.02 v 0.02 l 0.01,0.02 0.01,0.02 v 0.02 l 0.01,0.02 v 0.01 0.02 l 0.01,0.01 v 0.02 0.01 l 0.01,0.02 v 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0 0.01 0.01 0 c 0,0.18 -0.06,0.3 -0.14,0.47 l -5.33,11.31 c -0.17,0.4 -0.33,0.68 -0.75,0.68 -0.37,0 -0.7,-0.33 -0.7,-0.71 0,-0.17 0.08,-0.29 0.16,-0.47 l 5.29,-11.28 -5.28,-11.22 c -0.17,-0.34 -0.17,-0.5 -0.17,-0.54 0,-0.38 0.33,-0.71 0.7,-0.71 0.39,0 0.6,0.32 0.75,0.63 z"
          inkscape:connector-curvature="0"
-         style="fill:#ff0000;stroke:#ff0000;stroke-width:0" /></g>  </g>
+         style="fill:#ff0000;stroke:#ff0000;stroke-width:0" /></g>
+  </g>
   <g
      id="g6666-2"
      transform="matrix(2.7326117,0,0,2.7326117,590.14701,203.45041)"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002">
     <g
@@ -958,11 +963,12 @@
          id="path6662-4"
          d="m 517.34,411.87 0.02,0.03 0.01,0.04 0.01,0.03 0.02,0.03 0.01,0.02 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.02 v 0.02 l 0.01,0.02 0.01,0.02 v 0.02 l 0.01,0.02 v 0.01 0.02 l 0.01,0.01 v 0.02 0.01 l 0.01,0.02 v 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0 0.01 0.01 0 c 0,0.18 -0.06,0.3 -0.14,0.47 l -5.33,11.31 c -0.17,0.4 -0.33,0.68 -0.75,0.68 -0.37,0 -0.7,-0.33 -0.7,-0.71 0,-0.17 0.08,-0.29 0.16,-0.47 l 5.29,-11.28 -5.28,-11.22 c -0.17,-0.34 -0.17,-0.5 -0.17,-0.54 0,-0.38 0.33,-0.71 0.7,-0.71 0.39,0 0.6,0.32 0.75,0.63 z"
          inkscape:connector-curvature="0"
-         style="fill:#ff0000;stroke:#ff0000;stroke-width:0" /></g>  </g>
+         style="fill:#ff0000;stroke:#ff0000;stroke-width:0" /></g>
+  </g>
   <g
      id="g6736-7"
      transform="matrix(2.8910223,0,0,2.8910223,478.75368,93.730003)"
-     inkscape:export-filename="/home/user/Downloads/figures/kcbsref.png"
+     inkscape:export-filename="/home/user/Downloads/master-thesis/images/kcbsrefstates.png"
      inkscape:export-xdpi="96.580002"
      inkscape:export-ydpi="96.580002">
     <g
@@ -993,5 +999,6 @@
          id="path6732-3"
          d="m 517.34,411.87 0.02,0.03 0.01,0.04 0.01,0.03 0.02,0.03 0.01,0.02 0.01,0.03 0.01,0.03 0.01,0.02 0.01,0.03 0.01,0.02 v 0.02 l 0.01,0.02 0.01,0.02 v 0.02 l 0.01,0.02 v 0.01 0.02 l 0.01,0.01 v 0.02 0.01 l 0.01,0.02 v 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0 0.01 0.01 0 c 0,0.18 -0.06,0.3 -0.14,0.47 l -5.33,11.31 c -0.17,0.4 -0.33,0.68 -0.75,0.68 -0.37,0 -0.7,-0.33 -0.7,-0.71 0,-0.17 0.08,-0.29 0.16,-0.47 l 5.29,-11.28 -5.28,-11.22 c -0.17,-0.34 -0.17,-0.5 -0.17,-0.54 0,-0.38 0.33,-0.71 0.7,-0.71 0.39,0 0.6,0.32 0.75,0.63 z"
          inkscape:connector-curvature="0"
-         style="fill:#ff0000;stroke:#ff0000;stroke-width:0" /></g>  </g>
+         style="fill:#ff0000;stroke:#ff0000;stroke-width:0" /></g>
+  </g>
 </svg>
