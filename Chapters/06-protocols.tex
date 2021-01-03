@@ -1,16 +1,16 @@
 \chapter{Two protocols based on Spekkens contextuality}
-
+We now generalize the self-testing result in CITE, which was discussed in Section REF, to the framework of Spekkens contextuality. In particular, this will lift the usual restriction to projective measurements. Additional features will be discussed in Section REF. The first protocol we will consider assumes approximately operationally equivalent preparations, as well as a bounded information carrying capacity, much like the protocol in Section REF. In Section REF, we will study how imposing additional assumptions on the measurement devices allows us to relax this memory assumption.
 \section{Self-testing from approximately operationally equivalent preparations and bounded memory}
 Let $n\geq 5$ be an odd integer. The protocol we consider is reminiscent of the ideal $n$-cycle reference experiment \ref{eqn:ncycleideal}. As such, we assume an experimenter to be able to freely choose between $n$ three-outcome measurements $\{M_i\}_{i=1}^n$ with outcomes $m_1$, $m_2$, $m_3$. We assume measurements to be chosen according to a uniform distribution and denote measurement events by $m_k\vert M_i,P_0 \equiv m_k\vert M_i$, or $m_k,m_l\vert M_i,M_j, P_0 \equiv m_k,m_l\vert M_i,M_j$ for two sequential measurements. As shown in Figure REF, for ideally operating devices, the measurement events $m_1 \vert M_i$ correspond to the rank-one projectors $\vert u_i^{(n)}\rangle\langle u_i^{(n)}\vert$. Further, in the ideal case, the measurement events $m_3\vert M_i\equiv m_1\vert M_{i\oplus 1}\equiv\vert u_{i\oplus 1}^{(n)}\rangle\langle u_{i\oplus 1}^{(n)}\vert$ and the events $m_2\vert M_i$ correspond to the projectors $\mathbb{1}-\vert u_i^{(n)}\rangle\langle u_i^{(n)}\vert-\vert u_{i\oplus 1}^{(n)}\rangle\langle u_{i\oplus 1}^{(n)}\vert$, projecting onto the pure qutrit state completing the orthogonal triad $\subset \mathbb{R}^3$. In Figure REF, the events $m_3 \vert M_i$ and $m_1\vert M_{i\oplus 1}$ are non-overlapping, despite corresponding to the same ideal projectors, to highlight we do not need to assume the operational equivalence of these.
 
 \begin{figure}
-	\begin{subfigure}[t]{0.55\textwidth}
+	\begin{subfigure}[t]{0.45\textwidth}
     	\centering
     	\includegraphics[width=\textwidth]{images/mntsandpreps.png}
         \caption{}
 	\end{subfigure}
 	\hfill
-    \begin{subfigure}[t]{0.55\textwidth}
+    \begin{subfigure}[t]{0.45\textwidth}
     	\centering 
         \includegraphics[width=0.8\textwidth]{images/kcbsrefstates.png}
         \caption{}
@@ -39,5 +39,49 @@ We now elaborate on Step 6 of the protocol, detailing how an agent may post-proc
 p(m_k\vert M_i, P_{m_l\vert M_j})=\frac{p((m_k,m_l)\vert (M_i,M_j))}{\sum_{k'\in\{1,2,3\}} p((m_{k'},m_l)\vert (M_i,M_j))}.
 \end{equation}
 These retrospective preparations will be used in Section REF, where we propose a criterion to certify the quantumness of the apparatus.
+
+Additionally, the experimenter can infer the statistics $p(m_k\vert M_i, P_0)$ from the correlations $p((m_k,m_l)\vert(M_i,M_j),P_0)$:
+\begin{equation}
+\sum_{l,j}\frac{1}{n}p((m_k,m_l)\vert (M_i,M_j),P_0).
+\end{equation}
+These will become relevant in Section REF, when bounding the compatible quantum models.
 \subsection{Step 6a: Certifying quantumness}
-By coarse-graining, we obtain $3n$ binary measurements from the $n$ three-outcome measurements $M_i$. In total, we define $3n$ binary measurements and $3n$ preparations during post-processing. We denote the outcomes of the $3n$ binary measurements as $0$,$1$, where the outcome $0$ corresponds to the two coarse-grained measurement events. If we consider the ideal reference experiment REF and take the outcomes $0$, $1$ to be the eigenvalues of the binary projective measurements, one can think of these as rank-one projectors. There are $2n$ ideal binary measurements that probe the probability of finding the system in one of the $n$ one-dimensional subspaces spanned by the $n$ cycle states. The other $n$ ideal binary measurements correspond to rank-one projectors onto states in an orthogonal triad containing two cycle states. For the extent of this subsection we will for simplicity index the $3n$ binary measurements and preparations like $\{M_i\}_{i\in\{1,\dots,3n\}}$ and $\{P_i\}_{i\in\{1,\dots,3n\}}$, ordered such that the ideal measurement $M_i$
+By coarse-graining, we obtain $3n$ binary measurements from the $n$ three-outcome measurements $M_i$. In total, we define $3n$ binary measurements and $3n$ preparations during post-processing. We denote the outcomes of the $3n$ binary measurements as $0$,$1$, where the outcome $0$ corresponds to the two coarse-grained measurement events. If we consider the ideal reference experiment REF and take the outcomes $0$, $1$ to be the eigenvalues of the binary projective measurements, one can think of these as rank-one projectors. There are $2n$ ideal binary measurements that probe the probability of finding the system in one of the $n$ one-dimensional subspaces spanned by the $n$ cycle states. The other $n$ ideal binary measurements correspond to rank-one projectors onto states in an orthogonal triad containing two cycle states. For the extent of this subsection we will for simplicity index the $3n$ binary measurements and preparations like $\{M_i\}_{i\in\{1,\dots,3n\}}$ and $\{P_i\}_{i\in\{1,\dots,3n\}}$. For ideal measurements and preparations, we can choose the order such that the ideal measurement $M_i$ is the rank-one projector onto the ideal pure state preparation $P_i$. Therefore, for ideal devices, the retrospective preparations and binary measurements, if ordered in this manner, satisfy \begin{equation}
+\epsilon \coloneqq \max_i p(0\vert M_i, P_i)\stackrel{\text{ideal}}{=}0.
+\end{equation} 
+For noisy devices, we expect to find an ordering for which REF is approximately satisfied, with the parameter $\epsilon$ characterizing the amount of noise. The parameter $\epsilon$ can be determined from the observed statistics during post-processing.
+
+Apart from the noise-characterizing parameter $\epsilon$, the second relevant parameter for certifying quantumness is
+\begin{equation}
+\eta\coloneqq \min_{\substack{i,j \\ i\neq j}} p(0\vert M_i, P_j).
+\end{equation}
+For quantum devices, the parameter $\eta$ can be thought of as a measuring the maximum overlap or closeness of distinct states. As such, $\eta$ decreases as the cycle length $n$ increases. Let $m=2^k$. In Theorem REF of CITE it is proven that for a set of preparations $\{P_i\}_{i=1}^m$ and measurements $\{M_i\}_{i=1}^m$, producing statistics obeying $\epsilon<\frac{1}{4}\eta^2$, to be compatible with a (preparation) non-contextual ontological description, requires at least $k$ binary measurements in any TC set. The intuition behind this is the following: From the statistics of the $m$ preparations $\{P_i\}_{i=1}^m$ one can infer the statistics of any preparation in the convex hull of the $\{P_i\}_{i=1}^m$. If the $m$ preparations are not very ``close", as measured by $\eta$, relative to their sharpness, as measured by $\epsilon$, (this is enforced by the condition $\epsilon<\frac{1}{4}\eta^2$) then the associated probability density functions $\{\mu_i\}_{i=1}^m$ will have non-significant overlap. In particular, if we regard the $m$ probability density functions on the ontic state space $\Lambda$ as vectors $\{v_i\}_{i=1}^m$ in $\mathbb{R}^{\vert \Lambda \vert}$, then the proof of Theorem REF in CITE establishes that the $m=2^k$ vectors vary in $k$ linearly independent directions. Demanding preparation non-contextuality, every distinct preparation in the convex hull of the $\{P\}_{i=1}^n$ must produce different predictions for at least one of the measurements in a TC set. Finally, CITE notes that the function mapping a probability density function $\mu_j$, or rather the corresponding vector in $\mathbb{R}^{\vert \Lambda \vert}$ to the probability $p(m_k\vert M_i,\mu_j)$ of obtaining the outcome $m_k$ when performing the measurement $M_i$ for an initial preparation $\mu_j$ is linear. Hence, such mapping $\mathbb{R}^{\vert \Lambda \vert}\rightarrow\mathbb{R}$ is of the form $(x_1,\dots,x_{\vert \Lambda \vert})\mapsto a_1 x_1+\dots + a_n x_n = \vec{a}\cdot \vec{x}$ with $0 \leq a_i \leq 1$, and $x_i$ the components w.r.t\ the basis $\{v_i\}_{i=1}^m$. Binary measurements can therefore only distinguish between preparations along a single direction, $\vec{a}$. Preparations whose ontological representations differ w.r.t.\ directions orthogonal to $\vec{a}$, are assigned the same probabilities by the binary measurement characterized by $\vec{a}$. A TC set of measurement must contain at least $k$ binary measurements for $k$ linearly independent preparations, if we demand compatiblity with a preparation non-contextual ontological model.
+
+We now turn to the bounded memory assumption required by the protocol, which relies on the results in CITE, the relevant ones of which were sketched above. Assume that the experimenter has access to $n\geq 5$ three-outcome measurement settings, like we considered at the beginning of Section REF, where $n$ is odd (think of $n$ as the cycle-length). Further, let $k$ be the largest integer satisfying $3n\geq 2^{k+1}$. To certify quantumness, we assume that there exists a TC set of measurements with $k$ binary measurements, i.e. that $k$ binary measurements are sufficient to fully characterize the statistics of the system at hand. If we find the condition $\epsilon<\frac{1}{4}\eta^2$ to be satisfied, we consider the system to be quantum.  How does this assumption relate to the assumption of bounded memory in Section REF? If we define the information carrying capacity as 
+\begin{equation}
+\mathcal{I}\coloneqq \log_2(\text{number of states that can be perfectly distinguished})
+\end{equation},
+then assuming a TC set with $k$ measurements implies bounding the information carrying capacity $\mathcal{I}\leq k \text{bits}$. In this sense, assumptions regarding the minimal size of TC sets of measurements directly relate to bounds on the information carrying capacity. In particular, bounding the information carrying capacity $\mathcal{I}\leq k \text{bits}$ implies a finite-dimensional Hilbert space $\mathcal{H}$, $\operatorname{dim}(\mathcal{H})\leq k$.
+
+If we wish to allow for an information carrying capacity of $k$ bits, we require an apparatus consistent with a cycle length $n$ such that
+\begin{alignat}{2}
+& && 3n\geq 2^{k+1} \\
+& \iff && \log_2(3n)-1\geq k.
+\end{alignat}
+The relationship between cycle length and simulable bound on the information carrying capacity is logarithmic, as was the case for the class of protocols in Section REF, which assumed sharp measurements and cyclic compatibility relations. The price one has to pay for accounting for a greater information carrying capacity is two-fold:
+\begin{itemize}
+\item the apparatus must include additional measurement settings to be consistent with a greater cycle length $n$
+\item for a greater cycle-length $n$, a greater fidelity to the reference experiment is required, since for the ideal odd $n$-cycle scenario the relevant parameter $\frac{1}{4}\eta^2$, which bounds how sharp the measurement implementations must be for self-testing, decreases with an increasing cycle length $n$:
+\begin{equation}
+\frac{1}{4}\eta^2 = \frac{1}{2}(\frac{\pi}{n})^4.
+\end{equation}
+\end{itemize}
+
+\subsection{Step 6b: Bounding compatible quantum models}
+As discussed in Section REF, we assume a Hilbert space of bounded dimension, say dimension $\operatorname{dim}(\mathcal{H})\leq d$. We can w.l.o.g.\ take $\mathcal{H}$ to be $\mathbb{C}^k$, $k\leq d$, where $k$ is the true dimension of $\mathcal{H}$.
+
+We will now introduce the second key assumption of the protocol, which allows us to bound the quantum models compatible with the observed correlations: We assume that for all $i\in\{1,\dots,n\}$ there exists a convex combination $\{p_j^{(i)}\}_j$ of the preparations $\{P_{m_j\vert M_i}\}_j$ and a convex combination $\{q_j^{(*)}\}_j$ of the preparations $\{P_0,P_1,P_2\}$ such that these are (approximately) operationally equivalent:
+\begin{equation}
+\forall i\in\{1,\dots,n\} S_i \coloneqq \sum_{j=1}^3 p_j^{(i)}P_{m_j\vert M_i} \sim S_* \coloneqq \sum_{j=0}^2 q_j^{(*)}P_j.
+\end{equation}
+Although assuming approximate operational equivalences suffices, we will for now take the equivalences in REF to be exact. Once we establish bounds on the compatible quantum models for exact equivalences, this restriction may be relaxed. We consider two quantum preparations to be approximately operationally equivalent if the corresponding density operators are ``close" w.r.t.\ the Frobenius norm. Recall that for ideal devices and equal weights $p_j^{(i)}=q_j^{(*)}=\frac{1}{3}$, both $S_i$ and $S_{*}$ correspond to the fully mixed state $\frac{\mathbb{1}}{3}$. Note that the assumption of (approximate) operational equivalence cannot be verified on the basis of statistics alone, rendering the protocol semi-device-independent. What one can do is check whether the claim holds w.r.t.\ the available measurement settings. The reason for assuming the convex combinations $S_i$ and $S_{*}$ to be (approximately) operationally equivalent is to relate the action of the measurements $M_i$ on the preparations $P_{m_j\vert M_i}$ to how the measurements act on the initial preparation $P_0$. In particular, we want that if the measurements $M_i$ are almost projective when acting on the preparations $P_{m_j\vert M_i}$, then this also applies to the preparation $P_0$.
