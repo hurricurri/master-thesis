@@ -146,6 +146,7 @@ for $\Tilde{j}\neq j$, and
 \begin{equation}
 \sum_{k,l}{}^{'}\vert\langle \Psi_k^{m_j\vert M_i} \vert \Psi_l^{m_{j'}\vert M_i}\rangle \vert \leq 3 d^2\sqrt{\frac{2\epsilon}{\mathcal{X}}}.
 \end{equation}
+We could drop the factor $3$, since for sufficiently small $\epsilon$, the set of all vectors is linearly independent.
 \subsubsection{Orthonormal set $\subset \mathbb{C}^k$ close to the set of relevant eigenvectors}
 In the following subsection, we will bound the Frobenius distance
 \begin{equation}
@@ -160,15 +161,15 @@ is small for all $j$, $k$.
 Let $k'$ be the cardinality of the set $\mathcal{E}$.
 Define $A\in\mathbb{C}^{k,k'}$ as the matrix with columns $\mathcal{E}\subset\mathbb{C}^k$. Note that $k\geq k'$ for sufficiently small $\epsilon$, since all columns are linearly independent.The entries of the matrix $A^{\dag}A$ are essentially just the scalar products whose magnitude we bounded in Section REF. Some off-diagonal entries, namely those corresponding to the scalar product of two vectors that are part of the same spectral decomposition, are $0$. Finally, the diagonal entries of $A^{\dag}A$ are all $1$, due to normalization. Like in the proof of Lemma REF, we consider a spectral decomposition of $A$, $A=V\Sigma W^{\dag}$, and denote the rank of $A$ by $r$. Analogously to the proof of Lemma REF, we consider the matrix $\Tilde{A}=$, where we have set all diagonal entries of $\Sigma$ to $1$. The columns of $\Tilde{A}$ are orthonormal. It remains to show that $A\approx_F \Tilde{A}$:
 \begin{equation}
-\|A-\Tilde{A}\|_F=\|\begin{pmatrix} \mathbb{1_{k'}} \\ 0_{k-k',k'}\end{pmatrix} - \Sigma \|_F = \sqrt{(k'-r)+\sum_{i=1}^{r}(\sigma_i-1)^2}.
+\|A-\Tilde{A}\|_F^2=\|\begin{pmatrix} \mathbb{1_{k'}} \\ 0_{k-k',k'}\end{pmatrix} - \Sigma \|_F^2 = (k'-r)+\sum_{i=1}^{r}(\sigma_i-1)^2.
 \end{equation}
 We now use REF to bound the singular values and rank of $A$:
 \begin{equation}
-\|A^{\dag}A - \mathbb{1} \|_F = \sqrt{(k'-r)+\sum_{i=1}^r(\sigma_i^2-1)^2} \leq \mathcal{O}(d^2\sqrt{\frac{\epsilon}{\mathcal{X}}}),
+\|A^{\dag}A - \mathbb{1} \|_F^2 = (k'-r)+\sum_{i=1}^r(\sigma_i^2-1)^2 \leq \mathcal{O}(d^4\frac{\epsilon}{\mathcal{X}}),
 \end{equation}
 where the inequality follows from REF. Thus, for sufficiently small $\epsilon$ the rank of $A$ is $r=k'$, and
 \begin{equation}
-\|A-\Tilde{A}\|_F=\sqrt{\sum_{i=1}^{k'}(\sigma_i - 1)^2}\leq\sqrt{\sum_{i=1}^{k'}(\sigma_i - 1)^2(\sigma_i+1)^2}\leq\mathcal{O}(d^2\sqrt{\frac{\epsilon}{\mathcal{X}}}).
+\|A-\Tilde{A}\|_F^2=\sum_{i=1}^{k'}(\sigma_i - 1)^2\leq\sum_{i=1}^{k'}(\sigma_i - 1)^2(\sigma_i+1)^2\leq\mathcal{O}(d^4\frac{\epsilon}{\mathcal{X}}).
 \end{equation}
 As such, the orthonormal set $\bigcup\limits_{j=1}^3\{\vert \Phi_k^{m_j\vert M_i}\rangle\}_{k:p_k^{m_j\vert M_i}\geq \mathcal{X}}\subset\mathbb{C}^k$, given by the columns of $\Tilde{A}$, satisfies
 \begin{equation}
@@ -176,4 +177,33 @@ As such, the orthonormal set $\bigcup\limits_{j=1}^3\{\vert \Phi_k^{m_j\vert M_i
 \end{equation}
 Such a set can be found for all $i\in\{1,\dots,n\}$.
 \subsubsection{The measurement $M_i$ acts almost projectively on the subspace $V_{\text{relev}}^{(i)}$}
-
+We now bound the expression
+\begin{equation}
+\|F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F,
+\end{equation}
+in order to show that the measurement $M_i$ acts almost projectively on the subspace $V_{\text{relev}}^{(i)}$. As a first step, we first bound
+\begin{equation}
+\|\Pi_{\text{relev}}^{(i)}-\sum_j\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F\leq\sqrt{2}\sum_j\sum_k{}^{'}\sqrt{1-\vert \langle \Psi_k^{m_j\vert M_i} \vert \Phi_k^{m_j\vert M_i} \rangle \vert^2}.
+\end{equation}
+Notice that
+\begin{equation}
+\|A-\Tilde{A}\|_F^2=\sum_j\sum_k{}^{'}\|\vert \Psi_k^{m_j\vert M_i} \rangle - \vert \Phi_k^{m_j\vert M_i}\rangle\|_2^2=2\sum_j\sum_k{}^{'}(1-\vert\langle \Psi_k^{m_j\vert M_i} \vert \Phi_k^{m_j\vert M_i} \rangle \vert).
+\end{equation}
+We can write 
+\begin{equation}
+\vert \Phi_k^{m_j\vert M_i}\rangle = \cos(\theta_k^{m_j\vert M_i})\vert \Psi_k^{m_j\vert M_i}\rangle + \exp(i\phi_k^{m_j\vert M_i})\sin(\theta_k^{m_j\vert M_i})\vert \Psi_{k,\perp}^{m_j\vert M_i} \rangle, 
+\end{equation}
+where $\cos(\theta_k^{m_j\vert M_i})= \vert\langle \Phi_k^{m_j\vert M_i}\vert\Psi_k^{m_j\vert M_i} \rangle\vert$ for $\theta_k^{m_j\vert M_i}\in[0,\frac{\pi}{2}]$, $\phi_k^{m_j\vert M_i}$ is some phase, and $\vert \Psi_{k,\perp}^{m_j\vert M_i} \rangle$ is a state perpendicular to $\vert \Psi_k^{m_j\vert M_i}\rangle$.
+Thus, equations REF can be rewritten like
+\begin{align}
+& \|\Pi_{\text{relev}}^{(i)}-\sum_j\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F\leq\sqrt{2}\sum_j\sum_k{}^{'}\sin(\theta_k^{m_j\vert M_i}), \\
+& \|A-\Tilde{A}\|_F^2=\sum_j\sum_k{}^{'}\|\vert \Psi_k^{m_j\vert M_i} \rangle - \vert \Phi_k^{m_j\vert M_i}\rangle\|_2^2=2\sum_j\sum_k{}^{'}2\sin^2\left(\frac{\theta_k^{m_j\vert M_i}}{2}\right).
+\end{align}
+Like in Section REF, equivalence of $\|\cdot\|_1$ and $\|\cdot\|_2$ norms, allows us to write:
+\begin{equation}
+2\sum_j\sum_k{}^{'}\sin\left(\frac{\theta}{2}\right)\leq \mathcal{O}\left(d^{5/2}\sqrt{\frac{\epsilon}{\mathcal{X}}}\right).
+\end{equation}
+For all $0\leq \theta \leq 2\pi$, $2\sin(\frac{\theta}{2})-\sin(\theta)\geq 0$, therefore
+\begin{equation}
+\|\Pi_{\text{relev}}^{(i)}-\sum_j\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F = \sqrt{2}\sum_j\sum_k{}^{'}\sin(\theta_k^{m_j\vert M_i})\leq\mathcal{O}\left(d^{5/2}\sqrt{\frac{\epsilon}{\mathcal{X}}}\right).
+\end{equation}

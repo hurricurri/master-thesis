@@ -40,6 +40,6 @@
 \contentsline {subsubsection}{\numberline {6.1.2.2}Orthonormal set $\subset \mathbb {C}^k$ close to the set of relevant eigenvectors}{85}{subsubsection.176}%
 \contentsline {subsubsection}{\numberline {6.1.2.3}The measurement $M_i$ acts almost projectively on the subspace $V_{\text {relev}}^{(i)}$}{86}{subsubsection.183}%
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}An Appendix}{87}{appendix.184}%
+\contentsline {chapter}{\numberline {A}An Appendix}{88}{appendix.192}%
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{88}{dummy.185}%
+\contentsline {chapter}{Bibliography}{89}{dummy.193}%
