@@ -36,7 +36,10 @@
 \contentsline {section}{\numberline {6.1}Self-testing from approximately operationally equivalent preparations and bounded memory}{78}{section.141}%
 \contentsline {subsection}{\numberline {6.1.1}Step 6a: Certifying quantumness}{80}{subsection.153}%
 \contentsline {subsection}{\numberline {6.1.2}Step 6b: Bounding compatible quantum models}{83}{subsection.160}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}Overlap between statistically relevant states}{84}{subsubsection.171}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}Orthonormal set $\subset \mathbb {C}^k$ close to the set of relevant eigenvectors}{85}{subsubsection.176}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}The measurement $M_i$ acts almost projectively on the subspace $V_{\text {relev}}^{(i)}$}{86}{subsubsection.183}%
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}An Appendix}{84}{appendix.162}%
+\contentsline {chapter}{\numberline {A}An Appendix}{87}{appendix.184}%
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{85}{dummy.163}%
+\contentsline {chapter}{Bibliography}{88}{dummy.185}%

@@ -85,3 +85,95 @@ We will now introduce the second key assumption of the protocol, which allows us
 \forall i\in\{1,\dots,n\} S_i \coloneqq \sum_{j=1}^3 p_j^{(i)}P_{m_j\vert M_i} \sim S_* \coloneqq \sum_{j=0}^2 q_j^{(*)}P_j.
 \end{equation}
 Although assuming approximate operational equivalences suffices, we will for now take the equivalences in REF to be exact. Once we establish bounds on the compatible quantum models for exact equivalences, this restriction may be relaxed. We consider two quantum preparations to be approximately operationally equivalent if the corresponding density operators are ``close" w.r.t.\ the Frobenius norm. Recall that for ideal devices and equal weights $p_j^{(i)}=q_j^{(*)}=\frac{1}{3}$, both $S_i$ and $S_{*}$ correspond to the fully mixed state $\frac{\mathbb{1}}{3}$. Note that the assumption of (approximate) operational equivalence cannot be verified on the basis of statistics alone, rendering the protocol semi-device-independent. What one can do is check whether the claim holds w.r.t.\ the available measurement settings. The reason for assuming the convex combinations $S_i$ and $S_{*}$ to be (approximately) operationally equivalent is to relate the action of the measurements $M_i$ on the preparations $P_{m_j\vert M_i}$ to how the measurements act on the initial preparation $P_0$. In particular, we want that if the measurements $M_i$ are almost projective when acting on the preparations $P_{m_j\vert M_i}$, then this also applies to the preparation $P_0$.
+
+Denote the density operator corresponding to the preparation $P_{m_k\vert M_i}$ by 
+\begin{equation}
+\rho_{m_k\vert M_i} = \sum_m p_m^{m_k\vert M_i} \vert \Psi_m^{m_k\vert M_i}\rangle\langle \Psi_m^{m_k\vert M_i} \vert,
+\end{equation} $\vert \Psi_m^{m_k\vert M_i} \rangle \in \mathbb{C}^k$, and the positive semi-definite operator corresponding to the measurement event $m_k\vert M_i$ by
+\begin{equation}
+F_{m_k\vert M_i}=\sum_l \lambda_l^{m_k\vert M_i} \vert \alpha_l^{m_k\vert M_i}\rangle \langle \alpha_l^{m_k\vert M_i} \vert,
+\end{equation} $\vert \alpha_l^{m_k\vert M_i} \rangle \in \mathbb{C}^k$.
+By REF,
+\begin{align}
+p(m_k\vert M_i, P_{m_k\vert M_i}) & \geq 1-2\epsilon \\
+p(m_k\vert M_i, P_{m_{k'}\vert M_i}) & \leq \epsilon,
+\end{align}
+for $k'\neq k$.
+Therefore,
+\begin{equation}
+\sum_{l,m}\lambda_l^{m_k\vert M_i}p_m^{m_k\vert M_i}\vert \langle \alpha_l^{m_k\vert M_i} \vert \Psi_m^{m_k\vert M_i} \rangle \vert^2 \geq 1-2\epsilon
+\end{equation}
+and analogously, for $k'\neq k$,
+\begin{equation}
+\sum_{l,m}\lambda_l^{m_k\vert M_i}p_m^{m_{k'}\vert M_i}\vert \langle \alpha_l^{m_k\vert M_i} \vert \Psi_m^{m_{k'}\vert M_i} \rangle \vert^2 \leq \epsilon.
+\end{equation}
+Later, we will consider the behaviour for $\epsilon\rightarrow 0$
+
+We want to show that the measurement $M_i$ acts ``almost projectively" on the preparations $\{P_{m_j\vert M_i}\}_{j=1}^3$, and by extension on $P_0$. Consider the density operator $\rho_{m_k\vert M_i}$, like in REF. For eigenvalues $p_m^{m_k\vert M_i}$ of the noisy density operator that are very small, say of the order $\epsilon$, we cannot infer from the statistics $\{p(m_j\vert M_i, P_{m_k\vert M_i})\}_{j,k}$ alone whether the measurement $M_i$ acts almost projectively on the corresponding subspace $\mathbb{C}\vert \Psi_m^{m_k\vert M_i}\rangle$, since this subspace is insignificant in terms of statistics. In order to sidestep this issue, we consider only a ``statistically relevant" subspace of $\mathbb{C}^k$:
+Define $\Pi_{\text{relev}}^{(i)}$ as the projector onto the subspace 
+\begin{equation}
+V_{\text{relev}}^{(i)}=\operatorname{span}(\bigcup_{k=1}^3\{\vert \Psi_m^{m_k\vert M_i}\rangle\}_{m:p_m^{m_k\vert M_i}\geq\mathcal{X}}).
+\end{equation}
+For now, $\mathcal{X}$ is an arbitrary cutoff, characterizing the minimum magnitude of eigenvalues for which the corresponding eigenvector in REF spans a statistically relevant one-dimensional subspace. We will later set $\mathcal{X}$ to an appropriate value in terms of $\epsilon$. Implementing this technical workaround, the condition REF and REF become
+\begin{equation}
+\sum_{m:p_m^{m_k\vert M_i}\geq \mathcal{X}} (1-\sum_l \lambda_l^{m_k\vert M_i} \vert \langle \alpha_l^{m_k\vert M_i}\vert \Psi_m^{m_k\vert M_i} \rangle \vert^2)\leq \frac{2\epsilon}{\mathcal{X}}
+\end{equation}
+and
+\begin{equation}
+\sum_{l,m:p_m^{m_{k'}\vert M_i}\geq \mathcal{X}} \lambda_l^{m_k\vert M_i} \vert \langle \alpha_l^{m_k\vert M_i}\vert \Psi_m^{m_{k'}\vert M_i} \rangle \vert^2\leq \frac{\epsilon}{\mathcal{X}},
+\end{equation}
+for $k'\neq k$.
+
+\subsubsection{Overlap between statistically relevant states}
+We begin by bounding the overlap $\vert \langle \Psi_k^{m_j\vert M_i}\vert \Psi_l^{m_{j'}\vert M_i}\rangle \vert$, for $j'\neq j$ and $\vert \Psi_k^{m_j\vert M_i}\rangle, \vert \Psi_l^{m_{j'}\vert M_i}\rangle \in V_{\text{relev}}^{(i)}$. In the ideal case these vectors are perfectly orthogonal. For notational simplicity, we will write $\sum_{k:p_k^{m_j\vert M_i}\geq \mathcal{X}}$ as $\sum'_k$, and analogously for two summation indices.
+Using the fact that $\sum_{\Tilde{j}}F_{m_{\Tilde{j}}\vert M_i}=\mathbb{1}$, we can re-write
+\begin{equation}
+\sum_{k,l}{}^{'}\vert\langle \Psi_k^{m_j\vert M_i} \vert \Psi_l^{m_{j'}\vert M_i}\rangle \vert = \sum_{k,l}{}^{'}\vert \sum_{\Tilde{j}} \operatorname{tr}(F_{m_{\Tilde{j}}\vert M_i}\vert \Psi_k^{m_j\vert M_i}\rangle\langle \Psi_l^{m_{j'}\vert M_i}\vert) \vert.
+\end{equation}
+This is upper-bounded by
+\begin{equation}
+\sum_{k,l}{}^{'}\vert\langle \Psi_k^{m_j\vert M_i} \vert \Psi_l^{m_{j'}\vert M_i}\rangle \vert \leq \sum_{\Tilde{j},m}\sum_{k,l}{}^{'}\lambda_m^{m_{\Tilde{j}}\vert M_i}\vert \langle \alpha_m^{m_{\Tilde{j}}\vert M_i} \vert \Psi_k^{m_j\vert M_i} \rangle \vert \vert \langle \Psi_l^{m_{j'}\vert M_i}\vert \alpha_m^{m_{\Tilde{j}}\vert M_i} \rangle \vert.
+\end{equation}
+Note that since $j\neq j'$, $\Tilde{j}\neq j$ or $\Tilde{j}\neq j'$. We now use condition REF. REF bounds the square of the 2-norm of the vector with entries
+\begin{equation*}
+\left((\lambda_m^{m_{\Tilde{j}}\vert M_i})^{\frac{1}{2}}\vert \langle \alpha_m^{m_{\Tilde{j}}\vert M_i}\vert \Psi_k^{m_j\vert M_i}\rangle \vert\right)_{m,l:p_l^{m_j\vert M_i}\geq \mathcal{X}}\;,
+\end{equation*} 
+for $\Tilde{j}\neq j$. Such vector has at most $d^2$ components, where $d$ is the upper bound on the Hilbert space dimension we imposed in Section REF. Since $\|\cdot\|_1$ and $\|\cdot\|_2$ are equivalent, with $\|\vec{x}\|_1\leq \sqrt{k}\|\vec{x}\|_2$ for $\vec{x}\in\mathbb{C}^k$, we find
+\begin{equation}
+\sum_{k,m}{}^{'}\lambda_m^{m_{\Tilde{j}}\vert M_i}\vert \langle \alpha_m^{m_{\Tilde{j}}\vert M_i}\vert \Psi_k^{m_j\vert M_i}\rangle \vert \leq d\sqrt{\frac{\epsilon}{\mathcal{X}}},
+\end{equation}
+for $\Tilde{j}\neq j$, and
+\begin{equation}
+\sum_{k,l}{}^{'}\vert\langle \Psi_k^{m_j\vert M_i} \vert \Psi_l^{m_{j'}\vert M_i}\rangle \vert \leq 3 d^2\sqrt{\frac{2\epsilon}{\mathcal{X}}}.
+\end{equation}
+\subsubsection{Orthonormal set $\subset \mathbb{C}^k$ close to the set of relevant eigenvectors}
+In the following subsection, we will bound the Frobenius distance
+\begin{equation}
+\|F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F
+\end{equation}
+Recall that the Frobenius norm of an operator $A\in\mathbb{C}^{k,k}$ is defined in terms of the trace of $A^{\dag}A$. The trace of $A^{\dag}A$ is conveniently expressed in terms of an orthonormal basis $\{\vert \phi_j \rangle\}_j\subset \mathbb{C}^k$: $\sum_j \langle \phi_j \vert A^{\dag}A \vert \phi_j \rangle$. However, the conditions REF are all expressed in terms of the states $\bigcup\limits_{j=1}^3\{\vert \Psi_k^{m_j\vert M_i} \rangle\}_k$, which are in general not orthogonal. Therefore, we want to find an orthonormal set $\bigcup\limits_{j=1}^3\{\vert \Phi_k^{m_j\vert M_i}\rangle\}_{k:p_k^{m_j\vert M_i}\geq \mathcal{X}}\subset\mathbb{C}^k$ closest to $\mathcal{E}\coloneqq\bigcup\limits_{j=1}^3\{\vert \Psi_k^{m_j\vert M_i}\rangle\}_{k:p_k^{m_j\vert M_i}\geq \mathcal{X}}\subset\mathbb{C}^k$, in the sense that the quantity
+\begin{equation}
+\sum_{j}\sum_{k}{}^{'}\|\vert \Psi_k^{m_j\vert M_i} \rangle - \vert \Phi_k^{m_j\vert M_i} \rangle \|_2.
+\end{equation}
+is small for all $j$, $k$.
+
+Let $k'$ be the cardinality of the set $\mathcal{E}$.
+Define $A\in\mathbb{C}^{k,k'}$ as the matrix with columns $\mathcal{E}\subset\mathbb{C}^k$. Note that $k\geq k'$ for sufficiently small $\epsilon$, since all columns are linearly independent.The entries of the matrix $A^{\dag}A$ are essentially just the scalar products whose magnitude we bounded in Section REF. Some off-diagonal entries, namely those corresponding to the scalar product of two vectors that are part of the same spectral decomposition, are $0$. Finally, the diagonal entries of $A^{\dag}A$ are all $1$, due to normalization. Like in the proof of Lemma REF, we consider a spectral decomposition of $A$, $A=V\Sigma W^{\dag}$, and denote the rank of $A$ by $r$. Analogously to the proof of Lemma REF, we consider the matrix $\Tilde{A}=$, where we have set all diagonal entries of $\Sigma$ to $1$. The columns of $\Tilde{A}$ are orthonormal. It remains to show that $A\approx_F \Tilde{A}$:
+\begin{equation}
+\|A-\Tilde{A}\|_F=\|\begin{pmatrix} \mathbb{1_{k'}} \\ 0_{k-k',k'}\end{pmatrix} - \Sigma \|_F = \sqrt{(k'-r)+\sum_{i=1}^{r}(\sigma_i-1)^2}.
+\end{equation}
+We now use REF to bound the singular values and rank of $A$:
+\begin{equation}
+\|A^{\dag}A - \mathbb{1} \|_F = \sqrt{(k'-r)+\sum_{i=1}^r(\sigma_i^2-1)^2} \leq \mathcal{O}(d^2\sqrt{\frac{\epsilon}{\mathcal{X}}}),
+\end{equation}
+where the inequality follows from REF. Thus, for sufficiently small $\epsilon$ the rank of $A$ is $r=k'$, and
+\begin{equation}
+\|A-\Tilde{A}\|_F=\sqrt{\sum_{i=1}^{k'}(\sigma_i - 1)^2}\leq\sqrt{\sum_{i=1}^{k'}(\sigma_i - 1)^2(\sigma_i+1)^2}\leq\mathcal{O}(d^2\sqrt{\frac{\epsilon}{\mathcal{X}}}).
+\end{equation}
+As such, the orthonormal set $\bigcup\limits_{j=1}^3\{\vert \Phi_k^{m_j\vert M_i}\rangle\}_{k:p_k^{m_j\vert M_i}\geq \mathcal{X}}\subset\mathbb{C}^k$, given by the columns of $\Tilde{A}$, satisfies
+\begin{equation}
+\sum_{j=1}^3\sum_k{}^{'}\|\vert \Psi_k^{m_j\vert M_i} \rangle - \vert \Phi_k^{m_j\vert M_i}\rangle \|_2^2=\|A-\Tilde{A}\|_F^2\leq \mathcal{O}(d^4\frac{\epsilon}{\mathcal{X}})
+\end{equation}
+Such a set can be found for all $i\in\{1,\dots,n\}$.
+\subsubsection{The measurement $M_i$ acts almost projectively on the subspace $V_{\text{relev}}^{(i)}$}
+
