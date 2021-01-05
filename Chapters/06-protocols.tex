@@ -34,9 +34,9 @@ Like in Section REF, we assume i.i.d.\ rounds, i.e. the devices to operate in an
 
 We write the free choice of measurements $(M_i,M_j)$ and subsequent outcomes $(m_k,m_l)$ as ordered lists to indicate that the distributions $p((m_k,m_l)\vert (M_i,M_j),P_0)$ are in general not independent of the order, since we do not assume any underlying compatibility relations, like we did in Section REF. In the ideal case, the distinguished preparation $P_0$ corresponds to the $\ket{0}$ qutrit state, which produces a maximal violation of the KCBS inequality. Additionally, we assume access to two additional auxilliary preparations, $P_1$ and $P_2$, which we require to establish approximate operational equivalences during post-processing. In the ideal case the preparations $P_1$ and $P_2$ correspond to the $\ket{1}$ and $\ket{2}$ qutrit states, forming an orthogonal triad with $P_0\equiv\ket{0}\bra{0}$. The convex combination $\frac{1}{3}\sum_{i=0}^2 P_i\equiv\frac{1}{3}\sum_{i=0}^2\ket{i}\bra{i}=\frac{\mathbb{1}}{3}$ corresponds to the fully mixed state $\frac{\mathbb{1}}{3}$, as does the convex combination with equal weights of the ideal projectors corresponding to the measurement events $\{m_k\vert M_i\}_{k=1}^3$ for all $i\in\{1,\dots,n\}$. Here, we implicitly defined the convex combination of two preparations to be the preparation that is implemented by generating a random number and performing the preparation procedure associated with that outcome. We note that Steps 1-4 of the protocol correspond almost one-to-one to the steps of the protocol in CITE, which was discussed in Section REF, the only difference being that the experimenter now freely chooses between $n^2$, as opposed to $n$ measurement settings.
 
-We now elaborate on Step 6 of the protocol, detailing how an agent may post-process the acquired data, with the goal of self-testing the apparatus. The experimenter retrospectively defines $3n$ preparations, which we denote $\{P_{m_k\vert M_i}\}_{\substack{i\in\{1,\dots,n\} \\ k\in\{1,2,3\}}}$. As suggested by the notation, $P_{m_k\vert M_i}$ is prepared by performing the measurement $M_i$ on a system initially prepared like $P_0$, and conditioning on the outcome $m_k$. We refer to these preparations as retrospective, since they are not directly implemented by the experimenter. However, one can infer the relevant statistics $p(m_k\vert M_i, P_{m_l\vert M_j})$ for these preparations from the distributions $p((m_k,m_l)\vert (M_i,M_j))$:
+We now elaborate on Step 6 of the protocol, detailing how an agent may post-process the acquired data, with the goal of self-testing the apparatus. The experimenter retrospectively defines $2n$ preparations, which we denote $\{P_{m_k\vert M_i}\}_{\substack{i\in\{1,\dots,n\} \\ k\in\{1,2\}}}$. As suggested by the notation, $P_{m_k\vert M_i}$ is prepared by performing the measurement $M_i$ on a system initially prepared like $P_0$, and conditioning on the outcome $m_k$. We refer to these preparations as retrospective, since they are not directly implemented by the experimenter. However, one can infer the relevant statistics $p(m_k\vert M_i, P_{m_l\vert M_j})$ for these preparations from the distributions $p((m_k,m_l)\vert (M_i,M_j))$:
 \begin{equation}
-p(m_k\vert M_i, P_{m_l\vert M_j})=\frac{p((m_k,m_l)\vert (M_i,M_j))}{\sum_{k'\in\{1,2,3\}} p((m_{k'},m_l)\vert (M_i,M_j))}.
+p(m_k\vert M_i, P_{m_l\vert M_j})=\frac{p((m_k,m_l)\vert (M_i,M_j))}{\sum_{k'\in\{1,2\}} p((m_{k'},m_l)\vert (M_i,M_j))}.
 \end{equation}
 These retrospective preparations will be used in Section REF, where we propose a criterion to certify the quantumness of the apparatus.
 
@@ -46,7 +46,7 @@ Additionally, the experimenter can infer the statistics $p(m_k\vert M_i, P_0)$ f
 \end{equation}
 These will become relevant in Section REF, when bounding the compatible quantum models.
 \subsection{Step 6a: Certifying quantumness}
-By coarse-graining, we obtain $3n$ binary measurements from the $n$ three-outcome measurements $M_i$. In total, we define $3n$ binary measurements and $3n$ preparations during post-processing. We denote the outcomes of the $3n$ binary measurements as $0$,$1$, where the outcome $0$ corresponds to the two coarse-grained measurement events. If we consider the ideal reference experiment REF and take the outcomes $0$, $1$ to be the eigenvalues of the binary projective measurements, one can think of these as rank-one projectors. There are $2n$ ideal binary measurements that probe the probability of finding the system in one of the $n$ one-dimensional subspaces spanned by the $n$ cycle states. The other $n$ ideal binary measurements correspond to rank-one projectors onto states in an orthogonal triad containing two cycle states. For the extent of this subsection we will for simplicity index the $3n$ binary measurements and preparations like $\{M_i\}_{i\in\{1,\dots,3n\}}$ and $\{P_i\}_{i\in\{1,\dots,3n\}}$. For ideal measurements and preparations, we can choose the order such that the ideal measurement $M_i$ is the rank-one projector onto the ideal pure state preparation $P_i$. Therefore, for ideal devices, the retrospective preparations and binary measurements, if ordered in this manner, satisfy \begin{equation}
+By coarse-graining, we obtain $2n$ binary measurements from the $n$ three-outcome measurements $M_i$: for each $M_i$ we ``lump together" outcomes $m_2$, $m_3$, and $m_1$, $m_3$. In total, we define $2n$ binary measurements and $2n$ preparations during post-processing. We denote the outcomes of the $2n$ binary measurements as $0$, $1$, where the outcome $0$ corresponds to the two coarse-grained measurement events. If we consider the ideal reference experiment REF and take the outcomes $0$, $1$ to be the eigenvalues of the binary projective measurements, one can think of these as rank-one projectors. There are $n$ ideal binary measurements that probe the probability of finding the system in one of the $n$ one-dimensional subspaces spanned by the $n$ cycle states. The other $n$ ideal binary measurements correspond to rank-one projectors onto states in an orthogonal triad containing two cycle states. For the extent of this subsection we will for simplicity index the $2n$ binary measurements and preparations like $\{M_i\}_{i\in\{1,\dots,2n\}}$ and $\{P_i\}_{i\in\{1,\dots,2n\}}$. For ideal measurements and preparations, we can choose the order such that the ideal measurement $M_i$ is the rank-one projector onto the ideal pure state preparation $P_i$. Therefore, for ideal devices, the retrospective preparations and binary measurements, if ordered in this manner, satisfy \begin{equation}
 \epsilon \coloneqq \max_i p(0\vert M_i, P_i)\stackrel{\text{ideal}}{=}0.
 \end{equation} 
 For noisy devices, we expect to find an ordering for which REF is approximately satisfied, with the parameter $\epsilon$ characterizing the amount of noise. The parameter $\epsilon$ can be determined from the observed statistics during post-processing.
@@ -57,16 +57,16 @@ Apart from the noise-characterizing parameter $\epsilon$, the second relevant pa
 \end{equation}
 For quantum devices, the parameter $\eta$ can be thought of as a measuring the maximum overlap or closeness of distinct states. As such, $\eta$ decreases as the cycle length $n$ increases. Let $m=2^k$. In Theorem REF of CITE it is proven that for a set of preparations $\{P_i\}_{i=1}^m$ and measurements $\{M_i\}_{i=1}^m$, producing statistics obeying $\epsilon<\frac{1}{4}\eta^2$, to be compatible with a (preparation) non-contextual ontological description, requires at least $k$ binary measurements in any TC set. The intuition behind this is the following: From the statistics of the $m$ preparations $\{P_i\}_{i=1}^m$ one can infer the statistics of any preparation in the convex hull of the $\{P_i\}_{i=1}^m$. If the $m$ preparations are not very ``close", as measured by $\eta$, relative to their sharpness, as measured by $\epsilon$, (this is enforced by the condition $\epsilon<\frac{1}{4}\eta^2$) then the associated probability density functions $\{\mu_i\}_{i=1}^m$ will have non-significant overlap. In particular, if we regard the $m$ probability density functions on the ontic state space $\Lambda$ as vectors $\{v_i\}_{i=1}^m$ in $\mathbb{R}^{\vert \Lambda \vert}$, then the proof of Theorem REF in CITE establishes that the $m=2^k$ vectors vary in $k$ linearly independent directions. Demanding preparation non-contextuality, every distinct preparation in the convex hull of the $\{P\}_{i=1}^n$ must produce different predictions for at least one of the measurements in a TC set. Finally, CITE notes that the function mapping a probability density function $\mu_j$, or rather the corresponding vector in $\mathbb{R}^{\vert \Lambda \vert}$ to the probability $p(m_k\vert M_i,\mu_j)$ of obtaining the outcome $m_k$ when performing the measurement $M_i$ for an initial preparation $\mu_j$ is linear. Hence, such mapping $\mathbb{R}^{\vert \Lambda \vert}\rightarrow\mathbb{R}$ is of the form $(x_1,\dots,x_{\vert \Lambda \vert})\mapsto a_1 x_1+\dots + a_n x_n = \vec{a}\cdot \vec{x}$ with $0 \leq a_i \leq 1$, and $x_i$ the components w.r.t\ the basis $\{v_i\}_{i=1}^m$. Binary measurements can therefore only distinguish between preparations along a single direction, $\vec{a}$. Preparations whose ontological representations differ w.r.t.\ directions orthogonal to $\vec{a}$, are assigned the same probabilities by the binary measurement characterized by $\vec{a}$. A TC set of measurement must contain at least $k$ binary measurements for $k$ linearly independent preparations, if we demand compatiblity with a preparation non-contextual ontological model.
 
-We now turn to the bounded memory assumption required by the protocol, which relies on the results in CITE, the relevant ones of which were sketched above. Assume that the experimenter has access to $n\geq 5$ three-outcome measurement settings, like we considered at the beginning of Section REF, where $n$ is odd (think of $n$ as the cycle-length). Further, let $k$ be the largest integer satisfying $3n\geq 2^{k+1}$. To certify quantumness, we assume that there exists a TC set of measurements with $k$ binary measurements, i.e. that $k$ binary measurements are sufficient to fully characterize the statistics of the system at hand. If we find the condition $\epsilon<\frac{1}{4}\eta^2$ to be satisfied, we consider the system to be quantum.  How does this assumption relate to the assumption of bounded memory in Section REF? If we define the information carrying capacity as 
+We now turn to the bounded memory assumption required by the protocol, which relies on the results in CITE, the relevant ones of which were sketched above. Assume that the experimenter has access to $n\geq 5$ three-outcome measurement settings, like we considered at the beginning of Section REF, where $n$ is odd (think of $n$ as the cycle-length). Further, let $k$ be the largest integer satisfying $2n\geq 2^{k+1}$. To certify quantumness, we assume that there exists a TC set of measurements with $k$ binary measurements, i.e. that $k$ binary measurements are sufficient to fully characterize the statistics of the system at hand. If we find the condition $\epsilon<\frac{1}{4}\eta^2$ to be satisfied, we consider the system to be quantum.  How does this assumption relate to the assumption of bounded memory in Section REF? If we define the information carrying capacity as 
 \begin{equation}
-\mathcal{I}\coloneqq \log_2(\text{number of states that can be perfectly distinguished})
-\end{equation},
-then assuming a TC set with $k$ measurements implies bounding the information carrying capacity $\mathcal{I}\leq k \text{bits}$. In this sense, assumptions regarding the minimal size of TC sets of measurements directly relate to bounds on the information carrying capacity. In particular, bounding the information carrying capacity $\mathcal{I}\leq k \text{bits}$ implies a finite-dimensional Hilbert space $\mathcal{H}$, $\operatorname{dim}(\mathcal{H})\leq k$.
+\mathcal{I}\coloneqq \log_2(\text{number of states that can be perfectly distinguished}),
+\end{equation}
+then assuming a TC set with $k$ measurements implies bounding the information carrying capacity $\mathcal{I}\leq k$ bits. In this sense, assumptions regarding the minimal size of TC sets of measurements directly relate to bounds on the information carrying capacity. In particular, bounding the information carrying capacity $\mathcal{I}\leq k \text{bits}$ implies a finite-dimensional Hilbert space $\mathcal{H}$, $\operatorname{dim}(\mathcal{H})\leq k$.
 
 If we wish to allow for an information carrying capacity of $k$ bits, we require an apparatus consistent with a cycle length $n$ such that
 \begin{alignat}{2}
-& && 3n\geq 2^{k+1} \\
-& \iff && \log_2(3n)-1\geq k.
+& && 2n\geq 2^{k+1} \\
+& \iff && \log_2(n)\geq k.
 \end{alignat}
 The relationship between cycle length and simulable bound on the information carrying capacity is logarithmic, as was the case for the class of protocols in Section REF, which assumed sharp measurements and cyclic compatibility relations. The price one has to pay for accounting for a greater information carrying capacity is two-fold:
 \begin{itemize}
@@ -78,7 +78,7 @@ The relationship between cycle length and simulable bound on the information car
 \end{itemize}
 
 \subsection{Step 6b: Bounding compatible quantum models}
-As discussed in Section REF, we assume a Hilbert space of bounded dimension, say dimension $\operatorname{dim}(\mathcal{H})\leq d$. We can w.l.o.g.\ take $\mathcal{H}$ to be $\mathbb{C}^k$, $k\leq d$, where $k$ is the true dimension of $\mathcal{H}$.
+As discussed in Section REF, we assume a Hilbert space of bounded dimension, say dimension $\operatorname{dim}(\mathcal{H})\leq d$. We can w.l.o.g.\ take $\mathcal{H}$ to be $\mathbb{C}^k$, $k\leq d$, where $k$ is the true dimension of $\mathcal{H}$. For notational simplicity we define $P_{m_3\vert M_i}\coloneqq P_{m_1\vert M_{i\oplus 1}}$.
 
 We will now introduce the second key assumption of the protocol, which allows us to bound the quantum models compatible with the observed correlations: We assume that for all $i\in\{1,\dots,n\}$ there exists a convex combination $\{p_j^{(i)}\}_j$ of the preparations $\{P_{m_j\vert M_i}\}_j$ and a convex combination $\{q_j^{(*)}\}_j$ of the preparations $\{P_0,P_1,P_2\}$ such that these are (approximately) operationally equivalent:
 \begin{equation}
@@ -181,9 +181,16 @@ We now bound the expression
 \begin{equation}
 \|F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F,
 \end{equation}
+or rather
+\begin{equation}
+\|F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\vert \Phi_k^{m_j\vert M_i}\rangle \langle \Phi_k^{m_j\vert M_i}\vert \|_F,
+\end{equation}
 in order to show that the measurement $M_i$ acts almost projectively on the subspace $V_{\text{relev}}^{(i)}$. As a first step, we first bound
 \begin{equation}
-\|\Pi_{\text{relev}}^{(i)}-\sum_j\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F\leq\sqrt{2}\sum_j\sum_k{}^{'}\sqrt{1-\vert \langle \Psi_k^{m_j\vert M_i} \vert \Phi_k^{m_j\vert M_i} \rangle \vert^2}.
+\begin{split}
+\|\Pi_{\text{relev}}^{(i)}-\sum_j\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F & \leq \sum_j\sum_k{}^{'}\| \vert \Phi_k^{m_j\vert M_i}\rangle \langle \Phi_k^{m_j\vert M_i}\vert-\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert\|_F \\
+& =\sqrt{2}\sum_j\sum_k{}^{'}\sqrt{1-\vert \langle \Psi_k^{m_j\vert M_i} \vert \Phi_k^{m_j\vert M_i} \rangle \vert^2}.
+\end{split}
 \end{equation}
 Notice that
 \begin{equation}
@@ -207,3 +214,36 @@ For all $0\leq \theta \leq 2\pi$, $2\sin(\frac{\theta}{2})-\sin(\theta)\geq 0$, 
 \begin{equation}
 \|\Pi_{\text{relev}}^{(i)}-\sum_j\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F = \sqrt{2}\sum_j\sum_k{}^{'}\sin(\theta_k^{m_j\vert M_i})\leq\mathcal{O}\left(d^{5/2}\sqrt{\frac{\epsilon}{\mathcal{X}}}\right).
 \end{equation}
+We now bound REF:
+\begin{equation}
+\|F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F \leq \mathcal{O}\left(d^{5/2}\sqrt{\frac{\epsilon}{\mathcal{X}}}\right)+\|(F_{m_j\vert M_i}-\mathbb{1})\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i} \rangle \langle \Psi_k^{m_j\vert M_i} \vert \|_F.
+\end{equation}
+The last term in REF satisfies
+\begin{equation}
+\begin{split}
+\|(F_{m_j\vert M_i}-\mathbb{1})\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i} \rangle \langle \Psi_k^{m_j\vert M_i} \vert \|_F^2 & =\operatorname{tr}((F_{m_j\vert M_i}-\mathbb{1})^2\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i} \rangle \langle \Psi_k^{m_j\vert M_i} \vert) \\
+& \leq \sum_k{}^{'}(1-\sum_l \lambda_l^{m_j\vert M_i}\vert \langle \Psi_k^{m_j\vert M_i}\vert \alpha_l^{m_j\vert M_i}\rangle \vert ^2)
+\end{split},
+\end{equation}
+where the rightmost term is small due to REF. Hence, we arrive at
+\begin{equation}
+\|F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F \leq \mathcal{O}\left(d^{5/2}\sqrt{\frac{\epsilon}{\mathcal{X}}}\right),
+\end{equation}
+or alternatively
+\begin{equation}
+\|F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\vert \Phi_k^{m_j\vert M_i}\rangle \langle \Phi_k^{m_j\vert M_i}\vert \|_F \leq \mathcal{O}\left(d^{5/2}\sqrt{\frac{\epsilon}{\mathcal{X}}}\right).
+\end{equation}
+The operators $\{\sum_{k}{}^{'}\vert \Phi_k^{m_j\vert M_i}\rangle \langle \Phi_k^{m_j\vert M_i}\vert\}_{j\in\{1,2,3\}}$ are orthogonal projectors.
+\subsubsection{Why can we confine our analysis to the subspace $V_{\text{relev}}^{(i)}$?}
+We now discuss in what sense the assumption regarding operational equivalences of preparations, introduced at the beginning of Section REF, justifies confining our analysis to only the subspace $V_{\text{relev}}^{(i)}$. 
+For the convex combinations $S_i$, as defined in REF, we find:
+\begin{equation}
+\|\sum_j p_j^{(i)}(\rho_{m_j\vert M_i}-\Pi_{\text{relev}}^{(i)}\rho_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)})\|_F \leq \sum_j p_j^{(i)}\|\rho_{m_j\vert M_i}-\Pi_{\text{relev}}^{(i)}\rho_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}\|_F \leq \sqrt{d}\mathcal{X}.
+\end{equation}
+Due to operational equivalence $S_i\sim S_{*}$, we can write:
+\begin{equation}
+\|\sum_j q_j^{(*)}(\rho_{j}-\Pi_{\text{relev}}^{(i)}\rho_{j}\Pi_{\text{relev}}^{(i)})\|_F \leq \sqrt{d}\mathcal{X},
+\end{equation}
+where $\rho_{j}$ is the density operator corresponding to the preparation $P_j$.
+
+\subsubsection{Piecing things together}

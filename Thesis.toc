@@ -36,10 +36,12 @@
 \contentsline {section}{\numberline {6.1}Self-testing from approximately operationally equivalent preparations and bounded memory}{78}{section.141}%
 \contentsline {subsection}{\numberline {6.1.1}Step 6a: Certifying quantumness}{80}{subsection.153}%
 \contentsline {subsection}{\numberline {6.1.2}Step 6b: Bounding compatible quantum models}{83}{subsection.160}%
-\contentsline {subsubsection}{\numberline {6.1.2.1}Overlap between statistically relevant states}{84}{subsubsection.171}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}Overlap between statistically relevant states}{85}{subsubsection.171}%
 \contentsline {subsubsection}{\numberline {6.1.2.2}Orthonormal set $\subset \mathbb {C}^k$ close to the set of relevant eigenvectors}{85}{subsubsection.176}%
-\contentsline {subsubsection}{\numberline {6.1.2.3}The measurement $M_i$ acts almost projectively on the subspace $V_{\text {relev}}^{(i)}$}{86}{subsubsection.183}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}The measurement $M_i$ acts almost projectively on the subspace $V_{\text {relev}}^{(i)}$}{87}{subsubsection.183}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}Why can we confine our analysis to the subspace $V_{\text {relev}}^{(i)}$?}{88}{subsubsection.197}%
+\contentsline {subsubsection}{\numberline {6.1.2.5}Piecing things together}{89}{subsubsection.200}%
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}An Appendix}{88}{appendix.192}%
+\contentsline {chapter}{\numberline {A}An Appendix}{90}{appendix.201}%
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{89}{dummy.193}%
+\contentsline {chapter}{Bibliography}{91}{dummy.202}%
