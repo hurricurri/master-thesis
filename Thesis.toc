@@ -39,6 +39,6 @@
 \contentsline {subsubsection}{\numberline {6.1.2.1}Overlap between statistically relevant states}{84}{subsubsection.170}%
 \contentsline {subsubsection}{\numberline {6.1.2.2}Orthonormal set close to the set of relevant eigenvectors}{84}{subsubsection.175}%
 \contentsline {subsubsection}{\numberline {6.1.2.3}The measurement $M_i$ acts almost projectively on $V_{\text {relev}}^{(i)}$}{86}{subsubsection.182}%
-\contentsline {subsubsection}{\numberline {6.1.2.4}Why can we confine our analysis to the subspace $V_{\text {relev}}^{(i)}$?}{87}{subsubsection.196}%
-\contentsline {subsubsection}{\numberline {6.1.2.5}Piecing things together}{88}{subsubsection.204}%
-\contentsline {chapter}{Bibliography}{89}{dummy.206}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}Why can we confine our analysis to the subspace $V_{\text {relev}}^{(i)}$?}{87}{subsubsection.197}%
+\contentsline {subsubsection}{\numberline {6.1.2.5}Piecing things together}{89}{subsubsection.205}%
+\contentsline {chapter}{Bibliography}{90}{dummy.209}%

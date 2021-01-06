@@ -169,10 +169,10 @@ provided that the smallest singular value $\sigma_{\text{min}}\leq 1$. For the K
 \end{equation*}
 Therefore,
 \begin{alignat*}{2}
-& \|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F\leq\;\epsilon\frac{n}{\sigma_{\text{min}}^2} && \text{ and}\\[0.5em]
-& \|Z\|_F \stackrel{(\square)}{\leq} \|Z^{\dag}Z\|_F \leq \epsilon\frac{n}{\sigma_{\text{min}}^2}&&,
+\|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F & \leq\;\epsilon\frac{n}{\sigma_{\text{min}}^2} && \text{ and}\\[0.5em]
+\|Z\|_F & \stackrel{(\square)}{\leq} \epsilon\frac{n^2}{\sigma_{\text{min}}^2}&&,
 \end{alignat*}
-where the inequality $(\square)$ holds because $\|A\|_F\geq\operatorname{tr}(A)$ in general. 
+where the inequality $(\square)$ holds because $n\|A\|_F\geq\operatorname{tr}(A)$ for $A\in\mathbb{C}^{n,n}$. 
 
 
 By definition, $X=B^{\dag}WD^{-1}$, and hence
@@ -197,7 +197,7 @@ W_1^{\dag} \\ W_2^{\dag}
 \end{equation*}
 Unitaries leave the Frobenius norm invariant, as $\|A\|_F^{\textstyle ^2}=\sum_k\|Ae_k\|_2^{\textstyle ^2} = \sum_k \|UAe_k\|_2^{\textstyle ^2}=\|UA\|_F^{\textstyle ^2}\thinspace$, where $U$ is a unitary. Therefore,
 \begin{equation*}
-\|B^{\dag}-\Tilde{V}_2\Sigma_r W_1^{\dag}\|_F=\|ZW_2^{\dag}\|_F=\|Z\|_F\leq\epsilon \frac{n}{\sigma_{\text{min}}^2}.
+\|B^{\dag}-\Tilde{V}_2\Sigma_r W_1^{\dag}\|_F=\|ZW_2^{\dag}\|_F=\|Z\|_F\leq\epsilon \frac{n^2}{\sigma_{\text{min}}^2}.
 \end{equation*}
 It remains to show that $\Tilde{V}_2$ is approximately isometric, which follows from the previously derived bound $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\epsilon\frac{n}{\sigma_{\text{min}}^2}$, as we will now prove:
 
