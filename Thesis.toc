@@ -28,20 +28,20 @@
 \contentsline {subsection}{\numberline {4.3.2}Input-output processes as information transducers}{62}{subsection.117}%
 \contentsline {subsection}{\numberline {4.3.3}Memory-optimal classical simulation of quantum correlations}{64}{subsection.122}%
 \contentsline {subsection}{\numberline {4.3.4}Classical simulations dissipate heat}{66}{subsection.125}%
-\contentsline {chapter}{\numberline {5}A revised notion of classicality \\ Spekkens non-contextuality}{71}{chapter.133}%
-\contentsline {section}{\numberline {5.1}Outcome determinism for unsharp measurements (ODUM)}{71}{section.134}%
-\contentsline {section}{\numberline {5.2}Operational approach due to Spekkens}{72}{section.135}%
-\contentsline {section}{\numberline {5.3}Spekkens non-contextuality inequalities \\ KCBS revisited}{77}{section.139}%
-\contentsline {chapter}{\numberline {6}Two protocols based on Spekkens contextuality}{78}{chapter.140}%
-\contentsline {section}{\numberline {6.1}Self-testing from approximately operationally equivalent preparations and bounded memory}{78}{section.141}%
-\contentsline {subsection}{\numberline {6.1.1}Step 6a: Certifying quantumness}{80}{subsection.153}%
-\contentsline {subsection}{\numberline {6.1.2}Step 6b: Bounding compatible quantum models}{83}{subsection.160}%
-\contentsline {subsubsection}{\numberline {6.1.2.1}Overlap between statistically relevant states}{85}{subsubsection.171}%
-\contentsline {subsubsection}{\numberline {6.1.2.2}Orthonormal set $\subset \mathbb {C}^k$ close to the set of relevant eigenvectors}{85}{subsubsection.176}%
-\contentsline {subsubsection}{\numberline {6.1.2.3}The measurement $M_i$ acts almost projectively on the subspace $V_{\text {relev}}^{(i)}$}{87}{subsubsection.183}%
-\contentsline {subsubsection}{\numberline {6.1.2.4}Why can we confine our analysis to the subspace $V_{\text {relev}}^{(i)}$?}{88}{subsubsection.197}%
-\contentsline {subsubsection}{\numberline {6.1.2.5}Piecing things together}{89}{subsubsection.200}%
+\contentsline {chapter}{\numberline {5}A revised notion of classicality \\ Spekkens non-contextuality}{70}{chapter.132}%
+\contentsline {section}{\numberline {5.1}Outcome determinism for unsharp measurements (ODUM)}{70}{section.133}%
+\contentsline {section}{\numberline {5.2}Operational approach due to Spekkens}{71}{section.134}%
+\contentsline {section}{\numberline {5.3}Spekkens non-contextuality inequalities \\ KCBS revisited}{76}{section.138}%
+\contentsline {chapter}{\numberline {6}Two protocols based on Spekkens contextuality}{77}{chapter.139}%
+\contentsline {section}{\numberline {6.1}Self-testing from approximately operationally equivalent preparations and bounded memory}{77}{section.140}%
+\contentsline {subsection}{\numberline {6.1.1}Step 6a: Certifying quantumness}{79}{subsection.152}%
+\contentsline {subsection}{\numberline {6.1.2}Step 6b: Bounding compatible quantum models}{82}{subsection.159}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}Overlap between statistically relevant states}{84}{subsubsection.170}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}Orthonormal set $\subset \mathbb {C}^k$ close to the set of relevant eigenvectors}{84}{subsubsection.175}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}The measurement $M_i$ acts almost projectively on the subspace $V_{\text {relev}}^{(i)}$}{86}{subsubsection.182}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}Why can we confine our analysis to the subspace $V_{\text {relev}}^{(i)}$?}{87}{subsubsection.196}%
+\contentsline {subsubsection}{\numberline {6.1.2.5}Piecing things together}{88}{subsubsection.199}%
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}An Appendix}{90}{appendix.201}%
+\contentsline {chapter}{\numberline {A}An Appendix}{89}{appendix.200}%
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{91}{dummy.202}%
+\contentsline {chapter}{Bibliography}{90}{dummy.201}%

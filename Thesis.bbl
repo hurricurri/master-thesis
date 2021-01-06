@@ -1,16 +1,307 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{46}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Hawthorn et~al.(2001)Hawthorn, Weber, and Scholten]{test}
-C.~J. Hawthorn, K.~P. Weber, and R.~E. Scholten.
-\newblock Littrow configuration tunable external cavity diode laser with fixed
-  direction output beam.
-\newblock \emph{Review of Scientific Instruments}, 72\penalty0 (12):\penalty0
-  4477--4479, December 2001.
-\newblock URL \url{http://link.aip.org/link/?RSI/72/4477/1}.
+\bibitem[Kochen and Specker(1968)]{Kochen1968}
+Simon Kochen and E.P. Specker.
+\newblock The problem of hidden variables in quantum mechanics.
+\newblock \emph{Indiana Univ. Math. J.}, 17, 1968.
+\newblock \doi{10.1512/iumj.1968.17.170044}.
+
+\bibitem[Bell(1964)]{Bell1964}
+J.S. Bell.
+\newblock On the {E}instein-{P}odolsky-{R}osen paradox.
+\newblock \emph{Physics Physique Fizika}, 1, 1964.
+\newblock \doi{10.1103/PhysicsPhysiqueFizika.1.195}.
+
+\bibitem[Hensen et~al.(2015)Hensen, Bernien, Dréau, Reiserer, Kalb, Blok,
+  Ruitenberg, Vermeulen, Schouten, Abellán, Amaya, Pruneri, Mitchell, Markham,
+  Twitchen, Elkouss, Wehner, Taminiau, and Hanson]{Hensen2015}
+B.~Hensen, H.~Bernien, A.~E. Dréau, A.~Reiserer, N.~Kalb, M.~S. Blok,
+  J.~Ruitenberg, R.~F.~L. Vermeulen, R.~N. Schouten, C.~Abellán, W.~Amaya,
+  V.~Pruneri, M.~W. Mitchell, M.~Markham, D.~J. Twitchen, D.~Elkouss,
+  S.~Wehner, T.~H. Taminiau, and R.~Hanson.
+\newblock Loophole-free {B}ell inequality violation using electron spins
+  separated by 1.3 kilometres.
+\newblock \emph{Nature}, 526, 2015.
+\newblock \doi{10.1038/nature15759}.
+
+\bibitem[Pusey(2019)]{Pusey2019}
+Matthew~F. Pusey.
+\newblock Contextuality.
+\newblock In \emph{Solstice of Foundations, {ETH} {Z}urich}, 2019.
+
+\bibitem[Specker(1975)]{Specker1975}
+E.~P. Specker.
+\newblock The logic of propositions which are not simultaneously decidable.
+\newblock In \emph{The Logico-Algebraic Approach to Quantum Mechanics: Volume
+  {I}: Historical Evolution}. Springer Netherlands, 1975.
+\newblock \doi{10.1007/978-94-010-1795-4_8}.
+
+\bibitem[Cabello(2012)]{Cabello2012}
+Adan Cabello.
+\newblock Specker's fundamental principle of quantum mechanics.
+\newblock \emph{arXiv:1212.1756}, 2012.
+
+\bibitem[Cabello(2013)]{Cabello2013}
+Adán Cabello.
+\newblock Simple explanation of the quantum violation of a fundamental
+  inequality.
+\newblock \emph{Phys. Rev. Lett.}, 110, 2013.
+\newblock \doi{10.1103/physrevlett.110.060402}.
+
+\bibitem[Spekkens(2005)]{Spekkens2005}
+R.~W. Spekkens.
+\newblock Contextuality for preparations, transformations, and unsharp
+  measurements.
+\newblock \emph{Phys. Rev. A}, 71, 2005.
+\newblock \doi{10.1103/PhysRevA.71.052108}.
+
+\bibitem[Nielsen and Chuang(2010)]{Nielsen2010}
+Michael~A. Nielsen and Isaac~L. Chuang.
+\newblock \emph{Quantum Computation and Quantum Information: 10th Anniversary
+  Edition}.
+\newblock Cambridge University Press, 2010.
+\newblock \doi{10.1017/CBO9780511976667}.
+
+\bibitem[Watrous(2018)]{Watrous2018}
+J.~Watrous.
+\newblock \emph{The Theory of Quantum Information}.
+\newblock Cambridge University Press, 2018.
+\newblock \doi{10.1017/9781316848142}.
+
+\bibitem[Spekkens(2012)]{Spekkens2012}
+Robert~W. Spekkens.
+\newblock Foundations of quantum mechanics.
+\newblock In \emph{Lecture Series, {PSI}}, 2012.
+
+\bibitem[Peres(2002)]{Peres2002}
+Asher Peres.
+\newblock \emph{Quantum Theory: Concepts and Methods}.
+\newblock Kluwer, 2002.
+\newblock \doi{10.1007/0-306-47120-5}.
+
+\bibitem[Mermin(1993)]{Mermin1993}
+N.~David Mermin.
+\newblock Hidden variables and the two theorems of {J}ohn {B}ell.
+\newblock \emph{Rev. Mod. Phys.}, 65, 1993.
+\newblock \doi{10.1103/revmodphys.65.803}.
+
+\bibitem[Bell(1966)]{Bell1966}
+John~S. Bell.
+\newblock On the problem of hidden variables in quantum mechanics.
+\newblock \emph{Rev. Mod. Phys.}, 38, 1966.
+\newblock \doi{10.1103/RevModPhys.38.447}.
+
+\bibitem[Peres(1991)]{Peres1991}
+A.~Peres.
+\newblock Two simple proofs of the {K}ochen-{S}pecker theorem.
+\newblock \emph{J. Phys. A}, 24, 1991.
+\newblock \doi{10.1088/0305-4470/24/4/003}.
+
+\bibitem[Conway and Kochen(2011)]{Conway2011}
+John~H. Conway and Simon Kochen.
+\newblock \emph{The Strong Free Will Theorem}.
+\newblock Cambridge University Press, 2011.
+\newblock \doi{10.1017/CBO9780511976971.014}.
+
+\bibitem[Clauser et~al.(1969)Clauser, Horne, Shimony, and Holt]{Clauser1969}
+John~F. Clauser, Michael~A. Horne, Abner Shimony, and Richard~A. Holt.
+\newblock Proposed experiment to test local hidden-variable theories.
+\newblock \emph{Phys. Rev. Lett.}, 23, 1969.
+\newblock \doi{10.1103/PhysRevLett.23.880}.
+
+\bibitem[Colbeck(2019)]{Colbeck2019}
+Roger Colbeck.
+\newblock Bell non-locality.
+\newblock In \emph{Solstice of Foundations, {ETH} {Z}urich}, 2019.
+
+\bibitem[Fine(1982)]{Fine1982}
+Arthur Fine.
+\newblock Hidden variables, joint probability, and the bell inequalities.
+\newblock \emph{Phys. Rev. Lett.}, 48, 1982.
+\newblock \doi{10.1103/PhysRevLett.48.291}.
+
+\bibitem[Cabello et~al.(2014)Cabello, Severini, and Winter]{Cabello2014}
+Adán Cabello, Simone Severini, and Andreas Winter.
+\newblock Graph-theoretic approach to quantum correlations.
+\newblock \emph{Phys. Rev. Lett.}, 112, 2014.
+\newblock \doi{10.1103/physrevlett.112.040401}.
+
+\bibitem[Brunner et~al.(2014)Brunner, Cavalcanti, Pironio, Scarani, and
+  Wehner]{Brunner2014}
+Nicolas Brunner, Daniel Cavalcanti, Stefano Pironio, Valerio Scarani, and
+  Stephanie Wehner.
+\newblock Bell nonlocality.
+\newblock \emph{Rev. Mod. Phys.}, 86, 2014.
+\newblock \doi{10.1103/RevModPhys.86.419}.
+
+\bibitem[Yu and Oh(2012)]{Yu2012}
+Sixia Yu and C.~H. Oh.
+\newblock State-independent proof of {K}ochen-{S}pecker theorem with 13 rays.
+\newblock \emph{Phys. Rev. Lett.}, 108, 2012.
+\newblock \doi{10.1103/PhysRevLett.108.030402}.
+
+\bibitem[Cabello et~al.(2016)Cabello, Kleinmann, and Portillo]{Cabello2016}
+Adán Cabello, Matthias Kleinmann, and José~R. Portillo.
+\newblock Quantum state-independent contextuality requires 13 rays.
+\newblock \emph{J. Phys. A}, 49, 2016.
+\newblock \doi{10.1088/1751-8113/49/38/38lt01}.
+
+\bibitem[Klyachko et~al.(2008)Klyachko, Can, Binicio\ifmmode~\breve{g}\else
+  \u{g}\fi{}lu, and Shumovsky]{Klyachko2008}
+Alexander~A. Klyachko, M.~Ali Can, Sinem Binicio\ifmmode~\breve{g}\else
+  \u{g}\fi{}lu, and Alexander~S. Shumovsky.
+\newblock Simple test for hidden variables in spin-1 systems.
+\newblock \emph{Phys. Rev. Lett.}, 101, 2008.
+\newblock \doi{10.1103/PhysRevLett.101.020403}.
+
+\bibitem[Bharti et~al.(2019)Bharti, Ray, Varvitsiotis, Warsi, Cabello, and
+  Kwek]{Bharti2019}
+Kishor Bharti, Maharshi Ray, Antonios Varvitsiotis, Naqueeb~Ahmad Warsi, Adán
+  Cabello, and Leong-Chuan Kwek.
+\newblock Robust self-testing of quantum systems via noncontextuality
+  inequalities.
+\newblock \emph{Phys. Rev. Lett.}, 122, 2019.
+\newblock \doi{10.1103/physrevlett.122.250403}.
+
+\bibitem[Amaral(2018)]{Amaral2018}
+Barbara Amaral.
+\newblock \emph{On graph approaches to contextuality and their role in quantum
+  theory}.
+\newblock Springer, 2018.
+
+\bibitem[Heunen et~al.(2014)Heunen, Fritz, and Reyes]{Heunen2014}
+Chris Heunen, Tobias Fritz, and Manuel~L. Reyes.
+\newblock Quantum theory realizes all joint measurability graphs.
+\newblock \emph{Phys. Rev. A}, 89, 2014.
+\newblock \doi{10.1103/PhysRevA.89.032121}.
+
+\bibitem[Kunjwal(2019)]{Kunjwal2019}
+Ravi Kunjwal.
+\newblock Beyond the {C}abello-{S}everini-{W}inter framework: Making sense of
+  contextuality without sharpness of measurements.
+\newblock \emph{Quantum}, 3, 2019.
+\newblock \doi{10.22331/q-2019-09-09-184}.
+
+\bibitem[Ekert(1991)]{Ekert91}
+Artur~K. Ekert.
+\newblock Quantum cryptography based on {B}ell's theorem.
+\newblock \emph{Phys. Rev. Lett.}, 67, 1991.
+\newblock \doi{10.1103/PhysRevLett.67.661}.
+
+\bibitem[Šupić and Bowles(2020)]{Supic2020}
+Ivan Šupić and Joseph Bowles.
+\newblock Self-testing of quantum systems: a review.
+\newblock \emph{Quantum}, 4, 2020.
+\newblock \doi{10.22331/q-2020-09-30-337}.
+
+\bibitem[McKague and Mosca(2011)]{McKague2011}
+Matthew McKague and Michele Mosca.
+\newblock Generalized self-testing and the security of the 6-state protocol.
+\newblock In \emph{Theory of Quantum Computation, Communication, and
+  Cryptography}. Springer, 2011.
+\newblock \doi{10.1007/978-3-642-18073-6_10}.
+
+\bibitem[Horn(2013)]{Horn2013}
+Roger~A. Horn.
+\newblock \emph{Matrix analysis}.
+\newblock Cambridge University Press, second edition edition, 2013.
+\newblock \doi{10.1017/9781139020411}.
+
+\bibitem[Brassard et~al.(1999)Brassard, Cleve, and Tapp]{Brassard1999}
+Gilles Brassard, Richard Cleve, and Alain Tapp.
+\newblock Cost of exactly simulating quantum entanglement with classical
+  communication.
+\newblock \emph{Phys. Rev. Lett.}, 83, 1999.
+\newblock \doi{10.1103/PhysRevLett.83.1874}.
+
+\bibitem[Toner and Bacon(2003)]{Toner2003}
+B.~F. Toner and D.~Bacon.
+\newblock Communication cost of simulating {B}ell correlations.
+\newblock \emph{Phys. Rev. Lett.}, 91, 2003.
+\newblock \doi{10.1103/PhysRevLett.91.187904}.
+
+\bibitem[Cabello et~al.(2018)Cabello, Gu, Gühne, and Xu]{Cabello2018}
+Adán Cabello, Mile Gu, Otfried Gühne, and Zhen-Peng Xu.
+\newblock Optimal classical simulation of state-independent quantum
+  contextuality.
+\newblock \emph{Phys. Rev. Lett.}, 120, 2018.
+\newblock \doi{10.1103/physrevlett.120.130401}.
+
+\bibitem[Kleinmann et~al.(2011)Kleinmann, Gühne, Portillo, Åke Larsson, and
+  Cabello]{Kleinmann2011}
+Matthias Kleinmann, Otfried Gühne, José~R. Portillo, Jan Åke Larsson, and
+  Adán Cabello.
+\newblock Memory cost of quantum contextuality.
+\newblock \emph{New J. Phys.}, 13, 2011.
+\newblock \doi{10.1088/1367-2630/13/11/113011}.
+
+\bibitem[Wiesner et~al.(2012)Wiesner, Gu, Rieper, and Vedral]{Wiesner2012}
+Karoline Wiesner, Mile Gu, Elisabeth Rieper, and Vlatko Vedral.
+\newblock Information-theoretic lower bound on energy cost of stochastic
+  computation.
+\newblock \emph{Proc. R. Soc. A}, 468, 2012.
+\newblock \doi{10.1098/rspa.2012.0173}.
+
+\bibitem[A.~Peres(1998)]{Peres1998}
+A.~Ron A.~Peres.
+\newblock In \emph{Microphysical Reality and Quantum Formalism}. Kluwer, 1998.
+
+\bibitem[Barnett and Crutchfield(2015)]{Barnett2015}
+Nix Barnett and James~P. Crutchfield.
+\newblock Computational mechanics of input-output processes: Structured
+  transformations and the {\(\epsilon\)}-transducer.
+\newblock \emph{J. Stat. Phys.}, 161, 2015.
+\newblock \doi{10.1007/s10955-015-1327-5}.
+
+\bibitem[Spekkens(2014)]{Spekkens2014}
+Robert~W. Spekkens.
+\newblock The status of determinism in proofs of the impossibility of a
+  noncontextual model of quantum theory.
+\newblock \emph{Foundations of Physics}, 44, 2014.
+\newblock \doi{10.1007/s10701-014-9833-x}.
+
+\bibitem[Buchanan(2019)]{Buchanan2019}
+Mark Buchanan.
+\newblock Leibniz’s principle of indistinguishability.
+\newblock \emph{Nat. Phys.}, 15, 2019.
+\newblock \doi{10.1038/s41567-019-0711-5}.
+
+\bibitem[Spekkens(2019)]{Spekkens2019}
+Robert~W. Spekkens.
+\newblock The ontological identity of empirical indiscernibles: {L}eibniz's
+  methodological principle and its significance in the work of einstein.
+\newblock \emph{https://arxiv.org/abs/1909.04628}, 2019.
+
+\bibitem[Einstein(1905)]{Einstein1905}
+A.~Einstein.
+\newblock On the electrodynamics of moving bodies.
+\newblock \emph{Annalen der Physik}, 17, 1905.
+\newblock \doi{10.1002/andp.19053221004}.
+
+\bibitem[Mazurek et~al.(2016)Mazurek, Pusey, Kunjwal, Resch, and
+  Spekkens]{Mazurek2016}
+Michael~D. Mazurek, Matthew~F. Pusey, Ravi Kunjwal, Kevin~J. Resch, and
+  Robert~W. Spekkens.
+\newblock An experimental test of noncontextuality without unphysical
+  idealizations.
+\newblock \emph{Nat. Commun.}, 7, 2016.
+\newblock \doi{10.1038/ncomms11780}.
+
+\bibitem[Pusey et~al.(2019)Pusey, del Rio, and Meyer]{Pusey2019a}
+Matthew~F. Pusey, Lídia del Rio, and Bettina Meyer.
+\newblock Contextuality without access to a tomographically complete set.
+\newblock \emph{arXiv:1904.08699}, 2019.
+
+\bibitem[Pusey(2018)]{Pusey2018}
+Matthew~F. Pusey.
+\newblock Robust preparation noncontextuality inequalities in the simplest
+  scenario.
+\newblock \emph{Phys. Rev. A}, 98, 2018.
+\newblock \doi{10.1103/PhysRevA.98.022112}.
 
 \end{thebibliography}
