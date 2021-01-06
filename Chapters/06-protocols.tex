@@ -148,7 +148,7 @@ for $\Tilde{j}\neq j$, and
 \sum_{k,l}{}^{'}\vert\langle \Psi_k^{m_j\vert M_i} \vert \Psi_l^{m_{j'}\vert M_i}\rangle \vert \leq 3 d^2\sqrt{\frac{2\epsilon}{\mathcal{X}}}.
 \end{equation}
 We could drop the factor $3$, since for sufficiently small $\epsilon$, the set of all vectors is linearly independent.
-\subsubsection{Orthonormal set $\subset \mathbb{C}^k$ close to the set of relevant eigenvectors}
+\subsubsection{Orthonormal set close to the set of relevant eigenvectors}
 In the following subsection, we will bound the Frobenius distance
 \begin{equation}
 \|F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F
@@ -177,7 +177,7 @@ As such, the orthonormal set $\bigcup\limits_{j=1}^3\{\vert \Phi_k^{m_j\vert M_i
 \sum_{j=1}^3\sum_k{}^{'}\|\vert \Psi_k^{m_j\vert M_i} \rangle - \vert \Phi_k^{m_j\vert M_i}\rangle \|_2^2=\|A-\Tilde{A}\|_F^2\leq \mathcal{O}(d^4\frac{\epsilon}{\mathcal{X}})
 \end{equation}
 Such a set can be found for all $i\in\{1,\dots,n\}$.
-\subsubsection{The measurement $M_i$ acts almost projectively on the subspace $V_{\text{relev}}^{(i)}$}
+\subsubsection{The measurement $M_i$ acts almost projectively on $V_{\text{relev}}^{(i)}$}
 We now bound the expression
 \begin{equation}
 \|F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F,
@@ -199,7 +199,7 @@ Notice that
 \end{equation}
 We can write 
 \begin{equation}
-\vert \Phi_k^{m_j\vert M_i}\rangle = \cos(\theta_k^{m_j\vert M_i})\vert \Psi_k^{m_j\vert M_i}\rangle + \exp(i\phi_k^{m_j\vert M_i})\sin(\theta_k^{m_j\vert M_i})\vert \Psi_{k,\perp}^{m_j\vert M_i} \rangle, 
+\vert \Phi_k^{m_j\vert M_i}\rangle = \cos(\theta_k^{m_j\vert M_i})\vert \Psi_k^{m_j\vert M_i}\rangle + \exp(i\phi_k^{m_j\vert M_i})\sin(\theta_k^{m_j\vert M_i})\vert \Psi_{k,\perp}^{m_j\vert M_i} \rangle, \\[0.5em]
 \end{equation}
 where $\cos(\theta_k^{m_j\vert M_i})= \vert\langle \Phi_k^{m_j\vert M_i}\vert\Psi_k^{m_j\vert M_i} \rangle\vert$ for $\theta_k^{m_j\vert M_i}\in[0,\frac{\pi}{2}]$, $\phi_k^{m_j\vert M_i}$ is some phase, and $\vert \Psi_{k,\perp}^{m_j\vert M_i} \rangle$ is a state perpendicular to $\vert \Psi_k^{m_j\vert M_i}\rangle$.
 Thus, equations REF can be rewritten like
@@ -246,5 +246,33 @@ Due to operational equivalence $S_i\sim S_{*}$, we can write:
 \|\sum_j q_j^{(*)}(\rho_{j}-\Pi_{\text{relev}}^{(i)}\rho_{j}\Pi_{\text{relev}}^{(i)})\|_F \leq \sqrt{d}\mathcal{X},
 \end{equation}
 where $\rho_{j}$ is the density operator corresponding to the preparation $P_j$.
-
+Therefore,
+\begin{equation}
+q_0^{(*)}\|(\rho_{0}-\Pi_{\text{relev}}^{(i)}\rho_{0}\Pi_{\text{relev}}^{(i)})\|_F \leq \sqrt{d}\mathcal{X},
+\end{equation}
+where we have used Lemma REF:
+\begin{lemma}
+Let $A$, $B$ be two positive semi-definite operators. Then
+\begin{equation}
+\|A+B\|_F \geq \|A\|_F.
+\end{equation}
+\end{lemma}
+\begin{proof}
+$\|A+B\|_F^2=\operatorname{tr}(A^2+B^2+2AB)\geq \operatorname{tr}(A^2)=\|A\|_F^2$, where we have used that, due to semi positive-definiteness $tr(B^2)$, $tr(AB)$ $\geq 0$. This can be seen by simply inserting an arbitrary spectral decomposition for $A$, $B$, and noting that all eigenvalues are non-negative.
+\end{proof}
+The operators in REF are indeed positive semi-definite: they are Hermitian and satisfy
+\begin{equation}
+\langle \phi \vert \rho_{j}-\Pi_{\text{relev}}^{(i)}\rho_{j}\Pi_{\text{relev}}^{(i)} \vert \phi \rangle \geq 0,
+\end{equation}
+for all $\phi\in\mathbb{C}^k$. This can be seen by expanding an arbitrary $\phi$ in terms of an ONB with respect to which the projector $\Pi_{\text{relev}}^{(i)}$ is diagonal.
+Since $q_0^{(*)}\approx\frac{1}{3}$, we conclude that
+\begin{equation}
+\|(\rho_{0}-\Pi_{\text{relev}}^{(i)}\rho_{0}\Pi_{\text{relev}}^{(i)})\|_F \leq \mathcal{O}(\sqrt{d}\mathcal{X}).
+\end{equation}
+Apart from when certifying quantumness, as detailed in Section REF, we only care about single measurements acting on the distinguished preparation $P_0$ for self-testing. Since $\rho_0$ has no statistically relevant spectral components not in $V_{\text{relev}}^{(i)}$, we are justified in proving almost-projectiveness of the measurements $M_i$ only for that subspace, REF. We will use REF in Section REF, to arrive at the self-testing result.
 \subsubsection{Piecing things together}
+We define $\ket{u_0}$ as an arbitrary purification of $\rho_0$, and denote $\sum_{k}{}^{'}\vert \Phi_k^{m_j\vert M_i}\rangle \langle \Phi_k^{m_j\vert M_i}\vert$ by $\Pi_{\text{relev}}^{(j\vert i)}$, where $\Pi_{\text{relev}}^{(i)}=\sum_{j\in\{1,2,3\}}\Pi_{\text{relev}}^{(j\vert i)}$. In analogous fashion to CITE, we define
+\begin{equation}
+\ket{u_i} = \frac{(\Pi_{\text{relev}}^{(1\vert i)}\otimes\mathbb{1})}{\sqrt{\operatorname{tr}(\Pi_{\text{relev}}^{(1\vert i)}\rho_0)}}\ket{u_0},
+\end{equation}
+for $i\in\{1,\dots,n\}$.

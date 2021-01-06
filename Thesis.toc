@@ -37,11 +37,8 @@
 \contentsline {subsection}{\numberline {6.1.1}Step 6a: Certifying quantumness}{79}{subsection.152}%
 \contentsline {subsection}{\numberline {6.1.2}Step 6b: Bounding compatible quantum models}{82}{subsection.159}%
 \contentsline {subsubsection}{\numberline {6.1.2.1}Overlap between statistically relevant states}{84}{subsubsection.170}%
-\contentsline {subsubsection}{\numberline {6.1.2.2}Orthonormal set $\subset \mathbb {C}^k$ close to the set of relevant eigenvectors}{84}{subsubsection.175}%
-\contentsline {subsubsection}{\numberline {6.1.2.3}The measurement $M_i$ acts almost projectively on the subspace $V_{\text {relev}}^{(i)}$}{86}{subsubsection.182}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}Orthonormal set close to the set of relevant eigenvectors}{84}{subsubsection.175}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}The measurement $M_i$ acts almost projectively on $V_{\text {relev}}^{(i)}$}{86}{subsubsection.182}%
 \contentsline {subsubsection}{\numberline {6.1.2.4}Why can we confine our analysis to the subspace $V_{\text {relev}}^{(i)}$?}{87}{subsubsection.196}%
-\contentsline {subsubsection}{\numberline {6.1.2.5}Piecing things together}{88}{subsubsection.199}%
-\vspace {2em}
-\contentsline {chapter}{\numberline {A}An Appendix}{89}{appendix.200}%
-\vspace {2em}
-\contentsline {chapter}{Bibliography}{90}{dummy.201}%
+\contentsline {subsubsection}{\numberline {6.1.2.5}Piecing things together}{88}{subsubsection.204}%
+\contentsline {chapter}{Bibliography}{89}{dummy.206}%
