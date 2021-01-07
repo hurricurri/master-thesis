@@ -149,7 +149,7 @@ We now aim to bound the Frobenius distance
 \end{pmatrix}
 \right\|_F.
 \end{equation*}
-As the Frobenius norm is submultiplicative, i.e. $\|AB\|_F\leq\|A\|_F\|B\|_F$, we find
+We find:
 \begin{equation*}
 \left\|
 \begin{pmatrix}
@@ -161,16 +161,13 @@ As the Frobenius norm is submultiplicative, i.e. $\|AB\|_F\leq\|A\|_F\|B\|_F$, w
 \mathbb{1}_r & \\
 & 0_{n-r}
 \end{pmatrix}
-\right\|_F\;\leq\;\|D^{-1}\|^{\textstyle ^2}_F\;\|\Tilde{X}-X^{*}\|_F\; \leq\; \epsilon\thinspace\|D^{-1}\|_F^{\textstyle ^2}\;\stackrel{(\bigtriangleup)}{\leq}\;\epsilon\thinspace \frac{n}{\sigma_{\text{min}}^2}\thinspace,
+\right\|_F\;\leq\;\|WD^{-1}W^{\dag}(\Tilde{X}-X^*)WD^{-1}W^{\dag}\|_F\; \leq\; \frac{\epsilon}{\sigma_{\text{min}}^2}\thinspace.
 \end{equation*}
-provided that the smallest singular value $\sigma_{\text{min}}\leq 1$. For the KCBS scenario, $n=5+1$, we find $\sigma^2_{\text{min}}=\frac{1}{2}(\sqrt{5}-1)\approx 0.618$. The inequality $(\bigtriangleup)$ holds because
-\begin{equation*}
-\|D^{-1}\|_F^{\textstyle ^2} = (n-r)+\sum_{i=1}^r\frac{1}{\sigma_i^2}\leq\frac{n}{\sigma_{\text{min}}^2}\thinspace. 
-\end{equation*}
+For the KCBS scenario, $n=5+1$, we find $\sigma^2_{\text{min}}=\frac{1}{2}(\sqrt{5}-1)\approx 0.618$.
 Therefore,
 \begin{alignat*}{2}
-\|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F & \leq\;\epsilon\frac{n}{\sigma_{\text{min}}^2} && \text{ and}\\[0.5em]
-\|Z\|_F & \stackrel{(\square)}{\leq} \epsilon\frac{n^2}{\sigma_{\text{min}}^2}&&,
+\|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F & \leq\;\frac{\epsilon}{\sigma_{\text{min}}^2} && \text{ and}\\[0.5em]
+\|Z\|_F & \stackrel{(\square)}{\leq} \epsilon\frac{n}{\sigma_{\text{min}}^2}&&,
 \end{alignat*}
 where the inequality $(\square)$ holds because $n\|A\|_F\geq\operatorname{tr}(A)$ for $A\in\mathbb{C}^{n,n}$. 
 
@@ -197,9 +194,9 @@ W_1^{\dag} \\ W_2^{\dag}
 \end{equation*}
 Unitaries leave the Frobenius norm invariant, as $\|A\|_F^{\textstyle ^2}=\sum_k\|Ae_k\|_2^{\textstyle ^2} = \sum_k \|UAe_k\|_2^{\textstyle ^2}=\|UA\|_F^{\textstyle ^2}\thinspace$, where $U$ is a unitary. Therefore,
 \begin{equation*}
-\|B^{\dag}-\Tilde{V}_2\Sigma_r W_1^{\dag}\|_F=\|ZW_2^{\dag}\|_F=\|Z\|_F\leq\epsilon \frac{n^2}{\sigma_{\text{min}}^2}.
+\|B^{\dag}-\Tilde{V}_2\Sigma_r W_1^{\dag}\|_F=\|ZW_2^{\dag}\|_F=\|Z\|_F\leq\epsilon \frac{n}{\sigma_{\text{min}}^2}.
 \end{equation*}
-It remains to show that $\Tilde{V}_2$ is approximately isometric, which follows from the previously derived bound $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\epsilon\frac{n}{\sigma_{\text{min}}^2}$, as we will now prove:
+It remains to show that $\Tilde{V}_2$ is approximately isometric, which follows from the previously derived bound $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\frac{\epsilon}{\sigma_{\text{min}}^2}$, as we will now prove:
 
 Consider a SVD of $\Tilde{V}_2$,
 \begin{equation*}
@@ -243,7 +240,7 @@ Hence, $\|\Tilde{V}_2-V_2\|_F$ can be re-written like
 &&& 0_{r-r'}
 \end{pmatrix}+\mathbb{1}_r\right)\\[0.5em] &  =\sum_{i=1}^{r'}(\Tilde{\sigma}_i^2-2\Tilde{\sigma}_i+1) + (r-r') =\sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2+(r-r').
 \end{align*}
-The condition $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\epsilon\frac{n}{\sigma_{\text{min}}^2}$ implies
+The condition $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\frac{\epsilon}{\sigma_{\text{min}}^2}$ implies
 \begin{align*}
 \left\|T
 \begin{pmatrix}
@@ -252,18 +249,17 @@ The condition $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\epsilon\fra
 &&\Tilde{\sigma}_{r'}^2& \\
 &&&0_{r-r'}
 \end{pmatrix}T^{\dag}-\mathbb{1}_r\right\|_F & =\sum_{i=1}^{r'}(\Tilde{\sigma}_i^4-2\Tilde{\sigma}_i^2+1) + (r-r') \\
-& = \sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2(\Tilde{\sigma}_i+1)^2 + (r-r')\leq \epsilon\frac{n}{\sigma_{\text{min}}^2}\;,
+& = \sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2(\Tilde{\sigma}_i+1)^2 + (r-r')\leq \frac{\epsilon}{\sigma_{\text{min}}^2}\;,
 \end{align*}
-which in particular implies that, for $\epsilon<\frac{\sigma_{\text{min}}^2}{n}$, the rank of $\Tilde{V}_2$ must match that of $A^{\dag}$, i.e. $r=r'$. Additionally, $\Tilde{V}_2$ is approximately isometric:
+which in particular implies that, for $\epsilon<\sigma_{\text{min}}^2$, the rank of $\Tilde{V}_2$ must match that of $A^{\dag}$, i.e. $r=r'$. Additionally, $\Tilde{V}_2$ is approximately isometric:
 \begin{equation*}
-\|\Tilde{V}_2-V_2\|_F = \sum_{i=1}^r(\Tilde{\sigma_i}-1)^2\leq\epsilon\frac{n}{\sigma_{\text{min}}^2}\thinspace.
+\|\Tilde{V}_2-V_2\|_F = \sum_{i=1}^r(\Tilde{\sigma_i}-1)^2\leq\frac{\epsilon}{\sigma_{\text{min}}^2}\thinspace.
 \end{equation*}
 Together, this gives us the desired intermediate result:
 \begin{align*}
-\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \|B^{\dag}-\Tilde{V_2}\Sigma_r W_1^{\dag}\|_F + \|(\Tilde{V}_2-V_2)\Sigma_r W_1^{\dag}\|_F & \leq \epsilon\frac{n}{\sigma_{\text{min}}^2}+\epsilon\frac{n}{\sigma_{\text{min}}^2}\|\Sigma_r\|_F\\[0.5em]
-& \leq \epsilon\frac{n}{\sigma_{\text{min}}^2}(1+\sqrt{n}\thinspace\sigma_{\text{max}}),
+\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \|B^{\dag}-\Tilde{V_2}\Sigma_r W_1^{\dag}\|_F + \|(\Tilde{V}_2-V_2)\Sigma_r W_1^{\dag}\|_F & \leq \frac{\epsilon}{\sigma_{\text{min}}^2}(n+\sigma_{\text{max}}),
 \end{align*}
-where $\sigma_{\text{max}}$ is the maximum singular value of $A^{\dag}$. For the KCBS scenario, $n=5+1$, $\sigma_{\text{max}}=\sqrt{2}$, and consequently $\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \kappa\epsilon$, where $\kappa \approx 43.34$.
+where $\sigma_{\text{max}}$ is the maximum singular value of $A^{\dag}$. For the KCBS scenario, $n=5+1$, $\sigma_{\text{max}}=\sqrt{2}$, and consequently $\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \kappa\epsilon$, where $\kappa \approx 12$.
 
 To recap, we have just shown that
 \begin{align*}
@@ -362,7 +358,7 @@ We want \ref{eqn:selftestinginterm} to hold true for the normalized vectors $\ve
 \label{lem:selftestingfinallem}
 Let $\| \ket{a} - \ket{b} \|_2\leq\delta$ for vectors $\ket{a}$ and $\ket{b}$, such that $\|\ket{a}\|_2\geq2\delta$. Let $\vert \Hat{a} \rangle$ and $\vert \Hat{b} \rangle$ be $\ket{a}$ and $\ket{b}$, normalized to have unit norm. Then, we have that $\| \vert \Hat{a}\rangle-\vert \Hat{b} \rangle \|_2\leq \frac{2\delta}{\|\ket{a}\|_2}$.
 \end{lemma}
-The proof is found in \cite{Lemma} (Lemma 9). As $\vert \langle u_i^{(n)}\vert u_0^{(n)} \rangle \vert =5^{\frac{1}{4}}$, the assumption in Lemma \ref{lem:selftestingfinallem} is true for sufficiently small $\epsilon$.
+The proof is found in \cite{Bharti2019} (Lemma 9). As $\vert \langle u_i^{(n)}\vert u_0^{(n)} \rangle \vert =5^{\frac{1}{4}}$, the assumption in Lemma \ref{lem:selftestingfinallem} is true for sufficiently small $\epsilon$.
 
 Having proved that the only quantum model $\ket{\Psi}$, $\Pi_i$ compatible with a maximal violation of \ref{eqn:oddncycleclass} is \ref{eqn:ncycleideal}, and that this self-testing result is noise robust, we will now analyze what assumptions the protocol in \cite{Bharti2019} requires for practical purposes.
 
@@ -498,13 +494,13 @@ An interesting feature we observe is that the memory cost of simulating the idea
         \centering
         \begin{subfigure}{\textwidth}
             \centering
-            \includegraphics[width=0.6\textwidth]{images/allentropies.png}
+            \includegraphics[width=0.7\textwidth]{images/allentropies.png}
             \caption{Plotted is the Shannon entropy of the probability distribution over all achievable post-measurement quantum states after a given number of measurements for the 5, 7, and 9-cycle KS contextuality scenarios. The probability distribution over possible post-measurement quantum states becomes approximately stationary for a sufficiently large number of measurements and the entropies thus saturate. This stationary limit of $H$ is the process' RAM memory cost, and it increases with an increasing cycle length}
         \end{subfigure}
         \vskip\baselineskip
         \begin{subfigure}{\textwidth}
             \centering 
-            \includegraphics[width=0.6\textwidth]{images/memorycost.png}
+            \includegraphics[width=0.7\textwidth]{images/memorycost.png}
             \caption{The RAM memory cost of classically simulating the ideal reference experiment for $n$-cycle KS contextuality scenarios increases logarithmically with the number of ideal measurements obeying cyclic compatibility that are performed.}
         \end{subfigure}
         \caption{The RAM memory cost of classically simulating the ideal reference experiment for odd $n$-cycle KS contextuality scenarios in terms of the cycle length $n$.}
@@ -539,11 +535,11 @@ I_{erased}= -\frac{1}{n} \sum_{s,(x,y)} \pi(s) \expval{P_x^y}{s}\thinspace\log_2
 where we sum over all causal states $s$ and $(x,y)\in\{1,\dots,n\}\times\{0,1\}$. $\pi$ is the stationary probability distribution over the causal states and $\text{P}_x^y$ is the projector corresponding to the measurement-outcome pair $(x,y)$.
 
 We find that any classical simulation that emulates the ideal KCBS experiment must erase at least $\sim 2.75$ bits for each measurement (in the stationary regime).
-Therefore, the heat per measurement any classical simulation dissipates is at least $\sim 2.75\thinspace k_B\thinspace T \log(2)$. The heat dissipated by classical devices emulating higher order odd $n$-cycle scenarios increases with the cycle length $n$: By paying a price in terms of the number of ideal measurements satisfying cyclic compatibility we must implement, we can increase the minimal unit of heat that a classical simulation must dissipate per measurement cycle. Once again, this dependence is only sub-linear, as can be seen in Figure \ref{fig:erasedbits}.
+Therefore, the heat per measurement any classical simulation dissipates is at least $\sim 2.75\thinspace k_B\thinspace T \log(2)$. The heat dissipated by classical devices emulating higher order odd $n$-cycle scenarios increases with the cycle length $n$: By paying a price in terms of the number of ideal measurements satisfying cyclic compatibility we must implement, we can increase the minimal unit of heat that a classical simulation must dissipate per measurement cycle. Once again, this dependence is only logarithmic, as can be seen in Figure \ref{fig:erasedbits}.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\textwidth]{images/erasedbits.png}
+    \includegraphics[width=0.7\textwidth]{images/erasedbits.png}
     \caption{The minimal number of bits a classical simulation of the ideal $n$-cycle reference experiment must erase per measurement, in terms of the cycle length $n$. The number of erased bits increases logarithmically with the cycle length.}
     \label{fig:erasedbits}
 \end{figure}

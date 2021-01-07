@@ -16,7 +16,7 @@ Let $n\geq 5$ be an odd integer. The protocol we consider is reminiscent of the 
         \includegraphics[width=0.8\textwidth]{images/kcbsrefstates.png}
         \caption{}
     \end{subfigure}
-    \caption{}
+    \caption{\textbf{(a):} Measurement events and retrospective preparations corresponding to a self-testing scenario consistent with cycle length $n=5$. The experimenter can choose from five three-outcome measurements $M_i$, with outcomes $\{m_1,m_2,m_3\}$. In post-processing, the experimenter defines $2n$ preparations $\{P_{m_k\vert M_i}\}_{k,i}$, for $k\in\{1,2\}$ and $i\in\{1,\dots,n\}$. We identify $P_{m_3\vert M_i}\equiv P_{m_1\vert M_{\oplus 1}}$. In the ideal case, the measurement events $\{m_k\vert M_i\}_{k\in\{1,2,3\}}$ correspond to rank-one projectors onto the orthogonal triad $\subset \mathbb{C}^3$ containing the cycle states $\vert u_i\rangle$ and $\vert u_{i\oplus 1}\rangle$. Furthermore, in the ideal case, the preparations $P_{m_k\vert M_i}$ are pure states that coincide with the one-dimensional subspaces spanned by the vectors in this triad. Measurement events $m_3\vert M_i$ and $m_1\vert M_{i\oplus 1}$ are non-overlapping to illustrate that the self-testing protocol does not assume operational equivalence of these, despite the fact that they correspond to the same rank-one projector onto $\vert u_{i\oplus 1}\rangle$ in the ideal case. \textbf{(b):} Juxtaposition with the $n=5$ cycle states belonging to the odd $n$-cycle scenario. Figure (a) can be seen as a top view of (b), with every black dot corresponding to a cycle states $\vert u_i\rangle$.}
 \end{figure}
 
 Like in Section REF, we assume i.i.d.\ rounds, i.e. the devices to operate in an identical manner for all rounds of the protocol, in particular independently of previous input-output cycles. This allows us to lift relative frequencies to probabilities. We will discuss all other assumptions in due time. The protocol consists of the following steps:
@@ -281,19 +281,47 @@ We define $\ket{u_0}$ as an arbitrary purification of $\rho_0$, and denote $\sum
 \begin{equation}
 \ket{u_i} = \frac{(\Pi_{\text{relev}}^{(1\vert i)}\otimes\mathbb{1})}{\sqrt{\operatorname{tr}(\Pi_{\text{relev}}^{(1\vert i)}\rho_0)}}\ket{u_0},
 \end{equation}
-for $i\in\{1,\dots,n\}$. The vectors $\{\ket{u_i}\}_i$ are not consistent with cyclic compatibility, i.e. $\bra{u_i}\ket{u_{i\oplus 1}}\neq 0$.
+for $i\in\{1,\dots,n\}$, where the identity $\mathbb{1}$ acts on the purifying system. The vectors $\{\ket{u_i}\}_i$ are not consistent with cyclic compatibility, i.e. $\bra{u_i}\ket{u_{i\oplus 1}}\neq 0$.
 We obtain a set $\{u_i'\}_{i=1}^n$ from $\{u_i\}_{i=1}^n$, consistent with cyclic compatibility, i.e. $\bra{u_i'}\ket{u_{i\oplus 1}'}=0$. This is done by removing from $\ket{u_2}$ all components along the direction of $\ket{u_1'}\coloneqq\ket{u_1}$. We then remove from $\ket{u_3}$ all components along the direction of the updated $\ket{u_2'}$, and so on. For the final vector in the cycle we have to subtract two projections. The magnitude of all correcting terms is bounded by REF.
 For $i\in\{1,\dots,n\}$
 \begin{equation}
-\begin{split}
-\bra{u_i}\ket{u_{i\oplus 1}}\propto\operatorname{tr}(\Pi_{\text{relev}}^{1\vert i}\Pi_{\text{relev}}^{1\vert i\oplus 1}\rho_0) & =\operatorname{tr}(\Pi_{\text{relev}}^{1\vert i}(\Pi_{\text{relev}}^{1\vert i\oplus 1}-\Pi_{\text{relev}}^{3\vert i})\rho_0)\\ & \leq d \|\Pi_{\text{relev}}^{1\vert i\oplus 1}-\Pi_{\text{relev}}^{3\vert i}\|_F.\\ & \leq \mathcal{O}(d^{7/2}\epsilon^{1/2}\mathcal{X}^{-1/2})\; .
-\end{split}
+\bra{u_i}\ket{u_{i\oplus 1}}\propto\operatorname{tr}(\Pi_{\text{relev}}^{1\vert i}\Pi_{\text{relev}}^{1\vert i\oplus 1}\rho_0) \leq \|\Pi_{\text{relev}}^{1\vert i}\Pi_{\text{relev}}^{1\vert i\oplus 1}\|_F. \leq \mathcal{O}(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2})\; ,
 \end{equation}
-
+where for the first inequality we used that $\operatorname{tr}(\Pi_{\text{relev}}^{1\vert i}\Pi_{\text{relev}}^{1\vert i\oplus 1}\rho_0)$ is the Hilbert-Schmidt scalar product $<\Pi_{\text{relev}}^{1\vert i}\Pi_{\text{relev}}^{1\vert i\oplus 1},\rho_0>$. The Cauchy-Schwarz inequality then yields the upper bound in REF.
 
 We now consider the vectors
 $\ket{v_i}=\bra{u'_i}\ket{u_0}\ket{u'_i}$,
 for $i\in\{1,\dots, n\}$. The vectors $\ket{v_i}$ are of the same form as those we constructed in Section \ref{sec:cswhierarch}, in order to set up the Gram matrix $X$ corresponding to a quantum model of some correlation experiment. If we construct the Gram matrix of the vectors $\{v_i\}_{i=0}^n$, then this matrix satisfies the three constraints of the Lovász SDP REF for the odd $n$-cycle exclusivity graph. The objective function of the SDP, evaluated for this Gram matrix gives:
 \begin{equation}
-\sum_i^n X_{ii} = \sum_{i=1}^n \vert \bra{u'_i}\ket{u_0} \vert^2 = \operatorname{tr}(\Pi_{\text{relevant}}^{(1\vert i)}\rho_0)+\mathcal{O}(d^{7/2}\epsilon^{1/2}\mathcal{X}^{-1/2}).
+\sum_{i=1}^n X_{ii} = \sum_{i=1}^n \vert \bra{u'_i}\ket{u_0} \vert^2 = \sum_{i=1}^n\operatorname{tr}(\Pi_{\text{relevant}}^{(1\vert i)}\rho_0)+\mathcal{O}(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2}).
 \end{equation}
+To relate this linear combination to the observed statistics $p(m_k\vert M_i,P_0)$, we make use of REF:
+\begin{equation}
+\begin{split}
+\sum_{i=1}^n\operatorname{tr}(\Pi_{\text{relevant}}^{(1\vert i)}\rho_0) & =\sum_{i=1}^n\operatorname{tr}(F_{m_1\vert M_i}\Pi_{\text{relevant}}^{(i)}\rho_0\Pi_{\text{relevant}}^{(i)})+\mathcal{O}(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2}) \\  & =\sum_{i=1}^n\operatorname{tr}(F_{m_1\vert M_i}\rho_0)+\mathcal{O}(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2})+\mathcal{O}(d^{1/2}\mathcal{X}),
+\end{split}
+\end{equation}
+where we used REF to obtain the second equality.
+
+We now choose $\mathcal{X}=d^{4/3}\epsilon^{1/3}$ to get:
+\begin{equation}
+\sum_{i=1}^n\operatorname{tr}(\Pi_{\text{relevant}}^{(1\vert i)}\rho_0) = \sum_{i=1}^n\operatorname{tr}(F_{m_1\vert M_i}\rho_0)+\mathcal{O}(d^{^2}\epsilon^{1/3}).
+\end{equation}
+Hence,
+\begin{equation}
+\sum_{i=1}^n X_{ii} = \sum_{i=1}^n\operatorname{tr}(F_{m_1\vert M_i}\rho_0)+\mathcal{O}(d^{^2}\epsilon^{1/3}),
+\end{equation}
+and if $\operatorname{tr}(F_{m_1\vert M_i}\rho_0)\geq B_q^{(n)}+d^{^2}\epsilon^{1/3}$ then
+\begin{equation}
+\sum_{i=1}^n X_{ii} \geq B_q^{(n)}+\mathcal{O}(d^{^2}\epsilon^{1/3}).
+\end{equation}
+Therefore, by Lemmas REF, there exists an isometry $V$ such that
+\begin{equation}
+\|\bra{u_i}\ket{u_0}\ket{u_i}-\langle u_i^{(n)}\vert u_0^{(n)}\rangle V \vert u_i^{(n)} \rangle \|_2 = \|(\Pi_{\text{relev}}^{(1\vert i)}\otimes \mathbb{1})\ket{u_0}-V(\vert u_i^{(n)}\rangle \langle u_i^{(n)} \vert)\vert u_0^{(n)} \rangle \|_2 \leq \mathcal{O}(d^2\epsilon^{1/3}),
+\end{equation}
+for all $i \in \{1,\dots,n\}$.
+Using REF and REF, we conclude that
+\begin{equation}
+\|(F_{m_1\vert M_i}\otimes \mathbb{1})\ket{u_0}-V(\vert u_i^{(n)}\rangle \langle u_i^{(n)} \vert) \vert u_0^{(n)} \rangle \|_2 \leq \mathcal{O}(d^2\epsilon^{1/3}).
+\end{equation}
+This is our revised self-testing result. The deviation of any valid quantum model of the physical correlation experiment from the ideal reference experiment is bounded like above, up to a global isometry $V$.

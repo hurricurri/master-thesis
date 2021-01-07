@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.26)  6 JAN 2021 18:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.26)  7 JAN 2021 13:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -747,74 +747,69 @@ Chapter 4.
 ------------------------------------------------------------------------------
 [50
 
-] [51] [52] [53] [54] [55] [56] [57]
-
-Package natbib Warning: Citation `Lemma' on page 58 undefined on input line 365
-.
-
-[58] [59] [60] [61] [62]
-<images/transducer.png, id=1045, 566.115pt x 201.00093pt>
+] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62]
+<images/transducer.png, id=1046, 566.115pt x 201.00093pt>
 File: images/transducer.png Graphic file (type png)
 <use images/transducer.png>
-Package pdftex.def Info: images/transducer.png  used on input line 430.
+Package pdftex.def Info: images/transducer.png  used on input line 426.
 (pdftex.def)             Requested size: 317.52426pt x 112.74069pt.
  [63 <./images/transducer.png>] [64]
-<images/n=5,mnts=1.png, id=1068, 567.11874pt x 532.99126pt>
+<images/n=5,mnts=1.png, id=1069, 567.11874pt x 532.99126pt>
 File: images/n=5,mnts=1.png Graphic file (type png)
 <use images/n=5,mnts=1.png>
-Package pdftex.def Info: images/n=5,mnts=1.png  used on input line 466.
+Package pdftex.def Info: images/n=5,mnts=1.png  used on input line 462.
 (pdftex.def)             Requested size: 181.44391pt x 170.52002pt.
-<images/n=5,mnts=3.png, id=1069, 665.48625pt x 615.29875pt>
+<images/n=5,mnts=3.png, id=1070, 665.48625pt x 615.29875pt>
 File: images/n=5,mnts=3.png Graphic file (type png)
 <use images/n=5,mnts=3.png>
-Package pdftex.def Info: images/n=5,mnts=3.png  used on input line 472.
+Package pdftex.def Info: images/n=5,mnts=3.png  used on input line 468.
 (pdftex.def)             Requested size: 181.44391pt x 167.75713pt.
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 464--475
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 460--471
 []$[]$  $[]$ 
  []
 
-<images/n=5,mnts=5.png, id=1070, 699.61375pt x 626.34pt>
+<images/n=5,mnts=5.png, id=1071, 699.61375pt x 626.34pt>
 File: images/n=5,mnts=5.png Graphic file (type png)
 <use images/n=5,mnts=5.png>
-Package pdftex.def Info: images/n=5,mnts=5.png  used on input line 478.
+Package pdftex.def Info: images/n=5,mnts=5.png  used on input line 474.
 (pdftex.def)             Requested size: 181.44391pt x 162.4336pt.
-<images/n=5,mnts=10.png, id=1071, 659.46375pt x 620.3175pt>
+<images/n=5,mnts=10.png, id=1072, 659.46375pt x 620.3175pt>
 File: images/n=5,mnts=10.png Graphic file (type png)
 <use images/n=5,mnts=10.png>
-Package pdftex.def Info: images/n=5,mnts=10.png  used on input line 484.
+Package pdftex.def Info: images/n=5,mnts=10.png  used on input line 480.
 (pdftex.def)             Requested size: 181.44391pt x 170.66829pt.
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 476--487
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 472--483
 []$[]$  $[]$ 
  []
 
 [65 <./images/n=5,mnts=1.png> <./images/n=5,mnts=3.png> <./images/n=5,mnts=5.pn
 g> <./images/n=5,mnts=10.png>]
-<images/allentropies.png, id=1088, 462.528pt x 346.896pt>
+<images/allentropies.png, id=1089, 462.528pt x 346.896pt>
 File: images/allentropies.png Graphic file (type png)
 <use images/allentropies.png>
-Package pdftex.def Info: images/allentropies.png  used on input line 501.
-(pdftex.def)             Requested size: 272.1676pt x 204.13754pt.
-<images/memorycost.png, id=1089, 462.528pt x 346.896pt>
+Package pdftex.def Info: images/allentropies.png  used on input line 497.
+(pdftex.def)             Requested size: 317.52426pt x 238.15694pt.
+<images/memorycost.png, id=1090, 578.16pt x 433.62pt>
 File: images/memorycost.png Graphic file (type png)
 <use images/memorycost.png>
-Package pdftex.def Info: images/memorycost.png  used on input line 507.
-(pdftex.def)             Requested size: 272.1676pt x 204.13754pt.
+Package pdftex.def Info: images/memorycost.png  used on input line 503.
+(pdftex.def)             Requested size: 317.52426pt x 238.14105pt.
  [66] [67 <./images/allentropies.png> <./images/memorycost.png>] [68]
-<images/erasedbits.png, id=1117, 462.528pt x 346.896pt>
+<images/erasedbits.png, id=1118, 578.16pt x 433.62pt>
 File: images/erasedbits.png Graphic file (type png)
 <use images/erasedbits.png>
-Package pdftex.def Info: images/erasedbits.png  used on input line 546.
-(pdftex.def)             Requested size: 272.1676pt x 204.13754pt.
-) (./Chapters/05-spekkenscont.tex [69 <./images/erasedbits.png>]
+Package pdftex.def Info: images/erasedbits.png  used on input line 542.
+(pdftex.def)             Requested size: 317.52426pt x 238.14105pt.
+) (./Chapters/05-spekkenscont.tex [69] [70 <./images/erasedbits.png>]
 Chapter 5.
 ------------------------------------------------------------------------------
  5 A revised notion of classicality \\ Spekkens non-contextuality
 ------------------------------------------------------------------------------
-[70
+[71
 
-] [71] [72] [73] [74] [75]) (./Chapters/06-protocols.tex [76]
+] [72] [73] [74] [75] [76]) (./Chapters/06-protocols.tex [77]
 Chapter 6.
 ------------------------------------------------------------------------------
  6 Two protocols based on Spekkens contextuality
@@ -825,17 +820,17 @@ Overfull \hbox (24.7396pt too wide) in paragraph at lines 4--4
 a-lent prepa-
  []
 
-<images/mntsandpreps.png, id=1197, 280.04625pt x 219.82124pt>
+<images/mntsandpreps.png, id=1203, 277.035pt x 216.05719pt>
 File: images/mntsandpreps.png Graphic file (type png)
 <use images/mntsandpreps.png>
 Package pdftex.def Info: images/mntsandpreps.png  used on input line 10.
-(pdftex.def)             Requested size: 204.12224pt x 160.23001pt.
-<images/kcbsrefstates.png, id=1198, 261.51309pt x 160.18608pt>
+(pdftex.def)             Requested size: 204.12224pt x 159.19408pt.
+<images/kcbsrefstates.png, id=1204, 261.51309pt x 160.18608pt>
 File: images/kcbsrefstates.png Graphic file (type png)
 <use images/kcbsrefstates.png>
 Package pdftex.def Info: images/kcbsrefstates.png  used on input line 16.
 (pdftex.def)             Requested size: 163.2984pt x 100.0305pt.
-[77
+[78
 
 ]
 Overfull \hbox (42.25104pt too wide) in paragraph at lines 27--28
@@ -846,7 +841,7 @@ m/m/it/10.95 m[]; m[]\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 j\OT1/cmr/m/n/10.9
 1/cmr/m/n/10.95 )$. 
  []
 
-[78 <./images/mntsandpreps.png> <./images/kcbsrefstates.png>]
+[79 <./images/mntsandpreps.png> <./images/kcbsrefstates.png>]
 Overfull \hbox (83.65672pt too wide) in paragraph at lines 44--45
 []\OT1/cmr/m/n/10.95 Additionally, the ex-per-i-menter can in-fer the statis-ti
 cs $\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 m[]\OMS/cmsy/m
@@ -856,7 +851,7 @@ T1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 j\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95
 M[]; M[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; P[]\OT1/cmr/m/n/10.95 )$: 
  []
 
-[79] [80] [81] [82] [83] [84]
+[80] [81] [82] [83] [84] [85]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 180.
@@ -885,7 +880,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 180.
 
-[85] [86]
+[86] [87]
 Overfull \hbox (9.96365pt too wide) detected at line 221
 [][]\OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 F[]\OT1/cmr/m/n/10.95 ^^E[] \OMS/c
 msy/m/n/10.95 ^^@ [] [][]j\OT1/cmr/m/n/10.95 	[]\OMS/cmsy/m/n/10.95 ih\OT1/cmr/
@@ -912,23 +907,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 244.
 
-[87] [88]
-Overfull \hbox (2.402pt too wide) in paragraph at lines 283--287
-\OT1/cmr/m/n/10.95 for $\OML/cmm/m/it/10.95 i \OMS/cmsy/m/n/10.95 2 f\OT1/cmr/m
-/n/10.95 1\OML/cmm/m/it/10.95 ; [] ; n\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 
-. The vec-tors $\OMS/cmsy/m/n/10.95 f[]g[]$ \OT1/cmr/m/n/10.95 are not con-sis-
-tent with cyclic com-pat-i-bil-ity, i.e. $[] \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/
-10.95 =
- []
-
-) [89]
+[88] [89] [90]) [91]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-(./Thesis.bbl [90
+(./Thesis.bbl [92
 
 
-] [91] [92]
+] [93] [94]
 Underfull \hbox (badness 1194) in paragraph at lines 275--279
 []\OT1/cmr/m/n/10.95 Robert W. Spekkens.  The on-to-log-i-cal iden-tity of em-p
 ir-i-cal in-dis-cernibles: Leib-
@@ -940,8 +926,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 275--279
 in the work of ein-stein.
  []
 
-) [93]
-<declaration-originality.pdf, id=1343, 597.55246pt x 845.07718pt>
+) [95]
+<declaration-originality.pdf, id=1361, 597.55246pt x 845.07718pt>
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf>
 Package pdftex.def Info: declaration-originality.pdf  used on input line 107.
@@ -950,7 +936,7 @@ File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf>
 Package pdftex.def Info: declaration-originality.pdf  used on input line 107.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-<declaration-originality.pdf, id=1346, page=1, 597.55246pt x 845.07718pt>
+<declaration-originality.pdf, id=1364, page=1, 597.55246pt x 845.07718pt>
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
@@ -976,17 +962,14 @@ File: declaration-originality.pdf Graphic file (type pdf)
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
  107.
 (pdftex.def)             Requested size: 598.18013pt x 845.96486pt.
- [94 <./declaration-originality.pdf>]
-
-Package natbib Warning: There were undefined citations.
-
+ [96 <./declaration-originality.pdf>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
-(./Thesis.aux)
+ (./Thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 41CE0D56B45038B12FAC633FFA8127A3;12482.
+(rerunfilecheck)             Checksum: 1187CB93D531E701EE02D5F658F6ADCD;12482.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -994,8 +977,8 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 15086 strings out of 482555
- 221547 string characters out of 5952144
+ 15094 strings out of 482555
+ 221635 string characters out of 5952144
  505067 words of memory out of 5000000
  30084 multiletter control sequences out of 15000+600000
  553830 words of font info for 106 fonts, out of 8000000 for 9000
@@ -1010,29 +993,32 @@ ist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Thesis.pdf (99 pages, 1755922 bytes).
+fonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm
+-super/sfrm1095.pfb>
+Output written on Thesis.pdf (101 pages, 1776021 bytes).
 PDF statistics:
- 1563 PDF objects out of 1728 (max. 8388607)
- 1339 compressed objects within 14 object streams
- 356 named destinations out of 1000 (max. 500000)
+ 1592 PDF objects out of 1728 (max. 8388607)
+ 1363 compressed objects within 14 object streams
+ 364 named destinations out of 1000 (max. 500000)
  502 words of extra memory for PDF output out of 10000 (max. 10000000)
 

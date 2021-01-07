@@ -11,12 +11,11 @@ You're missing a field name---line 145 of file bibliography.bib
  :   year      = {2018},
  :                      ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Lemma"
 Warning--empty chapter and pages in Conway2011
 Warning--empty title in Peres1998
 You've used 46 entries,
             2481 wiz_defined-function locations,
-            853 strings with 11685 characters,
+            851 strings with 11675 characters,
 and the built_in function-call counts, 14734 in all, are:
 = -- 1212
 > -- 756

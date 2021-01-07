@@ -139,8 +139,6 @@ def simulate(n_array,no_mnts,plot_states=False):
             for outcome in range(2):
             
                 squared_norms = np.linalg.norm(project(mnt, outcome, states),axis=1)**2
-                #zero_idx = entry_in_array(squared_norms, 0)
-                #squared_norms = np.delete(squared_norms,zero_idx)
 
                 
                 to_sum = np.multiply( np.multiply(squared_norms,np.log2(squared_norms/n)), probs)
@@ -151,30 +149,20 @@ def simulate(n_array,no_mnts,plot_states=False):
         erased_bits[i] = erased
         
         
-    fig = plt.figure()
+    fig = plt.figure(figsize=(8,6))
     
     ax = fig.gca()
 
-    #right_side = ax.spines["right"]
-    #right_side.set_visible(False)
-    #top_side = ax.spines["top"]
-    #top_side.set_visible(False)
-    
-    plt.xticks(n_array)
-    plt.xlabel("cycle length", labelpad=10)
+   
+    plt.xticks(np.log2(n_array),('$log_2$(5)','$log_2$(7)','$log_2$(9)','$log_2$(11)','$log_2$(13)','$log_2$(15)'))
+    plt.yticks(np.array([2.5,3,3.5,4,4.5,5]))
+    plt.xlabel("$log_2$(cycle length)", labelpad=10)
     plt.ylabel("erased bits", labelpad=10)
     plt.grid(linestyle='--',color="lightgrey")
     
-    plt.scatter(n_array, erased_bits, color = "black", marker = "o", s=15)
-    coeffs = np.polyfit(np.log(np.array(n_array)), erased_bits , 1)
-    plt.plot(np.linspace(4.5,n_array[-1]+0.5,100), coeffs[1] + coeffs[0]*np.log(np.linspace(4.5,n_array[-1]+0.5,100)), "--", color = "darkgrey")
+    plt.plot(np.log2(n_array), erased_bits, "o", color = "black")
+    plt.savefig("erased")
     
-    f = open("coeffs.txt", "a")
-    f.write(str(coeffs))
-    f.close()
-    
-    
-
 
     fig = plt.figure()
     plt.xlabel("number of measurements", labelpad=10)
@@ -192,38 +180,28 @@ def simulate(n_array,no_mnts,plot_states=False):
     
     plt.legend()
    
-    ax = fig.gca()
-    
-    #right_side = ax.spines["right"]
-    #right_side.set_visible(False)
-    #top_side = ax.spines["top"]
-    #top_side.set_visible(False)
     
     
-    
-    fig = plt.figure()
-    
+    fig = plt.figure(figsize=(8,6))
     ax = fig.gca()
 
-    #right_side = ax.spines["right"]
-    #right_side.set_visible(False)
-    #top_side = ax.spines["top"]
-    #top_side.set_visible(False)
     
-    plt.xticks(n_array)
-    plt.xlabel("cycle length", labelpad=10)
+    plt.xticks(np.log2(n_array),('$log_2$(5)','$log_2$(7)','$log_2$(9)','$log_2$(11)','$log_2$(13)','$log_2$(15)'))
+    #plt.yticks()
+    plt.xlabel("$log_2$(cycle length)", labelpad=10)
     plt.ylabel("memory cost (bits)", labelpad=10)
     
-    plt.scatter(n_array,entropies[:,-1], color = "black", marker = "o", s=15)
+    plt.plot(np.log2(n_array), entropies[:,-1],"o", color = "black")
     
-    coeffs = np.polyfit(np.log(np.array(n_array)), entropies[:,-1] , 1)
-    plt.plot(np.linspace(4.5,n_array[-1]+0.5,100), coeffs[1] + coeffs[0]*np.log(np.linspace(4.5,n_array[-1]+0.5,100)), "--", color = "darkgrey")
+    #coeffs = np.polyfit(np.log(np.array(n_array)), entropies[:,-1] , 1)
+    #plt.plot(np.linspace(4.5,n_array[-1]+0.5,100), coeffs[1] + coeffs[0]*np.log(np.linspace(4.5,n_array[-1]+0.5,100)), "--", color = "darkgrey")
     plt.grid(linestyle='--',color="lightgrey")
-    #plt.savefig("n_cycle_RAM")
+    plt.savefig("n_cycle_RAM")
     
         
-simulate(np.array([5,7,9]),5,False)
+simulate(np.array([5,7,9,11,13,15]),3,False)
 
+#simulate(np.array([5,7]),5,False)
 plt.show()
 
 
