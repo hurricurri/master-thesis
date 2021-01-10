@@ -34,11 +34,13 @@
 \contentsline {section}{\numberline {5.3}Spekkens non-contextuality inequalities \\ KCBS revisited}{77}{section.138}%
 \contentsline {chapter}{\numberline {6}Two protocols based on Spekkens contextuality}{78}{chapter.139}%
 \contentsline {section}{\numberline {6.1}Self-testing from approximately operationally equivalent preparations and bounded memory}{78}{section.140}%
-\contentsline {subsection}{\numberline {6.1.1}Step 6a: Certifying quantumness}{81}{subsection.152}%
+\contentsline {subsection}{\numberline {6.1.1}Step 6a: Certificate of quantumness}{81}{subsection.152}%
 \contentsline {subsection}{\numberline {6.1.2}Step 6b: Bounding compatible quantum models}{83}{subsection.159}%
 \contentsline {subsubsection}{\numberline {6.1.2.1}Overlap between statistically relevant states}{85}{subsubsection.170}%
-\contentsline {subsubsection}{\numberline {6.1.2.2}Orthonormal set close to the set of relevant eigenvectors}{85}{subsubsection.175}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}Orthonormal set close to the set of relevant eigenvectors}{86}{subsubsection.175}%
 \contentsline {subsubsection}{\numberline {6.1.2.3}The measurement $M_i$ acts almost projectively on $V_{\text {relev}}^{(i)}$}{87}{subsubsection.182}%
-\contentsline {subsubsection}{\numberline {6.1.2.4}Why can we confine our analysis to the subspace $V_{\text {relev}}^{(i)}$?}{88}{subsubsection.197}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}Why can we confine our analysis to the subspace $V_{\text {relev}}^{(i)}$?}{89}{subsubsection.197}%
 \contentsline {subsubsection}{\numberline {6.1.2.5}Piecing things together}{90}{subsubsection.205}%
-\contentsline {chapter}{Bibliography}{92}{dummy.215}%
+\contentsline {section}{\numberline {6.2}Relaxing the memory assumption}{91}{section.215}%
+\contentsline {section}{\numberline {6.3}Discussion}{91}{section.216}%
+\contentsline {chapter}{Bibliography}{92}{dummy.217}%
