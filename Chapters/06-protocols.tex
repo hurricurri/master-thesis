@@ -122,6 +122,7 @@ Later, we will consider the behaviour for $\epsilon\rightarrow 0$
 We want to show that the measurement $M_i$ acts ``almost projectively" on the preparations $\{P_{m_j\vert M_i}\}_{j=1}^3$, and by extension on $P_0$. Consider the density operator $\rho_{m_k\vert M_i}$, like in \ref{eqn:densityop}. For eigenvalues $p_m^{m_k\vert M_i}$ of the noisy density operator that are very small, say of the order $\epsilon$, we cannot infer from the statistics $\{p(m_j\thinspace\vert\thinspace M_i, P_{m_k\vert M_i})\}_{j,k}$ alone whether the measurement $M_i$ acts almost projectively on the corresponding subspace $\mathbb{C}\vert \Psi_m^{m_k\vert M_i}\rangle$, since this subspace is insignificant in terms of statistics. In order to sidestep this issue, we consider only a ``statistically relevant" subspace of $\mathbb{C}^k$:
 Define $\Pi_{\text{relev}}^{(i)}$ as the projector onto the subspace 
 \begin{equation}
+\label{eqn:relevsubspace}
 V_{\text{relev}}^{(i)}=\operatorname{span}\left(\thinspace\bigcup_{k=1}^3\{\vert \Psi_m^{m_k\vert M_i}\rangle\}_{m:p_m^{m_k\vert M_i}\geq\mathcal{X}}\right).
 \end{equation}
 For now, $\mathcal{X}$ is an arbitrary cutoff, characterizing the minimum magnitude of eigenvalues for which the corresponding eigenvector in \ref{eqn:densityop} spans a statistically relevant one-dimensional subspace. We will later set $\mathcal{X}$ to an appropriate value in terms of $\epsilon$. Implementing this technical workaround, the conditions \ref{eqn:cond1} and \ref{eqn:cond2} become
@@ -153,12 +154,12 @@ Note that since $j\neq j'$, $\Tilde{j}\neq j$ or $\Tilde{j}\neq j'$. We now use 
 \end{equation*} 
 for $\Tilde{j}\neq j$. Such vector has at most $d^2$ components, where $d$ is the upper bound on the Hilbert space dimension we imposed in Section \ref{sec:certifyquant}. Since $\|\cdot\|_1$ and $\|\cdot\|_2$ are equivalent, with $\|\vec{x}\|_1\leq \sqrt{k}\thinspace\|\vec{x}\|_2$ for $\vec{x}\in\mathbb{C}^k$, we find
 \begin{equation}
-\sum_{k,m}{}^{'}\thinspace\lambda_m^{m_{\Tilde{j}}\vert M_i}\vert \langle \alpha_m^{m_{\Tilde{j}}\vert M_i}\vert \Psi_k^{m_j\vert M_i}\rangle \vert \leq d\sqrt{\frac{\epsilon}{\mathcal{X}}},
+\sum_{k,m}{}^{'}\thinspace\lambda_m^{m_{\Tilde{j}}\vert M_i}\vert \langle \alpha_m^{m_{\Tilde{j}}\vert M_i}\vert \Psi_k^{m_j\vert M_i}\rangle \vert \leq d\thinspace \epsilon^{1/2}\mathcal{X}^{-1/2},
 \end{equation}
 for $\Tilde{j}\neq j$, and
 \begin{equation}
 \label{eqn:overlapbound}
-\sum_{k,l}{}^{'}\thinspace\vert\langle \Psi_k^{m_j\vert M_i} \vert \Psi_l^{m_{j'}\vert M_i}\rangle \vert \leq 3 d^2\sqrt{\frac{2\epsilon}{\mathcal{X}}}.
+\sum_{k,l}{}^{'}\thinspace\vert\langle \Psi_k^{m_j\vert M_i} \vert \Psi_l^{m_{j'}\vert M_i}\rangle \vert \leq 3\sqrt{2}\thinspace d^2 \epsilon^{1/2}\mathcal{X}^{-1/2}.
 \end{equation}
 We could drop the factor $3$, since for sufficiently small $\epsilon$, the set of all vectors is linearly independent.
 \subsubsection{Orthonormal set close to the set of relevant eigenvectors}
@@ -175,24 +176,25 @@ is small for all $j$, $k$.
 Let $k'$ be the cardinality of the set $\mathcal{E}$.
 Define $A\in\mathbb{C}^{k,k'}$ as the matrix with columns $\mathcal{E}\subset\mathbb{C}^k$. Note that $k\geq k'$ for sufficiently small $\epsilon$, since all columns are linearly independent. The entries of the matrix $A^{\dag}A$ are essentially just the scalar products whose magnitude we bounded in Section \ref{sec:boundingoverlap}. Some off-diagonal entries, namely those corresponding to the scalar product of two vectors that are part of the same spectral decomposition, are $0$. Finally, the diagonal entries of $A^{\dag}A$ are all $1$, due to normalization. Like in the proof of Lemma \ref{lem:closegramdecomp}, we consider a spectral decomposition of $A$, $A=V\Sigma W^{\dag}$, and denote the rank of $A$ by $r$. Analogously to the proof of Lemma \ref{lem:closegramdecomp}, we consider the matrix $\Tilde{A}$, which arises from $A$ by setting all diagonal entries of $\Sigma$ to $1$. The columns of $\Tilde{A}$ are orthonormal. It remains to show that $A\approx_F \Tilde{A}$:
 \begin{equation}
-\|A-\Tilde{A}\|_F^{\textstyle ^2}=\left\|\begin{pmatrix} \mathbb{1_{k'}} \\ 0_{k-k',k'}\end{pmatrix} - \Sigma \right\|_F^2 = (k'-r)+\sum_{i=1}^{r}(\sigma_i-1)^2.
+\|A-\Tilde{A}\|_F^{\textstyle ^2}=\left\|\thinspace \begin{pmatrix} \mathbb{1_{k'}} \\ 0_{k-k',k'}\end{pmatrix} - \Sigma \thinspace\right\|_F^2 = (k'-r)+\sum_{i=1}^{r}(\sigma_i-1)^2.
 \end{equation}
 We now use \ref{eqn:overlapbound} to bound the singular values and rank of $A$:
 \begin{equation}
-\|A^{\dag}A - \mathbb{1} \|_F^{\textstyle ^2} = (k'-r)+\sum_{i=1}^r(\sigma_i^2-1)^2 \thinspace\leq\thinspace \mathcal{O}(d^4\frac{\epsilon}{\mathcal{X}})\thinspace.
+\|A^{\dag}A - \mathbb{1} \|_F^{\textstyle ^2} = (k'-r)+\sum_{i=1}^r(\sigma_i^2-1)^2 \thinspace\leq\thinspace \mathcal{O}\left(d^4\frac{\epsilon}{\mathcal{X}}\right)\thinspace.
 \end{equation}
 Thus, for sufficiently small $\epsilon$ the rank of $A$ is $r=k'$, and
 \begin{equation}
-\|A-\Tilde{A}\|_F^{\textstyle ^2}=\sum_{i=1}^{k'}(\sigma_i - 1)^2\leq\sum_{i=1}^{k'}(\sigma_i - 1)^2(\sigma_i+1)^2\leq\mathcal{O}(d^4\frac{\epsilon}{\mathcal{X}}).
+\|A-\Tilde{A}\|_F^{\textstyle ^2}=\sum_{i=1}^{k'}(\sigma_i - 1)^2\leq\sum_{i=1}^{k'}(\sigma_i - 1)^2(\sigma_i+1)^2\leq\mathcal{O}\left(d^4\frac{\epsilon}{\mathcal{X}}\right).
 \end{equation}
 As such, the orthonormal set $\bigcup\limits_{j=1}^3\{\vert \Phi_k^{m_j\vert M_i}\rangle\}_{k:p_k^{m_j\vert M_i}\geq \mathcal{X}}\subset\mathbb{C}^k$, given by the columns of $\Tilde{A}$, satisfies
 \begin{equation}
-\sum_{j=1}^3\sum_k{}^{'}\thinspace\left\|\thinspace\vert \Psi_k^{m_j\vert M_i} \rangle - \vert \Phi_k^{m_j\vert M_i}\rangle \thinspace\right\|_2^2=\|A-\Tilde{A}\|_F^{\textstyle ^2}\leq \mathcal{O}(d^4\frac{\epsilon}{\mathcal{X}})
+\sum_{j=1}^3\sum_k{}^{'}\thinspace\left\|\thinspace\vert \Psi_k^{m_j\vert M_i} \rangle - \vert \Phi_k^{m_j\vert M_i}\rangle \thinspace\right\|_2^2=\|A-\Tilde{A}\|_F^{\textstyle ^2}\leq \mathcal{O}\left(d^4\frac{\epsilon}{\mathcal{X}}\right)
 \end{equation}
 Such a set can be found for all $i\in\{1,\dots,n\}$.
 \subsubsection{The measurement $M_i$ acts almost projectively on $V_{\text{relev}}^{(i)}$}
 We now bound the expression
 \begin{equation}
+\label{eqn:projectiveness}
 \|F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\thinspace\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \thinspace \|_F,
 \end{equation}
 or rather
@@ -201,6 +203,7 @@ or rather
 \end{equation}
 in order to show that the measurement $M_i$ acts almost projectively on the subspace $V_{\text{relev}}^{(i)}$. As a first step, we bound
 \begin{equation}
+\label{eqn:bound1}
 \begin{split}
 \|\Pi_{\text{relev}}^{(i)}-\sum_j\sum_k{}^{'}\thinspace\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \thinspace\|_F & \leq \sum_j\sum_k{}^{'}\thinspace\left\| \thinspace \vert \Phi_k^{m_j\vert M_i}\rangle \langle \Phi_k^{m_j\vert M_i}\vert-\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert\thinspace\right\|_F \\
 & =\sqrt{2}\sum_j\sum_k{}^{'}\thinspace\sqrt{1-\vert \langle \Psi_k^{m_j\vert M_i} \vert \Phi_k^{m_j\vert M_i} \rangle \vert^2}\thinspace.
@@ -208,69 +211,78 @@ in order to show that the measurement $M_i$ acts almost projectively on the subs
 \end{equation}
 Notice that
 \begin{equation}
+\label{eqn:bound2}
 \|A-\Tilde{A}\|_F^{\textstyle ^2}=\sum_j\sum_k{}^{'}\thinspace\left\|\thinspace\vert \Psi_k^{m_j\vert M_i} \rangle - \vert \Phi_k^{m_j\vert M_i}\rangle\thinspace\right\|_2^2=2\sum_j\sum_k{}^{'}\thinspace\left(1-\vert\langle \Psi_k^{m_j\vert M_i} \vert \Phi_k^{m_j\vert M_i} \rangle \vert\right).
 \end{equation}
 We can write 
 \begin{equation}
 \vert \Phi_k^{m_j\vert M_i}\rangle = \cos(\theta_k^{m_j\vert M_i})\vert \Psi_k^{m_j\vert M_i}\rangle + \exp(i\phi_k^{m_j\vert M_i})\sin(\theta_k^{m_j\vert M_i})\vert \Psi_{k,\perp}^{m_j\vert M_i} \rangle, \\[0.5em]
 \end{equation}
-where $\cos(\theta_k^{m_j\vert M_i})= \vert\langle \Phi_k^{m_j\vert M_i}\vert\Psi_k^{m_j\vert M_i} \rangle\vert$ for $\theta_k^{m_j\vert M_i}\in[0,\frac{\pi}{2}]$, $\phi_k^{m_j\vert M_i}$ is some phase, and $\vert \Psi_{k,\perp}^{m_j\vert M_i} \rangle$ is a state perpendicular to $\vert \Psi_k^{m_j\vert M_i}\rangle$.
-Thus, equations REF can be rewritten like
+where $\cos(\theta_k^{m_j\vert M_i})= \vert\langle \Phi_k^{m_j\vert M_i}\vert\Psi_k^{m_j\vert M_i} \rangle\vert$, for $\theta_k^{m_j\vert M_i}\in[0,\frac{\pi}{2}]$, $\phi_k^{m_j\vert M_i}$ is some phase, and $\vert \Psi_{k,\perp}^{m_j\vert M_i} \rangle$ is a state perpendicular to $\vert \Psi_k^{m_j\vert M_i}\rangle$.
+Thus, \ref{eqn:bound1} and \ref{eqn:bound2} can be rewritten like
 \begin{align}
-& \|\Pi_{\text{relev}}^{(i)}-\sum_j\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F\leq\sqrt{2}\sum_j\sum_k{}^{'}\sin(\theta_k^{m_j\vert M_i}), \\
-& \|A-\Tilde{A}\|_F^2=\sum_j\sum_k{}^{'}\|\vert \Psi_k^{m_j\vert M_i} \rangle - \vert \Phi_k^{m_j\vert M_i}\rangle\|_2^2=2\sum_j\sum_k{}^{'}2\sin^2\left(\frac{\theta_k^{m_j\vert M_i}}{2}\right).
+& \|\thinspace\Pi_{\text{relev}}^{(i)}-\sum_j\sum_k{}^{'}\thinspace\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \thinspace\|_F\leq\sqrt{2}\sum_j\sum_k{}^{'}\sin(\theta_k^{m_j\vert M_i}), \\
+& \|A-\Tilde{A}\|_F^{\textstyle ^2}=\sum_j\sum_k{}^{'}\thinspace\left\|\vert\thinspace \Psi_k^{m_j\vert M_i} \rangle - \vert \Phi_k^{m_j\vert M_i}\rangle\right\|_2^2=2\sum_j\sum_k{}^{'}\thinspace 2\sin^2\left(\frac{1}{2}\theta_k^{m_j\vert M_i}\right).
 \end{align}
-Like in Section REF, equivalence of $\|\cdot\|_1$ and $\|\cdot\|_2$ norms, allows us to write:
+Equivalence of $\|\cdot\|_1$ and $\|\cdot\|_2$ norms allows us to write:
 \begin{equation}
-2\sum_j\sum_k{}^{'}\sin\left(\frac{\theta}{2}\right)\leq \mathcal{O}\left(d^{5/2}\sqrt{\frac{\epsilon}{\mathcal{X}}}\right).
+2\sum_j\sum_k{}^{'}\thinspace\sin\left(\frac{\theta}{2}\right)\leq \mathcal{O}\left(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2}\right).
 \end{equation}
 For all $0\leq \theta \leq 2\pi$, $2\sin(\frac{\theta}{2})-\sin(\theta)\geq 0$, therefore
 \begin{equation}
-\|\Pi_{\text{relev}}^{(i)}-\sum_j\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F = \sqrt{2}\sum_j\sum_k{}^{'}\sin(\theta_k^{m_j\vert M_i})\leq\mathcal{O}\left(d^{5/2}\sqrt{\frac{\epsilon}{\mathcal{X}}}\right).
+\label{eqn:projvsstates}
+\|\thinspace\Pi_{\text{relev}}^{(i)}-\sum_j\sum_k{}^{'}\thinspace\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \thinspace\|_F = \sqrt{2}\sum_j\sum_k{}^{'}\thinspace\sin(\theta_k^{m_j\vert M_i})\leq\mathcal{O}\left(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2}\right).
 \end{equation}
-We now bound REF:
+We now bound \ref{eqn:projectiveness}:
 \begin{equation}
-\|F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F \leq \mathcal{O}\left(d^{5/2}\sqrt{\frac{\epsilon}{\mathcal{X}}}\right)+\|(F_{m_j\vert M_i}-\mathbb{1})\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i} \rangle \langle \Psi_k^{m_j\vert M_i} \vert \|_F.
+\label{eqn:bound2}
+\begin{split}
+& \|\thinspace F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\thinspace\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F \\ & \leq \mathcal{O}\left(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2}\right)+\|\thinspace(F_{m_j\vert M_i}-\mathbb{1})\sum_k{}^{'}\thinspace\vert \Psi_k^{m_j\vert M_i} \rangle \langle \Psi_k^{m_j\vert M_i} \vert \thinspace\|_F.
+\end{split}
 \end{equation}
-The last term in REF satisfies
+The last term in \ref{eqn:bound2} satisfies
 \begin{equation}
 \begin{split}
-\|(F_{m_j\vert M_i}-\mathbb{1})\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i} \rangle \langle \Psi_k^{m_j\vert M_i} \vert \|_F^2 & =\operatorname{tr}((F_{m_j\vert M_i}-\mathbb{1})^2\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_i} \rangle \langle \Psi_k^{m_j\vert M_i} \vert) \\
-& \leq \sum_k{}^{'}(1-\sum_l \lambda_l^{m_j\vert M_i}\vert \langle \Psi_k^{m_j\vert M_i}\vert \alpha_l^{m_j\vert M_i}\rangle \vert ^2)
-\end{split},
+\|\thinspace(F_{m_j\vert M_i}-\mathbb{1})\sum_k{}^{'}\thinspace\vert \Psi_k^{m_j\vert M_i} \rangle \langle \Psi_k^{m_j\vert M_i} \vert\thinspace \|_F^{\textstyle ^2} & =\operatorname{tr}(\thinspace(F_{m_j\vert M_i}-\mathbb{1})^2\sum_k{}^{'}\thinspace\vert \Psi_k^{m_j\vert M_i} \rangle \langle \Psi_k^{m_j\vert M_i} \vert\thinspace) \\
+& \leq \sum_k{}^{'}\thinspace(\thinspace 1-\sum_l \lambda_l^{m_j\vert M_i}\vert \langle \Psi_k^{m_j\vert M_i}\vert \alpha_l^{m_j\vert M_i}\rangle \vert ^2\thinspace),
+\end{split}
 \end{equation}
-where the rightmost term is small due to REF. Hence, we arrive at
+where the rightmost term is small due to \ref{eqn:cond1new}. Hence, we arrive at
 \begin{equation}
-\|F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \|_F \leq \mathcal{O}\left(d^{5/2}\sqrt{\frac{\epsilon}{\mathcal{X}}}\right),
+\|\thinspace F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\thinspace\vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i}\vert \thinspace\|_F \leq \mathcal{O}\left(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2}\right),
 \end{equation}
 or alternatively
 \begin{equation}
-\|F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\vert \Phi_k^{m_j\vert M_i}\rangle \langle \Phi_k^{m_j\vert M_i}\vert \|_F \leq \mathcal{O}\left(d^{5/2}\sqrt{\frac{\epsilon}{\mathcal{X}}}\right).
+\label{eqn:projresult}
+\|\thinspace F_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}-\sum_{k}{}^{'}\vert \Phi_k^{m_j\vert M_i}\rangle \langle \Phi_k^{m_j\vert M_i}\vert \thinspace\|_F \leq \mathcal{O}\left(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2}\right).
 \end{equation}
-The operators $\{\sum_{k}{}^{'}\vert \Phi_k^{m_j\vert M_i}\rangle \langle \Phi_k^{m_j\vert M_i}\vert\}_{j\in\{1,2,3\}}$ are orthogonal projectors.
+The operators $\left\{\thinspace\sum_{k}{}^{'}\thinspace\vert \Phi_k^{m_j\vert M_i}\rangle \langle \Phi_k^{m_j\vert M_i}\vert\thinspace\right\}_{j\in\{1,2,3\}}$ are orthogonal projectors.
 
-While by convention $\vert \Psi_k^{m_1,M_{i\oplus 1}}\rangle \equiv \vert \Psi_k^{m_3,M_i}\rangle$, the vectors $\vert \Phi_k^{m_1,M_{i\oplus 1}}\rangle$, $\vert \Phi_k^{m_3,M_i}\rangle$, for $k$ such that $p_k^{m_1,M_{i\oplus 1}}\geq \mathcal{X}$, are a priori distinct, since orthogonalization is carried out with respect to a different set of vectors. However, as expected, the projectors $\Pi_{\text{relev}}^{1\vert i}\coloneqq \sum{}^{'}_k \vert \Phi_k^{m_1\vert M_i}\rangle \langle \Phi_k^{m_1\vert M_i} \vert $ and $\Pi_{\text{relev}}^{1\vert i\oplus 1}\coloneqq \sum{}^{'}_k \vert \Phi_k^{m_1\vert M_{i\oplus 1}}\rangle \langle \Phi_k^{m_1\vert M_{i\oplus 1}} \vert$ are approximately orthogonal:
+While by convention $\vert \Psi_k^{m_1,M_{i\oplus 1}}\rangle \equiv \vert \Psi_k^{m_3,M_i}\rangle$, the vectors $\vert \Phi_k^{m_1,M_{i\oplus 1}}\rangle$, $\vert \Phi_k^{m_3,M_i}\rangle$, for $k$ such that $p_k^{m_1,M_{i\oplus 1}}\geq \mathcal{X}$, are a priori distinct, since orthogonalization is carried out with respect to a different set of vectors. However, as expected, the projectors $\Pi_{\text{relev}}^{1\vert i}\coloneqq \sum{}^{'}_k\thinspace \vert \Phi_k^{m_1\vert M_i}\rangle \langle \Phi_k^{m_1\vert M_i} \vert $ and $\Pi_{\text{relev}}^{1\vert i\oplus 1}\coloneqq \sum{}^{'}_k\thinspace \vert \Phi_k^{m_1\vert M_{i\oplus 1}}\rangle \langle \Phi_k^{m_1\vert M_{i\oplus 1}} \vert$ are approximately orthogonal:
 \begin{equation}
-\|\Pi_{\text{relev}}^{1\vert i} \Pi_{\text{relev}}^{1\vert i\oplus 1}\|_F \leq \|\Pi_{\text{relev}}^{1\vert i}(\Pi_{\text{relev}}^{1\vert i\oplus 1}-\Pi_{\text{relev}}^{3\vert i})\|_F\leq \mathcal{O}(d^{5/2}\sqrt{\frac{\epsilon}{\mathcal{X}}}),
+\label{eqn:approxorth}
+\|\Pi_{\text{relev}}^{1\vert i} \Pi_{\text{relev}}^{1\vert i\oplus 1}\|_F \leq \|\Pi_{\text{relev}}^{1\vert i}(\Pi_{\text{relev}}^{1\vert i\oplus 1}-\Pi_{\text{relev}}^{3\vert i})\|_F\leq \mathcal{O}(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2}),
 \end{equation}
-where for the last inequality we used REF.
+where for the last inequality we used \ref{eqn:projvsstates}.
 \subsubsection{Why can we confine our analysis to the subspace $V_{\text{relev}}^{(i)}$?}
-We now discuss in what sense the assumption regarding operational equivalences of preparations, introduced at the beginning of Section REF, justifies confining our analysis to only the subspace $V_{\text{relev}}^{(i)}$. 
-For the convex combinations $S_i$, as defined in REF, we find:
+We now discuss in what sense the assumption regarding operational equivalences of preparations, introduced at the beginning of Section \ref{sec:boundingmodels}, justifies confining our analysis to only the subspace $V_{\text{relev}}^{(i)}$. 
+For the convex combinations $S_i$, as defined in \ref{eqn:approxequiv}, we find:
 \begin{equation}
-\|\sum_j p_j^{(i)}(\rho_{m_j\vert M_i}-\Pi_{\text{relev}}^{(i)}\rho_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)})\|_F \leq \sum_j p_j^{(i)}\|\rho_{m_j\vert M_i}-\Pi_{\text{relev}}^{(i)}\rho_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}\|_F \leq \sqrt{d}\mathcal{X}.
+\|\sum_j p_j^{(i)}(\rho_{m_j\vert M_i}-\Pi_{\text{relev}}^{(i)}\rho_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)})\|_F \leq \sum_j p_j^{(i)}\|\thinspace\rho_{m_j\vert M_i}-\Pi_{\text{relev}}^{(i)}\rho_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}\thinspace\|_F \leq d^{1/2}\mathcal{X}.
 \end{equation}
 Due to operational equivalence $S_i\sim S_{*}$, we can write:
 \begin{equation}
-\|\sum_j q_j^{(*)}(\rho_{j}-\Pi_{\text{relev}}^{(i)}\rho_{j}\Pi_{\text{relev}}^{(i)})\|_F \leq \sqrt{d}\mathcal{X},
+\|\sum_j q_j(\rho_{j}-\Pi_{\text{relev}}^{(i)}\rho_{j}\Pi_{\text{relev}}^{(i)})\thinspace\|_F \leq d^{1/2}\mathcal{X},
 \end{equation}
 where $\rho_{j}$ is the density operator corresponding to the preparation $P_j$.
 Therefore,
 \begin{equation}
-q_0^{(*)}\|(\rho_{0}-\Pi_{\text{relev}}^{(i)}\rho_{0}\Pi_{\text{relev}}^{(i)})\|_F \leq \sqrt{d}\mathcal{X},
+\label{eqn:sumtobound}
+q_0\|(\rho_{0}-\Pi_{\text{relev}}^{(i)}\rho_{0}\Pi_{\text{relev}}^{(i)})\|_F \leq d^{1/2}\mathcal{X},
 \end{equation}
-where we have used Lemma REF:
+where we have used Lemma \ref{lem:posopsum}:
 \begin{lemma}
+\label{lem:posopsum}
 Let $A$, $B$ be two positive semi-definite operators. Then
 \begin{equation}
 \|A+B\|_F \geq \|A\|_F.
@@ -279,42 +291,44 @@ Let $A$, $B$ be two positive semi-definite operators. Then
 \begin{proof}
 $\|A+B\|_F^2=\operatorname{tr}(A^2+B^2+2AB)\geq \operatorname{tr}(A^2)=\|A\|_F^2$, where we have used that, due to semi positive-definiteness $tr(B^2)$, $tr(AB)$ $\geq 0$. This can be seen by simply inserting an arbitrary spectral decomposition for $A$, $B$, and noting that all eigenvalues are non-negative.
 \end{proof}
-The operators in REF are indeed positive semi-definite: they are Hermitian and satisfy
+The operators in \ref{eqn:sumtobound} are indeed positive semi-definite: they are Hermitian and satisfy
 \begin{equation}
 \langle \phi \vert \rho_{j}-\Pi_{\text{relev}}^{(i)}\rho_{j}\Pi_{\text{relev}}^{(i)} \vert \phi \rangle \geq 0,
 \end{equation}
-for all $\phi\in\mathbb{C}^k$. This can be seen by expanding an arbitrary $\phi$ in terms of an ONB with respect to which the projector $\Pi_{\text{relev}}^{(i)}$ is diagonal.
-Since $q_0^{(*)}\approx\frac{1}{3}$, we conclude that
+for all $\vert \phi\rangle\in\mathbb{C}^k$. This can be seen by expanding an arbitrary $\vert \phi \rangle $ in terms of an ONB with respect to which the projector $\Pi_{\text{relev}}^{(i)}$ is diagonal.
+Since $q_0\approx\frac{1}{3}$, we conclude that
 \begin{equation}
-\|(\rho_{0}-\Pi_{\text{relev}}^{(i)}\rho_{0}\Pi_{\text{relev}}^{(i)})\|_F \leq \mathcal{O}(\sqrt{d}\mathcal{X}).
+\label{eqn:justification}
+\|(\rho_{0}-\Pi_{\text{relev}}^{(i)}\rho_{0}\Pi_{\text{relev}}^{(i)})\|_F \leq \mathcal{O}(d^{1/2}\mathcal{X}).
 \end{equation}
-Apart from when certifying quantumness, as detailed in Section REF, we only care about single measurements acting on the distinguished preparation $P_0$ for self-testing. Since $\rho_0$ has no statistically relevant spectral components not in $V_{\text{relev}}^{(i)}$, we are justified in proving almost-projectiveness of the measurements $M_i$ only for that subspace, REF. We will use REF in Section REF, to arrive at the self-testing result.
+Apart from when certifying quantumness, as detailed in Section \ref{sec:certifyquant}, we only care about single measurements acting on the distinguished preparation $P_0$ for self-testing. Since $\rho_0$ has no statistically relevant spectral components not in $V_{\text{relev}}^{(i)}$, we are justified in proving almost-projectiveness of the measurements $M_i$ only for the subspace \ref{eqn:relevsubspace}. We will use \ref{eqn:justification} in Section \ref{sec:piecing}, to arrive at the self-testing result.
 \subsubsection{Piecing things together}
-We define $\ket{u_0}$ as an arbitrary purification of $\rho_0$, and denote $\sum_{k}{}^{'}\vert \Phi_k^{m_j\vert M_i}\rangle \langle \Phi_k^{m_j\vert M_i}\vert$ by $\Pi_{\text{relev}}^{(j\vert i)}$, where $\Pi_{\text{relev}}^{(i)}=\sum_{j\in\{1,2,3\}}\Pi_{\text{relev}}^{(j\vert i)}$. In analogous fashion to CITE, we define
+\label{sec:piecing}
+We define $\ket{u_0}$ as an arbitrary purification of $\rho_0$, and denote $\sum_k{}^{'}\vert \Phi_k^{m_j\vert M_i}\rangle \langle \Phi_k^{m_j\vert M_i}\vert$ by $\Pi_{\text{relev}}^{(j\vert i)}$, where $\Pi_{\text{relev}}^{(i)}=\sum_{j\in\{1,2,3\}}\Pi_{\text{relev}}^{(j\vert i)}$. In analogous fashion to \cite{Bharti2019}, we define
 \begin{equation}
-\ket{u_i} = \frac{(\Pi_{\text{relev}}^{(1\vert i)}\otimes\mathbb{1})}{\sqrt{\operatorname{tr}(\Pi_{\text{relev}}^{(1\vert i)}\rho_0)}}\ket{u_0},
+\ket{u_i} = \frac{\left(\Pi_{\text{relev}}^{(1\vert i)}\otimes\mathbb{1}\right)}{\sqrt{\operatorname{tr}\left(\Pi_{\text{relev}}^{(1\vert i)}\rho_0\right)}}\ket{u_0},
 \end{equation}
 for $i\in\{1,\dots,n\}$, where the identity $\mathbb{1}$ acts on the purifying system. The vectors $\{\ket{u_i}\}_i$ are not consistent with cyclic compatibility, i.e. $\bra{u_i}\ket{u_{i\oplus 1}}\neq 0$.
-We obtain a set $\{u_i'\}_{i=1}^n$ from $\{u_i\}_{i=1}^n$, consistent with cyclic compatibility, i.e. $\bra{u_i'}\ket{u_{i\oplus 1}'}=0$. This is done by removing from $\ket{u_2}$ all components along the direction of $\ket{u_1'}\coloneqq\ket{u_1}$. We then remove from $\ket{u_3}$ all components along the direction of the updated $\ket{u_2'}$, and so on. For the final vector in the cycle we have to subtract two projections. The magnitude of all correcting terms is bounded by REF.
+We obtain a set $\{u_i'\}_{i=1}^n$ from $\{u_i\}_{i=1}^n$, consistent with cyclic compatibility, i.e. $\bra{u_i'}\ket{u_{i\oplus 1}'}=0$. This is done by removing from $\ket{u_2}$ all components along the direction of $\ket{u_1'}\coloneqq\ket{u_1}$. We then remove from $\ket{u_3}$ all components along the direction of the updated $\ket{u_2'}$, and so on. For the final vector in the cycle we have to subtract two projections. The magnitude of all correcting terms is bounded by \ref{eqn:approxorth}.
 For $i\in\{1,\dots,n\}$
 \begin{equation}
 \bra{u_i}\ket{u_{i\oplus 1}}\propto\operatorname{tr}(\Pi_{\text{relev}}^{1\vert i}\Pi_{\text{relev}}^{1\vert i\oplus 1}\rho_0) \leq \|\Pi_{\text{relev}}^{1\vert i}\Pi_{\text{relev}}^{1\vert i\oplus 1}\|_F. \leq \mathcal{O}(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2})\; ,
 \end{equation}
-where for the first inequality we used that $\operatorname{tr}(\Pi_{\text{relev}}^{1\vert i}\Pi_{\text{relev}}^{1\vert i\oplus 1}\rho_0)$ is the Hilbert-Schmidt scalar product $<\Pi_{\text{relev}}^{1\vert i}\Pi_{\text{relev}}^{1\vert i\oplus 1},\rho_0>$. The Cauchy-Schwarz inequality then yields the upper bound in REF.
+where for the first inequality we used that $\operatorname{tr}(\Pi_{\text{relev}}^{1\vert i}\Pi_{\text{relev}}^{1\vert i\oplus 1}\rho_0)$ is the Hilbert-Schmidt scalar product $<\Pi_{\text{relev}}^{1\vert i}\Pi_{\text{relev}}^{1\vert i\oplus 1},\rho_0>$, as well as the Cauchy-Schwarz inequality.
 
 We now consider the vectors
 $\ket{v_i}=\bra{u'_i}\ket{u_0}\ket{u'_i}$,
-for $i\in\{1,\dots, n\}$. The vectors $\ket{v_i}$ are of the same form as those we constructed in Section \ref{sec:cswhierarch}, in order to set up the Gram matrix $X$ corresponding to a quantum model of some correlation experiment. If we construct the Gram matrix of the vectors $\{v_i\}_{i=0}^n$, then this matrix satisfies the three constraints of the Lovász SDP REF for the odd $n$-cycle exclusivity graph. The objective function of the SDP, evaluated for this Gram matrix gives:
+for $i\in\{1,\dots, n\}$. The vectors $\ket{v_i}$ are of the same form as those we constructed in Section \ref{sec:cswhierarch}, in order to set up the Gram matrix $X$ corresponding to a quantum model of some correlation experiment. If we construct the Gram matrix of the vectors $\{v_i\}_{i=0}^n$, then this matrix satisfies the three constraints of the Lovász SDP \ref{eqn:lovaszsdp}, for the odd $n$-cycle exclusivity graph. The objective function of the SDP, evaluated for this Gram matrix gives:
 \begin{equation}
-\sum_{i=1}^n X_{ii} = \sum_{i=1}^n \vert \bra{u'_i}\ket{u_0} \vert^2 = \sum_{i=1}^n\operatorname{tr}(\Pi_{\text{relevant}}^{(1\vert i)}\rho_0)+\mathcal{O}(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2}).
+\sum_{i=1}^n X_{ii} = \sum_{i=1}^n \vert \langle u'_i\vert u_0\rangle \vert^2 = \sum_{i=1}^n\operatorname{tr}(\Pi_{\text{relevant}}^{(1\vert i)}\rho_0)+\mathcal{O}(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2}).
 \end{equation}
-To relate this linear combination to the observed statistics $p(m_k\vert M_i,P_0)$, we make use of REF:
+To relate this linear combination to the observed statistics $p(m_k\thinspace\vert\thinspace M_i,P_0)$, we make use of \ref{eqn:projresult}:
 \begin{equation}
 \begin{split}
 \sum_{i=1}^n\operatorname{tr}(\Pi_{\text{relevant}}^{(1\vert i)}\rho_0) & =\sum_{i=1}^n\operatorname{tr}(F_{m_1\vert M_i}\Pi_{\text{relevant}}^{(i)}\rho_0\Pi_{\text{relevant}}^{(i)})+\mathcal{O}(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2}) \\  & =\sum_{i=1}^n\operatorname{tr}(F_{m_1\vert M_i}\rho_0)+\mathcal{O}(d^{5/2}\epsilon^{1/2}\mathcal{X}^{-1/2})+\mathcal{O}(d^{1/2}\mathcal{X}),
 \end{split}
 \end{equation}
-where we used REF to obtain the second equality.
+where we used \ref{eqn:justification} to obtain the second equality.
 
 We now choose $\mathcal{X}=d^{4/3}\epsilon^{1/3}$ to get:
 \begin{equation}
@@ -324,18 +338,18 @@ Hence,
 \begin{equation}
 \sum_{i=1}^n X_{ii} = \sum_{i=1}^n\operatorname{tr}(F_{m_1\vert M_i}\rho_0)+\mathcal{O}(d^{^2}\epsilon^{1/3}),
 \end{equation}
-and if $\operatorname{tr}(F_{m_1\vert M_i}\rho_0)\geq B_q^{(n)}+d^{^2}\epsilon^{1/3}$ then
+and if $\sum_{i=1}^n \operatorname{tr}(F_{m_1\vert M_i}\rho_0)\geq B_q^{(n)}+d^{^2}\epsilon^{1/3}$ then
 \begin{equation}
 \sum_{i=1}^n X_{ii} \geq B_q^{(n)}+\mathcal{O}(d^{^2}\epsilon^{1/3}).
 \end{equation}
-Therefore, by Lemmas REF, there exists an isometry $V$ such that
+Therefore, by Lemmas \ref{lem:closegramdecomp}, there exists an isometry $V$ such that
 \begin{equation}
-\|\bra{u_i}\ket{u_0}\ket{u_i}-\langle u_i^{(n)}\vert u_0^{(n)}\rangle V \vert u_i^{(n)} \rangle \|_2 = \|(\Pi_{\text{relev}}^{(1\vert i)}\otimes \mathbb{1})\ket{u_0}-V(\vert u_i^{(n)}\rangle \langle u_i^{(n)} \vert)\vert u_0^{(n)} \rangle \|_2 \leq \mathcal{O}(d^2\epsilon^{1/3}),
+\|\bra{u_i}\ket{u_0}\ket{u_i}-\langle u_i^{(n)}\vert u_0^{(n)}\rangle V \vert u_i^{(n)} \rangle \|_2 = \|\thinspace(\Pi_{\text{relev}}^{(1\vert i)}\otimes \mathbb{1})\ket{u_0}-V(\thinspace\vert u_i^{(n)}\rangle \langle u_i^{(n)} \vert\thinspace)\thinspace\vert u_0^{(n)} \rangle \thinspace\|_2 \leq \mathcal{O}(d^2\epsilon^{1/3}),
 \end{equation}
 for all $i \in \{1,\dots,n\}$.
-Using REF and REF, we conclude that
+Using \ref{eqn:projresult} and \ref{eqn:justification}, we conclude that
 \begin{equation}
-\|(F_{m_1\vert M_i}\otimes \mathbb{1})\ket{u_0}-V(\vert u_i^{(n)}\rangle \langle u_i^{(n)} \vert) \vert u_0^{(n)} \rangle \|_2 \leq \mathcal{O}(d^2\epsilon^{1/3}).
+\|\thinspace (F_{m_1\vert M_i}\otimes \mathbb{1})\ket{u_0}-V(\thinspace\vert u_i^{(n)}\rangle \langle u_i^{(n)} \vert\thinspace)\thinspace \vert u_0^{(n)} \rangle \|_2 \leq \mathcal{O}(d^2\epsilon^{1/3}).
 \end{equation}
 This is our revised self-testing result. The deviation of any valid quantum model of the physical correlation experiment from the ideal reference experiment is bounded like above, up to a global isometry $V$.
 
