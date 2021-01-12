@@ -12,35 +12,35 @@
 \contentsline {section}{\numberline {1.7}Formal statement and proof of the KS Theorem}{13}{section.34}%
 \contentsline {section}{\numberline {1.8}Algebraic proof in four dimensions}{16}{section.41}%
 \contentsline {section}{\numberline {1.9}Local causality and Bell's Theorem\\ Locality as an instance of KS}{18}{section.44}%
-\contentsline {section}{\numberline {1.10}State-dependent KS contextuality\\ The KCBS inequality and odd n-cycle scenarios}{26}{section.58}%
-\contentsline {chapter}{\numberline {2}CSW graph-theoretic approach to quantum correlations}{31}{chapter.67}%
-\contentsline {section}{\numberline {2.1}Generic correlation experiments in the CSW framework}{31}{section.69}%
-\contentsline {section}{\numberline {2.2}The exclusivity graph of a correlation experiment}{35}{section.76}%
-\contentsline {section}{\numberline {2.3}Hierarchical structure of correlations}{35}{section.79}%
-\contentsline {section}{\numberline {2.4}What about unsharp measurements?}{39}{section.84}%
-\contentsline {section}{\numberline {2.5}Complications that arise without space-like separation}{39}{section.86}%
-\contentsline {chapter}{\numberline {3}Self-testing}{43}{chapter.87}%
-\contentsline {chapter}{\numberline {4}Self-testing via KS non-contextuality inequalities}{50}{chapter.100}%
-\contentsline {section}{\numberline {4.1}Preceding results}{50}{section.101}%
-\contentsline {section}{\numberline {4.2}Assumptions}{58}{section.108}%
-\contentsline {section}{\numberline {4.3}Sequential measurements and the memory assumption}{60}{section.114}%
-\contentsline {subsection}{\numberline {4.3.1}Setting and preliminary considerations}{62}{subsection.116}%
-\contentsline {subsection}{\numberline {4.3.2}Input-output processes as information transducers}{62}{subsection.117}%
-\contentsline {subsection}{\numberline {4.3.3}Memory-optimal classical simulation of quantum correlations}{64}{subsection.122}%
-\contentsline {subsection}{\numberline {4.3.4}Classical simulations dissipate heat}{66}{subsection.125}%
-\contentsline {chapter}{\numberline {5}A revised notion of classicality \\ Spekkens non-contextuality}{71}{chapter.132}%
-\contentsline {section}{\numberline {5.1}Outcome determinism for unsharp measurements (ODUM)}{71}{section.133}%
-\contentsline {section}{\numberline {5.2}Operational approach due to Spekkens}{72}{section.134}%
-\contentsline {section}{\numberline {5.3}Spekkens non-contextuality inequalities \\ KCBS revisited}{77}{section.138}%
-\contentsline {chapter}{\numberline {6}Two protocols based on Spekkens contextuality}{78}{chapter.139}%
-\contentsline {section}{\numberline {6.1}Self-testing from approximately operationally equivalent preparations and bounded memory}{78}{section.140}%
-\contentsline {subsection}{\numberline {6.1.1}Step 6a: Certificate of quantumness}{81}{subsection.152}%
-\contentsline {subsection}{\numberline {6.1.2}Step 6b: Bounding compatible quantum models}{83}{subsection.159}%
-\contentsline {subsubsection}{\numberline {6.1.2.1}Overlap between statistically relevant states}{85}{subsubsection.170}%
-\contentsline {subsubsection}{\numberline {6.1.2.2}Orthonormal set close to the set of relevant eigenvectors}{86}{subsubsection.175}%
-\contentsline {subsubsection}{\numberline {6.1.2.3}The measurement $M_i$ acts almost projectively on $V_{\text {relev}}^{(i)}$}{87}{subsubsection.182}%
-\contentsline {subsubsection}{\numberline {6.1.2.4}Why can we confine our analysis to the subspace $V_{\text {relev}}^{(i)}$?}{89}{subsubsection.197}%
-\contentsline {subsubsection}{\numberline {6.1.2.5}Piecing things together}{90}{subsubsection.205}%
-\contentsline {section}{\numberline {6.2}Relaxing the memory assumption}{91}{section.215}%
-\contentsline {section}{\numberline {6.3}Discussion}{91}{section.216}%
-\contentsline {chapter}{Bibliography}{92}{dummy.217}%
+\contentsline {section}{\numberline {1.10}State-dependent KS contextuality\\ The KCBS inequality and odd n-cycle scenarios}{26}{section.54}%
+\contentsline {chapter}{\numberline {2}CSW graph-theoretic approach to quantum correlations}{31}{chapter.61}%
+\contentsline {section}{\numberline {2.1}Generic correlation experiments in the CSW framework}{31}{section.63}%
+\contentsline {section}{\numberline {2.2}The exclusivity graph of a correlation experiment}{35}{section.70}%
+\contentsline {section}{\numberline {2.3}Hierarchical structure of correlations}{35}{section.73}%
+\contentsline {section}{\numberline {2.4}What about unsharp measurements?}{39}{section.77}%
+\contentsline {section}{\numberline {2.5}Complications that arise without space-like separation}{39}{section.79}%
+\contentsline {chapter}{\numberline {3}Self-testing}{43}{chapter.80}%
+\contentsline {chapter}{\numberline {4}Self-testing via KS non-contextuality inequalities}{50}{chapter.93}%
+\contentsline {section}{\numberline {4.1}Preceding results}{50}{section.94}%
+\contentsline {section}{\numberline {4.2}Assumptions}{58}{section.101}%
+\contentsline {section}{\numberline {4.3}Sequential measurements and the memory assumption}{60}{section.107}%
+\contentsline {subsection}{\numberline {4.3.1}Setting and preliminary considerations}{62}{subsection.109}%
+\contentsline {subsection}{\numberline {4.3.2}Input-output processes as information transducers}{62}{subsection.110}%
+\contentsline {subsection}{\numberline {4.3.3}Memory-optimal classical simulation of quantum correlations}{64}{subsection.115}%
+\contentsline {subsection}{\numberline {4.3.4}Classical simulations dissipate heat}{66}{subsection.118}%
+\contentsline {chapter}{\numberline {5}A revised notion of classicality \\ Spekkens non-contextuality}{71}{chapter.124}%
+\contentsline {section}{\numberline {5.1}Outcome determinism for unsharp measurements (ODUM)}{71}{section.125}%
+\contentsline {section}{\numberline {5.2}Operational approach due to Spekkens}{72}{section.126}%
+\contentsline {section}{\numberline {5.3}Spekkens non-contextuality inequalities \\ KCBS revisited}{77}{section.130}%
+\contentsline {chapter}{\numberline {6}Two protocols based on Spekkens contextuality}{78}{chapter.131}%
+\contentsline {section}{\numberline {6.1}Self-testing from approximately operationally equivalent preparations and bounded memory}{78}{section.132}%
+\contentsline {subsection}{\numberline {6.1.1}Step 6a: Certificate of quantumness}{81}{subsection.142}%
+\contentsline {subsection}{\numberline {6.1.2}Step 6b: Bounding compatible quantum models}{83}{subsection.144}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}Overlap between statistically relevant states}{85}{subsubsection.153}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}Orthonormal set close to the set of relevant eigenvectors}{86}{subsubsection.155}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}The measurement $M_i$ acts almost projectively on $V_{\text {relev}}^{(i)}$}{87}{subsubsection.156}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}Why can we confine our analysis to the subspace $V_{\text {relev}}^{(i)}$?}{89}{subsubsection.164}%
+\contentsline {subsubsection}{\numberline {6.1.2.5}Piecing things together}{90}{subsubsection.168}%
+\contentsline {section}{\numberline {6.2}Relaxing the memory assumption}{91}{section.169}%
+\contentsline {section}{\numberline {6.3}Discussion}{91}{section.170}%
+\contentsline {chapter}{Bibliography}{92}{dummy.171}%

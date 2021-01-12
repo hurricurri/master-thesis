@@ -344,10 +344,9 @@ Consequently, $p(\text{{success}})\leq\frac{3}{4}$ is a Bell inequality: the so-
 \end{equation}
 
 In QM, outcome probabilities are computed according to the Born rule. Assuming projective measurements on a pure quantum state, permissible quantum correlations for Bell-type experiments are of the form
-\begin{equation}
-\label{eqn:born}
-p(X=x,Y=y\vert A_i, B_j)=\expval{Pi_{A_i}^x\otimes\Pi_{B_j}^y}{\Psi},
-\end{equation}
+\begin{equation*}
+p(X=x,Y=y\vert A_i, B_j)=\expval{\Pi_{A_i}^x\otimes\Pi_{B_j}^y}{\Psi},
+\end{equation*}
 where $\ket{\Psi}\in\mathcal{H}$ is a normalized, bipartite Hilbert state vector and $\Pi_{A_i}^x$ is the projection operator corresponding to the outcome $x$ of the measurement $A_i$ on the subsystem A.
 
 What is remarkable about the CHSH scenario is the fact that one can give explicit projective measurements $A_{1}$, $A_{2}$, $B_{1}$, $B_{2}$, as well as the maximally entangled pure state $\ket{\Psi} =\frac{1}{\sqrt{2}}(\ket{\uparrow\uparrow} +\ket{\downarrow\downarrow})$, for which quantum theory predicts $p(\text{{success}})=\cos^{2}(\frac{\pi}{8})>\frac{3}{4}$: a violation of the CHSH Bell inequality. A set of Hermitian operators with this property is 
@@ -407,16 +406,16 @@ w_i p(e_i)=w_i p(x_i,y_i\vert a_i,b_i)=w_i-w_i\sum\limits_{(x_i',y_i')\neq(x_i,y
 The statistics of a Bell-type correlation experiment are fully characterized by the set $\{p(x,y\vert a,b)\}_{x,y,a,b}$. For the CHSH experiment, this set contains $2^4=16$ values between 0 and 1, which obey some normalization conditions and can be represented by a vector in $\mathbb{R}^{16}$. Identifying permissible correlations as a subset of $[0,1]^{16}$, in the case of CHSH, one can characterize the geometry of correlations that are compatible with say local causality, quantum theory, or the no-signalling principle. Each set of permissible correlations is clearly convex: While one can check that convex combination preserves the relevant constraints, there is an intuitive argument as to why this must be the case: Assume that we have two experimental procedure, each producing ``allowed" statistics. As we only impose constraints on what correlations we consider to be ``allowed", the actual existence of such procedures cannot be discarded. We now consider the following new experimental procedure: we generate a random bit and then perform the ``old" experimental procedure corresponding to the value of the generated bit. By changing the bias of our ``coin", we can produce all statistics that are convex combinations of the initial, permissible statistics.
 
 As discussed, all correlations $p(x,y\vert a,b)$ compatible with an ontological model obeying local causality are convex combinations of local, deterministic probability assignments $p_A(x \vert a,\lambda)p_B(y \vert b,\lambda)$. There are $2^4=16$ distinct such assignments. Thus, the set of local correlations 
-\begin{equation}
+\begin{equation*}
 \mathcal{L} =\{\{p(x,y\vert a,b)\}_{x,y,a,b}\equiv \vec{v}\in\mathbb{R}^{16}: \vec{v}\; \text{compatible with local causality}\}
-\end{equation}
+\end{equation*}
 is a polytope in $\mathbb{R}^{16}$ with 16 extremal vertices. A Bell inequality \ref{eqn:bellineq} defines a separative hyperplane that splits $[0,1]^{16}$ in two, such that the closed half-space contains $\mathcal{L}$. The Bell hyperplane could for instance be a facet of the local polytope, as shown in \ref{fig:correlations}. A facet of $\mathcal{L}$ is one of its delimiting hyperplanes. Correlations that maximally violate the CHSH Bell inequality have a maximal distance to the Bell hyperplane. Bell's Theorem tells us that the set of quantum correlations $\mathcal{Q}$ is strictly larger than $\mathcal{L}$. The set $\mathcal{Q}$ cannot be characterized in terms of a finite number of delimiting hyperplanes (linear inequalities) \cite{Brunner2014}. 
 
 The no-signalling principle is built into the tensor product representation of traditional QM. As such, the set $\mathcal{Q}$ is contained in the set $\mathcal{NS}$, which contains all correlations that obey no-signalling. Like $\mathcal{L}$, $\mathcal{NS}$ is a polytope: $\mathcal{NS}$ is the intersection of $[0,1]^{16}$, the hyperplanes corresponding to normalization constraints $\sum_{x,y} p(x,y\vert a,b)=1$, and those defined by the no-signalling conditions
-\begin{align}
+\begin{align*}
 \sum_y p(x,y\vert a,b) & = \sum_y p(x,y\vert a,b') \; \text{and} \\
 \sum_x p(x,y\vert a,b) & = \sum_x p(x,y\vert a',b)\;.
-\end{align}
+\end{align*}
 The set $\mathcal{NS}$ is strictly bigger than $\mathcal{Q}$, as there exist correlations, such as the ``PR-box", that satisfy the no-signalling principle and win the ``CHSH game" with certainty \cite{Brunner2014}.
 
 Analogous to Bell inequalities, KS non-contextuality inequalities define hyperplanes that splits the convex set of all permissible correlations in two, such that the closed half-space contains all correlations compatible with a KS non-contextual HVM description.
@@ -455,9 +454,9 @@ Note that there even exist KS colourable sets of measurements that produce state
 The perhaps simplest example of a quantum experiment leading to (state-dependent) KS contextuality for a single quantum system is the KCBS scenario \cite{Klyachko2008}. We will present the corresponding KCBS KS non-contextuality inequality, which will become relevant when we later discuss self-testing of quantum systems in Sections \ref{sec:self-testing} and \ref{sec:contselftesting}. 
 
 For the KCBS KS contextuality scenario we assume five dichotomic projective measurements with outcomes 0 and 1. Additionally, the five measurements should obey cyclic compatibility, as shown in Figure \ref{fig:kcbscompat}. We freely choose a pair of compatible measurements (measurement context) at random, each with equal probability, and determine the value of the following linear sum of probabilities:
-\begin{equation}
+\begin{equation*}
     \sum_{i=1}^5 p(0,1\vert i, i+1)\leq 2,
-\end{equation}
+\end{equation*}
 where compatibility with a KS non-contextual HVM imposes an upper bound of 2 for this expression: For any HVM description of the KCBS experiment, $\sum_{i=1}^5 p(0,1\vert i,i+1)$ can be rewritten as $\int_{\Lambda}d\lambda\thinspace\mu(\lambda\vert i,i+1)\sum_{i=1}^5 p(0,1\vert i, i+1, \lambda)$, where $\mu$ is some probability density function over the ontic state space $\Lambda$. Furthermore $\mu(\lambda\vert i,i+1)=\mu(\lambda)$ as we assume the choice of measurement context to be uncorrelated with the system. Analogously to Specker's three boxes or the CHSH experiment, one can easily verify that for a KS non-contextual HVM description this quantity has a non-trivial upper bound. 
 
 \begin{figure}
@@ -468,9 +467,9 @@ where compatibility with a KS non-contextual HVM imposes an upper bound of 2 for
 \end{figure}
 
 We now present a quantum experiment involving a KS colourable set of five projective measurements on a qutrit for which QM predicts a (maximal) violation of the KCBS KS non-contextuality inequality. The five projective measurements of this reference experiment correspond to five rank one projectors that project onto five pure qutrit states. The components of these five qutrit states with respect to the standard qutrit basis $\{\ket{0}, \ket{1}, \ket{2}\}$ are real, allowing us to represent them as vectors in $\mathbb{R}^3$, see Figure \ref{fig:kcbsref}. The angle between each of the five vectors and the $\vert 0\rangle$ qutrit axis is $\cos^2(\theta)=\frac{1}{\sqrt{5}}$. The following is an explicit expression for five suitable qutrit states that also satisfy cyclic compatibility:
-\begin{align}
+\begin{align*}
     \ket{u_j} = \left(\cos(\theta),\thinspace\sin(\theta)\sin(j\phi),\thinspace\sin(\theta)\cos(j\phi)\right)^T,
-\end{align}
+\end{align*}
 for $\displaystyle j=1\dots 5$ with $\displaystyle\phi=\frac{4\pi}{5}$.
 
 For these five projective measurements acting on the $\vert 0\rangle$ qutrit state, QM predicts \begin{equation*}

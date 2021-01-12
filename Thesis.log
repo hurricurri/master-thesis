@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.26)  11 JAN 2021 00:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.26)  12 JAN 2021 00:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -643,23 +643,23 @@ Package pdftex.def Info: images/4dim.png  used on input line 295.
  [16]
 [17 <./images/perestable.png> <./images/triads.png>] [18 <./images/4dim.png>]
 [19] [20]
-<images/bell.png, id=552, 534.947pt x 292.80525pt>
+<images/bell.png, id=551, 534.947pt x 292.80525pt>
 File: images/bell.png Graphic file (type png)
 <use images/bell.png>
-Package pdftex.def Info: images/bell.png  used on input line 369.
+Package pdftex.def Info: images/bell.png  used on input line 368.
 (pdftex.def)             Requested size: 362.88783pt x 198.62686pt.
-<images/chsh.png, id=553, 535.2497pt x 405.01312pt>
+<images/chsh.png, id=552, 535.2497pt x 405.01312pt>
 File: images/chsh.png Graphic file (type png)
 <use images/chsh.png>
-Package pdftex.def Info: images/chsh.png  used on input line 376.
+Package pdftex.def Info: images/chsh.png  used on input line 375.
 (pdftex.def)             Requested size: 272.1676pt x 205.95448pt.
-<images/chshmnts.png, id=556, 631.60968pt x 417.05812pt>
+<images/chshmnts.png, id=555, 631.60968pt x 417.05812pt>
 File: images/chshmnts.png Graphic file (type png)
 <use images/chshmnts.png>
-Package pdftex.def Info: images/chshmnts.png  used on input line 386.
+Package pdftex.def Info: images/chshmnts.png  used on input line 385.
 (pdftex.def)             Requested size: 317.52426pt x 209.66766pt.
  [21] [22 <./images/bell.png> <./images/chsh.png>]
-Overfull \hbox (28.56522pt too wide) in paragraph at lines 407--408
+Overfull \hbox (28.56522pt too wide) in paragraph at lines 406--407
 []\OT1/cmr/m/n/10.95 The statis-tics of a Bell-type cor-re-la-tion ex-per-i-men
 t are fully char-ac-ter-ized by the set $\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.
 95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; y\OMS/cmsy/m/n/10.95 j\OML/cmm/m
@@ -667,7 +667,7 @@ t are fully char-ac-ter-ized by the set $\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.
  []
 
 [23 <./images/chshmnts.png>]
-Overfull \hbox (22.44826pt too wide) in paragraph at lines 409--410
+Overfull \hbox (22.44826pt too wide) in paragraph at lines 408--409
 \OT1/cmr/m/n/10.95 causal-ity are con-vex com-bi-na-tions of lo-cal, de-ter-min
 -is-tic prob-a-bil-ity as-sign-ments $\OML/cmm/m/it/10.95 p[]\OT1/cmr/m/n/10.95
  (\OML/cmm/m/it/10.95 x\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 a; ^^U\OT1/cmr/
@@ -675,22 +675,22 @@ m/n/10.95 )\OML/cmm/m/it/10.95 p[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y\OMS
 /cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 b; ^^U\OT1/cmr/m/n/10.95 )$.
  []
 
-<images/correlations.png, id=588, 552.56438pt x 432.86719pt>
+<images/correlations.png, id=587, 552.56438pt x 432.86719pt>
 File: images/correlations.png Graphic file (type png)
 <use images/correlations.png>
-Package pdftex.def Info: images/correlations.png  used on input line 426.
+Package pdftex.def Info: images/correlations.png  used on input line 425.
 (pdftex.def)             Requested size: 317.52426pt x 248.73817pt.
 [24] [25 <./images/correlations.png>] [26] [27]
-<images/kcbscompat.png, id=641, 416.30531pt x 181.42781pt>
+<images/kcbscompat.png, id=637, 416.30531pt x 181.42781pt>
 File: images/kcbscompat.png Graphic file (type png)
 <use images/kcbscompat.png>
-Package pdftex.def Info: images/kcbscompat.png  used on input line 465.
+Package pdftex.def Info: images/kcbscompat.png  used on input line 464.
 (pdftex.def)             Requested size: 317.52426pt x 138.38487pt.
  [28 <./images/kcbscompat.png>]
-<images/kcbsref.png, id=653, 666.07608pt x 316.64691pt>
+<images/kcbsref.png, id=647, 666.07608pt x 316.64691pt>
 File: images/kcbsref.png Graphic file (type png)
 <use images/kcbsref.png>
-Package pdftex.def Info: images/kcbsref.png  used on input line 483.
+Package pdftex.def Info: images/kcbsref.png  used on input line 482.
 (pdftex.def)             Requested size: 453.60808pt x 215.64076pt.
 
 [29 <./images/kcbsref.png>]) (./Chapters/02-csw.tex [30]
@@ -701,17 +701,17 @@ Chapter 2.
 [31
 
 ] [32] [33] [34]
-<images/kcbsexclusivity1.png, id=714, 533.74406pt x 426.09187pt>
+<images/kcbsexclusivity1.png, id=707, 533.74406pt x 426.09187pt>
 File: images/kcbsexclusivity1.png Graphic file (type png)
 <use images/kcbsexclusivity1.png>
 Package pdftex.def Info: images/kcbsexclusivity1.png  used on input line 81.
 (pdftex.def)             Requested size: 272.1676pt x 217.27797pt.
-<images/kcbsexclusivity2.png, id=717, 444.91219pt x 313.9228pt>
+<images/kcbsexclusivity2.png, id=710, 444.91219pt x 313.9228pt>
 File: images/kcbsexclusivity2.png Graphic file (type png)
 <use images/kcbsexclusivity2.png>
 Package pdftex.def Info: images/kcbsexclusivity2.png  used on input line 87.
 (pdftex.def)             Requested size: 272.1676pt x 192.0387pt.
-<images/3boxesecl.png, id=720, 555.57562pt x 450.18187pt>
+<images/3boxesecl.png, id=713, 555.57562pt x 450.18187pt>
 File: images/3boxesecl.png Graphic file (type png)
 <use images/3boxesecl.png>
 Package pdftex.def Info: images/3boxesecl.png  used on input line 98.
@@ -723,7 +723,7 @@ Chapter 3.
 ------------------------------------------------------------------------------
  3 Self-testing
 ------------------------------------------------------------------------------
-<images/chshexcl.png, id=807, 597.73312pt x 403.5075pt>
+<images/chshexcl.png, id=800, 597.73312pt x 403.5075pt>
 File: images/chshexcl.png Graphic file (type png)
 <use images/chshexcl.png>
 Package pdftex.def Info: images/chshexcl.png  used on input line 18.
@@ -731,12 +731,12 @@ Package pdftex.def Info: images/chshexcl.png  used on input line 18.
 [43
 
 ] [44 <./images/chshexcl.png>] [45] [46]
-<images/self-testingcorr.png, id=876, 494.59781pt x 473.51906pt>
+<images/self-testingcorr.png, id=869, 494.59781pt x 473.51906pt>
 File: images/self-testingcorr.png Graphic file (type png)
 <use images/self-testingcorr.png>
 Package pdftex.def Info: images/self-testingcorr.png  used on input line 72.
 (pdftex.def)             Requested size: 272.1676pt x 260.56633pt.
-<images/self-testing.png, id=877, 805.50937pt x 574.39594pt>
+<images/self-testing.png, id=870, 805.50937pt x 574.39594pt>
 File: images/self-testing.png Graphic file (type png)
 <use images/self-testing.png>
 Package pdftex.def Info: images/self-testing.png  used on input line 79.
@@ -751,18 +751,18 @@ Chapter 4.
 [50
 
 ] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62]
-<images/transducer.png, id=1056, 566.115pt x 201.00093pt>
+<images/transducer.png, id=1049, 566.115pt x 201.00093pt>
 File: images/transducer.png Graphic file (type png)
 <use images/transducer.png>
 Package pdftex.def Info: images/transducer.png  used on input line 426.
 (pdftex.def)             Requested size: 317.52426pt x 112.74069pt.
  [63 <./images/transducer.png>] [64]
-<images/n=5,mnts=1.png, id=1079, 567.11874pt x 532.99126pt>
+<images/n=5,mnts=1.png, id=1072, 567.11874pt x 532.99126pt>
 File: images/n=5,mnts=1.png Graphic file (type png)
 <use images/n=5,mnts=1.png>
 Package pdftex.def Info: images/n=5,mnts=1.png  used on input line 462.
 (pdftex.def)             Requested size: 181.44391pt x 170.52002pt.
-<images/n=5,mnts=3.png, id=1080, 665.48625pt x 615.29875pt>
+<images/n=5,mnts=3.png, id=1073, 665.48625pt x 615.29875pt>
 File: images/n=5,mnts=3.png Graphic file (type png)
 <use images/n=5,mnts=3.png>
 Package pdftex.def Info: images/n=5,mnts=3.png  used on input line 468.
@@ -772,12 +772,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 460--471
 []$[]$  $[]$ 
  []
 
-<images/n=5,mnts=5.png, id=1081, 699.61375pt x 626.34pt>
+<images/n=5,mnts=5.png, id=1074, 699.61375pt x 626.34pt>
 File: images/n=5,mnts=5.png Graphic file (type png)
 <use images/n=5,mnts=5.png>
 Package pdftex.def Info: images/n=5,mnts=5.png  used on input line 474.
 (pdftex.def)             Requested size: 181.44391pt x 162.4336pt.
-<images/n=5,mnts=10.png, id=1082, 659.46375pt x 620.3175pt>
+<images/n=5,mnts=10.png, id=1075, 659.46375pt x 620.3175pt>
 File: images/n=5,mnts=10.png Graphic file (type png)
 <use images/n=5,mnts=10.png>
 Package pdftex.def Info: images/n=5,mnts=10.png  used on input line 480.
@@ -789,18 +789,18 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 472--483
 
 [65 <./images/n=5,mnts=1.png> <./images/n=5,mnts=3.png> <./images/n=5,mnts=5.pn
 g> <./images/n=5,mnts=10.png>]
-<images/allentropies.png, id=1099, 462.528pt x 346.896pt>
+<images/allentropies.png, id=1092, 462.528pt x 346.896pt>
 File: images/allentropies.png Graphic file (type png)
 <use images/allentropies.png>
 Package pdftex.def Info: images/allentropies.png  used on input line 497.
 (pdftex.def)             Requested size: 317.52426pt x 238.15694pt.
-<images/memorycost.png, id=1100, 578.16pt x 433.62pt>
+<images/memorycost.png, id=1093, 578.16pt x 433.62pt>
 File: images/memorycost.png Graphic file (type png)
 <use images/memorycost.png>
 Package pdftex.def Info: images/memorycost.png  used on input line 503.
 (pdftex.def)             Requested size: 317.52426pt x 238.14105pt.
  [66] [67 <./images/allentropies.png> <./images/memorycost.png>] [68]
-<images/erasedbits.png, id=1128, 578.16pt x 433.62pt>
+<images/erasedbits.png, id=1121, 578.16pt x 433.62pt>
 File: images/erasedbits.png Graphic file (type png)
 <use images/erasedbits.png>
 Package pdftex.def Info: images/erasedbits.png  used on input line 542.
@@ -823,12 +823,12 @@ Overfull \hbox (24.7396pt too wide) in paragraph at lines 4--4
 a-lent prepa-
  []
 
-<images/mntsandpreps.png, id=1220, 277.035pt x 216.05719pt>
+<images/mntsandpreps.png, id=1212, 277.035pt x 216.05719pt>
 File: images/mntsandpreps.png Graphic file (type png)
 <use images/mntsandpreps.png>
 Package pdftex.def Info: images/mntsandpreps.png  used on input line 10.
 (pdftex.def)             Requested size: 204.12224pt x 159.19408pt.
-<images/kcbsrefstates.png, id=1221, 261.51309pt x 160.18608pt>
+<images/kcbsrefstates.png, id=1213, 261.51309pt x 160.18608pt>
 File: images/kcbsrefstates.png Graphic file (type png)
 <use images/kcbsrefstates.png>
 Package pdftex.def Info: images/kcbsrefstates.png  used on input line 16.
@@ -902,7 +902,7 @@ in the work of ein-stein.
  []
 
 ) [95]
-<declaration-originality.pdf, id=1426, 597.55246pt x 845.07718pt>
+<declaration-originality.pdf, id=1385, 597.55246pt x 845.07718pt>
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf>
 Package pdftex.def Info: declaration-originality.pdf  used on input line 107.
@@ -911,7 +911,7 @@ File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf>
 Package pdftex.def Info: declaration-originality.pdf  used on input line 107.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-<declaration-originality.pdf, id=1429, page=1, 597.55246pt x 845.07718pt>
+<declaration-originality.pdf, id=1388, page=1, 597.55246pt x 845.07718pt>
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
@@ -943,9 +943,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
  (./Thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
-Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 3F5D60A2467AA3772F2C4936F4913787;12874.
 
+
+Package rerunfilecheck Warning: File `Thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Thesis.out':
+(rerunfilecheck)             Before: 373141E29AD2E3DBC25D4FFD0EE1BA29;12869
+(rerunfilecheck)             After:  2CA53BFC355A9F65C795C727380E33CC;12869.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -955,48 +961,63 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 15125 strings out of 482555
- 222118 string characters out of 5952144
- 508241 words of memory out of 5000000
- 30113 multiletter control sequences out of 15000+600000
+ 15083 strings out of 482555
+ 221614 string characters out of 5952144
+ 507127 words of memory out of 5000000
+ 30112 multiletter control sequences out of 15000+600000
  553830 words of font info for 106 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  52i,18n,63p,2919b,561s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</us
-r/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold7.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm
--super/sfrm1095.pfb>
-Output written on Thesis.pdf (101 pages, 1779782 bytes).
+pdfTeX warning (dest): name{equation.169} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{dummy.182} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{section.181} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.180} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.170} has been referenced but does not
+ exist, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/
+share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-s
+uper/sfrm1095.pfb>
+Output written on Thesis.pdf (101 pages, 1778379 bytes).
 PDF statistics:
- 1657 PDF objects out of 1728 (max. 8388607)
- 1427 compressed objects within 15 object streams
- 366 named destinations out of 1000 (max. 500000)
+ 1608 PDF objects out of 1728 (max. 8388607)
+ 1379 compressed objects within 14 object streams
+ 325 named destinations out of 1000 (max. 500000)
  518 words of extra memory for PDF output out of 10000 (max. 10000000)
 

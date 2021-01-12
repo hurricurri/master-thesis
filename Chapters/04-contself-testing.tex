@@ -529,9 +529,9 @@ For the $\epsilon$-transducer that simulates the ideal reference statistics, the
 I_{erased}=H(S_{t-1}\vert X_t,Y_t,S_t)
 \end{equation} 
 characterizes the amount of erased information for one step of the computation \cite{Wiesner2012}. The erased entropy can be re-written as $I_{erased}=H(S_t\vert X_t, S_{t-1})+I(S_t:X_t)$ \cite{Wiesner2012}, which simplifies to $I_{erased}=H(S_t\vert S_{t-1})$. Identifying the causal states of the optimal transducer with the post-measurement quantum states gives us an explicit expression for the erased information per measurement for odd $n$-cycle contextuality scenarios:
-\begin{equation}
-I_{erased}= -\frac{1}{n} \sum_{s,(x,y)} \pi(s) \expval{P_x^y}{s}\thinspace\log_2(\frac{\expval{P_x^y}{s}}{n}),    
-\end{equation}
+\begin{equation*}
+I_{erased}= -\frac{1}{n} \sum_{s,(x,y)} \pi(s) \expval{P_x^y}{s}\thinspace\log_2\left(\frac{\expval{P_x^y}{s}}{n}\right),    
+\end{equation*}
 where we sum over all causal states $s$ and $(x,y)\in\{1,\dots,n\}\times\{0,1\}$. $\pi$ is the stationary probability distribution over the causal states and $\text{P}_x^y$ is the projector corresponding to the measurement-outcome pair $(x,y)$.
 
 We find that any classical simulation that emulates the ideal KCBS experiment must erase at least $\sim 2.75$ bits for each measurement (in the stationary regime).
