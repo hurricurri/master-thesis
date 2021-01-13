@@ -17,7 +17,7 @@ For the class of odd $n$-cycle exclusivity graphs, $n\geq5$, the Lovász SDP \re
 
 From Section \ref{sec:cswhierarch} we know that the reference quantum experiment $\{\vert u_j^{(n)} \rangle \}_{j=0}^{n}$ presented in Section \ref{sec:kcbs} produces a maximal violation of the odd $n$-cycle KS non-contextuality inequality, because it attains the Lovász bound. The unique optimal solution $X^*_n$ is obtained from this reference quantum realization by the usual procedure:
 \begin{equation*}
-    X^*_n=\operatorname{Gram}(\thinspace\vert u_0^{(n)} \rangle\thinspace,\thinspace \langle u_1^{(n)} \vert u_0^{(n)} \rangle \vert u_1^{(n)} \rangle\thinspace,\thinspace\dots,\thinspace \langle u_n^{(n)} \vert u_0^{(n)} \rangle \vert u_n^{(n)} \rangle\thinspace)\thinspace.
+    X^*_n=\operatorname{Gram}(\thinspace\vert u_0 \rangle\thinspace,\thinspace \langle u_1^{(n)} \vert u_0 \rangle \vert u_1^{(n)} \rangle\thinspace,\thinspace\dots,\thinspace \langle u_n^{(n)} \vert u_0 \rangle \vert u_n^{(n)} \rangle\thinspace)\thinspace.
 \end{equation*}
 
 The following two lemmas will be important to prove robustness:
@@ -210,8 +210,8 @@ V_2^{\dag}V_2=T\begin{pmatrix} \mathbb{1}_r & 0_{r,d-r} \end{pmatrix} \begin{pma
 \end{equation*}
 and its Frobenius distance to $\Tilde{V}_2$ is
 \begin{equation*}
-\|\Tilde{V}_2-V_2\|_F = \left\|S\left[\Tilde{\Sigma}-\begin{pmatrix}
-\mathbb{1}_r \\ 0_{d-r,r}\end{pmatrix}\right]T^{\dag}\right\|_F=\operatorname{tr}\left(\left[\Tilde{\Sigma}^{\dag}-\begin{pmatrix} \mathbb{1}_r & 0_{r,d-r}\end{pmatrix}\right]\left[\Tilde{\Sigma}-\begin{pmatrix} \mathbb{1}_r \\ 0_{d-r,r}\end{pmatrix}\right]\right)
+\|\Tilde{V}_2-V_2\|_F^{\textstyle ^2} = \left\|S\left[\Tilde{\Sigma}-\begin{pmatrix}
+\mathbb{1}_r \\ 0_{d-r,r}\end{pmatrix}\right]T^{\dag}\right\|_F^2=\operatorname{tr}\left(\left[\Tilde{\Sigma}^{\dag}-\begin{pmatrix} \mathbb{1}_r & 0_{r,d-r}\end{pmatrix}\right]\left[\Tilde{\Sigma}-\begin{pmatrix} \mathbb{1}_r \\ 0_{d-r,r}\end{pmatrix}\right]\right)
 \end{equation*}
 Now, let $r'$ be the rank of $\Tilde{V}_2$, and $\Tilde{\sigma_1}\geq\dots\Tilde{\sigma}_{r'}>0$ the non-zero singular values of $\Tilde{V}_2$. Again, w.l.o.g.\
 \begin{equation*}
@@ -226,7 +226,7 @@ Now, let $r'$ be the rank of $\Tilde{V}_2$, and $\Tilde{\sigma_1}\geq\dots\Tilde
 \end{equation*}
 Hence, $\|\Tilde{V}_2-V_2\|_F$ can be re-written like
 \begin{align*}
-\|\Tilde{V}_2-V_2\|_F & =\operatorname{tr}\left(
+\|\Tilde{V}_2-V_2\|_F^{\textstyle ^2} & =\operatorname{tr}\left(
 \begin{pmatrix}
 \Tilde{\sigma}_1^2&&&\\
 &\ddots&&\\
@@ -248,12 +248,12 @@ The condition $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\frac{\epsil
 &\ddots&& \\
 &&\Tilde{\sigma}_{r'}^2& \\
 &&&0_{r-r'}
-\end{pmatrix}T^{\dag}-\mathbb{1}_r\right\|_F & =\sum_{i=1}^{r'}(\Tilde{\sigma}_i^4-2\Tilde{\sigma}_i^2+1) + (r-r') \\
-& = \sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2(\Tilde{\sigma}_i+1)^2 + (r-r')\leq \frac{\epsilon}{\sigma_{\text{min}}^2}\;,
+\end{pmatrix}T^{\dag}-\mathbb{1}_r\right\|_F^2 & =\sum_{i=1}^{r'}(\Tilde{\sigma}_i^4-2\Tilde{\sigma}_i^2+1) + (r-r') \\
+& = \sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2(\Tilde{\sigma}_i+1)^2 + (r-r')\leq \left(\frac{\epsilon}{\sigma_{\text{min}}^2}\right)^2\;,
 \end{align*}
 which in particular implies that, for $\epsilon<\sigma_{\text{min}}^2$, the rank of $\Tilde{V}_2$ must match that of $A^{\dag}$, i.e. $r=r'$. Additionally, $\Tilde{V}_2$ is approximately isometric:
 \begin{equation*}
-\|\Tilde{V}_2-V_2\|_F = \sum_{i=1}^r(\Tilde{\sigma_i}-1)^2\leq\frac{\epsilon}{\sigma_{\text{min}}^2}\thinspace.
+\|\Tilde{V}_2-V_2\|_F^{\textstyle ^2} = \sum_{i=1}^r(\Tilde{\sigma_i}-1)^2\leq\left(\frac{\epsilon}{\sigma_{\text{min}}^2}\right)^2\thinspace.
 \end{equation*}
 Together, this gives us the desired intermediate result:
 \begin{align*}
@@ -300,8 +300,8 @@ Having distilled the main proof components into three auxiliary theorems, Lemmas
 \label{thm:contselftesting}\hfill\break
 Let $n\geq5$ be an odd integer. The only quantum model $\ket{\Psi}$, $\{\Pi_i\}_{i=1}^n$ compatible with a maximal violation of the odd $n$-cycle KS non-contextuality inequality \ref{eqn:oddncycleclass} with exclusivity graph $\mathcal{G}_{ex}^{(n)}$ is \ref{eqn:ncycleideal}, up to a global isometry:
 \begin{align*}
-    \exists \emph{ isometry } V & : \ket{\Psi} = V \vert u_0^{(n)}\rangle \\[0.7em]
-    \forall i\in\{1,\dots,n\} & : \Pi_i \ket{\Psi} = V \vert u_i^{(n)} \rangle \langle u_i^{(n)} \vert \thinspace \vert u_0^{(n)} \rangle
+    \exists \emph{ isometry } V & : \ket{\Psi} = V \vert u_0\rangle \\[0.7em]
+    \forall i\in\{1,\dots,n\} & : \Pi_i \ket{\Psi} = V \vert u_i^{(n)} \rangle \langle u_i^{(n)} \vert \thinspace \vert u_0 \rangle
 \end{align*}
 
 Furthermore, all quantum models $\ket{\Psi}$, $\{\Pi_i\}_{i=1}^n$ compatible with an $\epsilon$-suboptimal violation of \ref{eqn:oddncycleclass}, i.e.\
@@ -309,8 +309,8 @@ Furthermore, all quantum models $\ket{\Psi}$, $\{\Pi_i\}_{i=1}^n$ compatible wit
     \sum_{i=0}^n \abs{\langle \Psi \vert \Pi_i \vert \Psi \rangle}^2> B_q(\mathcal{G}_{ex}^{(n)})-\epsilon\thinspace ,
 \end{equation*}where $B_q(\mathcal{G}_{ex}^{(n)})$ is the quantum supremum \ref{eqn:ncyclequsup}, are $\mathcal{O}(\epsilon)$ close in 2-norm to \ref{eqn:ncycleideal}, up to a global isometry:
 \begin{align*}
-    \exists \emph{ isometry } V & : \| \ket{\Psi} - V \vert u_0^{(n)}\rangle \|_2 \thinspace\leq\thinspace \mathcal{O}(\epsilon)\\[0.7em]
-    \forall i\in\{1,\dots,n\} & : \| \Pi_i \ket{\Psi} - V \vert u_i^{(n)} \rangle \langle u_i^{(n)} \vert \thinspace \vert u_0^{(n)} \rangle \| \leq \mathcal{O}(\epsilon)
+    \exists \emph{ isometry } V & : \| \ket{\Psi} - V \vert u_0\rangle \|_2 \thinspace\leq\thinspace \mathcal{O}(\epsilon)\\[0.7em]
+    \forall i\in\{1,\dots,n\} & : \| \Pi_i \ket{\Psi} - V \vert u_i^{(n)} \rangle \langle u_i^{(n)} \vert \thinspace \vert u_0 \rangle \| \leq \mathcal{O}(\epsilon)
 \end{align*}
 \end{theorem}
 
@@ -318,7 +318,7 @@ Here, the global isometry $V$ expresses the fact that the statistics of a correl
 
 \begin{proof} We denote the optimal solution of the Lovász SDP by $X^*_n$. Due to the unicity of $X_n^*$, see Lemma \ref{lem:kcbsunique}, one possible Gram decomposition of $X^*_n$ is
 \begin{equation*}
-X^*_n=\operatorname{Gram(\thinspace\vert u_0^{(n)}\rangle\thinspace,\thinspace \langle u_1^{(n)}\vert u_0^{(n)} \rangle \vert u_1^{(n)}\rangle\thinspace,\thinspace \dots\thinspace,\thinspace \langle u_n^{(n)}\vert u_0^{(n)}\rangle \vert u_n^{(n)}\rangle\thinspace)}\thinspace,
+X^*_n=\operatorname{Gram(\thinspace\vert u_0\rangle\thinspace,\thinspace \langle u_1^{(n)}\vert u_0 \rangle \vert u_1^{(n)}\rangle\thinspace,\thinspace \dots\thinspace,\thinspace \langle u_n^{(n)}\vert u_0\rangle \vert u_n^{(n)}\rangle\thinspace)}\thinspace,
 \end{equation*}
 with $\{\vert u_i^{(n)} \rangle \}_{i=0}^n$ the set of vectors defined in \ref{eqn:ncycleideal}.
 
@@ -345,7 +345,7 @@ Lemma \ref{lem:closegramdecomp} implies that
 \label{eqn:selftestinginterm}
 \begin{split}
     \forall\thinspace i\in\{0,\dots,n\},\; \exists \text{ unitary } U\in\mathbb{C}^{d,d}: \; & \| \langle \mathbf{\Tilde{u}}_i^{(n)} \vert \mathbf{\Tilde{u}}_0^{(n)} \rangle \vert \mathbf{\Tilde{u}}_i^{(n)} \rangle - \langle \mathbf{u}_i^{(n)} \vert \mathbf{u}_0^{(n)} \rangle \thinspace U\vert \mathbf{u}_i^{(n)}\rangle\|_2 \\[0.3em]
-    = \thinspace & \| \langle \Tilde{u}_i^{(n)} \vert \Tilde{u}_0^{(n)} \rangle \vert \Tilde{u}_i^{(n)} \rangle - \langle u_i^{(n)} \vert u_0^{(n)} \rangle \thinspace \mathcal{J}^{-1}UV^{'} \vert u_i^{(n)}\rangle\|_2 \leq \mathcal{O}(\epsilon)
+    = \thinspace & \| \langle \Tilde{u}_i^{(n)} \vert \Tilde{u}_0^{(n)} \rangle \vert \Tilde{u}_i^{(n)} \rangle - \langle u_i^{(n)} \vert u_0 \rangle \thinspace \mathcal{J}^{-1}UV^{'} \vert u_i^{(n)}\rangle\|_2 \leq \mathcal{O}(\epsilon)
 \end{split}
 \end{align}
 
@@ -358,7 +358,7 @@ We want \ref{eqn:selftestinginterm} to hold true for the normalized vectors $\ve
 \label{lem:selftestingfinallem}
 Let $\| \ket{a} - \ket{b} \|_2\leq\delta$ for vectors $\ket{a}$ and $\ket{b}$, such that $\|\ket{a}\|_2\geq2\delta$. Let $\vert \Hat{a} \rangle$ and $\vert \Hat{b} \rangle$ be $\ket{a}$ and $\ket{b}$, normalized to have unit norm. Then, we have that $\| \vert \Hat{a}\rangle-\vert \Hat{b} \rangle \|_2\leq \frac{2\delta}{\|\ket{a}\|_2}$.
 \end{lemma}
-The proof is found in \cite{Bharti2019} (Lemma 9). As $\vert \langle u_i^{(n)}\vert u_0^{(n)} \rangle \vert =5^{\frac{1}{4}}$, the assumption in Lemma \ref{lem:selftestingfinallem} is true for sufficiently small $\epsilon$.
+The proof is found in \cite{Bharti2019} (Lemma 9). As $\vert \langle u_i^{(n)}\vert u_0 \rangle \vert =5^{\frac{1}{4}}$, the assumption in Lemma \ref{lem:selftestingfinallem} is true for sufficiently small $\epsilon$.
 
 Having proved that the only quantum model $\ket{\Psi}$, $\Pi_i$ compatible with a maximal violation of \ref{eqn:oddncycleclass} is \ref{eqn:ncycleideal}, and that this self-testing result is noise robust, we will now analyze what assumptions the protocol in \cite{Bharti2019} requires for practical purposes.
 
@@ -406,7 +406,7 @@ One strength of contextuality as a competing notion of nonclassicality is that c
 However, for self-testing scenarios the information carrying capacity of the physical device is unknown.
 One therefore has to justify imposing an upper bound on the unknown device's information carrying capacity to conclude quantumness. As we will see, these upper bounds have to be of the order of a few bits, which means that the required memory assumption is a very strong one indeed. 
 
-In Section REF, where we propose two novel self-testing protocols based on Spekkens contextuality, the assumption of cyclic compatibility will be replaced by assumptions about (approximate) operational equivalences of certain experimental procedures. Both protocols will also assume an upper bound on the information carrying capacity of the unknown system. We will discuss their features in Section REF.
+In Section \ref{sec:protocols}, where we propose two novel self-testing protocols based on Spekkens contextuality, the assumption of cyclic compatibility will be replaced by assumptions about (approximate) operational equivalences of certain experimental procedures. Both protocols will also assume an upper bound on the information carrying capacity of the unknown system. We will discuss their features in Section \ref{sec:discussion}.
 
 Alternatively, Cabello proposes using Landauer's principle \cite{Cabello2018} to translate the memory cost of KS contextuality into a ``thermodynamical cost" \cite{Wiesner2012,Cabello2016}, in terms of heat the system dissipates when measured. His proposal will be subject of Section \ref{sec:landauer}. As the minimal unit of heat a classical simulation must dissipate per measurement will be of the order $\sim k_BT$, this proposal is hardly viable in a realistic experimental setting.
 
