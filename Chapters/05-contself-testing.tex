@@ -49,7 +49,7 @@ Let $\{\vert \Tilde{u}_i \rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ and $\{\vert u_
 for all $i\in\{1,\dots,n\}$
 \end{lemma}
 
-We will omit the proofs of Lemmas \ref{lem:kcbsunique} and \ref{lem:epssuboptgram}, as they do not provide much conceptual insight, and offer only a few comments. We include the proof of Lemma \ref{lem:closegramdecomp}, as \cite{Bharti2019} proves only a weaker version for $d=n$, but to the best of the author's knowledge implicitly uses a stronger statement analogous to that of Lemma \ref{lem:closegramdecomp}. Furthermore, the proof we present establishes a tighter error bound of the order $\mathcal{O}(\epsilon)$, compared to $\mathcal{O}(\sqrt{\epsilon})$ in \cite{Bharti2019}.
+We will omit the proofs of Lemmas \ref{lem:kcbsunique} and \ref{lem:epssuboptgram}, as they do not provide much conceptual insight, and offer only a few comments. We include the proof of Lemma \ref{lem:closegramdecomp}, as \cite{Bharti2019} proves only a weaker version for $d=n$, but to the best of the author's knowledge implicitly uses a stronger statement analogous to that of Lemma \ref{lem:closegramdecomp}. Furthermore, the proof we present establishes a tighter error bound of the order $\mathcal{O}(n\epsilon)$, compared to $\mathcal{O}(\sqrt{n\epsilon})$ in \cite{Bharti2019}, the only drawback being that this bound no longer scales sub-linearly in $n$, which might be relevant for very large cycle lengths.
 
 The proof of Lemma \ref{lem:kcbsunique} utilizes SDP duality theory and shows a sufficient condition for the unicity of $X^*_n$ to be satisfied by explicit construction. It applies only to the class of odd $n$-cycle scenarios, as it makes use of the cyclic exclusivity constraints that enter the Lovász SDP \ref{eqn:lovaszsdp}. Lemma \ref{lem:epssuboptgram} is a general result for the optimization problem \ref{eqn:lovaszsdp}, and as such applies to arbitrary exclusivity graphs. Like Lemma \ref{lem:kcbsunique}, the proof of Lemma \ref{lem:epssuboptgram} makes heavy use of SDP duality. 
 
@@ -161,7 +161,7 @@ We find:
 \mathbb{1}_r & \\
 & 0_{n-r}
 \end{pmatrix}
-\right\|_F\;\leq\;\|WD^{-1}W^{\dag}(\Tilde{X}-X^*)WD^{-1}W^{\dag}\|_F\; \leq\; \frac{\epsilon}{\sigma_{\text{min}}^2}\thinspace.
+\right\|_F\;=\;\|WD^{-1}W^{\dag}(\Tilde{X}-X^*)WD^{-1}W^{\dag}\|_F\; \leq\; \frac{\epsilon}{\sigma_{\text{min}}^2}\thinspace.
 \end{equation*}
 For the KCBS scenario, $n=5+1$, we find $\sigma^2_{\text{min}}=\frac{1}{2}(\sqrt{5}-1)\approx 0.618$.
 Therefore,
@@ -169,7 +169,7 @@ Therefore,
 \|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F & \leq\;\frac{\epsilon}{\sigma_{\text{min}}^2} && \text{ and}\\[0.5em]
 \|Z\|_F & \stackrel{(\square)}{\leq} \epsilon\frac{n}{\sigma_{\text{min}}^2}&&,
 \end{alignat*}
-where the inequality $(\square)$ holds because $n\|A\|_F\geq\operatorname{tr}(A)$ for $A\in\mathbb{C}^{n,n}$. 
+where the inequality $(\square)$ follows from the norm equivalence $\|\vec{x}\|_2\leq \|\vec{x}\|_1\leq \sqrt{k}\thinspace\|\vec{x}\|_2$, for $\vec{x}\in\mathbb{C}^k$. 
 
 
 By definition, $X=B^{\dag}WD^{-1}$, and hence
@@ -264,13 +264,13 @@ where $\sigma_{\text{max}}$ is the maximum singular value of $A^{\dag}$. For the
 To recap, we have just shown that
 \begin{align*}
 A^{\dag} & =V_1\Sigma_r W_1^{\dag} \\[0.3em]
-B^{\dag} & \stackrel{\mathcal{O}(\epsilon)}{\approx} V_2\Sigma_r W_1^{\dag},
+B^{\dag} & \stackrel{\mathcal{O}(n\epsilon)}{\approx} V_2\Sigma_r W_1^{\dag},
 \end{align*}
 where $V_2$ is an isometry. The next proof step is to show that there exists a unitary $U\in\mathbb{C}^{d,d}$ such that $B^{\dag}\approx U A^{\dag}$.
 
 According to Theorem 2.1.18 in \cite{Horn2013}, there exists a unitary $U\in\mathbb{C}^{d,d}$ such that $V_2=UV_1$. This unitary $U$ also relates the matrices $B^{\dag}$ and $A^{\dag}$, as
 \begin{equation*}
-B^{\dag}\stackrel{\mathcal{O}(\epsilon)}{\approx}V_2\Sigma_r W_1^{\dag}= UV_1\Sigma_r W_1^{\dag}=UA^{\dag}.
+B^{\dag}\stackrel{\mathcal{O}(n\epsilon)}{\approx}V_2\Sigma_r W_1^{\dag}= UV_1\Sigma_r W_1^{\dag}=UA^{\dag}.
 \end{equation*} 
 Finally, we can use this result to bound the distance between the two Gram decompositions $\{u_i\}_{i=1}^n$ and $\{\Tilde{u}_i\}_{i=1}^n$, and thereby conclude the proof:
 \begin{align*}
@@ -285,12 +285,12 @@ u_1 \;| & \dots &  | \; u_n
 \begin{pmatrix}
 \Tilde{u}_1-U u_1\; | &\dots& |\;\Tilde{u}_n-U u_n
 \end{pmatrix}
-\|_F\leq\mathcal{O}(\epsilon),
+\|_F\leq\mathcal{O}(n\epsilon),
 \end{align*}
 where vertical lines delimit columns.
 Since the Frobenius norm of an $n\times m$ matrix is just the two norm of the $(n\cdot m)$-long vector containing all matrix entries, we have
 \begin{equation*}
-\forall i\in\{1,\dots,n\}: \|\Tilde{u}_i-U u_i\|_2 \leq \mathcal{O}(\epsilon).
+\forall i\in\{1,\dots,n\}: \|\Tilde{u}_i-U u_i\|_2 \leq \mathcal{O}(n\epsilon).
 \end{equation*}
 \end{proof}
 
