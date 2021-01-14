@@ -49,7 +49,7 @@ Let $\{\vert \Tilde{u}_i \rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ and $\{\vert u_
 for all $i\in\{1,\dots,n\}$
 \end{lemma}
 
-We will omit the proofs of Lemmas \ref{lem:kcbsunique} and \ref{lem:epssuboptgram}, as they do not provide much conceptual insight, and offer only a few comments. We include the proof of Lemma \ref{lem:closegramdecomp}, as \cite{Bharti2019} proves only a weaker version for $d=n$, but implicitly uses the stronger statement of Lemma \ref{lem:closegramdecomp}. Furthermore, the proof we present establishes a tighter error bound of the order $\mathcal{O}(\epsilon)$, compared to $\mathcal{O}(\sqrt{\epsilon})$ in \cite{Bharti2019}.
+We will omit the proofs of Lemmas \ref{lem:kcbsunique} and \ref{lem:epssuboptgram}, as they do not provide much conceptual insight, and offer only a few comments. We include the proof of Lemma \ref{lem:closegramdecomp}, as \cite{Bharti2019} proves only a weaker version for $d=n$, but to the best of the author's knowledge implicitly uses a stronger statement analogous to that of Lemma \ref{lem:closegramdecomp}. Furthermore, the proof we present establishes a tighter error bound of the order $\mathcal{O}(\epsilon)$, compared to $\mathcal{O}(\sqrt{\epsilon})$ in \cite{Bharti2019}.
 
 The proof of Lemma \ref{lem:kcbsunique} utilizes SDP duality theory and shows a sufficient condition for the unicity of $X^*_n$ to be satisfied by explicit construction. It applies only to the class of odd $n$-cycle scenarios, as it makes use of the cyclic exclusivity constraints that enter the Lovász SDP \ref{eqn:lovaszsdp}. Lemma \ref{lem:epssuboptgram} is a general result for the optimization problem \ref{eqn:lovaszsdp}, and as such applies to arbitrary exclusivity graphs. Like Lemma \ref{lem:kcbsunique}, the proof of Lemma \ref{lem:epssuboptgram} makes heavy use of SDP duality. 
 
@@ -293,6 +293,8 @@ Since the Frobenius norm of an $n\times m$ matrix is just the two norm of the $(
 \forall i\in\{1,\dots,n\}: \|\Tilde{u}_i-U u_i\|_2 \leq \mathcal{O}(\epsilon).
 \end{equation*}
 \end{proof}
+
+Note that Lemma \ref{lem:closegramdecomp} is of no use for Bell-type self-testing scenarios, as it relates two Gram decompositions only by a global unitary $U$.
 
 Having distilled the main proof components into three auxiliary theorems, Lemmas \ref{lem:kcbsunique}-\ref{lem:closegramdecomp}, we will now demonstrate that these imply the desired self-testing result. \cite{Bharti2019} for the most part omits these final proof steps. Section \ref{sec:kscontass} will provide an in-depth discussion about all of the assumptions that go into the self-testing protocol.
 
