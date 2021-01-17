@@ -38,18 +38,18 @@ where $\|A\|_F=\operatorname{tr}(A^{\dag}A)$ is the Frobenius norm.
 
 \begin{lemma}
 \label{lem:closegramdecomp}
-Let $\Tilde{X}$ and $X^*$ $\in S_{+}^{\thinspace n}$ be two positive semi-definite matrices, $\epsilon$-close in Frobenius distance:
+Let $\Tilde{X}\in S_{+}^{\thinspace n}$ be a positive semi-definite matrix, $\epsilon$-close to $X^*\in S_{+}^{\thinspace n}$ like in \ref{lem:kcbsunique}:
 \begin{equation*}
 \|\Tilde{X}-X^*\|_F \leq \epsilon
 \end{equation*}
-Let $\{\vert \Tilde{u}_i \rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ and $\{\vert u_i\rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ be Gram decompositions of $\Tilde{X}$ and $X^*$, respectively. Then there exists a $d\times d$ unitary matrix $U$ such that
+Let $\{\vert \Tilde{u}_i \rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ and $\{\vert u_i\rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ be Gram decompositions of $\Tilde{X}$ and $X^*$, respectively. Then there exists a $d\times d$ unitary matrix $U$ such that for all $i\in\{1,\dots,n\}$
 \begin{equation*}
-    \|\vert \Tilde{u}_i\rangle - U \vert u_i\rangle\|_2 \leq \mathcal{O}(\epsilon),
+    \|\vert \Tilde{u}_i\rangle - U \vert u_i\rangle\|_2 \leq \mathcal{O}(\kappa(n)\epsilon),
 \end{equation*}
-for all $i\in\{1,\dots,n\}$
+where $\kappa(n)$ denotes the scaling in $n$.
 \end{lemma}
 
-We will omit the proofs of Lemmas \ref{lem:kcbsunique} and \ref{lem:epssuboptgram}, as they do not provide much conceptual insight, and offer only a few comments. We include the proof of Lemma \ref{lem:closegramdecomp}, as \cite{Bharti2019} proves only a weaker version for $d=n$, but to the best of the author's knowledge implicitly uses a stronger statement analogous to that of Lemma \ref{lem:closegramdecomp}. Furthermore, the proof we present establishes a tighter error bound of the order $\mathcal{O}(n\epsilon)$, compared to $\mathcal{O}(\sqrt{n\epsilon})$ in \cite{Bharti2019}, the only drawback being that this bound no longer scales sub-linearly in $n$, which might be relevant for very large cycle lengths.
+We will omit the proofs of Lemmas \ref{lem:kcbsunique} and \ref{lem:epssuboptgram}, as they do not provide much conceptual insight, and offer only a few comments. We include the proof of Lemma \ref{lem:closegramdecomp}, as \cite{Bharti2019} proves only a weaker version, in the sense that $d=n$, but to the best of the author's knowledge implicitly uses a stronger statement analogous to that of Lemma \ref{lem:closegramdecomp}. Furthermore, the proof we present establishes a tighter error bound of the order $\mathcal{O}(\kappa(n)\epsilon)$, compared to $\mathcal{O}(\sqrt{n\epsilon})$ in \cite{Bharti2019}. As opposed to the result in \cite{Bharti2019}, the proof of Lemma \ref{lem:closegramdecomp} makes use of the structure of the ideal Gram matrix $X^*$. Further research could determine the scaling constant $\kappa(n)$, which becomes relevant for large cycle lengths.
 
 The proof of Lemma \ref{lem:kcbsunique} utilizes SDP duality theory and shows a sufficient condition for the unicity of $X^*_n$ to be satisfied by explicit construction. It applies only to the class of odd $n$-cycle scenarios, as it makes use of the cyclic exclusivity constraints that enter the Lovász SDP \ref{eqn:lovaszsdp}. Lemma \ref{lem:epssuboptgram} is a general result for the optimization problem \ref{eqn:lovaszsdp}, and as such applies to arbitrary exclusivity graphs. Like Lemma \ref{lem:kcbsunique}, the proof of Lemma \ref{lem:epssuboptgram} makes heavy use of SDP duality. 
 
@@ -87,7 +87,7 @@ W_1 & W_2
 \begin{equation*}
 A^{\dag}=V_1\Sigma_r W_1^{\dag}.
 \end{equation*}
-The first step towards proving Lemma \ref{lem:closegramdecomp} is to generalize the result of Theorem 7.3.2 in \cite{Horn2013}. Concretely, we want to show that $B^{\dag}$, obeying $(B^{\dag})^{\dag}B^{\dag}\approx X^* = W\Lambda W^{\dag}$, can be approximately written like $B^{\dag}\approx V_2\Sigma_rW_1^{\dag}$, where $V_2\in\mathbb{C}^{d,r}$ is an isometry:
+The first step towards proving Lemma \ref{lem:closegramdecomp} is to generalize the result of Theorem 7.3.2 in \cite{Horn2013}. Concretely, we want to show that $B^{\dag}$, obeying $(B^{\dag})^{\dag}B^{\dag}\approx X^* = W\Lambda W^{\dag}$, can be approximately written like $B^{\dag}\approx V_2\Sigma_rW_1^{\dag}$, where $V_2\in\mathbb{C}^{d,r}$ is an isometry.
 
 By definition,
 \begin{equation*}
@@ -126,8 +126,8 @@ Z^{\dag}
 \Tilde{V}_2 & Z
 \end{pmatrix} =
 \begin{pmatrix}
-\Tilde{V}_2^{\dag}\Tilde{V}_2 & * \\
-* & Z^{\dag}Z
+\Tilde{V}_2^{\dag}\Tilde{V}_2 & \Tilde{V}_2^{\dag} Z \\
+Z^{\dag}\Tilde{V}_2 & Z^{\dag}Z
 \end{pmatrix}
 = 
 \begin{pmatrix}
@@ -139,8 +139,8 @@ We now aim to bound the Frobenius distance
 \begin{equation*}
 \left\|
 \begin{pmatrix}
-\Tilde{V}_2^{\dag}\Tilde{V}_2 & * \\
-* & Z^{\dag}Z
+\Tilde{V}_2^{\dag}\Tilde{V}_2 & \Tilde{V}_2^{\dag} Z \\
+Z^{\dag}\Tilde{V}_2 & Z^{\dag}Z
 \end{pmatrix}
 -
 \begin{pmatrix}
@@ -149,28 +149,29 @@ We now aim to bound the Frobenius distance
 \end{pmatrix}
 \right\|_F.
 \end{equation*}
-We find:
+Unitaries leave the Frobenius norm invariant, as $\|A\|_F^{\textstyle ^2}=\sum_k\|Ae_k\|_2^{\textstyle ^2} = \sum_k \|UAe_k\|_2^{\textstyle ^2}=\|UA\|_F^{\textstyle ^2}\thinspace$, where $U$ is a unitary. We find:
 \begin{equation*}
 \left\|
 \begin{pmatrix}
-\Tilde{V}_2^{\dag}\Tilde{V}_2 & * \\
-* & Z^{\dag}Z
+\Tilde{V}_2^{\dag}\Tilde{V}_2 & \Tilde{V}_2^{\dag} Z \\
+Z^{\dag}\Tilde{V}_2 & Z^{\dag}Z
 \end{pmatrix}
 -
 \begin{pmatrix}
 \mathbb{1}_r & \\
 & 0_{n-r}
 \end{pmatrix}
-\right\|_F\;=\;\|WD^{-1}W^{\dag}(\Tilde{X}-X^*)WD^{-1}W^{\dag}\|_F\; \leq\; \frac{\epsilon}{\sigma_{\text{min}}^2}\thinspace.
+\right\|_F\;=\;\|WD^{-1}W^{\dag}(\Tilde{X}-X^*)WD^{-1}W^{\dag}\|_F\; \leq\; \epsilon\thinspace\sigma_{\text{min}}^{(n)}{}^{-2}=\epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1},
 \end{equation*}
-For the KCBS scenario, $n=5+1$, we find $\sigma^2_{\text{min}}=\frac{1}{2}(\sqrt{5}-1)\approx 0.618$.
+where $\sigma_{\text{min}}^{(n)}$ is the singular value of $A$ with smallest magnitude, the square of which is the smallest non-zero eigenvalue of $X^*$, $\lambda_{\text{min}}^{(n)}$.
+For the KCBS scenario, $n=5+1$, we find $\lambda_{\text{min}}^{(n)}=\frac{1}{2}(\sqrt{5}-1)\approx 0.618$.
+
 Therefore,
 \begin{alignat*}{2}
-\|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F & \leq\;\frac{\epsilon}{\sigma_{\text{min}}^2} && \text{ and}\\[0.5em]
-\|Z\|_F & \stackrel{(\square)}{\leq} \epsilon\frac{n}{\sigma_{\text{min}}^2}&&,
+\|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F & \stackrel{(\triangle)}{\leq}\epsilon\thinspace \lambda_{\text{min}}^{(n)}{}^{-1} && \text{ and}\\[0.5em]
+\|Z\|_F & \stackrel{(\square)}{\leq}\mathcal{O}(\epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1})&&,
 \end{alignat*}
-where the inequality $(\square)$ follows from the norm equivalence $\|\vec{x}\|_2\leq \|\vec{x}\|_1\leq \sqrt{k}\thinspace\|\vec{x}\|_2$, for $\vec{x}\in\mathbb{C}^k$. 
-
+where $(\square)$ follows from $(\triangle)$, as we will show. For now, let us assume $(\square)$ to be true.
 
 By definition, $X=B^{\dag}WD^{-1}$, and hence
 \begin{equation*}
@@ -192,11 +193,11 @@ W_1^{\dag} \\ W_2^{\dag}
 W_1^{\dag} \\ W_2^{\dag}
 \end{pmatrix} = \Tilde{V}_2\Sigma_r W_1^{\dag} + ZW_2^{\dag}
 \end{equation*}
-Unitaries leave the Frobenius norm invariant, as $\|A\|_F^{\textstyle ^2}=\sum_k\|Ae_k\|_2^{\textstyle ^2} = \sum_k \|UAe_k\|_2^{\textstyle ^2}=\|UA\|_F^{\textstyle ^2}\thinspace$, where $U$ is a unitary. Therefore,
+Therefore,
 \begin{equation*}
-\|B^{\dag}-\Tilde{V}_2\Sigma_r W_1^{\dag}\|_F=\|ZW_2^{\dag}\|_F=\|Z\|_F\leq\epsilon \frac{n}{\sigma_{\text{min}}^2}.
+\|B^{\dag}-\Tilde{V}_2\Sigma_r W_1^{\dag}\|_F=\|ZW_2^{\dag}\|_F=\|Z\|_F\leq\mathcal{O}(\epsilon\thinspace \lambda_{\text{min}}^{(n)}{}^{-1}).
 \end{equation*}
-It remains to show that $\Tilde{V}_2$ is approximately isometric, which follows from the previously derived bound $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\frac{\epsilon}{\sigma_{\text{min}}^2}$, as we will now prove:
+Crucially, $\Tilde{V}_2$ is approximately isometric, which follows from the previously derived bound on $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F$, as we will now prove:
 
 Consider a SVD of $\Tilde{V}_2$,
 \begin{equation*}
@@ -240,7 +241,7 @@ Hence, $\|\Tilde{V}_2-V_2\|_F$ can be re-written like
 &&& 0_{r-r'}
 \end{pmatrix}+\mathbb{1}_r\right)\\[0.5em] &  =\sum_{i=1}^{r'}(\Tilde{\sigma}_i^2-2\Tilde{\sigma}_i+1) + (r-r') =\sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2+(r-r').
 \end{align*}
-The condition $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\frac{\epsilon}{\sigma_{\text{min}}^2}$ implies
+The condition $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\epsilon\lambda_{\text{min}}^{(n)}{}^{-1}$ implies
 \begin{align*}
 \left\|T
 \begin{pmatrix}
@@ -249,28 +250,28 @@ The condition $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F\leq\frac{\epsil
 &&\Tilde{\sigma}_{r'}^2& \\
 &&&0_{r-r'}
 \end{pmatrix}T^{\dag}-\mathbb{1}_r\right\|_F^2 & =\sum_{i=1}^{r'}(\Tilde{\sigma}_i^4-2\Tilde{\sigma}_i^2+1) + (r-r') \\
-& = \sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2(\Tilde{\sigma}_i+1)^2 + (r-r')\leq \left(\frac{\epsilon}{\sigma_{\text{min}}^2}\right)^2\;,
+& = \sum_{i=1}^{r'}(\Tilde{\sigma}_i-1)^2(\Tilde{\sigma}_i+1)^2 + (r-r')\leq \epsilon^2\lambda_{\text{min}}^{(n)}{}^{-2}\;,
 \end{align*}
-which in particular implies that, for $\epsilon<\sigma_{\text{min}}^2$, the rank of $\Tilde{V}_2$ must match that of $A^{\dag}$, i.e. $r=r'$. Additionally, $\Tilde{V}_2$ is approximately isometric:
+which in particular implies that, for $\epsilon<\lambda_{\text{min}}^{(n^)}$, the rank of $\Tilde{V}_2$ must match that of $A^{\dag}$, i.e. $r=r'$. Additionally, $\Tilde{V}_2$ is approximately isometric:
 \begin{equation*}
-\|\Tilde{V}_2-V_2\|_F^{\textstyle ^2} = \sum_{i=1}^r(\Tilde{\sigma_i}-1)^2\leq\left(\frac{\epsilon}{\sigma_{\text{min}}^2}\right)^2\thinspace.
+\|\Tilde{V}_2-V_2\|_F^{\textstyle ^2} = \sum_{i=1}^r(\Tilde{\sigma_i}-1)^2\leq\epsilon^2\lambda_{\text{min}}^{(n)}{}^{-2}\thinspace.
 \end{equation*}
 Together, this gives us the desired intermediate result:
 \begin{align*}
-\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \|B^{\dag}-\Tilde{V_2}\Sigma_r W_1^{\dag}\|_F + \|(\Tilde{V}_2-V_2)\Sigma_r W_1^{\dag}\|_F & \leq \frac{\epsilon}{\sigma_{\text{min}}^2}(n+\sigma_{\text{max}}),
+\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \|B^{\dag}-\Tilde{V_2}\Sigma_r W_1^{\dag}\|_F + \|(\Tilde{V}_2-V_2)\Sigma_r W_1^{\dag}\|_F & \leq \mathcal{O}(\epsilon\thinspace\sigma_{\text{max}}^{(n)}\thinspace\lambda_{\text{min}}^{(n)}{}^{-1}),
 \end{align*}
-where $\sigma_{\text{max}}$ is the maximum singular value of $A^{\dag}$. For the KCBS scenario, $n=5+1$, $\sigma_{\text{max}}=\sqrt{2}$, and consequently $\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \kappa\epsilon$, where $\kappa \approx 12$.
+where $\sigma_{\text{max}}^{(n)}$ is the maximum singular value of $A^{\dag}$. For the KCBS scenario, $n=5+1$, $\sigma_{\text{max}}^{(n)}=\sqrt{2}$, and consequently $\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \kappa\epsilon$, where $\kappa \approx 2.3$. Further study is needed to find how $\kappa(n)$ scales with $n$, in order to see how this bound compares to that in \cite{Bharti2019} for very large cycle lengths.
 
 To recap, we have just shown that
 \begin{align*}
 A^{\dag} & =V_1\Sigma_r W_1^{\dag} \\[0.3em]
-B^{\dag} & \stackrel{\mathcal{O}(n\epsilon)}{\approx} V_2\Sigma_r W_1^{\dag},
+B^{\dag} & \stackrel{\mathcal{O}(\kappa(n)\epsilon)}{\approx} V_2\Sigma_r W_1^{\dag},
 \end{align*}
 where $V_2$ is an isometry. The next proof step is to show that there exists a unitary $U\in\mathbb{C}^{d,d}$ such that $B^{\dag}\approx U A^{\dag}$.
 
 According to Theorem 2.1.18 in \cite{Horn2013}, there exists a unitary $U\in\mathbb{C}^{d,d}$ such that $V_2=UV_1$. This unitary $U$ also relates the matrices $B^{\dag}$ and $A^{\dag}$, as
 \begin{equation*}
-B^{\dag}\stackrel{\mathcal{O}(n\epsilon)}{\approx}V_2\Sigma_r W_1^{\dag}= UV_1\Sigma_r W_1^{\dag}=UA^{\dag}.
+B^{\dag}\stackrel{\mathcal{O}(\kappa(n)\epsilon)}{\approx}V_2\Sigma_r W_1^{\dag}= UV_1\Sigma_r W_1^{\dag}=UA^{\dag}.
 \end{equation*} 
 Finally, we can use this result to bound the distance between the two Gram decompositions $\{u_i\}_{i=1}^n$ and $\{\Tilde{u}_i\}_{i=1}^n$, and thereby conclude the proof:
 \begin{align*}
@@ -285,12 +286,24 @@ u_1 \;| & \dots &  | \; u_n
 \begin{pmatrix}
 \Tilde{u}_1-U u_1\; | &\dots& |\;\Tilde{u}_n-U u_n
 \end{pmatrix}
-\|_F\leq\mathcal{O}(n\epsilon),
+\|_F\leq\mathcal{O}(\kappa(n)\epsilon),
 \end{align*}
 where vertical lines delimit columns.
 Since the Frobenius norm of an $n\times m$ matrix is just the two norm of the $(n\cdot m)$-long vector containing all matrix entries, we have
 \begin{equation*}
-\forall i\in\{1,\dots,n\}: \|\Tilde{u}_i-U u_i\|_2 \leq \mathcal{O}(n\epsilon).
+\forall i\in\{1,\dots,n\}: \|\Tilde{u}_i-U u_i\|_2 \leq \mathcal{O}(\kappa(n)\epsilon).
+\end{equation*}
+The only thing that remains is proving the inequality $(\square)$. By considering the off-diagonal entries of $X^{\dag}X$, we find that
+\begin{equation*}
+\epsilon/{\lambda_{\text{min}}^{(n)}} \geq \|Z^{\dag}\Tilde{V}_2\|_F=\|Z^{\dag}V_2 - Z^{\dag}(V_2-\Tilde{V}_2)\|_F.
+\end{equation*}
+The reverse triangle inequality and submultiplicativity of the Frobenius norm yields
+\begin{equation*}
+\epsilon/{\lambda_{\text{min}}^{(n)}} \geq \|Z^{\dag}V_2\|_F - \|Z^{\dag}(V_2-\Tilde{V}_2)\|_F = \|Z\|_F(1-\|V_2-\Tilde{V}_2\|_F),
+\end{equation*}
+which implies
+\begin{equation*}
+\|Z\|_F \leq \mathcal{O}(\epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1})
 \end{equation*}
 \end{proof}
 
@@ -309,10 +322,10 @@ Let $n\geq5$ be an odd integer. The only quantum model $\ket{\Psi}$, $\{\Pi_i\}_
 Furthermore, all quantum models $\ket{\Psi}$, $\{\Pi_i\}_{i=1}^n$ compatible with an $\epsilon$-suboptimal violation of \ref{eqn:oddncycleclass}, i.e.\
 \begin{equation*}
     \sum_{i=0}^n \abs{\langle \Psi \vert \Pi_i \vert \Psi \rangle}^2> B_q(\mathcal{G}_{ex}^{(n)})-\epsilon\thinspace ,
-\end{equation*}where $B_q(\mathcal{G}_{ex}^{(n)})$ is the quantum supremum \ref{eqn:ncyclequsup}, are $\mathcal{O}(\epsilon)$ close in 2-norm to \ref{eqn:ncycleideal}, up to a global isometry:
+\end{equation*}where $B_q(\mathcal{G}_{ex}^{(n)})$ is the quantum supremum \ref{eqn:ncyclequsup}, are $\mathcal{O}(\kappa(n)\epsilon)$ close in 2-norm to \ref{eqn:ncycleideal}, up to a global isometry:
 \begin{align*}
-    \exists \emph{ isometry } V & : \| \ket{\Psi} - V \vert u_0\rangle \|_2 \thinspace\leq\thinspace \mathcal{O}(\epsilon)\\[0.7em]
-    \forall i\in\{1,\dots,n\} & : \| \Pi_i \ket{\Psi} - V \vert u_i^{(n)} \rangle \langle u_i^{(n)} \vert \thinspace \vert u_0 \rangle \| \leq \mathcal{O}(\epsilon)
+    \exists \emph{ isometry } V & : \| \ket{\Psi} - V \vert u_0\rangle \|_2 \thinspace\leq\thinspace \mathcal{O}(\kappa(n)\epsilon)\\[0.7em]
+    \forall i\in\{1,\dots,n\} & : \| \Pi_i \ket{\Psi} - V \vert u_i^{(n)} \rangle \langle u_i^{(n)} \vert \thinspace \vert u_0 \rangle \| \leq \mathcal{O}(\kappa(n)\epsilon)
 \end{align*}
 \end{theorem}
 
@@ -347,7 +360,7 @@ Lemma \ref{lem:closegramdecomp} implies that
 \label{eqn:selftestinginterm}
 \begin{split}
     \forall\thinspace i\in\{0,\dots,n\},\; \exists \text{ unitary } U\in\mathbb{C}^{d,d}: \; & \| \langle \mathbf{\Tilde{u}}_i^{(n)} \vert \mathbf{\Tilde{u}}_0^{(n)} \rangle \vert \mathbf{\Tilde{u}}_i^{(n)} \rangle - \langle \mathbf{u}_i^{(n)} \vert \mathbf{u}_0^{(n)} \rangle \thinspace U\vert \mathbf{u}_i^{(n)}\rangle\|_2 \\[0.3em]
-    = \thinspace & \| \langle \Tilde{u}_i^{(n)} \vert \Tilde{u}_0^{(n)} \rangle \vert \Tilde{u}_i^{(n)} \rangle - \langle u_i^{(n)} \vert u_0 \rangle \thinspace \mathcal{J}^{-1}UV^{'} \vert u_i^{(n)}\rangle\|_2 \leq \mathcal{O}(\epsilon)
+    = \thinspace & \| \langle \Tilde{u}_i^{(n)} \vert \Tilde{u}_0^{(n)} \rangle \vert \Tilde{u}_i^{(n)} \rangle - \langle u_i^{(n)} \vert u_0 \rangle \thinspace \mathcal{J}^{-1}UV^{'} \vert u_i^{(n)}\rangle\|_2 \leq \mathcal{O}(\kappa(n)\epsilon)
 \end{split}
 \end{align}
 

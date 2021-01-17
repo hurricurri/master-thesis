@@ -65,7 +65,7 @@ We now turn to the bounded memory assumption required by the protocol, which rel
 \begin{equation*}
 \mathcal{I}\coloneqq \log_2(\text{number of states that can be perfectly distinguished}),
 \end{equation*}
-then assuming a TC set with $k$ measurements implies bounding the information carrying capacity: $\mathcal{I}\leq k$ bits. In this sense, assumptions regarding the minimal size of TC sets of measurements directly relate to bounds on the information carrying capacity. In particular, bounding the information carrying capacity $\mathcal{I}\leq k \text{ bits}$ implies a finite-dimensional Hilbert space $\mathcal{H}$, $\operatorname{dim}(\mathcal{H})\leq k$.
+then assuming a TC set with $k$ measurements implies bounding the information carrying capacity: $\mathcal{I}\leq k$ bits. Conversely, assuming an ontological description, a bound $k$ on the number of perfectly distinguishable preparations implies the existence of a TC set of measurements with $k$ elements. In this sense, assumptions regarding the minimal size of TC sets of measurements directly relate to bounds on the information carrying capacity. In particular, bounding the information carrying capacity $\mathcal{I}\leq k \text{ bits}$ implies a finite-dimensional Hilbert space $\mathcal{H}$, $\operatorname{dim}(\mathcal{H})\leq k$.
 
 If we wish to allow for an information carrying capacity of $k$ bits, we require an apparatus consistent with a cycle length $n$ such that
 \begin{alignat*}{2}
@@ -344,16 +344,16 @@ and if $\sum_{i=1}^n \operatorname{tr}(F_{m_1\vert M_i}\rho_0)\geq B_q^{(n)}-d^{
 \end{equation*}
 Therefore, by Lemmas \ref{lem:closegramdecomp}, there exists an isometry $V$ such that
 \begin{equation*}
-\|\bra{u_i}\ket{u_0}\ket{u_i}-\langle u_i^{(n)}\vert u_0\rangle V \vert u_i^{(n)} \rangle \|_2 = \|\thinspace(\Pi_{\text{relev}}^{(1\vert i)}\otimes \mathbb{1})\ket{u_0}-V(\thinspace\vert u_i^{(n)}\rangle \langle u_i^{(n)} \vert\thinspace)\thinspace\vert u_0 \rangle \thinspace\|_2 \leq \mathcal{O}(n\thinspace d^2\epsilon^{1/3}),
+\|\bra{u_i}\ket{u_0}\ket{u_i}-\langle u_i^{(n)}\vert u_0\rangle V \vert u_i^{(n)} \rangle \|_2 = \|\thinspace(\Pi_{\text{relev}}^{(1\vert i)}\otimes \mathbb{1})\ket{u_0}-V\thinspace\vert u_i^{(n)}\rangle \langle u_i^{(n)} \vert\thinspace\vert u_0 \rangle \thinspace\|_2 \leq \mathcal{O}(n\thinspace\kappa(n)\thinspace d^2\epsilon^{1/3}),
 \end{equation*}
 for all $i \in \{1,\dots,n\}$.
 Using \ref{eqn:projresult} and \ref{eqn:justification}, we conclude that
 \begin{equation*}
-\|\thinspace (F_{m_1\vert M_i}\otimes \mathbb{1})\ket{u_0}-V(\thinspace\vert u_i^{(n)}\rangle \langle u_i^{(n)} \vert\thinspace)\thinspace \vert u_0 \rangle \|_2 \leq \mathcal{O}(n \thinspace d^2\epsilon^{1/3}).
+\|\thinspace (F_{m_1\vert M_i}\otimes \mathbb{1})\ket{u_0}-V \thinspace\vert u_i^{(n)}\rangle \langle u_i^{(n)} \vert\thinspace\thinspace \vert u_0 \rangle \|_2 \leq \mathcal{O}(n\thinspace\kappa(n) \thinspace d^2\epsilon^{1/3}).
 \end{equation*}
-This is our revised self-testing result. The deviation of any valid quantum model of the physical correlation experiment from the ideal reference experiment is bounded like above, up to a global isometry $V$.
+This is our first generalized self-testing result. The deviation of any valid quantum model of the physical correlation experiment from the ideal reference experiment is bounded like above, up to a global isometry $V$.
 
-\section{Relaxing the memory assumption}
+\section{Cost of relaxing the memory assumption}
 \label{sec:relaxmemoryass}
 
 

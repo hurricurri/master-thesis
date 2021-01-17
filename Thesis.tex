@@ -13,6 +13,9 @@
 
 \usepackage[doipre={DOI:~}]{uri} % loads "url", if not already loaded
 
+\usepackage{etoolbox}
+\usepackage{nicefrac}
+
 \input{macros}
 
 %% ----------------------------------------------------------------
@@ -61,6 +64,15 @@ blah\ldots
 
 %% ----------------------------------------------------------------
 \lhead{\emph{Contents}}  % Set the left side page header to "Contents"
+
+
+\makeatletter
+\pretocmd{\chapter}{\addtocontents{toc}{\protect\addvspace{15\p@}}}{}{}
+\pretocmd{\section}{\addtocontents{toc}{\protect\addvspace{5\p@}}}{}{}
+\pretocmd{\subsection}{\addtocontents{toc}{\protect\addvspace{5\p@}}}{}{}
+\pretocmd{\subsubsection}{\addtocontents{toc}{\protect\addvspace{5\p@}}}{}{}
+\makeatother
+
 \tableofcontents  % Write out the Table of Contents
 
 %% ----------------------------------------------------------------
