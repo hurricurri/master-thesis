@@ -6,9 +6,9 @@
 
 In Section \ref{sec:csw} we considered general correlation experiments testing some linear combination of probabilities $S$ and found that any quantum realization $\ket{\Psi}$, $\Pi_i$ can be translated into a feasible solution $X$ of the Lovász SDP \ref{eqn:lovaszsdp}, such that the value of $S$, as predicted by QM, corresponds to the objective function the SDP aims to maximize, evaluated at the feasible solution $X$. Conversely, if there are no additional physical constraints, for example due to space-like separated subsystems, one can construct a quantum realization for every feasible solution $X$ that achieves $S=\sum_{i=1}^n X_{ii}$. Such quantum realization was constructed from an arbitrary Gram decomposition of $X$. This connection between feasible solutions to the Lovász SDP and quantum models of the correlation experiment will be central to proving robust self-testing based on KS non-contextuality inequalities.
 
-As outlined in Section \ref{sec:self-testing}, the essence of self-testing is that a maximal violation of suitable Bell or KS non-contextuality inequalities is only compatible with an essentially unique quantum realization $\ket{\Psi}$, $\{\Pi_i\}_i$, up to statistics-preserving trivial degrees of freedom. Furthermore, the inequalities are tests of non-classicality. If our experiment produces correlations that violate these, this certifies that the correlations were not simulated by some classical mechanism, which would render all proofs of information-theoretic security superfluous. Extra care has to be taken in the case of contextuality scenarios, as will be the topic of Section \ref{sec:memoryass}. Ideally, such self-tests should be robust to noise, i.e.\ a $\epsilon$-suboptimal violation should imply that the only compatible quantum realizations are ``close" to the ideal reference implementation, up to trivial degrees of freedom. For sufficiently small $\epsilon$, we would still observe a Bell or KS non-contextuality inequality violation.
+As outlined in Section \ref{sec:self-testing}, the essence of self-testing is that a maximal violation of suitable Bell or KS non-contextuality inequalities is only compatible with an essentially unique quantum realization $\ket{\Psi}$, $\{\Pi_i\}_i$, up to statistics-preserving trivial degrees of freedom. Furthermore, the inequalities are tests of non-classicality. If our experiment produces correlations that violate these, this certifies that the correlations were not simulated by some classical mechanism, which would render all proofs of information-theoretic security superfluous. Extra care has to be taken in the case of contextuality scenarios, as will be the topic of Section \ref{sec:memoryass}. Ideally, such self-tests should be robust to noise, i.e.\ a $\epsilon$-suboptimal violation should imply that the only compatible quantum realizations are ``close" to the ideal reference implementation, up to trivial degrees of freedom.
 
-We will now sketch the proof in \cite{Bharti2019}, which demonstrates that the class of odd $n$-cycle contextuality scenarios allows for robust self-testing. Recall that an odd $n$-cycle correlation experiment assumes cyclic compatibility relations, like in Figure \ref{fig:kcbscompat}. The self-testing protocol consists of an experimenter choosing freely between the $n$ measurement contexts $(i,i\oplus1)$ and determining the outcome correlations $p(0,1\thinspace\vert\thinspace i,i\oplus 1)$ that constitute the test for non-classicality $S$. The main ``ingredients" of the proof are the following three lemmas:
+We will now sketch the proof in \cite{Bharti2019}, which demonstrates that the class of odd $n$-cycle contextuality scenarios allows for robust self-testing. Recall that an odd $n$-cycle correlation experiment assumes cyclic compatibility relations, like in Figure \ref{fig:kcbscompat}. The self-testing protocol consists of an experimenter choosing freely between the $n$ measurement contexts $(i,i\oplus1)$ and determining the outcome correlations $p(0,1\thinspace\vert\thinspace i,i\oplus 1)$ that constitute the test $S$. The main ``ingredients" of the proof are the following three lemmas:
 
 \begin{lemma}[\cite{Bharti2019}]
 \label{lem:kcbsunique}
@@ -40,16 +40,16 @@ where $\|A\|_F=\operatorname{tr}(A^{\dag}A)$ is the Frobenius norm.
 \label{lem:closegramdecomp}
 Let $\Tilde{X}\in S_{+}^{\thinspace n}$ be a positive semi-definite matrix, $\epsilon$-close to $X^*\in S_{+}^{\thinspace n}$ like in \ref{lem:kcbsunique}:
 \begin{equation*}
-\|\Tilde{X}-X^*\|_F \leq \epsilon
+\|\Tilde{X}-X^*\|_F \leq \epsilon.
 \end{equation*}
 Let $\{\vert \Tilde{u}_i \rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ and $\{\vert u_i\rangle\}_{i=1}^n\subset\mathbb{C}^{d}$ be Gram decompositions of $\Tilde{X}$ and $X^*$, respectively. Then there exists a $d\times d$ unitary matrix $U$ such that for all $i\in\{1,\dots,n\}$
 \begin{equation*}
-    \|\vert \Tilde{u}_i\rangle - U \vert u_i\rangle\|_2 \leq \mathcal{O}(\kappa(n)\epsilon),
+    \|\vert \Tilde{u}_i\rangle - U \vert u_i\rangle\|_2 \leq \kappa(n)\epsilon + \mathcal{O}(\kappa(n)^2\epsilon^2),
 \end{equation*}
 where $\kappa(n)$ denotes the scaling in $n$.
 \end{lemma}
 
-We will omit the proofs of Lemmas \ref{lem:kcbsunique} and \ref{lem:epssuboptgram}, as they do not provide much conceptual insight, and offer only a few comments. We include the proof of Lemma \ref{lem:closegramdecomp}, as \cite{Bharti2019} proves only a weaker version, in the sense that $d=n$, but to the best of the author's knowledge implicitly uses a stronger statement analogous to that of Lemma \ref{lem:closegramdecomp}. Furthermore, the proof we present establishes a tighter error bound of the order $\mathcal{O}(\kappa(n)\epsilon)$, compared to $\mathcal{O}(\sqrt{n\epsilon})$ in \cite{Bharti2019}. As opposed to the result in \cite{Bharti2019}, the proof of Lemma \ref{lem:closegramdecomp} makes use of the structure of the ideal Gram matrix $X^*$. Further research could determine the scaling constant $\kappa(n)$, which becomes relevant for large cycle lengths.
+We will omit the proofs of Lemmas \ref{lem:kcbsunique} and \ref{lem:epssuboptgram}, as they do not provide much conceptual insight, and offer only a few comments. We include the proof of Lemma \ref{lem:closegramdecomp}, as \cite{Bharti2019} proves only a weaker version, in the sense that $d=n$, but to the best of the author's knowledge implicitly uses a stronger statement analogous to that of Lemma \ref{lem:closegramdecomp}. Furthermore, the proof we present establishes a tighter error bound of the order $\mathcal{O}(\kappa(n)\epsilon)$, compared to $\mathcal{O}(\sqrt{n\epsilon})$ in \cite{Bharti2019}. As opposed to the result in \cite{Bharti2019}, the proof of Lemma \ref{lem:closegramdecomp} makes use of the fact that the verifier has knowledge about the ideal Gram matrix $X^*$. Further research could determine the scaling constant $\kappa(n)$, which becomes relevant for large cycle lengths.
 
 The proof of Lemma \ref{lem:kcbsunique} utilizes SDP duality theory and shows a sufficient condition for the unicity of $X^*_n$ to be satisfied by explicit construction. It applies only to the class of odd $n$-cycle scenarios, as it makes use of the cyclic exclusivity constraints that enter the Lovász SDP \ref{eqn:lovaszsdp}. Lemma \ref{lem:epssuboptgram} is a general result for the optimization problem \ref{eqn:lovaszsdp}, and as such applies to arbitrary exclusivity graphs. Like Lemma \ref{lem:kcbsunique}, the proof of Lemma \ref{lem:epssuboptgram} makes heavy use of SDP duality. 
 
@@ -168,8 +168,8 @@ For the KCBS scenario, $n=5+1$, we find $\lambda_{\text{min}}^{(n)}=\frac{1}{2}(
 
 Therefore,
 \begin{alignat*}{2}
-\|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F & \stackrel{(\triangle)}{\leq}\epsilon\thinspace \lambda_{\text{min}}^{(n)}{}^{-1} && \text{ and}\\[0.5em]
-\|Z\|_F & \stackrel{(\square)}{\leq}\mathcal{O}(\epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1})&&,
+\|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F & \stackrel{(\triangle)}{\leq}\epsilon\thinspace \lambda_{\text{min}}^{(n)}{}^{-1} &&\text{ and}\\[0.5em]
+\|Z\|_F & \stackrel{(\square)}{\leq}\epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1}+&&\thinspace\mathcal{O}(\epsilon^2\lambda_{\text{min}}^{(n)}{}^{-2})\thinspace,
 \end{alignat*}
 where $(\square)$ follows from $(\triangle)$, as we will show. For now, let us assume $(\square)$ to be true.
 
@@ -195,7 +195,7 @@ W_1^{\dag} \\ W_2^{\dag}
 \end{equation*}
 Therefore,
 \begin{equation*}
-\|B^{\dag}-\Tilde{V}_2\Sigma_r W_1^{\dag}\|_F=\|ZW_2^{\dag}\|_F=\|Z\|_F\leq\mathcal{O}(\epsilon\thinspace \lambda_{\text{min}}^{(n)}{}^{-1}).
+\|B^{\dag}-\Tilde{V}_2\Sigma_r W_1^{\dag}\|_F=\|ZW_2^{\dag}\|_F=\|Z\|_F\leq \epsilon\thinspace \lambda_{\text{min}}^{(n)}{}^{-1}+\mathcal{O}(\epsilon^2\lambda_{\text{min}}^{(n)}{}^{-2}).
 \end{equation*}
 Crucially, $\Tilde{V}_2$ is approximately isometric, which follows from the previously derived bound on $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F$, as we will now prove:
 
@@ -258,9 +258,9 @@ which in particular implies that, for $\epsilon<\lambda_{\text{min}}^{(n^)}$, th
 \end{equation*}
 Together, this gives us the desired intermediate result:
 \begin{align*}
-\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \|B^{\dag}-\Tilde{V_2}\Sigma_r W_1^{\dag}\|_F + \|(\Tilde{V}_2-V_2)\Sigma_r W_1^{\dag}\|_F & \leq \mathcal{O}(\epsilon\thinspace\sigma_{\text{max}}^{(n)}\thinspace\lambda_{\text{min}}^{(n)}{}^{-1}),
+\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \|B^{\dag}-\Tilde{V_2}\Sigma_r W_1^{\dag}\|_F + \|(\Tilde{V}_2-V_2)\Sigma_r W_1^{\dag}\|_F & \leq \epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1}(1+\sigma_{\text{max}}^{(n)})\thinspace + \mathcal{O}(\epsilon^2\lambda_{\text{min}}^{(n)}{}^{-2}),
 \end{align*}
-where $\sigma_{\text{max}}^{(n)}$ is the maximum singular value of $A^{\dag}$. For the KCBS scenario, $n=5+1$, $\sigma_{\text{max}}^{(n)}=\sqrt{2}$, and consequently $\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \kappa\epsilon$, where $\kappa \approx 2.3$. Further study is needed to find how $\kappa(n)$ scales with $n$, in order to see how this bound compares to that in \cite{Bharti2019} for very large cycle lengths.
+where $\sigma_{\text{max}}^{(n)}$ is the maximum singular value of $A^{\dag}$. We take the second term to be negligible. For the KCBS scenario, $n=5+1$, $\sigma_{\text{max}}^{(n)}=\sqrt{2}$, and consequently $\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \kappa\epsilon$, where $\kappa \approx 3.55$. Further study is needed to find how $\kappa(n)$ scales with $n$, in order to see how this bound compares to that in \cite{Bharti2019} for very large cycle lengths.
 
 To recap, we have just shown that
 \begin{align*}
@@ -286,12 +286,12 @@ u_1 \;| & \dots &  | \; u_n
 \begin{pmatrix}
 \Tilde{u}_1-U u_1\; | &\dots& |\;\Tilde{u}_n-U u_n
 \end{pmatrix}
-\|_F\leq\mathcal{O}(\kappa(n)\epsilon),
+\|_F\leq\kappa(n)\epsilon + \mathcal{O}(\kappa(n)^2\epsilon^2),
 \end{align*}
 where vertical lines delimit columns.
 Since the Frobenius norm of an $n\times m$ matrix is just the two norm of the $(n\cdot m)$-long vector containing all matrix entries, we have
 \begin{equation*}
-\forall i\in\{1,\dots,n\}: \|\Tilde{u}_i-U u_i\|_2 \leq \mathcal{O}(\kappa(n)\epsilon).
+\forall i\in\{1,\dots,n\}: \|\Tilde{u}_i-U u_i\|_2 \leq \kappa(n)\epsilon + \mathcal{O}(\kappa(n)^2\epsilon^2).
 \end{equation*}
 The only thing that remains is proving the inequality $(\square)$. By considering the off-diagonal entries of $X^{\dag}X$, we find that
 \begin{equation*}
@@ -303,7 +303,7 @@ The reverse triangle inequality and submultiplicativity of the Frobenius norm yi
 \end{equation*}
 which implies
 \begin{equation*}
-\|Z\|_F \leq \mathcal{O}(\epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1})
+\|Z\|_F \leq \epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1} + \mathcal{O}(\epsilon^2\lambda_{\text{min}}^{(n)}{}^{-2})\thinspace.
 \end{equation*}
 \end{proof}
 
@@ -382,46 +382,43 @@ Having proved that the only quantum model $\ket{\Psi}$, $\Pi_i$ compatible with 
 The following is an as comprehensive as possible list of explicit or implicit assumptions that are required to self-test the reference quantum experiment \ref{eqn:ncycleideal}, on the basis of Theorem \ref{thm:contselftesting}:
 \begin{enumerate}
     \item i.i.d.\ rounds $x,y \thinspace\vert\thinspace i,i\oplus 1$
-    \item freely random choice of measurement context
+    \item uncorrelated preparation and measurement devices,\\ freely random choice of measurement context $i,i\oplus 1$
     \item sharp (outcome-repeatable and minimally disturbing) measurements 
     \item cyclic compatibility
     \item sequential measurements
     \begin{itemize}
         \item system not disturbed between measurements
-        \item each measurement device is used only once
-        \item information carrying capacity of the unknown system does not exceed ``simulable" bound
-        \item alternatively: Landauer's principle, ability to detect Landauer heat of the order $k_B T$ per measurement
     \end{itemize}
+    \item certify quantumness
+    \begin{enumerate}
+    \item information carrying capacity of the unknown system does not exceed ``simulable" bound (each measurement device is used only once)
+     \item alternatively: Landauer's principle, ability to detect Landauer heat of the order $k_B T$ per measurement
+     \end{enumerate}
 \end{enumerate}
 
-Let us go through Assumptions 1-5 in order:
+Let us go through Assumptions 1-6 in order:
 
-Assumptions 1, namely that the devices behave in the same way for every input-output round of the correlation experiment, is made in a large majority of current self-testing works \cite{Supic2020}. It allows us to lift relative frequencies observed in a correlation experiment to well-defined probability distributions $p(x,y\thinspace\vert\thinspace i, i\oplus 1)$ that is valid for all rounds of the protocol, a round being characterized by one input-output cycle for a given measurement context. When checking for compatible quantum models of the observed correlations, this assumption lets us relate the observed input-output sequence to quantum expectation values.
+Assumptions 1, namely that the devices behave in the same way for every input-output round of the correlation experiment, is made in a large majority of current self-testing works \cite{Supic2020}. It allows us to lift relative frequencies observed in a correlation experiment to well-defined probability distributions $p(x,y\thinspace\vert\thinspace i, i\oplus 1)$ that is valid for all rounds of the protocol, a round being characterized by one input-output cycle for a given measurement context.
 
-Assumption 2 is required to ensure the integrity of whatever Bell or KS inequality is used in the self-testing protocol. For a second, assume that Assumption 2 is not true. It follows that violations of say the KCBS KS non-contextuality inequality are indeed compatible with a KS non-contextual HVM description. Thus, violations of the KCBS inequality could be simulated by a classical mechanism, voiding the self-testing certificate. This can be seen as follows:
-The KCBS correlations experiment is a test for the expression $\sum_{i=1}^5 p(0,1\thinspace\vert\thinspace i,i\oplus1)$. Assuming compatibility with an ontological model and a finite number of ontic states $\lambda\in\Lambda$, we can rewrite this as \begin{align*}
-\sum_{\lambda\in\Lambda}\thinspace\sum_{i=1}^5 p(0,1\thinspace\vert\thinspace i,i\oplus1,\lambda) p(\lambda\thinspace\vert\thinspace i,i\oplus 1)=\sum_{\lambda\in\Lambda}\thinspace\sum_{i=1}^5 p(0,1\thinspace\vert\thinspace i,i\oplus1,\lambda)\mu_i(\lambda),
-\end{align*} where $\mu_i$ corresponds to the state preparation, conditioned on the measurement context $(i,i\oplus 1)$: $\mu_i(\lambda)=p(\lambda\thinspace\vert\thinspace i,i\oplus 1)$. Let $\Lambda$ consist of five ontic states $\lambda_i$, one for every measurement context $(i,i\oplus 1)$. Furthermore, let these ontic states $\lambda_i$ fix measurement outcomes in a way such that $p(0,1\thinspace\vert\thinspace i,i\oplus 1 ,\lambda_i)=1$. If we allow for the choice of measurement context to be correlated with the ontic state of the system, such that an experimenter can no longer make a free choice of measurement context, and that the ontic state of the system in fact fixes the measurement context like $\mu_i(\lambda)=\delta_{\lambda,\lambda_i}$, then
-\begin{equation*}
-    \sum_{\lambda\in\Lambda}\thinspace\sum_{i=1}^5 p(0,1\vert i,i\oplus1,\lambda)\mu_i(\lambda)=5>2.
-\end{equation*}
-Thus, even the algebraic maximum of the KCBS inequality is compatible with a KS non-contextual HVM description, if we do not make Assumption 2.
+For a second, assume that Assumption 2 is not true, and consider the preparation and  measurement devices to be correlated. We express this in terms of the shared random variable $\lambda$. As noted in CITE, such shared randomness can render the task of self-testing futile. Consider a quantum experiment where, based on the random variable $\lambda$, the preparation device prepares $\rho_\lambda=U_\lambda \rho \thinspace U_\lambda^{\dag}$ and the measurement $i$ is characterized by the positive semi-definite operator $M_\lambda^{(i)}=U_\lambda M^{(i)} U_\lambda^{\dag}$. The probability $p(0,1 \thinspace \vert \thinspace i,i\oplus 1)=\int_{\Lambda} d\lambda\thinspace\mu(\lambda)\operatorname{tr}(\rho_\lambda M_\lambda^{(i)})=\operatorname{tr}(\rho M^{(i)})$. The correlation experiment with shared randomness is therefore operationally indistinguishable from one without, and we cannot hope to relate the physical experiment to the reference experiment via a single unitary operator, based on observed correlations. Additionally, to bound classical simulations reproducing the statistics in a non-trivial way, we will model these as information transducers that take a freely random input from the verifier at every step of the input-output cycle. 
 
-The necessity of Assumption 3 for the soundness of the self-testing protocol was already highlighted in Sections \ref{sec:cswunsharp} and \ref{sec:complicationscont}. For unsharp quantum measurements, the class of odd $n$-cycle inequalities no longer comprises conceptually well-grounded tests of classicality. Relatedly, the CSW hierarchy falls apart and the Lovász SDP no longer characterizes optimal quantum violations of KS non-contextuality inequalities. Assumption 3 was critical in the above approach. Nevertheless, we would like to relax it - in a realistic setting, measurements will never be truly projective.
+The necessity of Assumption 3 for the soundness of the self-testing protocol was already highlighted in Sections \ref{sec:cswunsharp} and \ref{sec:complicationscont}. For unsharp quantum measurements, the class of odd $n$-cycle inequalities can be super-maximally violated by trivial POVM. Therefore, the CSW hierarchy falls apart and the Lovász SDP no longer characterizes optimal quantum violations of KS non-contextuality inequalities. Assumption 3 was critical in the above approach. Nevertheless, we would like to relax it - in a realistic setting, measurements will never be truly projective.
 
-Assumption 4 is required as cyclic compatibility went into deriving the odd $n$-cylce inequalities \ref{eqn:oddncycleclass} (recall that KS non-contextuality restricts the ontological representation of compatible measurements). Also, the CSW framework assumes compatible measurements. If the measurements $i,i\oplus 1$ were not compatible, the measurement events in Figure \ref{fig:kcbsexclusivity} could not be related to well-defined projectors $\Pi_i$, even for sequential measurements, as the product of two non-commuting projectors is not necessarily a projector.
+Assumption 4 is required by the CSW framework. If the measurements $i,i\oplus 1$ were not compatible, the measurement events in Figure \ref{fig:kcbsexclusivity} could not be related to well-defined projectors $\Pi_i$, even for sequential measurements, as the product of two non-commuting projectors is not necessarily a projector.
 
-As Assumption 5 is extensive, we devote an entire section to it. 
+Assumption 5 is needed, as it allows us to bound classical simulations reproducing the statistics in a non-trivial manner, something we will examine in Section \ref{sec:memoryass}. We assume that the system is not disturbed in between sequential measurements, so that the measurement sequence $i,i\oplus 1$ corresponds to a well-defined projector like before.
+
+As Assumption 6 is extensive, we devote an entire section to it. 
 
 \section{Sequential measurements and the memory assumption}
 \label{sec:memoryass}
 As described in Section \ref{sec:self-testing}, self-testing allows us to make powerful inferences about the quantum properties of a system. For applications of self-testing, the prime example being quantum key distribution (QKD), it is of great importance that the certificate not only encompasses the quantum state and measurements consistent with the maximal violation, but that the optimal input-output correlations also bear witness to the quantumness of the system. This means that we must exclude the possibility of the correlations being simulated by some classical mechanism, as this would for instance allow the copying of information and render the protocol information-theoretically insecure. To do so, we wish to study the resources a classical device requires, in order to simulate the ideal reference quantum realization. The odd $n$-cycle contextuality scenarios will be of particular interest to us. 
-In the case of Bell inequalities, the relevant resources have been identified and studied extensively \cite{Brassard1999,Toner2003}. As highlighted in Section \ref{sec:bell}, assuming local causality and freely chosen detector settings, correlations that violate a Bell inequality are incompatible with a local hidden variable model description. Thus, classically simulating correlations that exhibit Bell non-locality requires superluminal communication (``communication cost") \cite{Toner2003} and would violate special relativity. For self-testing via Bell inequalities this means that, assuming any adversary is bounded by the no-signalling principle, the violation of a Bell inequality certifies quantumness, provided that both subsystems are indeed space-like separated\footnote{Note that it is highly non-trivial to verify that two space-time points are space-like separated in a device independent manner.}. Analogously to Bell non-locality and the no-signalling principle, we wish to identify a physical principle that enables us to differentiate between a quantum system exhibiting KS non-contextuality and a classical mechanism simulating KS contextual correlations.
+In the case of Bell inequalities, the relevant resources have been identified and studied extensively \cite{Brassard1999,Toner2003}. As highlighted in Section \ref{sec:bell}, assuming local causality and freely chosen detector settings, correlations that violate a Bell inequality are incompatible with a local hidden variable model description. Thus, classically simulating correlations that exhibit Bell non-locality requires superluminal communication (``communication cost") \cite{Toner2003} and would violate special relativity. For self-testing via Bell inequalities this means that, assuming any adversary is bounded by the no-signalling principle, the violation of a Bell inequality certifies quantumness, provided that both subsystems are indeed space-like separated\footnote{Note that it is highly non-trivial to verify that two space-time points are space-like separated in a device independent manner.}. Analogously to Bell non-locality and the no-signalling principle, we wish to identify a physical principle that enables us to differentiate between a quantum system exhibiting KS non-contextuality and a classical mechanism simulating correlations that violate a KS non-contextuality inequality.
 One strength of contextuality as a competing notion of nonclassicality is that contextuality experiments comprise a much broader class of experiments. In particular, generic contextuality experiments don't presuppose multiple space-like separated systems, but can consist of sequences of state preparations and measurements of a single system. However, this generality also complicates the analysis of the relevant resources required for simulating KS contextuality. Moreover, we can in principle never distinguish between a single-system quantum experiment exhibiting some input-output correlations and a classical pre-programmed computer simulating the statistics \cite{Supic2020}. For Bell-type scenarios this possibility is circumvented by extending the experiment to multiple space-like separated subsystems. In Section \ref{sec:memoryass} we examine the ``memory cost" of KS contextuality \cite{Cabello2018,Kleinmann2011}: As we will see, the minimal internal entropy of a classical system emulating KS contextuality in many cases exceeds the information-carrying capacity of the quantum system it aims to emulate. To weed out the possibility of a classical mechanism producing the correlations, in \cite{Bharti2019} it is assumed that ``[$\dots$] the measured system has no more memory than its information carrying capacity".
 However, for self-testing scenarios the information carrying capacity of the physical device is unknown.
 One therefore has to justify imposing an upper bound on the unknown device's information carrying capacity to conclude quantumness. As we will see, these upper bounds have to be of the order of a few bits, which means that the required memory assumption is a very strong one indeed. 
 
-In Section \ref{sec:protocols}, where we propose two novel self-testing protocols based on Spekkens contextuality, the assumption of cyclic compatibility will be replaced by assumptions about (approximate) operational equivalences of certain experimental procedures. Both protocols will also assume an upper bound on the information carrying capacity of the unknown system. We will discuss their features in Section \ref{sec:discussion}.
+In Section \ref{sec:protocols}, where we propose a self-testing protocols based on Spekkens contextuality, the assumption of cyclic compatibility will be replaced by assumptions about (approximate) operational equivalences of certain experimental procedures. The protocol will also assume an upper bound on the information carrying capacity of the unknown system. We will discuss its features in Section \ref{sec:discussion}.
 
 Alternatively, Cabello proposes using Landauer's principle \cite{Cabello2018} to translate the memory cost of KS contextuality into a ``thermodynamical cost" \cite{Wiesner2012,Cabello2016}, in terms of heat the system dissipates when measured. His proposal will be subject of Section \ref{sec:landauer}. As the minimal unit of heat a classical simulation must dissipate per measurement will be of the order $\sim k_BT$, this proposal is hardly viable in a realistic experimental setting.
 
