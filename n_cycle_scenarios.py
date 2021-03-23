@@ -108,9 +108,9 @@ def simulate(n_array,no_mnts,plot_states=False):
             entropies[i,k] = entropy
             
             if plot_states:
-                fig = plt.figure(figsize=(10,5))
+                fig = plt.figure(figsize=(6,6))
                 ax = fig.gca(projection='3d')
-
+                ax.set_box_aspect((1,1,1))
                 ax.set_xlim3d(-1, 1)
                 ax.set_ylim3d(-1, 1)
                 ax.set_zlim3d(-1, 1)
@@ -130,9 +130,10 @@ def simulate(n_array,no_mnts,plot_states=False):
                 ax.set_yticks([]) 
                 ax.set_zticks([])
                 
-                ax.scatter(*states.T, s= 5000*probs, marker = "." ,color="black")
+                ax.scatter(*states.T, s= 2000*probs, marker = "." ,color="black")
                 ax.view_init(0, 0)
-                plt.savefig("n = " + str(n) + ", mnts = " + str(k+1), dpi=500)
+                if k==9:
+	                plt.savefig("n = " + str(n) + ", mnts = " + str(k+1), dpi=400)
 
         erased = 0
         for mnt in range(1,n+1):
@@ -154,8 +155,8 @@ def simulate(n_array,no_mnts,plot_states=False):
     ax = fig.gca()
 
    
-    plt.xticks(np.log2(n_array),('$log_2$(5)','$log_2$(7)','$log_2$(9)','$log_2$(11)','$log_2$(13)','$log_2$(15)'))
-    plt.yticks(np.array([2.5,3,3.5,4,4.5,5]))
+    #plt.xticks(np.log2(n_array),('$log_2$(5)','$log_2$(7)','$log_2$(9)','$log_2$(11)','$log_2$(13)','$log_2$(15)'))
+    #plt.yticks(np.array([2.5,3,3.5,4,4.5,5]))
     plt.xlabel("$log_2$(cycle length)", labelpad=10)
     plt.ylabel("erased bits", labelpad=10)
     plt.grid(linestyle='--',color="lightgrey")
@@ -186,7 +187,7 @@ def simulate(n_array,no_mnts,plot_states=False):
     ax = fig.gca()
 
     
-    plt.xticks(np.log2(n_array),('$log_2$(5)','$log_2$(7)','$log_2$(9)','$log_2$(11)','$log_2$(13)','$log_2$(15)'))
+    #plt.xticks(np.log2(n_array),('$log_2$(5)','$log_2$(7)','$log_2$(9)','$log_2$(11)','$log_2$(13)','$log_2$(15)'))
     #plt.yticks()
     plt.xlabel("$log_2$(cycle length)", labelpad=10)
     plt.ylabel("memory cost (bits)", labelpad=10)
@@ -199,10 +200,10 @@ def simulate(n_array,no_mnts,plot_states=False):
     plt.savefig("n_cycle_RAM")
     
         
-simulate(np.array([5,7,9,11,13,15]),3,False)
+simulate(np.array([5]),10,True)
 
 #simulate(np.array([5,7]),5,False)
-plt.show()
+#plt.show()
 
 
 

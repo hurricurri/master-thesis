@@ -2,11 +2,11 @@
 \lhead{\emph{CSW graph-theoretic approach to quantum correlations}}
 \label{sec:csw}
 
-In \cite{Cabello2014}, the authors propose a graph-theoretic approach to classifying the statistics of an arbitrary correlation experiment that aims to determine the value of some linear combination of probabilities. In particular, \cite{Cabello2014} identifies a hierarchical structure that classifies correlations as classical (KS non-contextual), quantum, or more generally obeying the exclusivity principle \footnote{The exclusivity applies to pairwise exclusive events and bars their added probabilities from exceeding 1. We will come back to it shortly.}. This hierarchical structure is established by associating with a correlation experiment its corresponding ``exclusivity graph". The exclusivity structure obeyed by the experiment imposes non-trivial constraints on the set of permissible correlations compatible with KS non-contextuality, QM, or the exclusivity principle. In particular, upper bounds of the relevant linear combination of probabilities, within these three classes of theories, can be related to graph invariants of the experiment's exclusivity graph.
+In \cite{Cabello2014}, the authors propose a graph-theoretic approach to classifying the statistics of an arbitrary correlation experiment that aims to determine the value of some linear combination of probabilities. In particular, \cite{Cabello2014} identifies a hierarchical structure that classifies correlations as classical (KS non-contextual), quantum, or more generally obeying the exclusivity principle \footnote{The exclusivity applies to pairwise exclusive events and bars their added probabilities from exceeding 1. We will come back to it shortly.}. This hierarchical structure is established by associating with a correlation experiment its corresponding ``exclusivity graph". The exclusivity structure obeyed by the experiment imposes non-trivial constraints on the set of permissible correlations compatible with KS non-contextuality, QM, or the exclusivity principle. In particular, upper bounds of the relevant linear combination of probabilities within these three classes of theories, can be related to graph invariants of the experiment's exclusivity graph.
 
 \section{Generic correlation experiments in the CSW framework}
 \label{sec:correxp}
-The CSW framework takes an operationalist approach to correlation experiments, in the sense that any such experiment is described in terms of a sequence of (reproducible) experimental procedures. For example, one such experimental procedure may be to prepare the system in a certain way. If they provide the experimenter with an output (apart from the transformed system), such experimental procedures can be considered \emph{tests}. For a preparation $P$, and test $M$ with outcomes $\{k_i\}_i$, an operational theory specifies the probabilities $p(k_i\vert M,P)$. 
+The CSW framework takes an operationalist approach to correlation experiments, in the sense that any such experiment is described in terms of a sequence of (reproducible) experimental procedures. For example, one such experimental procedure may be to prepare the system in a certain way. If they provide the experimenter with an output (apart from the transformed system), such experimental procedures can be considered \emph{tests}. For a preparation $P$ and test $M$ with outcomes $\{k_i\}_i$, an operational theory specifies the probabilities $p(k_i\vert M,P)$. 
 
 There may be multiple equivalent ways of preparing a system, in the sense that we can never tell the preparation procedures apart by experiment, as they yield identical probability distributions for all tests. The equivalence class of operationally indistinguishable preparation procedures $P$ defines a state. In the same manner, the equivalence class of operationally indistinguishable tests $M$ defines an observable\footnote{This identification of operationally equivalent tests and preparations parallels the operational equivalence classes we will introduce in Section \ref{sec:spekkcont}, when introducing the notion of  Spekkens contextuality.}.
 
@@ -23,9 +23,9 @@ Two observables $M_{1}$, $M_{2}$ with outcome sets $\{k_i\}_i$ and $\{k'_i\}_{i}
 
 \noindent One may think of $M_{12}$ as measuring both $M_{1}$ and $M_{2}$ simultaneously, placing the outcome of $M_{1}$ into its first and the outcome of $M_{2}$ into its second output register. By discarding one of the outcomes, we reduce $M_{12}$ to the corresponding single-outcome measurement. At the level of probability distributions, discarding one of the outcomes corresponds to a summation over all possible outcomes held by the discarded register. For QM as operational theory and projective measurements, this definition is equivalent to operator commutativity. For general quantum measurements, Definition \ref{def:compat} implies that the POVM $M_1$ and $M_2$ are obtained by coarse graining the POVM $M_{12}$ that jointly realizes both.
 
-An \emph{event} is characterized by a list of compatible tests $(M_1, M_2, \dots, M_n)$ that yield some outcomes $(X_1, X_2, \dots, X_n)$. Let $X_1,X_2,\dots, X_n\thinspace\vert\thinspace M_1,M_2,\dots, M_n$ denote such event. Some events may be operationally equivalent, in the sense that they have the identical probability of occuring, for all initial preparations of the system. Analogous to our treatment of preparations and tests, operationally equivalent test-outcome tuples define the same event. Within QM, a state would be defined by a density operator, whereas equivalent events correspond to the same positive semi-definite operator or projector.
+An \emph{event} is characterized by a list of compatible tests $(M_1, M_2, \dots, M_n)$ that yield some outcomes $(X_1, X_2, \dots, X_n)$. Let $X_1,X_2,\dots, X_n\thinspace\vert\thinspace M_1,M_2,\dots, M_n$ denote such event. Some events may be operationally equivalent, in the sense that they have the identical probability of occuring, for all initial preparations of the system. Analogous to our treatment of preparations and tests, operationally equivalent test-outcome tuples define the same event. Within QM, a state is defined by a density operator, whereas equivalent events correspond to the same positive semi-definite operator or projector.
 
-A correlation experiment, like the KCBS or CHSH experiment, consists of one or multiple experimenters performing subsets of compatible tests on an intial preparation $P$ of the system. For instance, in the KCBS experiment, an experimenter chooses between five measurement contexts $(i,i\oplus 1)$. We assume that an experimenter can freely choose between measurement contexts, i.e.\ subsets of compatible tests, meaning that this choice is not correlated with say the system being measured. By recording which of all could-be events occurs for many repetitions of this procedure, the experimenter(s) can determine the value of some relevant linear combination $\sum_i w_i p(\epsilon_i\vert P)$, where $w_i>0$, and $\epsilon_i$ denotes a possible event i.e.\ a set of compatible tests that yield some outcomes. Sometimes we will omit the initial preparation $P$ in our formulas. Let us now discuss what conditions and assumptions allow us to impose non-trivial constraints on correlations.
+A correlation experiment, like the KCBS or CHSH experiment, consists of one or multiple experimenters performing subsets of compatible tests on an intial preparation $P$ of the system. For instance, in the KCBS experiment, an experimenter chooses between five measurement contexts $(i,i\oplus 1)$. We assume that an experimenter can freely choose between measurement contexts, i.e.\ subsets of compatible tests, meaning that this choice is not correlated with say the system being measured. By recording which of all could-be events occurs for many repetitions of this procedure, the experimenter(s) can determine the value of some relevant linear combination $\sum_i w_i p(\epsilon_i\vert P)$, where $w_i>0$ and $\epsilon_i$ denotes a possible event i.e.\ a set of compatible tests that yield some outcomes. Sometimes we will omit the initial preparation $P$ in our formulas. Let us now discuss what conditions and assumptions allow us to impose non-trivial constraints on correlations.
 
 We define two events to be exclusive if they specify different outcomes for identical tests.
 \begin{definition}[\cite{Amaral2018}]
@@ -35,7 +35,7 @@ For outcome-repeatable tests, two events
 X_1,X_2,\dots, X_n\thinspace\vert\thinspace M_1,M_2,\dots, M_n\;\text{ and }\; X'_1,X'_2,\dots, X'_m\thinspace\vert\thinspace M'_1,M'_2,\dots, M'_m  
 \end{equation*} are \emph{exclusive} if for some $i$ and $j$
 \begin{equation*}
-    M_i = M'_j \text{ and } X_i \neq X'_j.
+    M_i \equiv M'_j \text{ and } X_i \neq X'_j.
 \end{equation*}
 \end{definition}
 
@@ -50,7 +50,7 @@ For a correlation experiment with two exclusive could-be measurements events $\e
 The exclusivity principle extends this property to sets of pairwise exclusive events:
 
 \begin{principle}[Exclusivity principle]\hfill\break
-For a set of pairwise exclusive measurement events of a correlation experiment $\{\epsilon_i\}_i$
+For a set of pairwise exclusive measurement events of a correlation experiment $\{\epsilon_i\}_i$,
 \begin{equation*}
     \sum_i p(\epsilon_i)\leq 1,
 \end{equation*}
@@ -61,16 +61,16 @@ We denote the set of correlations that are compatible with the exclusivity princ
 
 Not all valid assignments of probabilities to events of a correlation experiment, i.e.\ probabilistic models of a correlation experiment, are compatible with the exclusivity principle. For example, consider Specker's three boxes, as introduced in Section \ref{sec:threeboxes}. The relevant linear combination of probabilities that this correlation experiment tests is
 \begin{equation*}
-S = \frac{1}{3}\sum_{i=1}^3\thinspace p(0,1 \thinspace\vert\thinspace i,i\oplus 1) +  \frac{1}{3}\sum_{i=1}^3\thinspace p(1,0\thinspace\vert\thinspace i\oplus 1,i).
+S = \frac{1}{3}\sum_{i=1}^3\thinspace p(0,1 \thinspace\vert\thinspace i,i\oplus 1) +  \frac{1}{3}\sum_{i=1}^3\thinspace p(1,0\thinspace\vert\thinspace i,i\oplus 1).
 \end{equation*}
 For both sums, the events that appear are pairwise exclusive. Therefore, within theories obeying the exclusivity principle, $S$ is upper-bounded by $\frac{2}{3}$. However, by assigning the probability $\frac{1}{2}$ to each event appearing in $S$ we obtain a probability assignment that is compatible with pairwise exclusivity, but incompatible with the exclusivity principle. Furthermore, this assignment of probabilities is consistent with perfectly anti-correlated outcomes for all measurement contexts, as was considered in Section \ref{sec:threeboxes}.
-While the exclusivity principle must not be true for arbitrary theories, it does apply to QM, if all measurements are projective, and by extension to KS non-contextual correlations. This can be seen by noting that exclusive events must be assigned orthogonal projectors and noting that for a set of orthogonal projectors $\{\Pi_i\}_i$, $(\thinspace\mathbb{1}-\sum_i \Pi_i\thinspace)$ is a positive semi-definite operator.
+While the exclusivity principle must not be true for arbitrary theories, it does apply to QM if all measurements are projective, and by extension to KS non-contextual correlations. This can be seen by noting that pairwise exclusive events must correspond to pairwise orthogonal projectors, as well as noting that for a set of orthogonal projectors $\{\Pi_i\}_i$, $(\thinspace\mathbb{1}-\sum_i \Pi_i\thinspace)$ is a projector.
 Therefore, in Section \ref{sec:cswhierarch}, we may use the exclusivity principle to impose constraints on the set of quantum (and KS non-contextual) correlations.
 
-If we extend quantum measurements to general POVM, the exclusivity principle must no longer hold, as we just demonstrated for correlation experiments like Specker's three boxes (assign the positive operator $\frac{\mathbb{1}}{2}$ to all measurement events).
+If we extend quantum measurements to general POVM, the exclusivity principle must no longer hold, as we just demonstrated for the Specker's three boxes correlation experiment (assign the positive operator $\frac{\mathbb{1}}{2}$ to all measurement events).
 
 \section{The exclusivity graph of a correlation experiment}
-The exclusivity graph of a correlation experiment is a convenient representation of the exclusivity structure obeyed by events that imposes constraints on what correlations are permissible within different classes of theories. 
+The exclusivity graph of a correlation experiment is a convenient representation of the exclusivity structure obeyed by events, imposing constraints on what correlations are permissible within different classes of theories. 
 The exclusivity graph of a correlation experiment $S=\sum_i w_i p(\epsilon_i)$ has a vertex for each measurement event $\epsilon_i$ appearing in $S$.  Furthermore, exclusive measurement events are represented as adjancent vertices, as shown in Figure \ref{fig:kcbsexclusivity} for the KCBS correlation experiment, or in Figure \ref{fig:3boxesexcl} for Specker's three boxes.
 
 
@@ -102,7 +102,7 @@ The exclusivity graph of a correlation experiment $S=\sum_i w_i p(\epsilon_i)$ h
 
 \section{Hierarchical structure of correlations}
 \label{sec:cswhierarch}
-We will now relate upper bounds for the quantity $S$, for correlations that are compatible with KS non-contextuality, QM, or the exclusivity principle, to graph invariants of the experiment's exclusivity graph. All three graph invariants can be computed by solving a corresponding mathematical optimization problems. The proofs we present are adapted from \cite{Cabello2014}:
+We will now relate upper bounds for the quantity $S$, consistent with KS non-contextuality, QM, or the exclusivity principle, to graph invariants of the experiment's exclusivity graph. All three graph invariants can be computed by solving a corresponding mathematical optimization problem. The proofs we present are adapted from \cite{Cabello2014}:
 
 \begin{itemize}
     \item \textbf{KS non-contextual correlations:}
@@ -116,7 +116,7 @@ We will now relate upper bounds for the quantity $S$, for correlations that are 
     where the expression is maximized over all independent sets of the exclusivity graph. This is the independence number of the (weighted) exclusivity graph. Section \ref{sec:kcbs} presents concrete values for the odd $n$-cycle scenarios, see Equation \ref{eqn:oddncycleclass}.
     
     \item \textbf{Quantum correlations:}
-    The set of quantum correlations, restricting to projective measurements, is of the form\footnote{We can w.l.o.g.\ assume a pure quantum state. For mixed states $\ket{\rho_A}$, consider the purification $\Psi_{AE}$ and projectors $(\thinspace\Pi_i\otimes\mathbb{1}_E\thinspace)$.} \begin{equation*}
+    The set of quantum correlations, restricting to projective measurements, is of the form\footnote{We can w.l.o.g.\ assume a pure quantum state. For mixed states $\rho_A$, consider the purification $\vert\Psi\rangle_{AE}$ and projectors $(\thinspace\Pi_i\otimes\mathbb{1}_E\thinspace)$.} \begin{equation*}
     p(\epsilon_i)=\expval{\Pi_i}{\Psi},
     \end{equation*}
     for some quantum state $\ket{\Psi}$ and $\Pi_{i}$ the projector corresponding to the event $\epsilon_i$. Adjacent events must be represented by orthogonal projectors:
@@ -173,7 +173,7 @@ Let us now comprehend in what sense trivial POVM are able to realize arbitrary p
 To work with a concrete example, consider the KCBS correlation experiment with exclusivity graph Figure \ref{fig:kcbsexclusivity}. We present an argument that parallels the one presented in \cite{Kunjwal2019}.
 Let $(i,i\oplus1)$ denote two compatible dichotomic measurements an experimenter can perform, which we will assume to be compatible POVM. Importantly, there generally exist many joint POVM $\{M_{00}^{i,i\oplus1},M_{01}^{i,i\oplus1}, M_{10}^{i,i\oplus1},M_{11}^{i,i\oplus1}\}$, satisfying Definition \ref{def:compat}, and we cannot rule out any of these without making additional assumptions. For Bell-type correlation experiments, we can impose additional constraints due to locality, namely that compatible measurements act on local Hilbert spaces, and in particular that compatible POVM are commuting. In contrast to projective measurements, commutativity is sufficient but not necessary for two POVM to be compatible: If and only if all elements from both POVM commute, their joint POVM is uniquely determined as
 \begin{equation*}
-    M_{ab}=M_{a}^i M_{b}^{i\oplus1},
+    M_{ab}^{i,i\oplus 1}=M_{a}^i M_{b}^{i\oplus1},
 \end{equation*}
 where $i\equiv\{M_{a}^i\}_a$ and $i\oplus1\equiv\{M_{b}^{i\oplus1}\}_b$ \cite{Kunjwal2019}.
 
@@ -187,20 +187,20 @@ Let us compare the possible correlations that may arise from commuting POVM to t
     \end{equation*}
     For Bell tests with remote measurement contexts, the joint measurement is given by a tensor product.
     
-    If we consider all POVM $i$ to be trivial, $i\equiv\{a^i_0\thinspace\mathbb{1}\thinspace,\thinspace a^i_1\thinspace\mathbb{1}\}$, then we find a joint probability distribution for all measurements $i$ that is compatible with all measureable marginal correlations for the five measurement contexts,
+    If we consider all POVM $i$ to be trivial, $M^i\equiv\{a^i_0\thinspace\mathbb{1}\thinspace,\thinspace a^i_1\thinspace\mathbb{1}\}$, then we find a joint probability distribution for all measurements $M^i$ that is compatible with all measureable marginal correlations for the five measurement contexts,
     \begin{equation*}
         p(x,y,z,v,w)=a^1_{x}\;a^2_{y}\;a^3_{z}\;a^4_{v}\;a^5_{w}\;,
     \end{equation*}
-    where $x,\dots,w$ denote the outcomes of the five measurements $i$. Finding such a global probability distribution implies that all correlations produced by the experiment are KS non-contextual, and in particular do not violate a KS non-contextuality inequality. To see this, assume an ontic state space that contains one ontic state for each outcome tuple $(x,y,z,v,w)$ and fixes the outcomes of the measurements $i$ accordingly. The preparation that assigns the probability $p(x,y,z,v,w)$ to the ontic state corresponding to that outcome tuple reproduces all correlations of the experiment. The ontological model is KS non-contextual, as it is deterministic and assigns outcomes to the individual operators, independent of the context they are measured in. For Bell scenarios with space-like separated parties, all compatible POVM are commuting, and trivial POVM cannot violate Bell inequalities. As alluded to in Section \ref{sec:bell}, we cannot carry out the same procedure for general contextuality scenarios, as the set of simultaneous eigenvalues for two compatible operators $A$, $B$ is in general not given by the Cartesian product of individual eigenvalues $\sigma(A)\times\sigma(B)$.
+    where $x,\dots,w$ denote the outcomes of the five measurements $M^i$. Finding such a global probability distribution implies that all correlations produced by the experiment are KS non-contextual, and in particular do not violate a KS non-contextuality inequality. To see this, assume an ontic state space that contains one ontic state for each outcome tuple $(x,y,z,v,w)$ and fixes the outcomes of the measurements $M^i$ accordingly. The preparation that assigns the probability $p(x,y,z,v,w)$ to the ontic state corresponding to that outcome tuple reproduces all correlations of the experiment. The ontological model is KS non-contextual, as it is deterministic and assigns outcomes to the individual operators, independent of the context they are measured in. Thus, for Bell scenarios with space-like separated parties, all compatible POVM are commuting, and trivial POVM cannot violate Bell inequalities. As alluded to in Section \ref{sec:bell}, we cannot carry out the same procedure for general contextuality scenarios, as the set of simultaneous eigenvalues for two compatible operators $A$, $B$ is in general not given by the Cartesian product of individual eigenvalues $\sigma(A)\times\sigma(B)$.
     \item \textbf{non-commuting POVM (KS-type scenarios):}
-    General compatibile POVM, these can be realized jointly in many different ways. A joint realization satisfying Definition \ref{def:compat} is of the form \begin{equation*}
+    General compatibile POVM, can be realized jointly in many different ways. A joint realization satisfying Definition \ref{def:compat} is of the form \begin{equation*}
     \{M_{00}^{i,i\oplus1}, M_{01}^{i,i\oplus1},  M_{10}^{i,i\oplus1}, M_{11}^{i,i\oplus1}\}.
     \end{equation*}
     For a single system, $\{M_{xy}^{i,i\oplus 1}\}_{xy}$ must no longer be the product of the individual POVM. As Kunjwal points out \cite{Kunjwal2019}, there is one undetermined degree of freedom, i.e.\ one positive semi-definite operator, say $M_{01}^{i,i\oplus 1}$, of the joint POVM not fixed by the marginal POVM $\{M_a^i\}_a$ and $\{M_b^{i\oplus 1}\}_b$:
     \begin{align*}
         M_{00}^{i,i\oplus 1}&=M_0^i-M_{01}^{i,i\oplus 1} \\[0.3em]
         M_{11}^{i,i\oplus 1}&=M_1^{i\oplus 1}-M_{01}^{i,i\oplus 1} \\[0.3em] M_{10}^{i,i\oplus 1}&=\mathbb{1}-M_{01}^{i,i\oplus 1}-M_{00}^{i,i\oplus 1}-M_{11}^{i,i\oplus 1} \\[0.3em]
-        &=\mathbb{1}-M_0^i-M_1^{i\oplus 1}+M_{01}^{i,i\oplus 1}
+        &=\mathbb{1}-M_0^i-M_1^{i\oplus 1}+M_{01}^{i,i\oplus 1}.
     \end{align*}
 
 Let us assume $\{M_a^i\}_a=\{\frac{\mathbb{1}}{2}, \frac{\mathbb{1}}{2}\}$ and $\{M_b^{i\oplus 1}\}_b=\{\frac{\mathbb{1}}{2}, \frac{\mathbb{1}}{2}\}$ to be trivial and acting on a qubit system. A possible joint POVM is
@@ -215,5 +215,5 @@ which is itself trivial. Furthermore, it produces correlations that exceed the L
 The above discussion is consistent with the observation that the notion of local causality is formulated entirely theory independent and makes no mention of the sharpness of measurements. Indeed, within QM, Bell inequalities apply to general quantum measurements just as they apply to projective quantum measurements, for reasons just highlighted. The aim of this Section was to motivate why, for general contextuality scenarios without additional locality constraints, extending Bell's notion of local causality, or rather local determinism, to apply to non-remote measurements contexts runs into problems. 
 
 Shifting to a general prepare-and-measure scenario, instead of extending the assumption of outcome determinism to arbitary unsharp measurements, we will follow Spekkens and adopt his proposal of a new notion of contextuality \cite{Spekkens2005}, which will be discussed in Section \ref{sec:spekkcont}.
-Lastly, the revised tests of non-classicality on which the protocol in \ref{sec:protocols} hinges, factor in source-measurement correlations, which one can think of as quantifying the sharpness of the measurements involved in the correlation experiment. Within QM, the source-measurement correlations capture the ``classicality" of trivial POVM measurements, and these in fact exhibit classical correlations.
+Lastly, the revised tests of non-classicality on which the protocol in \ref{sec:protocols} hinges, factor in source-measurement correlations, a term coined by Kunjwal in \cite{Kunjwal2019}, which one can think of as quantifying the sharpness of the measurements involved in the correlation experiment. Within QM, the source-measurement correlations capture the ``classicality" of trivial POVM measurements, and these in fact exhibit classical correlations.
 \end{itemize}
