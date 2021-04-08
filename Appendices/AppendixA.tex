@@ -51,35 +51,12 @@ for $k'\neq k$.
 
 For notational simplicity, we will write $\sum_{m:p_m^{m_k\vert M_i}\geq \mathcal{X}}$ as $\sum'_m$, whenever it is clear what measurement event $m_k\thinspace\vert\thinspace M_i$ we are referring to, and analogously for two summation indices.
 
-\section{Overlap between statistically relevant states}
-\label{sec:boundingoverlap}
-We begin by bounding the overlap $\vert \langle \Psi_k^{m_j\vert M_i}\vert \Psi_l^{m_{j'}\vert M_i}\rangle \vert$, for $j'\neq j$ and $\vert \Psi_k^{m_j\vert M_i}\rangle$, $\vert \Psi_l^{m_{j'}\vert M_i}\rangle \in V_{\text{relev}}^{(i)}$. In the ideal case these vectors are perfectly orthogonal. 
-Using the fact that $\sum_{\Tilde{j}}F_{m_{\Tilde{j}}\vert M_i}=\mathbb{1}$, we can re-write
-\begin{equation*}
-\sum_{k,l}{}^{'}\thinspace\vert\langle \Psi_k^{m_j\vert M_i} \vert \Psi_l^{m_{j'}\vert M_i}\rangle \vert = \sum_{k,l}{}^{'}\thinspace \vert \thinspace\sum_{\Tilde{j}} \operatorname{tr}\left(F_{m_{\Tilde{j}}\vert M_i}\thinspace\vert \Psi_k^{m_j\vert M_i}\rangle\langle \Psi_l^{m_{j'}\vert M_i}\vert\thinspace\right) \vert.
-\end{equation*}
-This is upper-bounded by
-\begin{equation*}
-\sum_{k,l}{}^{'}\vert\langle \Psi_k^{m_j\vert M_i} \vert \Psi_l^{m_{j'}\vert M_i}\rangle \vert \leq \sum_{\Tilde{j},m}\sum_{k,l}{}^{'}\thinspace\lambda_m^{m_{\Tilde{j}}\vert M_i}\vert \langle \alpha_m^{m_{\Tilde{j}}\vert M_i} \vert \Psi_k^{m_j\vert M_i} \rangle \vert \thinspace \vert \langle \Psi_l^{m_{j'}\vert M_i}\vert \alpha_m^{m_{\Tilde{j}}\vert M_i} \rangle \vert.
-\end{equation*}
-Note that since $j\neq j'$, $\Tilde{j}\neq j$ or $\Tilde{j}\neq j'$. We now use condition \ref{eqn:cond2new}, which bounds the square of the 2-norm of the vector with entries
-\begin{equation*}
-\left((\lambda_m^{m_{\Tilde{j}}\vert M_i})^{1/2}\thinspace \vert \langle \alpha_m^{m_{\Tilde{j}}\vert M_i}\vert \Psi_k^{m_j\vert M_i}\rangle \vert\thinspace\right)_{m,\thinspace l:p_l^{m_j\vert M_i}\geq \mathcal{X}}\;,
-\end{equation*} 
-for $\Tilde{j}\neq j$. Such vector has at most $d^2$ components, where $d$ is the upper bound on the Hilbert space dimension we imposed in Section \ref{sec:certifyquant}. Since $\|\cdot\|_1$ and $\|\cdot\|_2$ are equivalent, with $\|\vec{x}\|_1\leq \sqrt{k}\thinspace\|\vec{x}\|_2$ for $\vec{x}\in\mathbb{C}^k$, we find
-\begin{equation*}
-\sum_{k,m}{}^{'}\thinspace\lambda_m^{m_{\Tilde{j}}\vert M_i}\vert \langle \alpha_m^{m_{\Tilde{j}}\vert M_i}\vert \Psi_k^{m_j\vert M_i}\rangle \vert \leq d\thinspace \epsilon^{1/2}\mathcal{X}^{-1/2},
-\end{equation*}
-for $\Tilde{j}\neq j$, and
+\section{Relating the retrospective preparations $\rho_{m_k \vert M_i}$ to $\rho_0$}
 
-\begin{equation}
-\label{eqn:overlapbound}
-\sum_{k,l}{}^{'}\thinspace\vert\langle \Psi_k^{m_j\vert M_i} \vert \Psi_l^{m_{j'}\vert M_i}\rangle \vert \leq 3\sqrt{2}\thinspace d^2 \epsilon^{1/2}\mathcal{X}^{-1/2}.
-\end{equation}
-We could drop the factor $3$, since for sufficiently small $\epsilon$, the set of all vectors is linearly independent.
+Without further assumptions, it is impossible to infer anything about how the measurements $M_i$ act on the preparation $P_0$ from the correlations $p(m_k \, \vert \, M_i , P_{m_l\vert M_j} )$ alone. For instance, we cannot rule out that the density operator $\rho_0$ is in fact orthogonal to all $\rho_{m_l\vert M_j}$. Recall that $P_{m_l\vert M_j}$ is defined as the preparation procedure that involves performing the measurement $M_j$ on the preparation $P_0$, and conditioning on the outcome $m_l$. If we take $\{E_l^{(j)}\}_l$ to be a set of Kraus operators consistent with the measurement $M_j$, i.e. $E_l^{(j)}{}^{\dag}E_l^{(j)} = F_{m_l\vert M_j}$, one immediately sees that there in fact exists an infinite family of Kraus operators $UE_l^{(j)}$ satisfying this exact condition, where $U$ is an arbitary unitary operator. As such, the post-measurement states are completely undetermined.
+Note that for PVM we do not plagued with this unitary indeterminacy. In order to get ahead, we assume the operational equivalence of some preparations, as detailed at the beginning of Section \ref{sec:boundingmodels}.
 
-\subsubsection{Why can we confine our analysis to the subspace $V_{\text{relev}}^{(i)}$?}
-We now discuss in what sense the assumption regarding operational equivalences of preparations, introduced at the beginning of Section \ref{sec:boundingmodels}, justifies confining our analysis to only the subspace $V_{\text{relev}}^{(i)}$. 
+
 For the convex combinations $S_i$, as defined in \ref{eqn:approxequiv}, we find:
 \begin{equation*}
 \|\sum_j p_j^{(i)}(\rho_{m_j\vert M_i}-\Pi_{\text{relev}}^{(i)}\rho_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)})\|_F \leq \sum_j p_j^{(i)}\|\thinspace\rho_{m_j\vert M_i}-\Pi_{\text{relev}}^{(i)}\rho_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}\thinspace\|_F \leq d^{1/2}\mathcal{X}.
@@ -103,16 +80,93 @@ Let $A$, $B$ be two positive semi-definite operators. Then
 \end{equation*}
 \end{lemma}
 \begin{proof}
-$\|A+B\|_F^2=\operatorname{tr}(A^2+B^2+2AB)\geq \operatorname{tr}(A^2)=\|A\|_F^2$, where we have used that, due to semi positive-definiteness $tr(B^2)$, $tr(AB)$ $\geq 0$. This can be seen by simply inserting an arbitrary spectral decomposition for $A$, $B$, and noting that all eigenvalues are non-negative.
+$\|A+B\|_F^2=\operatorname{tr}(A^2+B^2+2AB)\geq \operatorname{tr}(A^2)=\|A\|_F^2$, as $tr(B^2)$, $tr(AB)$ $\geq 0$ due to semi positive-definiteness. This can be seen by simply inserting an arbitrary spectral decomposition for $A$, $B$, and noting that all eigenvalues are non-negative.
 \end{proof}
 The operators in \ref{eqn:sumtobound} are indeed positive semi-definite: they are Hermitian and satisfy
 \begin{equation*}
 \langle \phi \vert \rho_{j}-\Pi_{\text{relev}}^{(i)}\rho_{j}\Pi_{\text{relev}}^{(i)} \vert \phi \rangle \geq 0,
 \end{equation*}
-for all $\vert \phi\rangle\in\mathbb{C}^k$. This can be seen by expanding an arbitrary $\vert \phi \rangle $ in terms of an ONB with respect to which the projector $\Pi_{\text{relev}}^{(i)}$ is diagonal.
-Since $q_0\approx\frac{1}{3}$, we conclude that
+for all $\vert \phi\rangle\in\mathbb{C}^k$, as can be verified by expanding an arbitrary $\vert \phi \rangle $ in terms of an ONB with respect to which the projector $\Pi_{\text{relev}}^{(i)}$ is diagonal. Note that we expect $q_0\approx\frac{1}{3}$ for noisy devices.
+
+Loosely speaking, the above implies that, under the assumption of operational equivalence, $\rho_0$ has no statistically significant spectral components that are not in $V_{\text{relev}}^{(i)}$. This allows us to infer how the measurements $M_i$ act on $P_0$ from the correlations $p(m_k \, \vert \, M_i , P_{m_l\vert M_j} )$.
+
+\section{Constructing a feasible Gram matrix}
+
+In this section, we construct a feasible Gram matrix $\Tilde{X}_{ij}=\langle \Tilde{u}_i \vert \Tilde{u}_j \rangle$, starting with the vectors $\{\vert u_i \rangle \}_{i=0}^n$, as defined in Section \ref{sec:boundingmodels}. Recall that the matrix $X_{ij}=\langle u_i \vert u_j \rangle$ in general does not satisfy the $n+(n+1)=2n+1$ independent linear constraints of the Lovász SDP. In order to estimate how close the matrix $X$ is to the feasible region, we bound the $2n+1$ problematic entries
+\begin{align}
+\vert X_{0i}-X_{ii}\vert \hspace{1em} &\text{, $1\leq i \leq n$, and} \\
+\vert X_{ij} \vert \hspace{1em} & \text{, for $j>i$, $i\sim j$.}
+\end{align}
+
+Starting with $\vert X_{0i} - X_{ii}\vert$,  we find that
+\begin{align}
+\label{eqn:diagbounds1}
+\vert X_{0i} - X_{ii} \vert & = \operatorname{tr}((F_{m_1\vert M_i}-F_{m_1\vert M_i}^2)\rho_0) \\
+\label{eqn:diagbounds2}
+& \leq \operatorname{tr}((F_{m_1\vert M_i}-F_{m_1\vert M_i}^2)\,\Pi_{\text{relev}}^{(i)}\rho_0\Pi_{\text{relev}}^{(i)})+\sqrt{d}\,\|\rho_0 - \Pi_{\text{relev}}^{(i)}\rho_0\Pi_{\text{relev}}^{(i)}\|_F\\
+\label{eqn:diagbounds3}
+& \leq d\,\frac{\mathcal{X}}{q_0}+\frac{1}{q_0}\sum_k p_{m_k\vert M_i} \operatorname{tr}((F_{m_1\vert M_i}-F_{m_1\vert M_i}^2)\,\sum_l {}^{'} p_l^{m_k\vert M_i}\vert \Psi_l^{m_k \vert M_i}\rangle \langle \Psi_l^{m_k\vert M_i}\vert\,)\\
+\label{eqn:diagbounds4}
+& \leq d\,\frac{\mathcal{X}}{q_0}+\frac{1}{q_0}(\epsilon + \sum_l {}^{'} p_l^{m_1\vert M_i}\operatorname{tr}((F_{m_1\vert M_i}-F_{m_1\vert M_i}^2)\, \vert \Psi_l^{m_1 \vert M_i}\rangle \langle \Psi_l^{m_1\vert M_i}\vert\,) \\
+\label{eqn:diagbounds5}
+& \leq d\,\frac{\mathcal{X}}{q_0}+\frac{3 \epsilon}{q_0}.
+\end{align}
+From \ref{eqn:diagbounds1} to \ref{eqn:diagbounds2} we used the Cauchy Schwarz inequality. To obtain \ref{eqn:diagbounds3}, we make use of the operational equivalence $S_* \sim S_i$. The final upper bound \ref{eqn:diagbounds5} follows from the inequalities \ref{eqn:cond1} and \ref{eqn:cond2}. 
+
+We can choose the cutoff $\mathcal{X}>0$ to be arbitrarily small, therefore
 \begin{equation}
-\label{eqn:justification}
-\|(\rho_{0}-\Pi_{\text{relev}}^{(i)}\rho_{0}\Pi_{\text{relev}}^{(i)})\|_F \leq \mathcal{O}(d^{1/2}\mathcal{X}).
+\vert X_{0i} - X_{ii} \vert \leq \frac{2\epsilon}{q_0}\,.
 \end{equation}
-Apart from when certifying quantumness, as detailed in Section \ref{sec:certifyquant}, we only care about single measurements acting on the distinguished preparation $P_0$ for self-testing. Since $\rho_0$ has no statistically relevant spectral components not in $V_{\text{relev}}^{(i)}$, we are justified in proving almost-projectiveness of the measurements $M_i$ only for the subspace \ref{eqn:relevsubspace}. We will use \ref{eqn:justification} in Section \ref{sec:piecing}, to arrive at the self-testing result.
+
+Bounding the off-diagonal matrix elements $\vert X_{ij}\vert$, $j>i$, $i \sim j$, is more involved. The overlap $\vert X_{ij} \vert = \vert \langle u_i \vert u_j \rangle \vert$ is by definition equal to
+\begin{equation}
+\vert \langle u_i \vert u_j \rangle \vert = \vert \operatorname{tr}(\rho_0 \, F_{m_1\vert M_i} F_{m_1\vert M_{i\oplus 1}}) \vert.
+\end{equation}
+Making use of the triangle and Cauchy-Schwarz inequalities, we obtain
+\begin{equation}
+\label{eqn:initialbound}
+\begin{split}
+\vert \operatorname{tr}(\rho_0 \, F_{m_1\vert M_i} F_{m_1\vert M_{i\oplus 1}}) \vert \leq &\hspace{0.5em} \vert \operatorname{tr}(F_{m_1\vert M_i} F_{m_1\vert M_{i \oplus 1}}\Pi_{\text{relev}}^{(i)}\rho_0\Pi_{\text{relev}}^{(i)})\vert \\ & + \|(\rho_0-\Pi_{\text{relev}}^{(i)}\rho_0\Pi_{\text{relev}}^{(i)})^{1/2}\|_F\,\|(\rho_0-\Pi_{\text{relev}}^{(i)}\rho_0\Pi_{\text{relev}}^{(i)})^{1/2} F_{m_1\vert M_i} F_{m_1\vert M_{i\oplus 1}}\|_F,
+\end{split}
+\end{equation}
+where the square root of a positive semi-definite operator is well-defined as the Hermitian operator obtained by replacing all eigenvalues with their respective square roots in some spectral decomposition. In the following, all matrix norms are taken with respect to the Frobenius norm, allowing us to omit the `F' subscript for simplicity.
+
+The second term in \ref{eqn:initialbound} is less or equal to $\operatorname{tr}(\rho_0-\Pi_{\text{relev}}^{(i)}\rho_0\Pi_{\text{relev}}^{(i)})\leq d\,\mathcal{X}$. We can bound the first term like
+\begin{align}
+\label{eqn:initialbound2}
+\begin{split}
+\vert \operatorname{tr}(F_{m_1\vert M_i} F_{m_1\vert M_{i \oplus 1}}\Pi_{\text{relev}}^{(i)}\rho_0\Pi_{\text{relev}}^{(i)})\vert & \leq  \|\sum_{j,k} {}^{'} \vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i} \vert F_{m_1\vert M_i} F_{m_1 \vert M_{i\oplus 1}}\| \\
+& + \|\Pi_{\text{relev}}^{(i)} - \sum_{j,k} {}^{'} \vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i} \vert \| \, \sqrt{\operatorname{tr}(F_{m_1\vert M_i}\rho_0)}\sqrt{\operatorname{tr}(F_{m_1\vert M_{i\oplus 1}}\rho_0)}.
+\end{split}
+\end{align}
+The first term on the right hand side of \ref{eqn:initialbound2} is to leading order $\leq 2\sqrt{\frac{d\epsilon}{\mathcal{X}}}$, which follows from \ref{eqn:cond2new}. The second term is less or equal to
+\begin{equation}
+\label{eqn:tobound}
+\sqrt{\operatorname{tr}(F_{m_1\vert M_i}\rho_0)}\sqrt{\operatorname{tr}(F_{m_1\vert M_{i\oplus 1}}\rho_0)}\left(\sum_{j\neq j'}\sum_{k,k'}{}^{'}\vert \langle \Psi_k^{m_j\vert M_i}\vert \Psi_{k'}^{m_{j'}\vert M_i} \rangle \vert^2\right)^{1/2}.
+\end{equation}
+We thus need to bound the overlap between statistically significant eigenvectors belonging to distinct measurement outcomes.
+
+In the ideal case statistically significant eigenvectors belonging to distinct measurement outcomes are orthogonal. As we will prove now, this orthogonality still holds approximately in a noisy setting, if the noise-characterizing parameter $\epsilon$ is sufficiently small.
+
+Using the fact that $\sum_{\Tilde{j}}F_{m_{\Tilde{j}}\vert M_i}=\mathbb{1}$, we can write
+\begin{align}
+\vert\langle \Psi_k^{m_j\vert M_i} \vert \Psi_{k'}^{m_{j'}\vert M_i}\rangle \vert & \leq \sum_l \vert \langle \Psi_k^{m_j\vert M_i} \vert F_{m_l\vert M_i}\vert \Psi_{k'}^{m_{j'}\vert M_i}\rangle\vert \\
+\label{eqn:toinsert}
+& \leq \sum_{l,r}\lambda_r^{m_l\vert M_i}\vert \langle \Psi_k^{m_j\vert M_i} \vert \alpha_r^{m_l\vert M_i}\rangle \vert \, \vert \langle \alpha_r^{m_l\vert M_i}\vert \Psi_{k'}^{m_{j'}\vert M_i}\rangle \vert.
+\end{align}
+
+If we get rid of the pesky square root in \ref{eqn:tobound} by using the fact that $\|\cdot\|_2\leq \|\cdot\|_1$, insert \ref{eqn:toinsert}, and use the inequality \ref{eqn:cond2new}, we find that the expression \ref{eqn:tobound} is to leading order less or equal to
+\begin{equation}
+6\sqrt{\operatorname{tr}(F_{m_1\vert M_i}\rho_0)}\sqrt{\operatorname{tr}(F_{m_1\vert M_{i\oplus 1}}\rho_0)}\,d^{3/2}\sqrt{\frac{\epsilon}{\mathcal{X}}}.
+\end{equation}
+
+If we consider all terms that contribute to the upper bound on $\vert X_{ij} \vert$, we have one contribution $\propto \mathcal{X}$, as well as one contribution $\propto \mathcal{X}^{-1/2}$. This means that we can no longer choose $\mathcal{X}$ to be arbitrarily small or large, as then one of the two contributions would blow up. To find the optimal value of $\mathcal{X}$, we compute the partial derivative of $\vert X_{ij}\vert$ with respect to $\mathcal{X}$ and set this expression to zero. Defining $ c_i \coloneqq \sqrt{\operatorname{tr}(F_{m_1\vert M_i}\rho_0)}\sqrt{\operatorname{tr}(F_{m_1\vert M_{i\oplus 1}}\rho_0)}$, the optimal value of $\mathcal{X}$ turns out to be $\mathcal{X}=(3 c_i)^{2/3}\thinspace(d \epsilon)^{1/3}$.
+
+Piecing everything together, the final upper bound on $\vert X_{i\,i\oplus 1} \vert$ is
+\begin{equation}
+\vert X_{i\,i\oplus 1} \vert \leq 3(3c_i)^{2/3}\,d^{4/3}\,\epsilon^{1/3}\eqqcolon \delta_{\epsilon,d}.
+\end{equation}
+
+Note that for noisy devices we expect $c_i\approx \cos^2(\theta_n)$, as defined in Section \ref{sec:kcbs}. Importantly, the numerical constant $3(3c_i)^{2/3}$ is operationally accessible.
+
+ 
