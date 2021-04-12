@@ -40,9 +40,11 @@
 \addtotoc{Abstract}  % Add the "Abstract" page entry to the Contents
 \abstract{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
-blah\ldots
+Self-testing allows for powerful inferences about the quantum properties of an adversarial input-output device from a minimal set of assumptions, by only interacting with the device classically. The vast majority of self-testing protocols rely on Bell non-locality. This thesis explores the possibility of self-testing local input-output devices, without the need for entanglement. 
 
-}
+Kochen-Specker contextuality, a generalization of Bell non-locality to single-partite systems, was identified as a resource for self-testing in \cite{Bharti2019}. We study their protocol in detail, derive an improved robustness to noise, and perform a numerical analysis of the constant of proportionality, for the simplest case. Carefully pointing out several problematic assumptions of the protocol, we argue for ways to adapt it. 
+
+Lastly, we propose a novel protocol based on Spekkens' operational notion of contextuality, replacing unphysical assumptions regarding noise-free and commuting measurements with approximate operational equivalences. Furthermore, the certificate of quantumness we propose is inherently robust to noise.
 
 \clearpage  % Abstract ended, start a new page
 %% ----------------------------------------------------------------
@@ -50,13 +52,10 @@ blah\ldots
 \setstretch{1.3}  % Reset the line-spacing to 1.3 for body text (if it has changed)
 
 % The Acknowledgements page, for thanking everyone
-\acknowledgements{
-\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
-
-blah\ldots
-
-}
-\clearpage  % End of the Acknowledgements
+%\acknowledgements{
+%\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+%}
+%\clearpage  % End of the Acknowledgements
 %% ----------------------------------------------------------------
 
 \pagestyle{fancy}  %The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back

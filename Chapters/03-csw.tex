@@ -183,13 +183,13 @@ Let us compare the possible correlations that may arise from commuting POVM to t
     \item \textbf{commuting POVM (Bell-type scenarios):}
     Due to commutativity, the probability of an event $x,y\thinspace\vert\thinspace i,i\oplus 1$ can be calculated like
     \begin{equation*}
-        p(x,y\thinspace\vert\thinspace i,i\oplus 1) = \operatorname{tr}(\rho\thinspace M_x^i\thinspace M_y^{i\oplus 1}).
+        p(x,y\thinspace\vert\thinspace i,i\oplus 1) = \operatorname{tr}(\rho M_x^i M_y^{i\oplus 1}).
     \end{equation*}
     For Bell tests with remote measurement contexts, the joint measurement is given by a tensor product.
     
     If we consider all POVM $i$ to be trivial, $M^i\equiv\{a^i_0\thinspace\mathbb{1}\thinspace,\thinspace a^i_1\thinspace\mathbb{1}\}$, then we find a joint probability distribution for all measurements $M^i$ that is compatible with all measureable marginal correlations for the five measurement contexts,
     \begin{equation*}
-        p(x,y,z,v,w)=a^1_{x}\;a^2_{y}\;a^3_{z}\;a^4_{v}\;a^5_{w}\;,
+        p(x,y,z,v,w)=a^1_{x}\,a^2_{y}\,a^3_{z}\,a^4_{v}\,a^5_{w},
     \end{equation*}
     where $x,\dots,w$ denote the outcomes of the five measurements $M^i$. Finding such a global probability distribution implies that all correlations produced by the experiment are KS non-contextual, and in particular do not violate a KS non-contextuality inequality. To see this, assume an ontic state space that contains one ontic state for each outcome tuple $(x,y,z,v,w)$ and fixes the outcomes of the measurements $M^i$ accordingly. The preparation that assigns the probability $p(x,y,z,v,w)$ to the ontic state corresponding to that outcome tuple reproduces all correlations of the experiment. The ontological model is KS non-contextual, as it is deterministic and assigns outcomes to the individual operators, independent of the context they are measured in. Thus, for Bell scenarios with space-like separated parties, all compatible POVM are commuting, and trivial POVM cannot violate Bell inequalities. As alluded to in Section \ref{sec:bell}, we cannot carry out the same procedure for general contextuality scenarios, as the set of simultaneous eigenvalues for two compatible operators $A$, $B$ is in general not given by the Cartesian product of individual eigenvalues $\sigma(A)\times\sigma(B)$.
     \item \textbf{non-commuting POVM (KS-type scenarios):}

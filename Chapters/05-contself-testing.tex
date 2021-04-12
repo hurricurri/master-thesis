@@ -161,17 +161,18 @@ Z^{\dag}\Tilde{V}_2 & Z^{\dag}Z
 \mathbb{1}_r & \\
 & 0_{n-r}
 \end{pmatrix}
-\right\|_F\;=\;\|WD^{-1}W^{\dag}(\Tilde{X}-X^*)WD^{-1}W^{\dag}\|_F\; & \leq\; \epsilon\thinspace \operatorname{max}\left\{\sigma_{\text{min}}^{(n)}{}^{-2},1\right\}\\ & =\epsilon\thinspace\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\},
+\right\|_F\;=\;\|WD^{-1}W^{\dag}(\Tilde{X}-X^*)WD^{-1}W^{\dag}\|_F\; & \leq\; \epsilon\thinspace \operatorname{max}\left\{\sigma_{\text{min}}^{(n)}{}^{-2},1\right\},
 \end{align*}
 where $\sigma_{\text{min}}^{(n)}$ is the non-zero singular value of $A$ with smallest magnitude, the square of which is the smallest non-zero eigenvalue of $X^*$, $\lambda_{\text{min}}^{(n)}$.
 For the KCBS scenario, $n=5$, we find $\lambda_{\text{min}}^{(n)}=\frac{1}{2}(\sqrt{5}-1)\approx 0.618$.
 
 Therefore,
-\begin{alignat*}{2}
-\|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F & \stackrel{(\triangle)}{\leq}\epsilon\thinspace \operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\} &&\text{ and}\\[0.5em]
-\|Z\|_F & \stackrel{(\square)}{\leq}\epsilon\thinspace\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}+&&\thinspace\mathcal{O}(\epsilon^2\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}^2)\thinspace,
-\end{alignat*}
-where $(\square)$ follows from $(\triangle)$, as we will show. For now, let us assume $(\square)$ to be true.
+\begin{alignat}{2}
+\label{eqn:approxiso}
+\|\Tilde{V}_2^{\dag}\Tilde{V}_2-\mathbb{1}_r\|_F & \leq \epsilon\thinspace \operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\} &&\text{ and}\\[0.5em]\label{eqn:approxzero}
+\|Z\|_F & \leq \epsilon\thinspace\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}+&&\thinspace\mathcal{O} \left(\epsilon^2\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}^2\right)\thinspace,
+\end{alignat}
+where \ref{eqn:approxzero} follows from \ref{eqn:approxiso}, as we will show. For now, let us assume \ref{eqn:approxzero} to be true.
 
 By definition, $X=B^{\dag}WD^{-1}$, and hence
 \begin{equation*}
@@ -195,7 +196,7 @@ W_1^{\dag} \\ W_2^{\dag}
 \end{equation*}
 Therefore,
 \begin{equation*}
-\|B^{\dag}-\Tilde{V}_2\Sigma_r W_1^{\dag}\|_F=\|ZW_2^{\dag}\|_F=\|Z\|_F\leq \epsilon\thinspace \operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}+\mathcal{O}(\epsilon^2\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}^2).
+\|B^{\dag}-\Tilde{V}_2\Sigma_r W_1^{\dag}\|_F=\|ZW_2^{\dag}\|_F=\|Z\|_F\leq \epsilon\thinspace \operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}+\mathcal{O}\left(\epsilon^2\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}^2\right).
 \end{equation*}
 Crucially, $\Tilde{V}_2$ is approximately isometric, which follows from the previously derived bound on $\|\Tilde{V}_2^{\dag}\Tilde{V}_2 -\mathbb{1}_r\|_F$, as we will now prove:
 
@@ -256,9 +257,9 @@ which in particular implies that, for $\epsilon<\operatorname{min}\left\{\lambda
 \begin{equation*}
 \|\Tilde{V}_2-V_2\|_F^{\textstyle ^2} = \sum_{i=1}^r(\Tilde{\sigma_i}-1)^2\leq\epsilon^2\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}^2\thinspace.
 \end{equation*}
-Together, this gives us the desired intermediate result:
+Together, this gives us the desired intermediate result. Namely, up to leading order, 
 \begin{align*}
-\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \|B^{\dag}-\Tilde{V_2}\Sigma_r W_1^{\dag}\|_F + \|(\Tilde{V}_2-V_2)\Sigma_r W_1^{\dag}\|_F \leq & \thinspace\epsilon\thinspace\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}(1+\sigma_{\text{max}}^{(n)})\thinspace \\ & + \mathcal{O}(\epsilon^2\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}^2),
+\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \|B^{\dag}-\Tilde{V_2}\Sigma_r W_1^{\dag}\|_F + \|(\Tilde{V}_2-V_2)\Sigma_r W_1^{\dag}\|_F \leq & \thinspace\epsilon\thinspace\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}\left(1+\sigma_{\text{max}}^{(n)}\right),
 \end{align*}
 where $\sigma_{\text{max}}^{(n)}$ is the maximum singular value of $A^{\dag}$. We take the second term to be negligible. For the KCBS scenario, $n=5$, $\sigma_{\text{max}}^{(n)}=\sqrt{2}$, and consequently $\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \kappa\epsilon$, where $\kappa \approx 3.55$. 
 For $n>7$, one finds numerically that $\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}=1$. Additionally, $\lambda_{\text{max}}^{(n)}=\sigma_{\text{max}}^{(n)}{}^2$ scales linearly in $n$ like $\lambda_{\text{max}}^{(n)}\approx \frac{1}{4}n+1$.
@@ -287,24 +288,24 @@ u_1 \;| & \dots &  | \; u_n
 \begin{pmatrix}
 \Tilde{u}_1-U u_1\; | &\dots& |\;\Tilde{u}_n-U u_n
 \end{pmatrix}
-\|_F\leq\kappa(n)\epsilon + \mathcal{O}(\kappa(n)^2\epsilon^2),
+\|_F\leq\kappa(n)\epsilon + \mathcal{O}\left(\kappa(n)^2\epsilon^2\right),
 \end{align*}
 where vertical lines delimit columns.
 Since the Frobenius norm of an $n\times m$ matrix is just the two norm of the $(n\cdot m)$-long vector containing all matrix entries, we have
 \begin{equation*}
-\forall i\in\{0,\dots,n\}: \|\vert\Tilde{u}_i\rangle-U\vert u_i\rangle\|_2 \leq \kappa(n)\epsilon + \mathcal{O}(\kappa(n)^2\epsilon^2).
+\forall i\in\{0,\dots,n\}: \|\vert\Tilde{u}_i\rangle-U\vert u_i\rangle\|_2 \leq \kappa(n)\epsilon + \mathcal{O}\left(\kappa(n)^2\epsilon^2\right).
 \end{equation*}
-The only thing that remains is proving the inequality $(\square)$. By considering the off-diagonal entries of $X^{\dag}X$, we find that
+The only thing that remains is proving the inequality \ref{eqn:approxzero}. By considering the off-diagonal entries of $X^{\dag}X$, we find that
 \begin{equation*}
 \epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1} \geq \|Z^{\dag}\Tilde{V}_2\|_F=\|Z^{\dag}V_2 - Z^{\dag}(V_2-\Tilde{V}_2)\|_F.
 \end{equation*}
 The reverse triangle inequality and submultiplicativity of the Frobenius norm yields
 \begin{equation*}
-\epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1} \geq \|Z^{\dag}V_2\|_F - \|Z^{\dag}(V_2-\Tilde{V}_2)\|_F \geq \|Z\|_F(1-\|V_2-\Tilde{V}_2\|_F),
+\epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1} \geq \|Z^{\dag}V_2\|_F - \|Z^{\dag}(V_2-\Tilde{V}_2)\|_F \geq \|Z\|_F\,(1-\|V_2-\Tilde{V}_2\|_F),
 \end{equation*}
 which implies
 \begin{equation*}
-\|Z\|_F \leq \epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1} + \mathcal{O}(\epsilon^2\lambda_{\text{min}}^{(n)}{}^{-2})\thinspace.
+\|Z\|_F \leq \epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1} + \mathcal{O}\left(\epsilon^2\lambda_{\text{min}}^{(n)}{}^{-2}\right)\thinspace.
 \end{equation*}
 \end{proof}
 
@@ -377,6 +378,63 @@ Let $\| \ket{a} - \ket{b} \|_2\leq\delta$ for vectors $\ket{a}$ and $\ket{b}$, s
 The proof is found in \cite{Bharti2019} (Lemma 9). As $\vert \langle u_i^{(n)}\vert u_0 \rangle \vert =5^{\frac{1}{4}}$, the assumption in Lemma \ref{lem:selftestingfinallem} is true for sufficiently small $\epsilon$.
 
 Having proved that the only quantum model $\ket{\Psi}$, $\Pi_i$ compatible with a maximal violation of \ref{eqn:oddncycleclass} is \ref{eqn:ncycleideal}, up to a global isometry, and that this self-testing result is robust, we will now analyze what assumptions the protocol in \cite{Bharti2019} requires for practical purposes.
+
+\subsection{Proportionality constant in Lemma \ref{lem:epssuboptgram}}
+\label{sec:propconst}
+
+In order to get a feeling for the constant of proportionality in Lemma \ref{lem:epssuboptgram}, we perform a short numerical analysis for the simplest case, $n=5$. An analytic approach would most likely involve deriving a closed-form expression for the Hölderian error bounds used in \cite{Bharti2019}.
+
+Our strategy to obtain an estimate for the constant of proportionality is to generate a large number of random matrices that are both in the feasible set of the Lovász SDP \ref{eqn:lovaszsdp} and $\epsilon$-suboptimal. The sketch in Figure \ref{fig:feasibleset} helps to visualize the set of matrices from which we sample, although it does not do justice to the large affine dimension of the feasible set. 
+
+
+We generate $\sim 10^4$ feasible, $\epsilon$-suboptimal matrices $\{X_i^{\epsilon}\}_i$ and compute the maximum ratio 
+\begin{equation*}
+\nu_{\epsilon}(n=5)\coloneqq \max_i \, \frac{\|X_i^{\epsilon}-X^{*}\|_F}{\sum_i X^{*}_{ii}-X_{ii}},
+\end{equation*}
+where $X^{*}$ denotes the optimal solution of the SDP \ref{eqn:lovaszsdp} for $n=5$.
+Furthermore, we perform the analysis for different values of $\epsilon$, which range over many orders of magnitude, since we aim to find a universal constant that upper-bounds the ratio between deviation in Frobenius norm and suboptimality. Our estimate for the universal constant is then
+\begin{equation*}
+\nu(n=5)\coloneqq \max_{\epsilon}\, \nu_{\epsilon}(n=5).
+\end{equation*}
+
+The set of Hermitian matrices on $\mathbb{C}^{n+1}$, $\operatorname{Herm}(\mathbb{C}^{n+1})$, is a $(n+1)^2$-dimensional real vector space.
+Define the $(n^2-2n)$-dimensional subspace
+\begin{equation*}
+\bar{\mathcal{A}}\coloneqq \{X\in\operatorname{Herm}(\mathbb{C}^{n+1}) \, \vert \, X_{ii}=X_{0i} \text{ for } 1\leq i \leq n, \text{ and } X_{ij}=0,\text{ } i\sim j\}\subset{\operatorname{Herm}(\mathbb{C}^{n+1})}.
+\end{equation*}
+The affine space
+\begin{equation*}
+\mathcal{A}\coloneqq \bar{\mathcal{A}}+e_{00},
+\end{equation*}
+is obtained by translating the subspace $\bar{\mathcal{A}}$ along the vector $e_{00}$, where $e_{ij}$ is the matrix that has a $1$ at $(i,j)$, and $0$ elsewhere. The feasible set of the Lovász SDP \ref{eqn:lovaszsdp} is then $\mathcal{A}\cap S_{+}^{n+1}$.
+
+To generate appropriate random matrices, we note that the vector connecting $X^{*}$ and any $X_i$ must be in $\bar{\mathcal{A}}$. An ONB of $\bar{\mathcal{A}}$, with respect to the inner product $\langle X,Y\rangle=\operatorname{tr}(X^{\dag}Y)$, is given by the $(n^2-2n)$ matrices
+\begin{alignat*}{2}
+\doublespacing
+& D_i \coloneqq \frac{e_{ii}+e_{0i}+e_{i0}}{\sqrt{3}}&& \text{ , for } 1\leq i\leq n,\\
+& T_{ij} \coloneqq \frac{e_{ij}+e_{ji}}{\sqrt{2}}  && \text{ , for } i \not\sim j, i>j,\\
+& R_{ij} \coloneqq i\frac{e_{ij}-e_{ji}}{\sqrt{2}} && \text{ , for } i\not\sim j, i>j.
+\end{alignat*}
+\onehalfspacing
+By sampling $(n^2-2n)$ real parameters from a Gaussian distribution, we can generate random, normalized shifts that are uniformly distributed on the $(n^2-2n)$-dimensional unit sphere. To get an $\epsilon$-suboptimal matrix, we simply multiply this shift by $\epsilon$. To check whether the shift preserves positive semi-definiteness, we attempt to perform a Cholesky decomposition of the matrix $X^{*}+\epsilon V+10^{-12}\mathbb{1}$. The regularizing term $10^{-12}\mathbb{1}$ accounts for the fact that the Cholesky decomposition can only be computed for positive definite matrices, whereas we want to check for positive semi-definiteness.
+
+Figure \ref{fig:propconst} captures the results of the numerical analysis for $5$ independent trials. We estimate $\nu(n=5)\sim 1.5$.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{images/feasibleset.png}
+\end{center}
+\caption{The feasible set of the Lovász SDP \ref{eqn:lovaszsdp} is a bounded convex set. It is given by the intersection of the set of positive semi-definite matrices $S_{+}^{n+1}$ and the affine space $\mathcal{A}$, as defined in the the text. $Z^{*}$ is the optimal solution of the SDP that is dual to \ref{eqn:lovaszsdp}. The primal optimal solution of \ref{eqn:lovaszsdp} is the unique point of intersection of the feasible set $\mathcal{A}\cap S_{+}^{n+1}$ and the subspace $(Z^{*})^{\perp}$ \cite{Bharti2019}. As such, the subspace $(Z^{*})^{\perp}$ is a supporting hyperplane of the feasible set, which lies entirely on one side of this hyperplane.  Furthermore, the set of $\epsilon$-suboptimal, feasible matrices is given by the intersection of $\mathcal{A}\cap S_{+}^{n+1}$ and $\{X\in \operatorname{Herm}(\mathbb{C}^{n+1})\,\vert\, \langle Z^{*}, X\rangle = \epsilon\}$ \cite{Bharti2019}.}
+\label{fig:feasibleset}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.7\textwidth]{images/propconst.png}
+\end{center}
+\caption{Numerical analysis of the proportionality constant $\nu(n)$ in Lemma \ref{lem:epssuboptgram}, for $n=5$. These values are computed by randomly generating $\sim 10^4$ feasible, $\epsilon$-suboptimal matrices, where $\epsilon$ ranges over several orders of magnitude. Plotted is the maximal ratio between deviation in Frobenius norm and suboptimality, $\nu_{\epsilon}(n=5)$, for $5$ independent trials. Each black dot corresponds to $\sim 10^4$ feasible, $\epsilon$-suboptimal matrices. We estimate the constant of proportionality to be $\max_{\epsilon} \nu_{\epsilon}(n=5)\sim 1.5$.}
+\label{fig:propconst}
+\end{figure}
 
 \section{Assumptions}
 \label{sec:kscontass}
