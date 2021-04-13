@@ -7,11 +7,11 @@ Denote the density operator corresponding to the preparation $P_{m_k\vert M_i}$ 
 \begin{equation}
 \label{eqn:densityop}
 \rho_{m_k\vert M_i} = \sum_m p_m^{m_k\vert M_i} \vert \Psi_m^{m_k\vert M_i}\rangle\langle \Psi_m^{m_k\vert M_i} \vert\thinspace ,
-\end{equation} where $\vert \Psi_m^{m_k\vert M_i} \rangle \in \mathbb{C}^k$, and the positive semi-definite operator corresponding to the measurement event $m_k\,\vert\, M_i$ by
+\end{equation} where $\vert \Psi_m^{m_k\vert M_i} \rangle \in \mathbb{C}^d$, and the positive semi-definite operator corresponding to the measurement event $m_k\,\vert\, M_i$ by
 \begin{equation}
 \label{eqn:mntop}
 F_{m_k\vert M_i}=\sum_l \lambda_l^{m_k\vert M_i} \vert \alpha_l^{m_k\vert M_i}\rangle \langle \alpha_l^{m_k\vert M_i} \vert\thinspace ,
-\end{equation} where $\vert \alpha_l^{m_k\vert M_i} \rangle \in \mathbb{C}^k$.
+\end{equation} where $\vert \alpha_l^{m_k\vert M_i} \rangle \in \mathbb{C}^d$.
 By \ref{eqn:epsilon},
 \begin{align*}
 p(m_k\vert M_i, P_{m_k\vert M_i}) & \geq 1-2\epsilon, \text{ and} \\
@@ -29,13 +29,13 @@ and analogously, for $k'\neq k$,
 \sum_{l,m}\lambda_l^{m_k\vert M_i}p_m^{m_{k'}\vert M_i}\vert \langle \alpha_l^{m_k\vert M_i} \vert \Psi_m^{m_{k'}\vert M_i} \rangle \vert^2 \leq \epsilon.
 \end{equation}
 
-Consider the density operator $\rho_{m_k\vert M_i}$, like in \ref{eqn:densityop}. For eigenvalues $p_m^{m_k\vert M_i}$ of the noisy density operator that are very small, say of the order $\epsilon$, we cannot infer from the statistics $\{p(m_j\thinspace\vert\thinspace M_i, P_{m_k\vert M_i})\}_{j,k}$ alone much about how the accessible measurements act on the corresponding subspace $\mathbb{C}\vert \Psi_m^{m_k\vert M_i}\rangle$, since this subspace is ``insignificant" in terms of statistics. To sidestep this issue, we consider only a ``statistically relevant" subspace of $\mathbb{C}^k$:
+Consider the density operator $\rho_{m_k\vert M_i}$, like in \ref{eqn:densityop}. For eigenvalues $p_m^{m_k\vert M_i}$ of the noisy density operator that are very small, say of the order $\epsilon$, we cannot infer from the statistics $\{p(m_j\thinspace\vert\thinspace M_i, P_{m_k\vert M_i})\}_{j,k}$ alone much about how the accessible measurements act on the corresponding subspace $\mathbb{C}\vert \Psi_m^{m_k\vert M_i}\rangle$ (e.g. almost projectively), since this subspace is ``insignificant" in terms of statistics. To sidestep this issue, we consider only a ``statistically relevant" subspace of $\mathbb{C}^d$:
 Define $\Pi_{\text{relev}}^{(i)}$ as the projector onto the subspace 
 \begin{equation}
 \label{eqn:relevsubspace}
 V_{\text{relev}}^{(i)}=\operatorname{span}\left(\thinspace\bigcup_{k=1}^3\left\{\vert \Psi_m^{m_k\vert M_i}\rangle\right\}_{m:p_m^{m_k\vert M_i}\geq\mathcal{X}}\right).
 \end{equation}
-For now, $\mathcal{X}$ is an arbitrary cutoff, characterizing the minimum magnitude of eigenvalues for which the corresponding eigenvector in \ref{eqn:densityop} spans a statistically relevant one-dimensional subspace. We will later set $\mathcal{X}$ to an appropriate value in terms of $\epsilon$. 
+For now, $\mathcal{X}$ is an arbitrary cutoff characterizing the minimum magnitude of eigenvalues for which the corresponding eigenvector in \ref{eqn:densityop} spans a statistically relevant one-dimensional subspace. We will later set $\mathcal{X}$ to an appropriate value in terms of $\epsilon$. 
 
 The conditions \ref{eqn:cond1} and \ref{eqn:cond2} become
 \begin{equation}
@@ -54,14 +54,16 @@ For notational simplicity, we will write $\sum_{m:p_m^{m_k\vert M_i}\geq \mathca
 \section{Relating the retrospective preparations $\rho_{m_k \vert M_i}$ to $\rho_0$}
 
 Without further assumptions, it is impossible to infer anything about how the measurements $M_i$ act on the preparation $P_0$ from the correlations $p(m_k \, \vert \, M_i , P_{m_l\vert M_j} )$ alone. For instance, we cannot rule out that the density operator $\rho_0$ is in fact orthogonal to all $\rho_{m_l\vert M_j}$. Recall that $P_{m_l\vert M_j}$ is defined as the preparation procedure that involves performing the measurement $M_j$ on the preparation $P_0$, and conditioning on the outcome $m_l$. If we take $\left\{E_l^{(j)}\right\}_l$ to be a set of Kraus operators consistent with the measurement $M_j$, i.e. $E_l^{(j)}{}^{\dag}E_l^{(j)} = F_{m_l\vert M_j}$, one immediately sees that there in fact exists an infinite family of Kraus operators $UE_l^{(j)}$ satisfying this exact condition, where $U$ is an arbitary unitary operator. As such, the post-measurement states are completely undetermined.
-Note that for PVM we are not plagued with this unitary indeterminacy. In order to get ahead, we assume the operational equivalence of some preparations, as detailed at the beginning of Section \ref{sec:boundingmodels}.
+Note that for PVM we are not plagued with this unitary indeterminacy. 
+
+In order to get ahead, we assume the operational equivalence of some preparations, as detailed at the beginning of Section \ref{sec:boundingmodels}.
 
 
 For the convex combinations $S_i$, as defined in \ref{eqn:approxequiv}, we find:
 \begin{equation*}
 \left\|\sum_j p_j^{(i)}\left(\rho_{m_j\vert M_i}-\Pi_{\text{relev}}^{(i)}\rho_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}\right)\right\|_F \leq \sum_j p_j^{(i)}\left\|\thinspace\rho_{m_j\vert M_i}-\Pi_{\text{relev}}^{(i)}\rho_{m_j\vert M_i}\Pi_{\text{relev}}^{(i)}\thinspace\right\|_F \leq d^{1/2}\mathcal{X}.
 \end{equation*}
-Due to operational equivalence $S_i\sim S_{*}$, we can write:
+Due to the operational equivalence $S_i\sim S_{*}$, we can write:
 \begin{equation*}
 \left\|\sum_j q_j(\rho_{j}-\Pi_{\text{relev}}^{(i)}\rho_{j}\Pi_{\text{relev}}^{(i)})\thinspace\right\|_F \leq d^{1/2}\mathcal{X},
 \end{equation*}
@@ -86,7 +88,7 @@ The operators in \ref{eqn:sumtobound} are indeed positive semi-definite: they ar
 \begin{equation*}
 \langle \phi \vert \rho_{j}-\Pi_{\text{relev}}^{(i)}\rho_{j}\Pi_{\text{relev}}^{(i)} \vert \phi \rangle \geq 0,
 \end{equation*}
-for all $\vert \phi\rangle\in\mathbb{C}^k$, as can be verified by expanding an arbitrary $\vert \phi \rangle $ in terms of an ONB with respect to which the projector $\Pi_{\text{relev}}^{(i)}$ is diagonal. Note that we expect $q_0\approx\frac{1}{3}$ for noisy devices.
+for all $\vert \phi\rangle\in\mathbb{C}^d$, as can be verified by expanding an arbitrary $\vert \phi \rangle $ in terms of an ONB with respect to which the projector $\Pi_{\text{relev}}^{(i)}$ is diagonal. Note that we expect $q_0\approx\frac{1}{3}$ for noisy devices.
 
 Loosely speaking, the above implies that, under the assumption of operational equivalence, $\rho_0$ has no statistically significant spectral components that are not in $V_{\text{relev}}^{(i)}$. This allows us to infer how the measurements $M_i$ act on $P_0$ from the correlations $p(m_k \, \vert \, M_i , P_{m_l\vert M_j} )$.
 
@@ -133,7 +135,7 @@ Making use of the triangle and Cauchy-Schwarz inequalities, we obtain
 \end{split}
 \end{equation}
 \onehalfspacing
-where the square root of a positive semi-definite operator is well-defined as the Hermitian operator obtained by replacing all eigenvalues with their respective square roots in some spectral decomposition. In the following, all matrix norms are taken with respect to the Frobenius norm, allowing us to omit the `F' subscript for simplicity.
+where the square root of a positive semi-definite operator is well-defined as the Hermitian operator obtained by replacing all eigenvalues with their respective square roots in some spectral decomposition. In the following, all matrix norms are taken with respect to the Frobenius norm, allowing us to omit the `F' subscript for notational simplicity.
 
 The second term in \ref{eqn:initialbound} is less or equal to $\operatorname{tr}\left(\rho_0-\Pi_{\text{relev}}^{(i)}\rho_0\Pi_{\text{relev}}^{(i)}\right)\leq d\mathcal{X}$. We can bound the first term like
 \begin{align}
@@ -143,11 +145,13 @@ The second term in \ref{eqn:initialbound} is less or equal to $\operatorname{tr}
 & \hspace{11em} + \left\|\Pi_{\text{relev}}^{(i)} - \sum_{j,k} {}^{'} \vert \Psi_k^{m_j\vert M_i}\rangle \langle \Psi_k^{m_j\vert M_i} \vert \, \right\| \,\left[ \operatorname{tr}(F_{m_1\vert M_i}\rho_0)\operatorname{tr}(F_{m_1\vert M_{i\oplus 1}}\rho_0)\right]^{1/2}.
 \end{split}
 \end{align}
-The first term on the right hand side of \ref{eqn:initialbound2} is to leading order $\leq 2\left(\frac{d\epsilon}{\mathcal{X}}\right)^{1/2}$, which follows from \ref{eqn:cond2new}. The second term is less or equal to
+The first term on the right hand side of \ref{eqn:initialbound2} is to leading order $\leq 2\left(\frac{d\epsilon}{\mathcal{X}}\right)^{1/2}$, which follows from \ref{eqn:cond2new}. The second term is equal to
 \begin{equation}
 \label{eqn:tobound}
-\left[\operatorname{tr}(F_{m_1\vert M_i}\rho_0)\operatorname{tr}(F_{m_1\vert M_{i\oplus 1}}\rho_0)\right]^{1/2}\left(\,\sum_{j\neq j'}\sum_{k,k'}{}^{'}\vert \langle \Psi_k^{m_j\vert M_i}\vert \Psi_{k'}^{m_{j'}\vert M_i} \rangle \vert^2\right)^{1/2}.
+\left[\operatorname{tr}(F_{m_1\vert M_i}\rho_0)\operatorname{tr}(F_{m_1\vert M_{i\oplus 1}}\rho_0)\right]^{1/2}\left(\,\sum_{j\neq j'}\sum_{k,k'}{}^{'}\vert \langle \Psi_k^{m_j\vert M_i}\vert \Psi_{k'}^{m_{j'}\vert M_i} \rangle \vert^2\right)^{1/2},
 \end{equation}
+provided that $\epsilon$ is sufficiently small, such that the $\vert \Psi_k^{m_j \vert M_i}\rangle$ are all linearly independent (see below). One obtains this expression by simply writing out the corresponding norm.
+
 We thus need to bound the overlap between statistically significant eigenvectors belonging to distinct measurement outcomes.
 
 In the ideal case statistically significant eigenvectors belonging to distinct measurement outcomes are orthogonal. As we will prove now, this orthogonality still holds approximately in a noisy setting, if the noise-characterizing parameter $\epsilon$ is sufficiently small.
@@ -164,7 +168,7 @@ If we get rid of the pesky square root in \ref{eqn:tobound} by using the fact th
 2\cdot3\left[\operatorname{tr}(F_{m_1\vert M_i}\rho_0)\operatorname{tr}(F_{m_1\vert M_{i\oplus 1}}\rho_0)\right]^{1/2}\,d^{3/2}\left(\frac{\epsilon}{\mathcal{X}}\right)^{1/2}.
 \end{equation}
 
-If we consider all terms that contribute to the upper bound on $\vert X_{ij} \vert$, we have one contribution $\propto \mathcal{X}$, as well as two contribution $\propto \mathcal{X}^{-1/2}$. This means that we can no longer choose $\mathcal{X}$ to be arbitrarily small or large, as then one of the two contributions would blow up. To find the optimal value of $\mathcal{X}$, we compute the partial derivative of $\vert X_{ij}\vert$ with respect to $\mathcal{X}$ and set this expression to zero. Defining $ c_i \coloneqq \left[\operatorname{tr}(F_{m_1\vert M_i}\rho_0)\operatorname{tr}(F_{m_1\vert M_{i\oplus 1}}\rho_0)\right]^{1/2}$, the optimal value of $\mathcal{X}$ turns out to be $\mathcal{X}=\left[(d\epsilon)^{1/2}(3c_i +\frac{1}{d})\right]^{2/3}$. For noisy devices we expect $c_i\approx \cos^2(\theta_n)$, as defined in Section \ref{sec:kcbs}. 
+If we consider all terms that contribute to the upper bound on $\vert X_{ij} \vert$, we have one contribution $\propto \mathcal{X}$, as well as two contribution $\propto \mathcal{X}^{-1/2}$. This means that we can no longer choose $\mathcal{X}$ to be arbitrarily small or large, as then at least one of the contributions would blow up. To find the optimal value of $\mathcal{X}$, we compute the partial derivative of the upper bound on $\vert X_{ij}\vert$ with respect to $\mathcal{X}$ and set this expression to zero. Defining $ c_i \coloneqq \left[\operatorname{tr}(F_{m_1\vert M_i}\rho_0)\operatorname{tr}(F_{m_1\vert M_{i\oplus 1}}\rho_0)\right]^{1/2}$, the optimal value of $\mathcal{X}$ turns out to be $\mathcal{X}=\left[(d\epsilon)^{1/2}(3c_i +\frac{1}{d})\right]^{2/3}$. For noisy devices we expect $c_i\approx \cos^2(\theta_n)$, as defined in Section \ref{sec:kcbs}. 
 
 Piecing everything together, we can bound $\vert X_{i\,i\oplus 1} \vert$ like
 \begin{equation}
@@ -182,45 +186,55 @@ Consider the set of vectors $\{\vert u_i \rangle\}_{i=1}^{n}\subset \mathbb{C}^d
 \begin{split}
 & \vert \langle u'_i \vert u'_{i\oplus 1}\rangle\vert  = 0 \text{, and to leading order}\\[1em] 
 & \|\vert u'_i \rangle - \vert u_i \rangle \|_2 \leq \delta\operatorname{tr}(\rho_0 F_{m_1\vert M_{i\ominus 1}})^{-1/2}\left(1+\frac{\operatorname{tr}(\rho_0 F_{m_1\vert M_{i}})^{1/2}}{\operatorname{tr}(\rho_0 F_{m_1\vert M_{i\ominus 2}})^{1/2}}\right)\eqqcolon \Theta_i^{\delta}, \text{ in case $1\leq i<n$, and} \\[1em]
-& \|\vert u'_n \rangle - \vert u_n\rangle \|_2 \leq \Theta_n^{\delta} + \left[\kappa\, d^{1/2}\left(1-\operatorname{tr}(\rho_{m_1\vert M_i } F_{m_1\vert M_j})\right)^{1/2}
-+ \left(\operatorname{tr}(\rho_0 F_{m_1\vert M_1})-\frac{\operatorname{tr}(\rho_0 F_{m_1\vert M_i})^2}{\operatorname{tr}(\rho_0 F_{m_1\vert M_{n-1}})}\right)\right]^{-1/2}\\[1em]&\hspace{9.1em}\cdot \left[\delta +  \left(\frac{\operatorname{tr}(F_{m_1\vert M_1}\rho_0)}{\operatorname{tr}(F_{m_1\vert M_{n-1}}\rho_0)}\right)^{1/2}\left( \delta + \operatorname{tr}(F_{m_1\vert M_n}\rho_0)^{1/2}\,\Theta_{n-1}^{\delta} \right)\right],
+& \|\vert u'_n \rangle - \vert u_n\rangle \|_2 \leq \Theta_n^{\delta} + \left[\kappa\, d^{1/2}\left(1-\operatorname{tr}(\rho_{m_1\vert M_l } F_{m_1\vert M_m})\right)^{1/2}
++ \left(\operatorname{tr}(\rho_0 F_{m_1\vert M_1})-\frac{\operatorname{tr}(\rho_0 F_{m_1\vert M_l})^2}{\operatorname{tr}(\rho_0 F_{m_1\vert M_{n-1}})}\right)\right]^{-1/2}\\[1em]&\hspace{9.1em}\cdot \left[\delta +  \left(\frac{\operatorname{tr}(F_{m_1\vert M_1}\rho_0)}{\operatorname{tr}(F_{m_1\vert M_{n-1}}\rho_0)}\right)^{1/2}\left( \delta + \operatorname{tr}(F_{m_1\vert M_n}\rho_0)^{1/2}\,\Theta_{n-1}^{\delta} \right)\right],
 \end{split}
 \end{equation*}
-where \[\kappa=2\, \frac{\operatorname{tr}(\rho_0 F_{m_1\vert M_{i}})}{\operatorname{tr}(\rho_0 F_{m_1\vert M_{n-1}})}.\]
-Here, $i\neq j \in \{1,n-1\}$ such that $\operatorname{tr}(\rho_0 F_{m_1\vert M_i})\geq \operatorname{tr}(\rho_0 F_{m_1\vert M_j})$.
+where \[\kappa=2\, \frac{\operatorname{tr}(\rho_0 F_{m_1\vert M_{l}})}{\operatorname{tr}(\rho_0 F_{m_1\vert M_{n-1}})}.\]
+Here, $l\neq m \in \{1,n-1\}$ such that $\operatorname{tr}(\rho_0 F_{m_1\vert M_l})\geq \operatorname{tr}(\rho_0 F_{m_1\vert M_m})$.
 \end{lemma}
 \begin{proof}
 The standard Gram-Schmidt method defines $\vert u'_1 \rangle \coloneqq \vert u_1 \rangle$. Subsequent $\vert u'_i \rangle$, $1< i < n$, are found by subtracting from $\vert u_i \rangle$ its projection onto $\vert u'_{i-1}\rangle$:
 \begin{equation}
-\vert u_i \rangle = \frac{\langle u'_{i-1} \vert u_i \rangle}{\langle  u'_{i-1} \vert  u'_{i-1} \rangle}\vert  u'_{i-1} \rangle.
+\vert u_i' \rangle = \vert  u_i \rangle - \frac{\langle u'_{i-1} \vert u_i \rangle}{\langle  u'_{i-1} \vert  u'_{i-1} \rangle}\vert  u'_{i-1} \rangle.
 \end{equation}
 As such, the statement of Lemma \ref{lem:orthogonalize} holds trivially for $i=1,2$. 
 
-Let $2<i<n$. By the above method, we find that, to leading order,
+Let $2<i<n$. For the above othogonalization algorithm, we find that, to leading order,
 \begin{equation}
 \|\vert u'_i \rangle - \vert u_i \rangle\|_2 \leq \delta\, \|\vert u_{i-1}\rangle\|_2^{-1}\left(1+\frac{\|\vert u_{i} \rangle \|_2}{\|\vert u_{i-2}\rangle \|_2}\right),
 \end{equation}
-and \ref{eqn:orthlem} follows by definition of the $\vert u_i \rangle$. 
+and the statement of Lemma \ref{eqn:orthlem} follows by definition of the $\vert u_i \rangle$. 
 
-The case where $i=n$ is more tedious, since we require that $\vert u'_n \rangle$ be orthogonal to both $\vert u'_1 \rangle = \vert u_1 \rangle$  and $\vert u'_{n-1} \rangle$. To achieve this, we subtract from $\vert u_n \rangle$ its component parallel to $\vert u'_{n-1} \rangle$, as well as its component parallel to \[\vert \bar{u}_1 \rangle=\vert u'_1 \rangle-\frac{\langle u'_{n-1} \vert u'_{1} \rangle}{\langle u'_{n-1}\vert u'_{n-1}\rangle}\vert u'_{n-1} \rangle.\]
+The case where $i=n$ is more tedious, since we require that $\vert u'_n \rangle$ be orthogonal to both $\vert u'_1 \rangle = \vert u_1 \rangle$  and $\vert u'_{n-1} \rangle$. To achieve this, we subtract from $\vert u_n \rangle$ its component parallel to $\vert u'_{n-1} \rangle$, as well as its component parallel to 
+\begin{equation}
+\vert \bar{u}_1 \rangle=\vert u'_1 \rangle-\frac{\langle u'_{n-1} \vert u'_{1} \rangle}{\langle u'_{n-1}\vert u'_{n-1}\rangle}\vert u'_{n-1} \rangle.
+\end{equation}
 
-The computation of the upper bound on $\|\vert u'_n \rangle - \vert u_n\rangle \|_2$ is analogous to the case where $i<n$, with the notable exception that, in order to get a meaningful upper bound, we must prove that $\|\vert \bar{u}_1 \rangle \|_2$ is non-zero. In particular, we want that $\delta\|\vert \bar{u}_1 \rangle \|_2^{-1}$ remains small, since $\vert u'_n \rangle$ includes correction terms $\sim \delta \| \vert \bar{u}_1 \rangle \|_2^{-1}$. Fortunately, it turns out that $\| \vert \bar{u}_1 \rangle \|_2 \geq \mathcal{O}\left(\eta\right)$, where $\eta$ is defined in Section \ref{sec:certifyquant}. We will later set $\delta$ to $\max_i \vert X_{i\,i\oplus 1}\vert \leq \mathcal{O}\left(d^{4/3}\epsilon^{1/3}\right)$, and assume that $\epsilon$ is much smaller than $\eta=\mathcal{O}(\frac{1}{n})$.
+The computation of the upper bound on $\|\vert u'_n \rangle - \vert u_n\rangle \|_2$ is analogous to the case where $i<n$, with the notable exception that, in order to get a meaningful upper bound, we must prove that $\|\vert \bar{u}_1 \rangle \|_2$ is non-zero. In particular, we want that $\delta_{\epsilon,d}\|\vert \bar{u}_1 \rangle \|_2^{-1}$ remains small, since $\vert u'_n \rangle$ includes correction terms $\sim \delta \| \vert \bar{u}_1 \rangle \|_2^{-1}$. Fortunately, it turns out that $\| \vert \bar{u}_1 \rangle \|_2 \geq \mathcal{O}\left(\eta\right)$, where $\eta$ is defined in Section \ref{sec:certifyquant}. We will later set $\delta$ to $\max_i \vert X_{i\,i\oplus 1}\vert \leq \mathcal{O}\left(d^{4/3}\epsilon^{1/3}\right)$, and assume that $\epsilon$ is much smaller than $\eta=\mathcal{O}(\frac{1}{n})$.
 
-En route to lower bounding $\| \vert \bar{u}_1 \rangle \|_2^{2} = \langle \bar{u}_1\vert \bar{u}_1 \rangle \approx \langle u_1 \vert u_1 \rangle - \frac{\vert \langle u_1 \vert u_{n-1}\rangle \vert ^2}{\langle u_{n-1} \vert u_{n-1}\rangle}$, we show that \[\left\|\Pi_{\text{relev}}^{(1)}F_{m_1\vert M_{n-1}}-\sum_k{}^{'}\vert \Psi_k^{m_1\vert M_1} \rangle \langle \Psi_k^{m_1\vert M_1} \vert \right\| \leq 2\left( \frac{1-  \operatorname{tr}(\rho_{m_1\vert M_1}F_{m_1\vert M_{n-1}}) }{\mathcal{X}} \right).\] This is a direct consequence of Lemma \ref{lem:approxproj}.
-From this intermediate result, setting \[\mathcal{X}\propto\left(\frac{1-\operatorname{tr}(\rho_{m_1\vert M_1}F_{m_1\vert M_{n-1}})}{d}\right)^{1/2},\] it follows that 
+En route to lower bounding $\| \vert \bar{u}_1 \rangle \|_2^{2} = \langle \bar{u}_1\vert \bar{u}_1 \rangle \approx \langle u_1 \vert u_1 \rangle - \frac{\vert \langle u_1 \vert u_{n-1}\rangle \vert ^2}{\langle u_{n-1} \vert u_{n-1}\rangle}$, we show that 
+\begin{equation}
+\left\|\Pi_{\text{relev}}^{(1)}F_{m_1\vert M_{n-1}}-\sum_k{}^{'}\vert \Psi_k^{m_1\vert M_1} \rangle \langle \Psi_k^{m_1\vert M_1} \vert \right\| \leq 2\left( \frac{1-  \operatorname{tr}(\rho_{m_1\vert M_1}F_{m_1\vert M_{n-1}}) }{\mathcal{X}} \right).
+\end{equation} This is a direct consequence of Lemma \ref{lem:approxproj}.
+From this intermediate result, setting \begin{equation}
+\mathcal{X}\propto\left(\frac{1-\operatorname{tr}(\rho_{m_1\vert M_1}F_{m_1\vert M_{n-1}})}{d}\right)^{1/2},\end{equation}
+ it follows that 
 \begin{equation}
 \begin{split}
 \langle u_1 \vert u_{n-1}\rangle =  \operatorname{tr}(\rho_0 F_{m_1 \vert M_1} F_{m_1 \vert M_{n-1}}) = \operatorname{tr}(\rho_0F_{m_1\vert M_1}) +\mathcal{O}\left(d^{1/2} \left(1-\operatorname{tr}(\rho_{m_1\vert M_1}F_{m_1\vert M_{n-1}})\right)^{1/2} \right).
 \end{split}
 \end{equation}
-We can also substitute $\sum_k{}^{'}\vert \Psi_k ^{m_1\vert M_{n-1}}\rangle \langle \Psi_k ^{m_1\vert M_{n-1}} \vert$ for $\Pi_{\text{relev}}^{(n-1)}F_{m_1\vert M_1}$, giving us
-\[\langle u_1 \vert u_{n-1}\rangle = \operatorname{tr}(\rho_0 F_{m_1\vert M_i}) +  \mathcal{O}\left(d^{1/2} \left(1-\operatorname{tr}(\rho_{m_1\vert M_i}F_{m_1\vert M_j})\right)^{1/2} \right),\]
-where $i\neq j \in \{1,n-1\}$ and $\operatorname{tr}(\rho_0 F_{m_1\vert M_i})\geq \operatorname{tr}(\rho_0 F_{m_1\vert M_j})$.
+We can also substitute $\sum_k{}^{'}\vert \Psi_k ^{m_1\vert M_{n-1}}\rangle \langle \Psi_k ^{m_1\vert M_{n-1}} \vert$ for $\Pi_{\text{relev}}^{(n-1)}F_{m_1\vert M_1}$, again giving us\vspace{0.5em}
+\begin{equation}
+\langle u_1 \vert u_{n-1}\rangle = \operatorname{tr}(\rho_0 F_{m_1\vert M_i}) +  \mathcal{O}\left(d^{1/2} \left(1-\operatorname{tr}(\rho_{m_1\vert M_l}F_{m_1\vert M_m})\right)^{1/2} \right),\end{equation}
+\vspace{0.5em}
+where $l\neq m \in \{1,n-1\}$ and $\operatorname{tr}(\rho_0 F_{m_1\vert M_l})\geq \operatorname{tr}(\rho_0 F_{m_1\vert M_m})$.
 
 Noting that $\langle u_1 \vert u_{n-1} \rangle \leq \left(\operatorname{tr}(\rho_0F_{m_1\vert M_1})\operatorname{tr}(\rho_0F_{m_1\vert M_{n-1}})\right)^{1/2}\leq \max_{i\in \{1,n-1\}} \operatorname{tr}(\rho_0 F_{m_1\vert M_i})$, we conclude that 
-\[\begin{split} \|\vert \bar{u}_1 \rangle \|_2^2  & \geq \left[\operatorname{tr}(\rho_0 F_{m_1\vert M_1})-\frac{\operatorname{tr}(\rho_0 F_{m_1\vert M_i})^2}{\operatorname{tr}(\rho_0 F_{m_1\vert M_{n-1}})}\right]+ 2\,d^{1/2}\frac{\operatorname{tr}(\rho_0 F_{m_1\vert M_i})}{\operatorname{tr}(\rho_0 F_{m_1\vert M_{n-1}})}\left(1-\operatorname{tr}(\rho_{m_1\vert M_i} F_{m_1\vert M_j})\right)^{1/2} \\[1em]
-& = \left[\operatorname{tr}(\rho_0 F_{m_1\vert M_1})-\frac{\operatorname{tr}(\rho_0 F_{m_1\vert M_i})^2}{\operatorname{tr}(\rho_0 F_{m_1\vert M_{n-1}})}\right]+\kappa\, d^{1/2}\left(1-\operatorname{tr}(\rho_{m_1\vert M_i} F_{m_1\vert M_j})\right)^{1/2}, \end{split}\]
-where we defined \[\kappa\coloneqq 2\,\frac{\operatorname{tr}(\rho_0 F_{m_1\vert M_i})}{\operatorname{tr}(\rho_0 F_{m_1\vert M_{n-1}})}.\]
+\[\begin{split} \|\vert \bar{u}_1 \rangle \|_2^2  & \geq \left[\operatorname{tr}(\rho_0 F_{m_1\vert M_1})-\frac{\operatorname{tr}(\rho_0 F_{m_1\vert M_l})^2}{\operatorname{tr}(\rho_0 F_{m_1\vert M_{n-1}})}\right]+ 2\,d^{1/2}\frac{\operatorname{tr}(\rho_0 F_{m_1\vert M_l})}{\operatorname{tr}(\rho_0 F_{m_1\vert M_{n-1}})}\left(1-\operatorname{tr}(\rho_{m_1\vert M_l} F_{m_1\vert M_m})\right)^{1/2} \\[1em]
+& = \left[\operatorname{tr}(\rho_0 F_{m_1\vert M_1})-\frac{\operatorname{tr}(\rho_0 F_{m_1\vert M_l})^2}{\operatorname{tr}(\rho_0 F_{m_1\vert M_{n-1}})}\right]+\kappa\, d^{1/2}\left(1-\operatorname{tr}(\rho_{m_1\vert M_l} F_{m_1\vert M_m})\right)^{1/2}, \end{split}\]
+where we defined \[\kappa\coloneqq 2\,\frac{\operatorname{tr}(\rho_0 F_{m_1\vert M_l})}{\operatorname{tr}(\rho_0 F_{m_1\vert M_{n-1}})}.\]
 
 
 \end{proof}
@@ -233,8 +247,8 @@ assuming that $\epsilon$ is much smaller than $\zeta$.
 \begin{proof}
 The expression \[\left\| \Pi_{\text{relev}}^{(1)}-\sum_j \sum_k{}^{'}\vert \Psi_k^{m_1\vert M_1}\rangle \langle \Psi_k^{m_1\vert M_1} \vert \right\| =  \left(\sum_{j\neq j'}\sum_{k,k'}{}^{'}\vert \langle \Psi_k^{m_1\vert M_1} \vert  \Psi_k^{m_1\vert M_1} \rangle \vert ^2 \right)^{1/2}\] already appeared in \ref{eqn:tobound}, and we found an upper bound $\mathcal{O}\left(d^{3/2}\left(\frac{\epsilon}{\mathcal{X}}\right)^{1/2}\right)$. As such,
 \[\begin{split}
-\left\|\Pi_{\text{relev}}^{(1)}F_{m_1\vert M_{n-1}}-\sum_k{}^{'}\vert \Psi_k^{m_1\vert M_1} \rangle \langle \Psi_k^{m_1\vert M_1} \vert \right\| & \leq \mathcal{O}\left(d^{3/2}\left(\frac{\epsilon}{\mathcal{X}}\right)^{1/2}\right) + \left\| \left(F_{m_1\vert M_i}-\mathbb{1}\right)\sum_k{}^{'}\vert \Psi_k^{m_1\vert M_i}\rangle \langle \Psi_k^{m_1\vert M_i} \vert \right\| \\[0.5em]
-&\hspace{1em} +\left\|\sum_{j\neq 1}\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_1} \rangle \langle \Psi_k^{m_j\vert M_1} \vert F_{m_1\vert M_i}\right\| \\[0.8em]
+\left\|\Pi_{\text{relev}}^{(1)}F_{m_1\vert M_{n-1}}-\sum_k{}^{'}\vert \Psi_k^{m_1\vert M_1} \rangle \langle \Psi_k^{m_1\vert M_1} \vert \right\| & \leq \mathcal{O}\left(d^{3/2}\left(\frac{\epsilon}{\mathcal{X}}\right)^{1/2}\right) + \left\| \left(F_{m_1\vert M_{n-1}}-\mathbb{1}\right)\sum_k{}^{'}\vert \Psi_k^{m_1\vert M_1}\rangle \langle \Psi_k^{m_1\vert M_1} \vert \right\| \\[0.5em]
+&\hspace{1em} +\left\|\sum_{j\neq 1}\sum_k{}^{'}\vert \Psi_k^{m_j\vert M_1} \rangle \langle \Psi_k^{m_j\vert M_1} \vert F_{m_1\vert M_{n-1}}\right\| \\[0.8em]
 & \leq 2 \frac{\zeta}{\mathcal{X}},
 \end{split}\]
 
@@ -243,7 +257,7 @@ where we used \ref{eqn:cond1new} and \ref{eqn:cond2new}, substituting $\epsilon\
 \end{proof}
 
 Define $X_{ij}'=\langle u_i' \vert u_j'\rangle$, where $\{\vert u_i' \rangle\}_{i=0}^{n}$ is the set of vectors introduced in Lemma \ref{lem:orthogonalize}. We left $\vert u_0 \rangle$ untouched, therefore $\vert u_0' \rangle \coloneqq \vert u_0 \rangle$. 
-Lastly, we enforce the constraints $X_{0i}'=X_{ii}'$, by multiplying each $\vert u_i' \rangle$ with $\frac{X_{0i}'}{X_{ii}'}$, giving us $\vert \Tilde{u}_i \rangle \coloneqq \frac{X_{0i}'}{X_{ii}'} \vert u_i' \rangle$. This preserves positive semi-definiteness, since any matrix whose entries are given by the inner product between vectors from a given set, in this case $\{\vert \Tilde{u}_i \rangle\}_{i=1}^n$, is by construction positive semi-definite. To leading order \[\frac{X_{0i}'}{X_{ii}'}=1+\frac{X_{0i}'-X_{ii}'}{X_{0i}'},\]
+Lastly, we enforce the constraints $X_{0i}'=X_{ii}'$ by multiplying each $\vert u_i' \rangle$ with $\frac{X_{0i}'}{X_{ii}'}$, giving us $\vert \Tilde{u}_i \rangle \coloneqq \frac{X_{0i}'}{X_{ii}'} \vert u_i' \rangle$. This preserves positive semi-definiteness, since any matrix whose entries are given by the inner product between vectors from a given set, in this case $\{\vert \Tilde{u}_i \rangle\}_{i=1}^n$, is by construction positive semi-definite. To leading order \[\frac{X_{0i}'}{X_{ii}'}=1+\frac{X_{0i}'-X_{ii}'}{X_{0i}'},\]
 and \[\|\vert \Tilde{u}_i \rangle - \vert u_i \rangle\|_2 \leq \|\vert u_i \rangle -\vert u_i' \rangle\|_2+\|\vert u_i'\rangle\|_2 \left| \frac{X_{0i}'-X_{ii}'}{X_{0i}'} \right|,\]
 giving us \[\|\vert \Tilde{u}_i \rangle - \vert u_i \rangle\|_2\leq \|\vert u_i \rangle -\vert u_i' \rangle\|_2\,\left[3+\operatorname{tr}(\rho_0 F_{m_1\vert M_i})^{-1/2}\right].\]
 Finally, Lemma \ref{lem:orthogonalize} implies that \[\|\vert \Tilde{u}_i \rangle - \vert u_i \rangle\|_2 \leq \mathcal{O}\left(d^{13/12}\,\epsilon^{1/3}\,\eta^{-1/4}\right). \]
