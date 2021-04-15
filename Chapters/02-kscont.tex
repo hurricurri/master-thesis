@@ -1,7 +1,8 @@
+\part{Contextuality}
 \chapter{Kochen-Specker contextuality}
 \label{sec:kscontextuality}
 \lhead{\emph{Kochen-Specker contextuality}}
-Sections \ref{sec:threeboxes}-\ref{sec:bell} are in part adapted from.
+Sections \ref{sec:threeboxes}-\ref{sec:bell} are adapted from a proseminar literature review by the author, conducted in the spring semester 2020.
 
 The Kochen-Specker (KS) Theorem \cite{Kochen1968} is the often overlooked brother of Bell's monumental no-go theorem \cite{Bell1964}. In loose terms, Bell's Theorem proves that quantum mechanics (QM) cannot be described in terms of a local hidden variable model (HVM). A ``Bell inequality" is a condition measurement correlations must obey, for them to permit a local HVM description. Violations of Bell inequalities have been observed in numerous experiments: The well-known Delft experiment of 2015 was the first loophole-free confirmation of such violations \cite{Hensen2015}. As will be discussed in Section \ref{sec:bell}, Bell locality and KS non-contextuality are closely related, locality being the weaker assumption and justified by special relativity. Nevertheless, the KS Theorem has several distinct features that deserve to be studied in their own right. Most notably, KS contextuality allows one to examine how even single quantum systems are incompatible with a seemingly orthodox classical description in terms of hidden variables \cite{Pusey2019}. In contrast, Bell tests require two or more space-like separated quantum systems, in order for the measurement statistics to exhibit Bell non-locality. The reason for this is that we observe violations of Bell inequalities for entangled quantum systems. An immediate consequence is that the notion of KS contextuality applies to a much broader class of experiments.
 
@@ -25,7 +26,7 @@ Informally, the KS Theorem states the following:
 A non-contextual deterministic HVM of QM for Hilbert spaces of dimension $\geq3$ is impossible.
 \end{theorem}
 
-It is tempting to try to recast Specker's “three boxes” example to the realm of quantum theory. Within the theory of QM, compatible measurements are conventionally represented by commuting Hermitian operators. To implement the example in QM, we would have to find a quantum state $|\Psi\rangle$ and pairwise commuting two-outcome measurements $M_{1}$, $M_{2}$, $M_{3}$ not all simultaneously measurable, such that QM predicts $p(\text{anti-correlated})>\frac{2}{3}$. For the same reasons, this would imply that non-contextual deterministic HVM are not compatible with the predictions of QM and would prove the KS Theorem, albeit initially only for a fixed dimension that may be greater than 3. However, if all three measurements are pairwise commuting, they necessarily have a joint eigenbasis. Thus, all three measurements could be simultaneously performed and correlations with $p(\text{success})>\frac{2}{3}$ could not arise. Despite this, Sections \ref{sec:formalproof}, \ref{sec:4dim} feature examples that are similar in spirit, if a little more involved, and which can indeed be implemented by QM.
+It is tempting to try to recast Specker's “three boxes” example to the realm of quantum theory. Within the theory of QM, compatible measurements are conventionally represented by commuting Hermitian operators. To implement the example in QM, we would have to find a quantum state $|\Psi\rangle$ and pairwise commuting two-outcome measurements $M_{1}$, $M_{2}$, $M_{3}$ not all simultaneously measurable, such that QM predicts $p(\text{anti-correlated})>\frac{2}{3}$. For the same reasons, this would imply that non-contextual deterministic HVM are not compatible with the predictions of QM and would prove the KS Theorem, albeit initially only for a fixed dimension that may be greater than 3. However, if all three measurements are pairwise commuting, they necessarily have a joint eigenbasis. Thus, all three measurements could be simultaneously performed and correlations with $p(\text{success})>\frac{2}{3}$ could not arise. Despite this, Sections \ref{sec:formalproof}, \ref{sec:4dim}, \ref{sec:kcbs} feature examples that are similar in spirit, if a little more involved, and which can indeed be implemented by QM.
 
 Specker hypothesized pairwise compatibility implying global compatibility to be the ``fundamental theorem of QM" that shapes the set of quantum correlations \cite{Cabello2012}. This is supported by the fact that for many correlation experiments the ``theorem" singles out correlations that are compatible with QM (and projective measurements) and offers an explanation for why quantum correlations cannot exceed certain mystifying bounds we will encounter in Section \ref{sec:cswhierarch} \cite{Cabello2013}.
 
@@ -33,7 +34,7 @@ Before we can discuss the KS Theorem and its proof in formal terms, as is done i
 
 \section{General framework of hidden variable models}
 \label{sec:hvm}
-An ontological model of QM\footnote{The following applies more generally for ontological models of arbitrary operational theories. An operational theory is one that makes testable predictions.}, more commonly referred to as a hidden variable model (HVM), presupposes some ontic state space $\Lambda$. An ontic state $\lambda\in\Lambda$ is a state of reality or “matter of fact” description of the system. It holds all attributes of the system, regardless of whether they are known or even knowable (hence hidden variables). Importantly, a HVM posits that our system is at each time point in some ontic state with corresponding definite attributes, even when these are not being subjected to measurements. In the case of KS contextuality we will only consider \textbf{deterministic} HVM, meaning that an ontic state fixes the outcomes of all possible measurements that may be performed on the system. Uncertainty in the ontic state that was prepared results in a probabilistic distribution of measurement outcomes. It is helpful to formalize this and boil the assumptions down to a simple mathematical model. We follow the notation and terminology of \cite{Spekkens2005}.
+An ontological model of QM\footnote{The following applies more generally to ontological models of arbitrary operational theories. An operational theory is one that makes testable predictions.}, more commonly referred to as a hidden variable model (HVM), presupposes some ontic state space $\Lambda$. An ontic state $\lambda\in\Lambda$ is a state of reality or “matter of fact” description of the system. It holds all attributes of the system, regardless of whether they are known or even knowable (hence hidden variables). Importantly, a HVM posits that our system is at each time point in some ontic state with corresponding definite attributes, even when these are not being subjected to measurements. In the case of KS contextuality, we will only consider \textbf{deterministic} HVM, meaning that an ontic state fixes the outcomes of all possible measurements that may be performed on the system. Uncertainty in the ontic state that was prepared results in a probabilistic distribution of measurement outcomes. It is helpful to formalize this and boil the assumptions down to a simple mathematical model. We follow the notation and terminology of \cite{Spekkens2005}.
 
 With any preparations $P$ one can associate a probability density function $\mu_{P}(\lambda)$ on the ontic state space $\Lambda$. One can think of a preparation as an ensemble of systems, much like in the spirit of statistical mechanics, whereby each individual member of the ensemble is in some well-defined ontic state $\lambda\in\Lambda$. The probability of picking a system from the ensemble at random with a hidden parameter contained in some region $\mathcal{A}\subset\Lambda$, is then given by $\int_{\mathcal{A}}\mu_{P}(\lambda)d\lambda$. By normalization, we require that $\int_{\Lambda}\mu_{P}(\lambda)d\lambda=1$.
 
@@ -41,14 +42,14 @@ Measurements $M$ can be associated with sets of indicator functions $\left\{ \xi
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\textwidth]{images/hvm.png}
-    \caption{Summary of the constituents characterizing a deterministic HVM for the case of a two-outcome measurement.\hfill\break A system's ontic state space $\Lambda$, here depicted as a one-dimensional axis, comprises all possible states of reality. A state preparation $P$ can be associated with a probability density function on $\Lambda$, modelling the uncertainty in the prepared ontic state. A deterministic HVM associates with any measurement $M$, here a two-outcome measurement with outcomes $m\in\{0,1\}$, a set of indicator functions $\{\xi_{M,m}\}_m$. The indicator function to measurement outcome $m$, $\xi_{M,m}:\Lambda\rightarrow\{0,1\}$, maps each ontic state to the probability of observing outcome $m$, conditioned on the system being in that ontic state.}
+    \includegraphics[width=0.55\textwidth]{images/hvm.png}
+    \caption{Summary of the constituents characterizing a deterministic HVM for the case of a two-outcome measurement.\hfill\break A system's ontic state space $\Lambda$, here depicted as a one-dimensional axis, comprises all possible states of reality. A state preparation $P$ can be associated with a probability density function on $\Lambda$, modelling the uncertainty in the prepared ontic state. A deterministic HVM associates with any measurement $M$, here a two-outcome measurement with outcomes $m\in\{0,1\}$, a set of indicator functions $\{\xi_{M,m}\}_m$. The indicator function to measurement outcome $m$, ${\xi_{M,m}:\Lambda\rightarrow\{0,1\}}$, maps each ontic state to the probability of observing outcome $m$, conditioned on the system being in that ontic state.}
     \label{fig:hvm}
 \end{figure}
 
 \section{Measurements in quantum mechanics}
 \label{sec:mnts}
-Section \ref{sec:kscont} will define the notion of KS non-contextuality that is at the heart of the KS Theorem. It is an assumption about the type of HVM the theorem rules out and, in loose terms, pertains to the measurements within such a HVM. To set the stage for discussing KS non-contextuality, this section introduces two ways of representing (projective) measurements in QM. As will be proved in Section \ref{sec:kscont}, the two notions of measurements will give us two equivalent notions of KS non-contextuality, each of which will be particularly useful for certain purposes. Note that within the framework of KS contextuality we assume all quantum measurements to be projective. On the other hand, in quantum information theory, a general quantum measurement is given by a set of positive semi-definite operators that sum to the identity, a so-called positive operator valued measure (POVM) \cite{Nielsen2010}. A projective measurement, or projection-valued measure (PVM), is also a POVM, however the reverse generally does not hold. The two are related in the sense that every POVM can be seen as a PVM acting on an extended Hilbert space, followed by us discarding some degrees of freedom, a consequence of Naimark's dilation theorem \cite{Watrous2018}. Thus, assuming all quantum measurements to be projective is in principle consistent with the existence of POVMs. In Section \ref{sec:spekkcont}, we present a revision of the traditional notion of KS contextuality due to Spekkens. Spekkens contextuality is defined largely in terms of operational primitives and is able to accommodate more general POVM quantum measurements. As physical measurements are non-ideal, we must account for these in view of our goal to certify quantum properties of a single quantum device under operational assumptions.
+Section \ref{sec:kscont} will define the notion of KS non-contextuality that is at the heart of the KS Theorem. It is an assumption about the type of HVM the theorem rules out and, in loose terms, pertains to the measurements within such a HVM. To set the stage for discussing KS non-contextuality, this section introduces two ways of representing (projective) measurements in QM. As will be proved in Section \ref{sec:kscont}, the two notions of measurements will give us two equivalent notions of KS non-contextuality, each of which will be particularly useful for certain purposes. Note that within the framework of KS contextuality, we assume all quantum measurements to be projective. On the other hand, in quantum information theory, a general quantum measurement is given by a set of positive semi-definite operators that sum to the identity, a so-called positive operator valued measure (POVM) \cite{Nielsen2010}. A projective measurement, or projection-valued measure (PVM), is also a POVM, however the reverse generally does not hold. The two are related in the sense that every POVM can be seen as a PVM acting on an extended Hilbert space, followed by us discarding some degrees of freedom, a consequence of Naimark's dilation theorem \cite{Watrous2018}. Thus, assuming all quantum measurements to be projective is in principle consistent with the existence of POVMs. In Section \ref{sec:spekkcont}, we present a revision of the traditional notion of KS contextuality due to Spekkens. Spekkens contextuality is defined largely in terms of operational primitives and is able to accommodate more general POVM quantum measurements. As physical measurements are non-ideal, we must account for these in view of our goal to certify quantum properties of a single quantum device under operational assumptions.
 
 The conventional way of representing projective measurements in QM is in terms of Hermitian operators, with every measurement being relatable to a set of pairwise commuting and thus simultaneously measurable operators that share a common eigenbasis. Measurement outcomes are tuples of simultaneous eigenvalues. The spectrum of a Hermitian operator A is denoted by $\sigma(A)$ and the set of all Hermitian operators on a Hilbert space $\mathcal{H}$ is denoted by $\operatorname{Herm}(\mathcal{H})$. 
 
@@ -199,7 +200,7 @@ Thus, commuting operators are mapped to simultaneous eigenvalues, and $\nu$ is a
 \section{Formal statement and proof of the KS Theorem}
 \label{sec:formalproof}
 
-The KS Theorem was first proved by Kochen and Specker in 1968 \cite{Kochen1968}. Previously, Bell independently proved that a deterministic HVM of QM that induces a non-contextual value assignment like in Definition \ref{def:kscontbasis}, must be contextual \cite{Bell1966}. However his proof was deemed less convincing, as it used a continuum of vector directions, as opposed to an explicit finite set \cite{Mermin1993}.
+The KS Theorem was first proved by Kochen and Specker in 1968 \cite{Kochen1968}. Previously, Bell independently proved that a deterministic HVM of QM that induces a non-contextual value assignment like in Definition \ref{def:kscontbasis} is contradictory \cite{Bell1966}. However his proof was deemed less convincing, as it used a continuum of vector directions, as opposed to an explicit finite set \cite{Mermin1993}.
 
 We are now ready to reformulate the KS Theorem in precise mathematical terms (adapted from \cite{Pusey2019}):
 
@@ -210,7 +211,7 @@ For all projective Hilbert spaces $\mathcal{P}(\mathcal{H})$ of dimension $\geq3
 
 The existence of such a set $\mathcal{S}$ is in contradiction with any attempt of a KS non-contextual deterministic HVM of QM, as KS non-contextuality implies a valid value assignment for every possible ontic state of the system. Thus the KS Theorem effectively states the impossibility of a non-contextual deterministic HVM. 
 
-As Pusey notes \cite{Pusey2019}, all assumptions (outcome determinism, context independence and Hilbert spaces of dimension $\ge3$) of the KS Theorem are necessary for the proof of impossibility. If we allow for context dependence, such a value assignment can be given for all sets $\mathcal{S}$, as we can assign appropriate values for each measurement contained in $\mathcal{S}$. Furthermore, relaxing the assumption of outcome determinism to an assignment of probabilities $\tilde{\omega}:\mathcal{S}\rightarrow\left[0,1\right]$ spoils the proof of impossibility, as a valid value assignment $\tilde{\omega}$ is given for instance by the Born rule: $\tilde{\omega}(\ket{\Psi_{i}} )\coloneqq\operatorname{tr}(\rho\ket{\Psi_{i}} \bra{\Psi_{i}})$ for some non-negative (Hermitian) operator $\rho$ with $\operatorname{tr}(\rho)=1$. Lastly, for Hilbert spaces of dimension 2, it is possible to give an explicit form of a non-contextual deterministic HVM \cite{Mermin1993}. The deeper reason for why our proof does not extend to the two-dimensional case is that it makes heavy use of overlapping ONB (measurement contexts) in the construction of $\mathcal{S}$, meaning different measurements that share at least one ray. These will be key in establishing a contradiction for dimensions $\geq3$. However, for two-dimensional Hilbert spaces, it is impossible to construct overlapping and distinct ONB, as a single ray fixes the ONB.
+As Pusey notes \cite{Pusey2019}, all assumptions (outcome determinism, context independence and Hilbert spaces of dimension $\ge3$) of the KS Theorem are necessary for the proof of impossibility. If we allow for context dependence, such a value assignment can be given for all sets $\mathcal{S}$, as we can assign appropriate values for each measurement contained in $\mathcal{S}$. Furthermore, relaxing the assumption of outcome determinism to an assignment of probabilities $\tilde{\omega}:\mathcal{S}\rightarrow\left[0,1\right]$ spoils the proof of impossibility, as a valid value assignment $\tilde{\omega}$ is given for instance by the Born rule: $\tilde{\omega}(\ket{\Psi_{i}} )\coloneqq\operatorname{tr}(\rho\ket{\Psi_{i}} \bra{\Psi_{i}})$ for some positive semi-definite (Hermitian) operator $\rho$ with $\operatorname{tr}(\rho)=1$. Lastly, for Hilbert spaces of dimension 2, it is possible to give an explicit form of a non-contextual deterministic HVM \cite{Mermin1993}. The deeper reason for why our proof does not extend to the two-dimensional case is that it makes heavy use of overlapping ONB (measurement contexts) in the construction of $\mathcal{S}$, meaning different measurements that share at least one ray. These will be key in establishing a contradiction for dimensions $\geq3$. However, for two-dimensional Hilbert spaces, it is impossible to construct overlapping and distinct ONB, as a single ray fixes the ONB.
 
 The proof of the KS Theorem is by induction with respect to to the dimension. The following Lemma (induction step), once proven, reduces the proof of the KS Theorem to the three-dimensional base case. We will prove the three-dimensional base case by giving an explicit set of directions belonging to overlapping orthogonal triads, for which a KS non-contextual value assignment can be shown to be impossible. This will be demonstrated by a chain of geometric arguments.
 
@@ -223,12 +224,12 @@ We follow \cite{Pusey2019}. Let $\{\ket{0},\dots,\ket{d} \}$ be an ONB of $\math
 \begin{equation*}
 \sum\limits _{\ket{\Psi_{i}}\in M'}\omega'(\left|\Psi_{i}\right\rangle )+\omega'(\ket{0} )=\sum\limits _{\ket{\Psi_{i}}\in M'}\omega'(\ket{\Psi_{i}})=1.     
 \end{equation*}
-Hence, $\omega:\mathcal{S}_{0}\mapsto\{0,1\}$, $\omega(\ket{\Psi} )\coloneqq\omega'(\ket{\Psi'})$ satisfies Condition 2 of \ref{def:kscontbasis}, where $\ket{\Psi'} \in\mathcal{S}_{0}'$ is the embedding of $\ket{\Psi} \in\mathcal{S}_{0}$ into $\mathcal{H}$. As per assumption, $w$ cannot be context independent. Therefore, by extension, $w'$ must also be context dependent.
+Hence, $\omega:\mathcal{S}_{0}\mapsto\{0,1\}$, $\omega(\ket{\Psi} )\coloneqq\omega'(\ket{\Psi'})$ satisfies Condition 2 of \ref{def:kscontbasis}, where $\ket{\Psi'} \in\mathcal{S}_{0}'$ is the embedding of $\ket{\Psi} \in\mathcal{S}_{0}$ into $\mathcal{H}$. As per assumption, $w$ cannot be context independent, a contradiction.
 \end{proof}
 What remains is a proof for the existence of a finite subset $\mathcal{S}$ that does not permit a valid KS non-contextual value assignment for the case of three dimensions. The following lemma allows us to consider only the three-dimensional complex projective space $\mathcal{P}(\mathbb{C}^{3})$ w.l.o.g.:
 
 \begin{lemma}
-Let $\mathcal{H}_{n}$ be a n-dimensional dimensional complex Hilbert space. A valid KS non-contextual value assignment $\omega:\mathcal{P}(\mathcal{H}_{n})\rightarrow\{0,1\}$ according to Definition \ref{def:kscontbasis} induces a valid value assignment $\tilde{\omega}:\mathcal{P}(\mathbb{C}^{n})\rightarrow\{0,1\}$.
+Let $\mathcal{H}_{n}$ be a n-dimensional complex Hilbert space. A valid KS non-contextual value assignment $\omega:\mathcal{P}(\mathcal{H}_{n})\rightarrow\{0,1\}$ according to Definition \ref{def:kscontbasis} induces a valid value assignment $\tilde{\omega}:\mathcal{P}(\mathbb{C}^{n})\rightarrow\{0,1\}$.
 \end{lemma}
 
 \begin{proof}
@@ -272,14 +273,14 @@ The proof of Lemma \ref{lem:3dbasecase} is given by the table in Figure \ref{fig
 \centering
 \begin{subfigure}{\textwidth}
 \centering
- \includegraphics[width=\textwidth]{images/perestable.png}
+ \includegraphics[width=0.85\textwidth]{images/perestable.png}
  \caption{Table containing the proof of the three-dimensional base case of the KS Theorem, in terms of a colouring problem where each orthogonal triad must contain exactly one green and two red rays. Each line of the table introduces a new orthogonal triad that is coloured, either w.l.o.g.\ or according to the values of previous triads. In each line, only the first ray of the triad is coloured green. The ``Other rays'' in each line are orthogonal to the single green ray in that line and are consequently coloured red. The stepwise colouring of rays leaves the orthogonal triad \{100,021,0\text{$\bar{1}$2}\} coloured red, proving the impossiblity of a valid colouring. Table copied from \cite{Peres1991}.}
  \label{fig:table}
 \end{subfigure}
 \hfill\break
 \begin{subfigure}{\textwidth}
 \centering
-\includegraphics[width=\textwidth]{images/triads.png}
+\includegraphics[width=0.9\textwidth]{images/triads.png}
 \caption{The left plot visualizes the first line of the proof-containing table, ``Other rays'' being coloured orange. The right plot visualizes the resulting contradiction, refer to the text.}
 \label{fig:triads}
 \end{subfigure}
@@ -293,7 +294,7 @@ We now reap the fruits of our previous efforts that proved the equivalence of KS
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{images/4dim.png}
+    \includegraphics[width=0.4\textwidth]{images/4dim.png}
     \caption{``Mermin Square'': Operators on $\mathbb{C}^{2}\otimes\mathbb{C}^{2}$ that allow for a proof of the KS Theorem in four dimensions. Tensor products between Pauli operators are omitted for readability. Within each row and each column, the operators commute. A non-contextual value assignment to these operators is contradictory, in the sense that the product of all nine values assigned to the operators would not be well-defined. For each row, the product of the three operators in that row is $\mathbb{1}_\mathcal{H}$. The same holds for the columns, with the notable exception that the product of the three operators in the rightmost column is $-\mathbb{1}_\mathcal{H}$. These identities on an operator level are key in establishing a contradiction. Figure adapted from \cite{Mermin1993}.}
     \label{fig:4dim}
 \end{figure}
@@ -350,7 +351,7 @@ p(X=x,Y=y\vert A_i, B_j)=\expval{\Pi_{A_i}^x\otimes\Pi_{B_j}^y}{\Psi},
 \end{equation*}
 where $\ket{\Psi}\in\mathcal{H}$ is a normalized, bipartite Hilbert state vector and $\Pi_{A_i}^x$ is the projection operator corresponding to the outcome $x$ of the measurement $A_i$ on the subsystem A.
 
-What is remarkable about the CHSH scenario is the fact that one can give explicit projective measurements $A_{1}$, $A_{2}$, $B_{1}$, $B_{2}$, as well as the maximally entangled pure state $\ket{\Psi} =\frac{1}{\sqrt{2}}(\ket{\uparrow\uparrow} +\ket{\downarrow\downarrow})$, for which quantum theory predicts $p(\text{{success}})=\cos^{2}(\frac{\pi}{8})>\frac{3}{4}$: a violation of the CHSH Bell inequality. A set of Hermitian operators with this property is 
+What is remarkable about the CHSH scenario is the fact that one can give explicit projective measurements $A_{1}$, $A_{2}$, $B_{1}$, $B_{2}$, as well as the maximally entangled pure state ${\ket{\Psi} =\frac{1}{\sqrt{2}}(\ket{\uparrow\uparrow} +\ket{\downarrow\downarrow})}$, for which quantum theory predicts $p(\text{{success}})=\cos^{2}(\frac{\pi}{8})>\frac{3}{4}$: a violation of the CHSH Bell inequality. A set of Hermitian operators with this property is 
 \begin{equation}
 \label{eqn:chshmnts}
 \begin{split}
@@ -366,14 +367,14 @@ with $\ket{\theta} \coloneqq\cos(\frac{\theta}{2})\ket{\uparrow} +\sin(\frac{\th
 \centering
 \begin{subfigure}{\textwidth}
 \centering
-\includegraphics[width=0.7\textwidth]{images/bell.png}
-\caption{CHSH setup leading to violations of the CHSH inequality. A source $S$ emits entangled EPR pairs. Constituent particles are measured in space-like separated regions, with experimenters being able to choose between two incompatible measurements $A_1$, $A_2$ or $B_1$, $B_2$. The random variables X, Y hold the measurement outcome for operators $A_1, A_2$ or $B_1, B_2$, respectively.\\[1em]}
+\includegraphics[width=0.60\textwidth]{images/bell.png}
+\caption{CHSH setup leading to violations of the CHSH inequality. A source $S$ emits entangled EPR pairs. Constituent particles are measured in space-like separated regions, with experimenters being able to choose between two incompatible measurements $A_1$, $A_2$ or $B_1$, $B_2$. The random variables X, Y hold the measurement outcomes for the operators $A_1, A_2$ or $B_1, B_2$, respectively.\\[1em]}
 \label{fig:bell}
 \end{subfigure}
 \begin{subfigure}{\textwidth}
 \centering
-\includegraphics[width=0.4\textwidth]{images/chsh.png}
-\caption{CHSH correlations for space-like separated operators $A_1$, $A_2$ and $B_1$, $B_2$. Lines indicate joint measurability. A solid line further indicates correlated outcomes, whereas a dashed line indicates anti-correlated outcomes. Let $X$, $Y$ be random variables that describe the measurement outcomes of $A_i$, $B_i$, respectively. We are interested in the probability that $X=Y$ for all choices of measurements but $(A_1,B_2)$ and $X\neq Y$ for the measurements $(A_1,B_2)$. Adapted from \cite{Spekkens2012}.\\[1em]}
+\includegraphics[width=0.35\textwidth]{images/chsh.png}
+\caption{CHSH correlations for space-like separated operators $A_1$, $A_2$ and $B_1$, $B_2$. Lines indicate joint measurability. A solid line further indicates correlated outcomes, whereas a dashed line indicates anti-correlated outcomes. Let $X$, $Y$ be random variables that describe the measurement outcomes of $A_i$, $B_i$, respectively. We are interested in the probability that $X=Y$ for all choices of measurements but $(A_1,B_2)$, and $X\neq Y$ for the measurements $(A_1,B_2)$. Adapted from \cite{Spekkens2012}.\\[1em]}
 \label{fig:chsh}
 \end{subfigure}
 \caption{CHSH Bell test}
@@ -407,22 +408,22 @@ The statistics of a Bell-type correlation experiment are fully characterized by 
 
 As discussed, all correlations $p(x,y\vert a,b)$ compatible with an ontological model obeying local causality are convex combinations of local, deterministic probability assignments $p_A(x \vert a,\lambda)p_B(y \vert b,\lambda)$. There are $2^4=16$ distinct such assignments. Thus, the set of local correlations 
 \begin{equation*}
-\mathcal{L} =\{\{p(x,y\vert a,b)\}_{x,y,a,b}\equiv \vec{v}\in\mathbb{R}^{12}: \vec{v}\; \text{compatible with local causality}\}
+\mathcal{L} =\left\lbrace\{p(x,y\vert a,b)\}_{x,y,a,b}\equiv \vec{v}\in\mathbb{R}^{12}: \vec{v}\; \text{compatible with local causality} \right\rbrace
 \end{equation*}
 is a polytope in $\mathbb{R}^{12}$ with 16 extremal vertices. A Bell inequality \ref{eqn:bellineq} defines a separative hyperplane that splits $[0,1]^{12}$ in two, such that $\mathcal{L}$ lies entirely on one side of this hyperplane (the closed half-space). The Bell hyperplane could for instance be a facet of the local polytope, as shown in Figure \ref{fig:correlations}. A facet of $\mathcal{L}$ is one of its delimiting hyperplanes. Bell's Theorem tells us that the set of quantum correlations $\mathcal{Q}$ is strictly larger than $\mathcal{L}$. The set $\mathcal{Q}$ further cannot be characterized in terms of a finite number of delimiting hyperplanes (linear inequalities) \cite{Brunner2014}. Correlations that maximally violate the CHSH Bell inequality have a maximal distance to the Bell hyperplane.
 
-The no-signalling principle is built into the tensor product representation of traditional QM. As such, the set $\mathcal{Q}$ is contained in the set $\mathcal{NS}$, which contains all correlations that obey no-signalling. Like $\mathcal{L}$, $\mathcal{NS}$ is a polytope: $\mathcal{NS}$ is the intersection of $[0,1]^{16}$, the hyperplanes corresponding to normalization constraints $\sum_{x,y} p(x,y\vert a,b)=1$, and those defined by the no-signalling conditions
+The no-signalling principle is built into the tensor product representation of traditional QM. As such, the set $\mathcal{Q}$ is contained in the set $\mathcal{NS}$, which contains all correlations that obey no-signalling. Like $\mathcal{L}$, $\mathcal{NS}$ is a polytope: $\mathcal{NS}$ is the intersection of $[0,1]^{12}$, the hyperplanes corresponding to normalization constraints $\sum_{x,y} p(x,y\vert a,b)=1$, and those defined by the no-signalling conditions
 \begin{align*}
 \sum_y p(x,y\vert a,b) & = \sum_y p(x,y\vert a,b') \; \text{and} \\
 \sum_x p(x,y\vert a,b) & = \sum_x p(x,y\vert a',b)\;.
 \end{align*}
 The set $\mathcal{NS}$ is strictly bigger than $\mathcal{Q}$, as there exist correlations, such as the ``PR-box", that satisfy the no-signalling principle and win the ``CHSH game" with certainty \cite{Brunner2014}.
 
-Analogous to Bell inequalities, KS non-contextuality inequalities define hyperplanes that splits the convex set of all permissible correlations in two, such that the closed half-space contains all correlations compatible with a KS non-contextual HVM description.
+Analogous to Bell inequalities, KS non-contextuality inequalities define hyperplanes that split the convex set of all permissible correlations in two, such that the closed half-space contains all correlations compatible with a KS non-contextual HVM description.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{images/correlations.png}
+    \includegraphics[width=0.4\textwidth]{images/correlations.png}
     \caption{Schematic drawing depicting the geometry of the convex sets $\mathcal{L}$, $\mathcal{Q}$, and $\mathcal{NS}$, containing all local, quantum, and no-signalling correlations, respectively. The sets $\mathcal{L}$, $\mathcal{NS}$ are polytopes and can be characterized by a finite number of facet hyperplanes, whereas the set $\mathcal{Q}$ is more complicated. A Bell inequality, like the CHSH inequality, defines a separative hyperplane such that all local correlations $\mathcal{L}$ lie to one ``side" of this hyperplane.}
     \label{fig:correlations}
 \end{figure}
@@ -436,7 +437,7 @@ Informally speaking, Bell's Theorem, as presented above, is proof of a KS Theore
 
 Mermin gives a GHZ-like proof of an eight-dimensional KS Theorem \cite{Mermin1993}, which can be recast into a proof of Bell's Theorem, further highlighting the deep connection between both theorems. Again, the information “lost” in assuming KS non-contextuality only when justified by locality is compensated for by a fixed quantum state. Thus, the fact that the KS Theorem is only measurement-dependent and in particular makes no reference to the system preparation is a consequence of the stronger assumption of KS non-contextuality imposed by the KS Theorem.
 
-On a final note, it is worth pointing out that the statement of the KS Theorem is of a fundamentally different nature than that of Bell's Theorem. In particular, it does not propose inequality constraints on correlations that, when found to be violated, would imply the impossibility of a particular classical description. The KS Theorem goes further than that and deduces the impossibility of such an attempt altogether, only by geometric considerations that lead to a contradiction. Nevertheless, this strength is also a key weakness of the theorem. A Bell inequality is operationally testable and does not make reference to the formalism of QM. The general form of correlations compatible with a local HVM description \ref{eqn:lhvm} makes sense, independent of QM. Therefore, the CHSH Bell inequality also holds for theories beyond QM. An experimental observation of a Bell inequality violation implies that there can be no operational theory of reality (compatible with experimental observations) that admits of a locally causal hidden variable theory, quantum theory only being one possible candidate. Any such theory would be in conflict with the experimental data which violates Bell inequalities. By comparison, the KS Theorem is formulated within the framework of QM, for instance making explicit reference to the system's Hilbert space. Therefore, the scope of the KS Theorem is limited to quantum theory. 
+On a final note, it is worth pointing out that the statement of the KS Theorem is of a fundamentally different nature than that of Bell's Theorem. In particular, it does not propose inequality constraints on correlations that, when found to be violated, would imply the impossibility of a particular classical description. The KS Theorem goes further than that and deduces the impossibility of such an attempt altogether, only by geometric considerations that lead to a contradiction. Nevertheless, this strength is also a key weakness of the theorem. A Bell inequality is operationally testable and does not make reference to the formalism of QM. The general form of correlations compatible with a local HVM description \ref{eqn:lhvm} makes sense, independent of QM. Therefore, the CHSH Bell inequality also holds for theories beyond QM. An experimental observation of a Bell inequality violation implies that there can be no operational theory of reality (compatible with experimental observations) that admits a locally causal hidden variable theory, quantum theory only being one possible candidate. Any such theory would be in conflict with the experimental data. By comparison, the KS Theorem is formulated within the framework of QM, for instance making explicit reference to the system's Hilbert space. Therefore, the scope of the KS Theorem is limited to quantum theory. 
 
 In Section \ref{sec:spekkcont} we revise the traditional notion of KS non-contextuality. Spekkens proposes a largely operational notion of non-contextuality that addresses these shortcomings \cite{Spekkens2005}. However, for the purposes of self-testing, which assumes the validity of QM, the main asset of Spekkens contextuality will be that it allows for a consistent treatment of unsharp POVM quantum measurements.
 
@@ -461,7 +462,7 @@ where compatibility with a KS non-contextual HVM imposes an upper bound of 2 for
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\textwidth]{images/kcbscompat.png}
+    \includegraphics[width=0.5\textwidth]{images/kcbscompat.png}
     \caption{Graph showing compatibility relations for the KCBS (left) and a higher order odd $n$-cycle scenario (right). Each vertex corresponds to one projective measurement, adjacent measurements are compatible.}
     \label{fig:kcbscompat}
 \end{figure}
@@ -479,7 +480,7 @@ Not only does the reference quantum experiment $\ket{0}$, $\{\ket{u_i}\}_{i=1}^5
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\textwidth]{images/kcbsref.png}
+    \includegraphics[width=0.8\textwidth]{images/kcbsref.png}
     \caption{Reference KCBS experiment on a qutrit leading to a maximal violation of the KCBS KS non-contextuality inequality. An experimenter can freely choose between five rank one projective measurements $\ket{u_i}$ that satisfy cyclic compatibility: $\bra{u_i}\ket{ u_{i\oplus1}} = 0$. The qutrit is initially prepared in the state $\ket{0\rangle}$ and then measured in one of five measurement contexts (i,i$\oplus$1). After the measurement the qutrit state is reset.}
     \label{fig:kcbsref}
 \end{figure}

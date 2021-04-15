@@ -2,7 +2,7 @@
 \lhead{\emph{Self-testing via KS non-contextuality inequalities}}
 \label{sec:contselftesting}
 
-\section{Preceding results}
+\section{Preceding results and improvements}
 
 In Section \ref{sec:csw}, we considered general correlation experiments testing some linear combination of probabilities $S$ and found that any quantum realization $\ket{\Psi}$, $\Pi_i$ can be translated into a feasible solution $X$ of the Lovász SDP \ref{eqn:lovaszsdp}, such that the value of $S$, as predicted by QM, corresponds to the objective function the SDP aims to maximize, evaluated at the feasible solution $X$. Conversely, if there are no additional physical constraints, for example due to space-like separated subsystems, one can construct a quantum realization for every feasible solution $X$ that achieves $S=\sum_{i=1}^n X_{ii}$. Such quantum realization was constructed from an arbitrary Gram decomposition of $X$. This connection between feasible solutions to the Lovász SDP and quantum models of the correlation experiment will be central to proving robust self-testing based on KS non-contextuality inequalities.
 
@@ -28,7 +28,7 @@ Let $(\mathcal{G}_{ex},w)$ be a weighted exclusivity graph with $n$ vertices and
 \begin{equation*}
     \sum_{i=1}^n w_i\thinspace\Tilde{X}_{ii} \geq B_{q}(\mathcal{G}_{ex},w)-\epsilon,
 \end{equation*}
-where $B_{q}(\mathcal{G}_{ex},w)=\sum_{i=1}^n w_i X_{ii}^*$ is the optimal solution of the Lovász SDP for the weighted exclusivity graph $(\mathcal{G}_{ex},w)$.
+where $B_{q}(\mathcal{G}_{ex},w)=\sum_{i=1}^n w_i X_{ii}^*$ is the optimal value of the Lovász SDP for the weighted exclusivity graph $(\mathcal{G}_{ex},w)$.
 Then
 \begin{equation*}
 \|\Tilde{X}-X^*\|_F \leq \mathcal{O}(\epsilon)\,,
@@ -44,12 +44,12 @@ Let $\Tilde{X}\in S_{+}^{\thinspace n+1}$ be a positive semi-definite matrix, $\
 \end{equation*}
 Let $\{\vert \Tilde{u}_i \rangle\}_{i=0}^n\subset\mathbb{C}^{d}$ and $\{\vert u_i\rangle\}_{i=0}^n\subset\mathbb{C}^{d}$ be Gram decompositions of $\Tilde{X}$ and $X^*$, respectively. Then there exists a $d\times d$ unitary matrix $U$ such that for all $i\in\{0,\dots,n\}$
 \begin{equation*}
-    \|\vert \Tilde{u}_i\rangle - U \vert u_i\rangle\|_2 \leq \kappa(n)\epsilon + \mathcal{O}(\kappa(n)^2\epsilon^2)\,,¸
+    \|\vert \Tilde{u}_i\rangle - U \vert u_i\rangle\|_2 \leq \kappa(n)\epsilon + \mathcal{O}(\kappa(n)^2\epsilon^2)\,,
 \end{equation*}
-where $\kappa(n)=\frac{1}{2}\sqrt{n+4}$ for all $n>7$.
+where $\kappa(n)=1+\frac{1}{2}\sqrt{n+4}$ for all $n>7$.
 \end{lemma}
 
-We will omit the proofs of Lemmas \ref{lem:kcbsunique} and \ref{lem:epssuboptgram}, as they do not provide much conceptual insight, and offer only a few comments. We include the proof of Lemma \ref{lem:closegramdecomp}, as \cite{Bharti2019} proves only a weaker version, in the sense that $d=n$. Furthermore, the proof we present establishes a tighter error bound of the order $\mathcal{O}(\kappa(n)\epsilon)$, compared to $\mathcal{O}(\sqrt{(n+1)\epsilon}\,)$ in \cite{Bharti2019}. As opposed to the result in \cite{Bharti2019}, the proof of Lemma \ref{lem:closegramdecomp} makes use of the fact that the verifier has knowledge about the ideal Gram matrix $X^*$. 
+We will omit the proofs of Lemmas \ref{lem:kcbsunique} and \ref{lem:epssuboptgram}, as they do not provide much conceptual insight, and offer only a few comments. We include the proof of Lemma \ref{lem:closegramdecomp}, as \cite{Bharti2019} proves only a weaker version, in the sense that $d=n$. More importantly, the proof we present establishes a tighter error bound of the order $\mathcal{O}(\kappa(n)\epsilon)$, compared to $\mathcal{O}(\sqrt{(n+1)\epsilon}\,)$ in \cite{Bharti2019}. As opposed to the result in \cite{Bharti2019}, the proof of Lemma \ref{lem:closegramdecomp} makes use of the fact that the verifier has knowledge about the ideal Gram matrix $X^*$. 
 
 The proof of Lemma \ref{lem:kcbsunique} utilizes SDP duality theory and shows a sufficient condition for the unicity of $X^*_n$ to be satisfied by explicit construction. It applies only to the class of odd $n$-cycle scenarios, as it makes use of the cyclic exclusivity constraints that enter the Lovász SDP \ref{eqn:lovaszsdp}. Lemma \ref{lem:epssuboptgram} is a general result for the optimization problem \ref{eqn:lovaszsdp}, and as such applies to arbitrary exclusivity graphs. Like Lemma \ref{lem:kcbsunique}, the proof of Lemma \ref{lem:epssuboptgram} makes heavy use of SDP duality theory. 
 
@@ -164,7 +164,7 @@ Z^{\dag}\Tilde{V}_2 & Z^{\dag}Z
 \right\|_F\;=\;\|WD^{-1}W^{\dag}(\Tilde{X}-X^*)WD^{-1}W^{\dag}\|_F\; & \leq\; \epsilon\thinspace \operatorname{max}\left\{\sigma_{\text{min}}^{(n)}{}^{-2},1\right\},
 \end{align*}
 where $\sigma_{\text{min}}^{(n)}$ is the non-zero singular value of $A$ with smallest magnitude, the square of which is the smallest non-zero eigenvalue of $X^*$, $\lambda_{\text{min}}^{(n)}$.
-For the KCBS scenario, $n=5$, we find $\lambda_{\text{min}}^{(n)}=\frac{1}{2}(\sqrt{5}-1)\approx 0.618$.
+For the KCBS scenario, $n=5$, we find \\$\lambda_{\text{min}}^{(n)}=\frac{1}{2}(\sqrt{5}-1)\approx 0.618$.
 
 Therefore,
 \begin{alignat}{2}
@@ -261,7 +261,7 @@ Together, this gives us the desired intermediate result. Namely, up to leading o
 \begin{align*}
 \|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \|B^{\dag}-\Tilde{V_2}\Sigma_r W_1^{\dag}\|_F + \|(\Tilde{V}_2-V_2)\Sigma_r W_1^{\dag}\|_F \leq & \thinspace\epsilon\thinspace\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}\left(1+\sigma_{\text{max}}^{(n)}\right),
 \end{align*}
-where $\sigma_{\text{max}}^{(n)}$ is the maximum singular value of $A^{\dag}$. We take the second term to be negligible. For the KCBS scenario, $n=5$, $\sigma_{\text{max}}^{(n)}=\sqrt{2}$, and consequently $\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \kappa\epsilon$, where $\kappa \approx 3.55$. 
+where $\sigma_{\text{max}}^{(n)}$ is the maximum singular value of $A^{\dag}$. For the KCBS scenario, $n=5$, $\sigma_{\text{max}}^{(n)}=\sqrt{2}$, and consequently $\|B^{\dag}-V_2\Sigma_r W_1^{\dag}\|_F\leq \kappa\epsilon$, where $\kappa \approx 3.55$. 
 For $n>7$, one finds numerically that $\operatorname{max}\left\{\lambda_{\text{min}}^{(n)}{}^{-1},1\right\}=1$. Additionally, $\lambda_{\text{max}}^{(n)}=\sigma_{\text{max}}^{(n)}{}^2$ scales linearly in $n$ like $\lambda_{\text{max}}^{(n)}\approx \frac{1}{4}n+1$.
 
 To recap, we have just shown that
@@ -275,7 +275,7 @@ According to Theorem 2.1.18 in \cite{Horn2013}, there exists a unitary $U\in\mat
 \begin{equation*}
 B^{\dag}\stackrel{\mathcal{O}(\kappa(n)\epsilon)}{\approx}V_2\Sigma_r W_1^{\dag}= UV_1\Sigma_r W_1^{\dag}=UA^{\dag}.
 \end{equation*} 
-Finally, we can use this result to bound the distance between the two Gram decompositions $\{u_i\}_{i=0}^n$ and $\{\Tilde{u}_i\}_{i=0}^n$, and thereby conclude the proof:
+Finally, we can use this result to bound the distance between the two Gram decompositions $\{\vert u_i \rangle \}_{i=0}^n$ and $\{\vert \Tilde{u}_i \rangle \}_{i=0}^n$, and thereby conclude the proof:
 \begin{align*}
 \|B^{\dag}-UA^{\dag}\|_F&=\|
 \begin{pmatrix}
@@ -297,31 +297,32 @@ Since the Frobenius norm of an $n\times m$ matrix is just the two norm of the $(
 \end{equation*}
 The only thing that remains is proving the inequality \ref{eqn:approxzero}. By considering the off-diagonal entries of $X^{\dag}X$, we find that
 \begin{equation*}
-\epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1} \geq \|Z^{\dag}\Tilde{V}_2\|_F=\|Z^{\dag}V_2 - Z^{\dag}(V_2-\Tilde{V}_2)\|_F.
+\epsilon\, \max\left\lbrace\lambda_{\text{min}}^{(n)}{}^{-1},1\right\rbrace \geq \|Z^{\dag}\Tilde{V}_2\|_F=\|Z^{\dag}V_2 - Z^{\dag}(V_2-\Tilde{V}_2)\|_F.
 \end{equation*}
 The reverse triangle inequality and submultiplicativity of the Frobenius norm yields
 \begin{equation*}
-\epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1} \geq \|Z^{\dag}V_2\|_F - \|Z^{\dag}(V_2-\Tilde{V}_2)\|_F \geq \|Z\|_F\,(1-\|V_2-\Tilde{V}_2\|_F),
+\epsilon\,\max\left\lbrace\thinspace\lambda_{\text{min}}^{(n)}{}^{-1},1\right\rbrace \geq \|Z^{\dag}V_2\|_F - \|Z^{\dag}(V_2-\Tilde{V}_2)\|_F \geq \|Z\|_F\,(1-\|V_2-\Tilde{V}_2\|_F),
 \end{equation*}
-which implies
+which implies, to first order,
 \begin{equation*}
-\|Z\|_F \leq \epsilon\thinspace\lambda_{\text{min}}^{(n)}{}^{-1} + \mathcal{O}\left(\epsilon^2\lambda_{\text{min}}^{(n)}{}^{-2}\right)\thinspace.
+\|Z\|_F \leq
+\epsilon\, \max\left\lbrace \lambda_{\text{min}}^{(n)}{}^{-1},1\right\rbrace.
 \end{equation*}
 \end{proof}
 
 Note that Lemma \ref{lem:closegramdecomp} is of no use for Bell-type self-testing scenarios, as it relates two Gram decompositions only by a global unitary $U$.
 
-Having distilled the main proof components into three auxiliary theorems, Lemmas \ref{lem:kcbsunique}-\ref{lem:closegramdecomp}, we will now demonstrate that these imply the desired self-testing result. \cite{Bharti2019} for the most part omits these final proof steps. Section \ref{sec:kscontass} will provide an in-depth discussion about all of the assumptions that go into the self-testing protocol.
+Having distilled the main proof components into three auxiliary lemmas, Lemmas \ref{lem:kcbsunique}-\ref{lem:closegramdecomp}, we will now demonstrate that these imply the desired self-testing result. \cite{Bharti2019} for the most part omits these final proof steps. Section \ref{sec:kscontass} will provide an in-depth discussion of all of the assumptions that go into the self-testing protocol.
 
 \begin{theorem}[Odd $n$-cycle KS non-contextuality inequalities facilitate self-testing \cite{Bharti2019}]
 \label{thm:contselftesting}\hfill\break
-Let $n\geq5$ be an odd integer. The only quantum model $\ket{\Psi}$, $\{\Pi_i\}_{i=1}^n$ compatible with a maximal violation of the odd $n$-cycle KS non-contextuality inequality \ref{eqn:oddncycleclass} with exclusivity graph $\mathcal{G}_{ex}^{(n)}$ is \ref{eqn:ncycleideal}, up to a global isometry:
+Let $n\geq5$ be an odd integer. The only valid quantum model $\ket{\Psi}$, $\{\Pi_i\}_{i=1}^n$ compatible with a maximal violation of the odd $n$-cycle KS non-contextuality inequality \ref{eqn:oddncycleclass} with exclusivity graph $\mathcal{G}_{ex}^{(n)}$ is \ref{eqn:ncycleideal}, up to a global isometry:
 \begin{align*}
     \exists \emph{ isometry } V & : \ket{\Psi} = V \vert u_0\rangle \\[0.7em]
     \forall i\in\{1,\dots,n\} & : \Pi_i \ket{\Psi} = V \vert u_i^{(n)} \rangle \langle u_i^{(n)} \vert \thinspace \vert u_0 \rangle
 \end{align*}
 
-Furthermore, all quantum models $\ket{\Psi}$, $\{\Pi_i\}_{i=1}^n$ compatible with an $\epsilon$-suboptimal violation of \ref{eqn:oddncycleclass}, i.e.\
+Furthermore, all valid quantum models $\ket{\Psi}$, $\{\Pi_i\}_{i=1}^n$ compatible with an $\epsilon$-suboptimal violation of \ref{eqn:oddncycleclass}, i.e.\
 \begin{equation*}
     \sum_{i=0}^n \abs{\langle \Psi \vert \Pi_i \vert \Psi \rangle}^2> B_q(\mathcal{G}_{ex}^{(n)})-\epsilon\thinspace ,
 \end{equation*}where $B_q(\mathcal{G}_{ex}^{(n)})$ is the quantum supremum \ref{eqn:ncyclequsup}, are $\mathcal{O}(\epsilon)$ close in 2-norm to \ref{eqn:ncycleideal}, up to a global isometry:
@@ -377,8 +378,6 @@ Let $\| \ket{a} - \ket{b} \|_2\leq\delta$ for vectors $\ket{a}$ and $\ket{b}$, s
 \end{lemma}
 The proof is found in \cite{Bharti2019} (Lemma 9). As $\vert \langle u_i^{(n)}\vert u_0 \rangle \vert =5^{\frac{1}{4}}$, the assumption in Lemma \ref{lem:selftestingfinallem} is true for sufficiently small $\epsilon$.
 
-Having proved that the only quantum model $\ket{\Psi}$, $\Pi_i$ compatible with a maximal violation of \ref{eqn:oddncycleclass} is \ref{eqn:ncycleideal}, up to a global isometry, and that this self-testing result is robust, we will now analyze what assumptions the protocol in \cite{Bharti2019} requires for practical purposes.
-
 \subsection{Proportionality constant in Lemma \ref{lem:epssuboptgram}}
 \label{sec:propconst}
 
@@ -389,7 +388,7 @@ Our strategy to obtain an estimate for the constant of proportionality is to gen
 
 We generate $\sim 10^4$ feasible, $\epsilon$-suboptimal matrices $\{X_i^{\epsilon}\}_i$ and compute the maximum ratio 
 \begin{equation*}
-\nu_{\epsilon}(n=5)\coloneqq \max_i \, \frac{\|X_i^{\epsilon}-X^{*}\|_F}{\sum_i X^{*}_{ii}-X_{ii}},
+\nu_{\epsilon}(n=5)\coloneqq \max_j \, \frac{\|X_j^{\epsilon}-X^{*}\|_F}{\sum_i (X^{*}_{ii}-X_{j,ii}^{\epsilon})},
 \end{equation*}
 where $X^{*}$ denotes the optimal solution of the SDP \ref{eqn:lovaszsdp} for $n=5$.
 Furthermore, we perform the analysis for different values of $\epsilon$, which range over many orders of magnitude, since we aim to find a universal constant that upper-bounds the ratio between deviation in Frobenius norm and suboptimality. Our estimate for the universal constant is then
@@ -408,7 +407,7 @@ The affine space
 \end{equation*}
 is obtained by translating the subspace $\bar{\mathcal{A}}$ along the vector $e_{00}$, where $e_{ij}$ is the matrix that has a $1$ at $(i,j)$, and $0$ elsewhere. The feasible set of the Lovász SDP \ref{eqn:lovaszsdp} is then $\mathcal{A}\cap S_{+}^{n+1}$.
 
-To generate appropriate random matrices, we note that the vector connecting $X^{*}$ and any $X_i$ must be in $\bar{\mathcal{A}}$. An ONB of $\bar{\mathcal{A}}$, with respect to the inner product $\langle X,Y\rangle=\operatorname{tr}(X^{\dag}Y)$, is given by the $(n^2-2n)$ matrices
+To generate appropriate random matrices, we note that the vector connecting $X^{*}$ and any $X_i^{\epsilon}$ must be in $\bar{\mathcal{A}}$. An ONB of $\bar{\mathcal{A}}$, with respect to the inner product $\langle X,Y\rangle=\operatorname{tr}(X^{\dag}Y)$, is given by the $(n^2-2n)$ matrices
 \begin{alignat*}{2}
 \doublespacing
 & D_i \coloneqq \frac{e_{ii}+e_{0i}+e_{i0}}{\sqrt{3}}&& \text{ , for } 1\leq i\leq n,\\
@@ -422,7 +421,7 @@ Figure \ref{fig:propconst} captures the results of the numerical analysis for $5
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.6\textwidth]{images/feasibleset.png}
+\includegraphics[width=0.5\textwidth]{images/feasibleset.png}
 \end{center}
 \caption{The feasible set of the Lovász SDP \ref{eqn:lovaszsdp} is a bounded convex set. It is given by the intersection of the set of positive semi-definite matrices $S_{+}^{n+1}$ and the affine space $\mathcal{A}$, as defined in the the text. $Z^{*}$ is the optimal solution of the SDP that is dual to \ref{eqn:lovaszsdp}. The primal optimal solution of \ref{eqn:lovaszsdp} is the unique point of intersection of the feasible set $\mathcal{A}\cap S_{+}^{n+1}$ and the subspace $(Z^{*})^{\perp}$ \cite{Bharti2019}. As such, the subspace $(Z^{*})^{\perp}$ is a supporting hyperplane of the feasible set, which lies entirely on one side of this hyperplane.  Furthermore, the set of $\epsilon$-suboptimal, feasible matrices is given by the intersection of $\mathcal{A}\cap S_{+}^{n+1}$ and $\{X\in \operatorname{Herm}(\mathbb{C}^{n+1})\,\vert\, \langle Z^{*}, X\rangle = \epsilon\}$ \cite{Bharti2019}.}
 \label{fig:feasibleset}
@@ -450,7 +449,7 @@ The following is an as comprehensive as possible list of explicit or implicit as
     \begin{itemize}
         \item system not disturbed between measurements
     \end{itemize}
-    \item information carrying capacity of the unknown system does not exceed ``simulable" bound (each measurement device is used only once)
+    \item information carrying capacity of the unknown system does not exceed ``simulable" bound (each measurement device is used only once) - memory assumption \cite{Bharti2019}
     
      \end{enumerate}
 \end{enumerate}
@@ -487,13 +486,13 @@ We consider correlations experiments that consist of a series of sequential meas
 Let us now examine how, in an adversarial setting where correlations may not capture the outcome statistics of compatible and ideal quantum measurements, a classical device with an internal memory can simulate the input-output process characterized by the correlation experiment.
 
 \subsection{Input-output processes as information transducers}
-In most general terms, a KS contextuality experiment is an input-output process. To verify that an experiment producing a maximal violation of say the KCBS KS non-contextuality inequality is compatible with the ideal reference experiment, as mandated by self-testing, we may in principle perform an infinite sequence of measurements  $\oset{\leftrightarrow}{X}=\{\dots,\thinspace X_{-1},\thinspace X_{0},\thinspace X_{1},\thinspace\dots\}$, yielding an infinite sequence of outputs $\oset{\leftrightarrow}{Y}=\{\dots,\thinspace Y_{-1},\thinspace Y_{0},\thinspace Y_{1},\thinspace \dots\}$ \cite{Cabello2018}. Here, $\oset{\leftrightarrow}{X}$ and $\oset{\leftrightarrow}{Y}$ are bi-infinite sequences of random variables and define stochastic processes. The random variable $X_{i}$ represents the freely chosen random measurement at time $t=i\in\mathbb{Z}$, whereas the random variable $Y_{i}$ represents the output obtained when performing the measurement $X_{i}$ at time $i$. We assume that all $X_i$ and $Y_i$ take values from finite alphabets $\mathcal{X}$ and $\mathcal{Y}$; most of the measurements we will consider are dichotomic, i.e.\ $\vert\mathcal{Y}\vert=2$, as is the case for the KCBS KS contextuality scenario. Furthermore, we can distinguish the present $t=0$ and partition the processes $\oset{\leftrightarrow}{X}$, $\oset{\leftrightarrow}{Y}$ into past and future: $\oset{\leftarrow}{X}\thinspace\coloneqq \dots,\thinspace X_{t-2},\thinspace X_{t-1}$ , $\oset{\rightarrow}{X}\thinspace\coloneqq X_t,\thinspace X_{t+1},\thinspace \dots$. The reference time is in fact arbitrary, as the stochastic processes we will consider turn out to be stationary. Any classical input-output mechanism producing a maximal violation that we cannot ``unmask" on the basis of correlations alone, must be consistent with the ideal reference input-output process.
+In most general terms, a KS contextuality experiment is an input-output process. To verify that an experiment producing a maximal violation of say the KCBS KS non-contextuality inequality is compatible with the ideal reference experiment, we may in principle perform an infinite sequence of measurements  $\oset{\leftrightarrow}{X}=\{\dots,\thinspace X_{-1},\thinspace X_{0},\thinspace X_{1},\thinspace\dots\}$, yielding an infinite sequence of outputs $\oset{\leftrightarrow}{Y}=\{\dots,\thinspace Y_{-1},\thinspace Y_{0},\thinspace Y_{1},\thinspace \dots\}$ \cite{Cabello2018}. Here, $\oset{\leftrightarrow}{X}$ and $\oset{\leftrightarrow}{Y}$ are bi-infinite sequences of random variables and define stochastic processes. The random variable $X_{i}$ represents the freely chosen random measurement at time $t=i\in\mathbb{Z}$, whereas the random variable $Y_{i}$ represents the output obtained when performing the measurement $X_{i}$ at time $i$. We assume that all $X_i$ and $Y_i$ take values from finite alphabets $\mathcal{X}$ and $\mathcal{Y}$; most of the measurements we will consider are dichotomic, i.e.\ $\vert\mathcal{Y}\vert=2$, as is the case for the KCBS KS contextuality scenario. Furthermore, we can distinguish the present $t=0$ and partition the processes $\oset{\leftrightarrow}{X}$, $\oset{\leftrightarrow}{Y}$ into past and future: $\oset{\leftarrow}{X}\thinspace\coloneqq \dots,\thinspace X_{t-2},\thinspace X_{t-1}$, $\oset{\rightarrow}{X}\thinspace\coloneqq X_t,\thinspace X_{t+1},\thinspace \dots$. The reference time is in fact arbitrary, as the stochastic processes we will consider turn out to be stationary. Any classical input-output mechanism producing a maximal violation that we cannot ``unmask" on the basis of correlations alone, must be consistent with the ideal reference input-output process.
 
 Any classical apparatus simulating the reference correlations has the form of a general information transducer, transforming an input stochastic process into an output stochastic process \cite{Cabello2018}. A classical simulation is at all times $i$ in some well-defined internal state $S_i$ that holds information about the past input-output sequence $\oset{\leftarrow}{Z}\thinspace\coloneqq(\oset{\leftarrow}{X},\oset{\leftarrow}{Y})$, stored inside a memory. As the future process may be correlated with the past, the internal memory of the device allows it to produce statistically correct predictions. If we pass a valid input symbol from $\mathcal{X}$ (think of $\mathcal{X}$ as the $n$ measurement settings a verifier can choose from for the odd $n$-cycle scenario) to the transducer it will generate an output symbol in $\mathcal{Y}$, based on the information about the past encoded in the internal state prior to the input. We assume that the choice of measurement setting is freely random and not correlated with the internal state of the machine. The output may be accompanied by an update of the transducer's internal memory. One can think of this input-output process as feeding the transducer an infinite tape, whereby each tape cell contains a valid input symbol (choice of measurement). The transducer then generates an output, overwrites the corresponding tape cell with said output, and updates its internal state, see Figure \ref{fig:transducer}. Note that we will only consider the RAM memory cost of such a simulation, which relates to the number of memory bits the device needs to store the relevant historical information about the past process\footnote{alternatively, the RAM memory cost can be regarded as the uncertainty (in bits) in the internal state of the transducer.}, and in particular not to the memory required to store say output and transition probabilities.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\textwidth]{images/transducer.png}
+    \includegraphics[width=0.6\textwidth]{images/transducer.png}
     \caption{A classical device simulating the ideal reference statistics of some KS-type experiment, consisting of sequential measurements. The device is fed a sequence of inputs (measurement choices) and produces outputs (measurement outcomes), based on its internal state prior to an input. The internal state of the device, which one can equate with a memory, stores relevant historical information about the past input-output process, on the basis of which the device generates the correct input-output statistics. After one input-output cycle, the device can update its memory state.}
     \label{fig:transducer}
 \end{figure}
@@ -521,7 +520,7 @@ The \emph{causal states} $[\oset{\leftarrow}{z}]$ of an input-output process $\o
 \end{definition}
 
 \subsection{Memory-optimal classical simulation of quantum correlations}
-In \cite{Cabello2018} it is shown that, for a ``causally complete" KS contextuality reference experiment, the causal states of the process' $\epsilon$-transducer correspond one-to-one to the possible quantum states $\{\ket{\Phi_{\oset{\leftarrow}{z}}}\}_{\oset{\leftarrow}{z}}$ the system can occupy after all past measurements $\oset{\leftarrow}{x}$. The assumption of causal completeness holds for many KS contextuality scenarios and in the following we will examine the odd $n$-cycle KS contextuality scenarios, in particular the KCBS scenario for $\text{n}=5$. In \cite{Cabello2018} the same analysis is performed for the Peres-Mermin (see Section \ref{sec:4dim}) and Yu-Oh (see Section \ref{sec:kcbs}) sets of measurements.
+In \cite{Cabello2018} it is shown that, for a ``causally complete" KS contextuality reference experiment, the causal states of the process' $\epsilon$-transducer correspond one-to-one to the possible quantum states $\{\ket{\Phi_{\oset{\leftarrow}{z}}}\}_{\oset{\leftarrow}{z}}$ the system can occupy after all past measurements $\oset{\leftarrow}{x}$. The assumption of causal completeness holds for many KS contextuality scenarios and in the following we will examine the odd $n$-cycle KS contextuality scenarios, in particular the KCBS scenario for $\text{n}=5$. In \cite{Cabello2018}, the same analysis is performed for the Peres-Mermin (see Section \ref{sec:4dim}) and Yu-Oh (see Section \ref{sec:kcbs}) sets of measurements.
 
 For all ideal odd $n$-cycle reference experiments, the number of possible post-measurement states tends to infinity when we increase the number of measurements in our sequence. However, the post-measurement states are not all equally probable. Figure \ref{fig:causalstates} illustrates this behaviour for the KCBS scenario $\text{n}=5$.
 
@@ -529,25 +528,25 @@ For all ideal odd $n$-cycle reference experiments, the number of possible post-m
         %\centering
         \begin{subfigure}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.8\textwidth]{images/n=5,mnts=1.png}
+            \includegraphics[width=0.7\textwidth]{images/n=5,mnts=1.png}
             \caption{one measurement}
         \end{subfigure}
         \hfill
         \begin{subfigure}{0.5\textwidth}
             \centering 
-            \includegraphics[width=0.8\textwidth]{images/n=5,mnts=3.png}
+            \includegraphics[width=0.7\textwidth]{images/n=5,mnts=3.png}
             \caption{three measurements}
         \end{subfigure}
         \vskip\baselineskip
         \begin{subfigure}{0.5\textwidth}
             \centering 
-            \includegraphics[width=0.8\textwidth]{images/n=5,mnts=5.png}
+            \includegraphics[width=0.7\textwidth]{images/n=5,mnts=5.png}
             \caption{five measurements}
         \end{subfigure}
         \hfill
         \begin{subfigure}{0.5\textwidth}
             \centering 
-            \includegraphics[width=0.8\textwidth]{images/n=5,mnts=10.png}
+            \includegraphics[width=0.7\textwidth]{images/n=5,mnts=10.png}
             \caption{ten measurements}
         \end{subfigure}
         \caption{Possible post-measurement quantum states after one, three, five, and ten measurements for the ideal KCBS experiment. The components of the post-measurement quantum states w.r.t.\ the standard qutrit basis are all real. The phases (signs) of the real qutrit states are chosen such that the corresponding vectors lie on a joint semisphere of $\mathbb{R}^3$. What is plotted are centered views of the three-dimensional plots along the negative x direction. As can be seen, the number of possible post-measurement states increases with the number of sequential measurements. The volume of a scattered point is proportional to the probability of the system being in that state after the measurements. The probability distribution over possible post-measurement quantum states becomes approximately stationary for large measurement sequences. The fact that all states lie on one of five semi-circles is a consequence of the compatibility structure of the five KCBS measurements. Analogous plots are obtained in \cite{Cabello2018} for the Peres Mermin and Yu-Oh KS contextuality scenarios.}
@@ -556,9 +555,9 @@ For all ideal odd $n$-cycle reference experiments, the number of possible post-m
 
 Problematically, the process describing the ideal quantum experiment is not stationary, i.e.\ not invariant under translations in time, as can be seen from Figure \ref{fig:causalstates}. However, if we ``truncate" the process and consider only input-output cycles after sufficiently many initial measurements, the probability distribution over quantum states and by extension the stochastic process describing the experiment becomes stationary for all practical purposes. We only have a notion of the memory-optimal statistics-emulating classical model for the case of stationary processes. For this reason we will always consider the truncated input-output process.
 
-To numerically compute the memory cost, we consider all possible measurement sequences of a given length k. The statistical complexity of the process (RAM memory cost) is then the Shannon entropy $H=-\sum_ip_i\log_2p_i$ of the probability distribution over all achievable post-measurement quantum states after $k$ measurements, in the limit of $k\rightarrow\infty$ \cite{Cabello2018,Barnett2015}. Recall that this probability distribution becomes approximately stationary, reflected by the above expression converging. We find the number of bits (RAM) needed by a memory-optimal simulation of the ideal reference KCBS experiment to be just over 4. The statistical complexity thus exceeds the information carrying capacity $\mathcal{C}=\log_2(3)$ of the reference qutrit. In \cite{Cabello2018} the same qualitative behaviour is observed for the Peres-Mermin and Yu-Oh sets of measurements, both of which exhibit state-independent KS contextuality. 
+To numerically compute the memory cost, we consider all possible measurement sequences of a given length k. The statistical complexity of the process (RAM memory cost) is then the Shannon entropy $H=-\sum_ip_i\log_2p_i$ of the probability distribution over all achievable post-measurement quantum states after $k$ measurements, in the limit of $k\rightarrow\infty$ \cite{Cabello2018,Barnett2015}. Recall that this probability distribution becomes approximately stationary, reflected by the above expression converging. We find the number of bits (RAM) needed by a memory-optimal simulation of the ideal reference KCBS experiment to be just over 4. The statistical complexity thus exceeds the information carrying capacity $\mathcal{C}=\log_2(3)$ of the reference qutrit. In \cite{Cabello2018}, the same qualitative behaviour is observed for the Peres-Mermin and Yu-Oh sets of measurements, both of which exhibit state-independent KS contextuality. 
 
-An interesting feature we observe is that the memory cost of simulating the ideal reference experiment for odd $n$-cycle contextuality scenarios with $\text{n}\geq5$ odd increases with the cycle length $n$, as is shown in Figure \ref{fig:ncycleRAM}. However, this increase is only logarithmic. Furthermore, what does not change is the fact that, no matter the cycle length, we need to assume an upper bound on the unknown device's information carrying capacity in order to conclude quantumness. Additionally, we need to assume that each measurement device is used only once, requiring a potentially infinite supply, as otherwise the measurement device, and not the system whose information carrying capacity we bound, could retain memory about the past stochastic process.
+An interesting feature we observe is that the memory cost of simulating the ideal reference experiment for odd $n$-cycle contextuality scenarios with $\text{n}\geq5$ odd increases with the cycle length $n$, as is shown in Figure \ref{fig:ncycleRAM}. However, this increase is only logarithmic. Furthermore, what does not change is the fact that, no matter the cycle length, we need to assume an upper bound on the unknown device's information carrying capacity, in order to conclude quantumness. Additionally, we need to assume that each measurement device is used only once, requiring a potentially infinite supply, as otherwise the measurement device, and not the system whose information carrying capacity we bound, could retain memory about the past stochastic process.
 
 \begin{figure}
         \centering
@@ -582,7 +581,7 @@ Note that in Figure \ref{fig:ncycleRAM} only the asymptotic values of $H$ are ph
 \begin{figure}
 \centering
 \includegraphics[width=0.8\textwidth]{images/twomnts.jpg}
-\caption{Simple classical information transducer with three internal memory states, $s_1, s_2, s_3$, which reproduces all correlations of the ideal odd $n$-cycle experiment, provided that the experimenter performs only two sequential measurements $i, i\oplus 1$. The rectangles with grey border give the outcome probabilities, conditioned on the respective memory state $s_j$ and measurement $i$. The arrows indicate transitions in the internal state, and are labeled by the respective conditional transition probabilities. Prior to each input-output cycle $i,i\oplus 1$, the transducer's memory is reset to the state $s_1$.
+\caption{Simple classical information transducer with three internal memory states, $s_1, s_2, s_3$, which reproduces all correlations of the ideal odd $n$-cycle experiment, provided that the experimenter performs only two sequential measurements $i, i\oplus 1$. The rectangles with grey border give the outcome probabilities, conditioned on the respective memory state $s_j$ and measurement $i$. The arrows indicate transitions in the internal state, and the respective conditional transition probabilities are given. Prior to each input-output cycle $i,i\oplus 1$, the transducer's memory is reset to the state $s_1$.
 The memory cost of this simulation, i.e. the maximal uncertainty in the internal memory state of the machine, is less than one bit (after one measurement, the system is in one of two states with unequal probability), and in particular does not exceed the qutrit information carrying capacity. This simple example is meant to motivate an increased measurement complexity, in order to establish a clear separation in terms of resources between the ideal qutrit and any classical simulation.}
 \label{fig:twomnts}
 \end{figure}
