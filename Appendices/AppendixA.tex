@@ -154,7 +154,7 @@ provided that $\epsilon$ is sufficiently small, such that the $\vert \Psi_k^{m_j
 
 We thus need to bound the overlap between statistically significant eigenvectors belonging to distinct measurement outcomes.
 
-In the ideal case statistically significant eigenvectors belonging to distinct measurement outcomes are orthogonal. As we will prove now, this orthogonality still holds approximately in a noisy setting, if the noise-characterizing parameter $\epsilon$ is sufficiently small.
+In the ideal case, statistically significant eigenvectors belonging to distinct measurement outcomes are orthogonal. As we will prove now, this orthogonality still holds approximately in a noisy setting, if the noise-characterizing parameter $\epsilon$ is sufficiently small.
 
 Using the fact that $\sum_{l} F_{m_{l}\vert M_i}=\mathbb{1}$, we can write
 \begin{align}
@@ -168,7 +168,7 @@ If we get rid of the pesky square root in \ref{eqn:tobound} by using the fact th
 2\cdot3\left[\operatorname{tr}(F_{m_1\vert M_i}\rho_0)\operatorname{tr}(F_{m_1\vert M_{i\oplus 1}}\rho_0)\right]^{1/2}\,d^{3/2}\left(\frac{\epsilon}{\mathcal{X}}\right)^{1/2}.
 \end{equation}
 
-If we consider all terms that contribute to the upper bound on $\vert X_{ij} \vert$, we have one contribution $\propto \mathcal{X}$, as well as two contribution $\propto \mathcal{X}^{-1/2}$. This means that we can no longer choose $\mathcal{X}$ to be arbitrarily small or large, as then at least one of the contributions would blow up. To find the optimal value of $\mathcal{X}$, we compute the partial derivative of the upper bound on $\vert X_{ij}\vert$ with respect to $\mathcal{X}$ and set this expression to zero. Defining $ c_i \coloneqq \left[\operatorname{tr}(F_{m_1\vert M_i}\rho_0)\operatorname{tr}(F_{m_1\vert M_{i\oplus 1}}\rho_0)\right]^{1/2}$, the optimal value of $\mathcal{X}$ turns out to be $\mathcal{X}=\left[(d\epsilon)^{1/2}(3c_i +\frac{1}{d})\right]^{2/3}$. For noisy devices we expect $c_i\approx \cos^2(\theta_n)$, as defined in Section \ref{sec:kcbs}. 
+If we consider all terms that contribute to the upper bound on $\vert X_{ij} \vert$, we have one contribution $\propto \mathcal{X}$, as well as two contribution $\propto \mathcal{X}^{-1/2}$. This means that we can no longer choose $\mathcal{X}$ to be arbitrarily small or large, as then at least one of the contributions would blow up. To find the optimal value of $\mathcal{X}$, we compute the partial derivative of the upper bound on $\vert X_{ij}\vert$ with respect to $\mathcal{X}$ and set this expression to zero. Defining $ c_i \coloneqq \left[\operatorname{tr}(F_{m_1\vert M_i}\rho_0)\operatorname{tr}(F_{m_1\vert M_{i\oplus 1}}\rho_0)\right]^{1/2}$, the optimal value of $\mathcal{X}$ turns out to be $\mathcal{X}=\left[(d\epsilon)^{1/2}(3c_i +\frac{1}{d})\right]^{2/3}$. For noisy devices, we expect $c_i\approx \cos^2(\theta_n)$, as defined in Section \ref{sec:kcbs}. 
 
 Piecing everything together, we can bound $\vert X_{i\,i\oplus 1} \vert$ like
 \begin{equation}
@@ -176,7 +176,7 @@ Piecing everything together, we can bound $\vert X_{i\,i\oplus 1} \vert$ like
 \end{equation}
 Importantly, the numerical constant is operationally accessible.
 
-Having derived upper bounds for both $\vert X_{ij} \vert$ and $\vert X_{0i}-X_{ii}\vert$, we can now enforce the linear constraints of the Lovász SDP \ref{eqn:lovaszsdp}, beginning with cyclic orthogonality.
+Having derived upper bounds on both $\vert X_{ij} \vert$ and $\vert X_{0i}-X_{ii}\vert$, we can now enforce the linear constraints of the Lovász SDP \ref{eqn:lovaszsdp}, beginning with cyclic orthogonality.
 
 \begin{lemma}
 \label{lem:orthogonalize}
@@ -225,7 +225,7 @@ From this intermediate result, setting \begin{equation}
 \langle u_1 \vert u_{n-1}\rangle =  \operatorname{tr}(\rho_0 F_{m_1 \vert M_1} F_{m_1 \vert M_{n-1}}) = \operatorname{tr}(\rho_0F_{m_1\vert M_1}) +\mathcal{O}\left(d^{1/2} \left(1-\operatorname{tr}(\rho_{m_1\vert M_1}F_{m_1\vert M_{n-1}})\right)^{1/2} \right).
 \end{split}
 \end{equation}
-We can also substitute $\sum_k{}^{'}\vert \Psi_k ^{m_1\vert M_{n-1}}\rangle \langle \Psi_k ^{m_1\vert M_{n-1}} \vert$ for $\Pi_{\text{relev}}^{(n-1)}F_{m_1\vert M_1}$, again giving us\vspace{0.5em}
+We can also substitute $\sum_k{}^{'}\vert \Psi_k ^{m_1\vert M_{n-1}}\rangle \langle \Psi_k ^{m_1\vert M_{n-1}} \vert$ for $\Pi_{\text{relev}}^{(n-1)}F_{m_1\vert M_1}$, giving us\vspace{0.5em}
 \begin{equation}
 \langle u_1 \vert u_{n-1}\rangle = \operatorname{tr}(\rho_0 F_{m_1\vert M_i}) +  \mathcal{O}\left(d^{1/2} \left(1-\operatorname{tr}(\rho_{m_1\vert M_l}F_{m_1\vert M_m})\right)^{1/2} \right),\end{equation}
 \vspace{0.5em}
@@ -257,7 +257,7 @@ where we used \ref{eqn:cond1new} and \ref{eqn:cond2new}, substituting $\epsilon\
 \end{proof}
 
 Define $X_{ij}'=\langle u_i' \vert u_j'\rangle$, where $\{\vert u_i' \rangle\}_{i=0}^{n}$ is the set of vectors introduced in Lemma \ref{lem:orthogonalize}. We left $\vert u_0 \rangle$ untouched, therefore $\vert u_0' \rangle \coloneqq \vert u_0 \rangle$. 
-Lastly, we enforce the constraints $X_{0i}'=X_{ii}'$ by multiplying each $\vert u_i' \rangle$ with $\frac{X_{0i}'}{X_{ii}'}$, giving us $\vert \Tilde{u}_i \rangle \coloneqq \frac{X_{0i}'}{X_{ii}'} \vert u_i' \rangle$. This preserves positive semi-definiteness, since any matrix whose entries are given by the inner product between vectors from a given set, in this case $\{\vert \Tilde{u}_i \rangle\}_{i=1}^n$, is by construction positive semi-definite. To leading order \[\frac{X_{0i}'}{X_{ii}'}=1+\frac{X_{0i}'-X_{ii}'}{X_{0i}'},\]
+Lastly, we enforce the constraints $X_{0i}'=X_{ii}'$, by multiplying each $\vert u_i' \rangle$ with $\left(X_{0i}'/X_{ii}'\right)$, giving us $\vert \Tilde{u}_i \rangle \coloneqq \left(X_{0i}'/X_{ii}'\right) \vert u_i' \rangle$. This preserves positive semi-definiteness, since any matrix whose entries are given by the inner product between vectors from a given set, in this case $\{\vert \Tilde{u}_i \rangle\}_{i=1}^n$, is by construction positive semi-definite. To leading order \[\frac{X_{0i}'}{X_{ii}'}=1+\frac{X_{0i}'-X_{ii}'}{X_{0i}'},\]
 and \[\|\vert \Tilde{u}_i \rangle - \vert u_i \rangle\|_2 \leq \|\vert u_i \rangle -\vert u_i' \rangle\|_2+\|\vert u_i'\rangle\|_2 \left| \frac{X_{0i}'-X_{ii}'}{X_{0i}'} \right|,\]
 giving us \[\|\vert \Tilde{u}_i \rangle - \vert u_i \rangle\|_2\leq \|\vert u_i \rangle -\vert u_i' \rangle\|_2\,\left[3+\operatorname{tr}(\rho_0 F_{m_1\vert M_i})^{-1/2}\right].\]
 Finally, Lemma \ref{lem:orthogonalize} implies that \[\|\vert \Tilde{u}_i \rangle - \vert u_i \rangle\|_2 \leq \mathcal{O}\left(d^{13/12}\,\epsilon^{1/3}\,\eta^{-1/4}\right). \]
