@@ -1,0 +1,43 @@
+\chapter{Discussion}
+\label{sec:discussion}
+\section{Summary of results}
+We have shown that robust self-testing of a unipartite system is possible under a novel set of assumptions. In particular, we replaced the unphysical assumptions that all measurements be noise-free and perfectly cyclically compatible with the approximate operational equivalence of certain preparation procedures. We have made no assumptions that are not operationally testable regarding the sharpness of the accessible measurements, or the degree of purity of the accessible preparations. The inherently operational relevant parameters of our protocol are $\epsilon$ and $\eta$, as defined in Section $\ref{sec:certifyquant}$, which characterize the noise and closeness of the accessible preparations and measurements, respectively.
+Since we cannot utilize Bell non-locality as quantumness witness for our unipartite setting, both approaches assume an upper bound on the information carrying capacity of the unknown device.
+
+Additionally, we improved the robustness to noise of the protocol given in \citep{Bharti2019}, yielding an error bound of the order $\mathcal{O}\left(n^{1/2}\epsilon\right)$, as opposed to the previous bound $\mathcal{O}\left(n^{1/2}\epsilon^{1/2}\right)$. We also performed a numerical analysis of the proportionality constant, and determined the memory cost of simulating the ideal correlations.
+
+\section{Analysis of our results and assumptions}
+
+A clear benefit of the quantumness witness we propose is that it is by construction robust to noise. The relevant condition $\epsilon<\frac{1}{4}\eta^2$ is straightforwardly testable and also holds for preparations and measurements that are subject to little noise. In comparison, it is not apparent to what degree the quantumness witness proposed in $\cite{Bharti2019}$ has this property. In particular, one would either have to find an efficient way of computing the optimal memory cost ``on the go", based on the observed correlations, which would require computational overhead, or prove to what degree the Shannon entropy of the distribution over causal states is robust, if the process slightly deviates from the ideal one.
+
+In its current form, our protocol is burdened by the exponential dependence of the cycle length $n$ on the minimal number of binary measurements constituting a tomographically complete set one wants to account for. This is undesirable, since the error bound we give would quickly blow up for large information carrying capacities. Furthermore, Lemma \ref{lem:closegramdecomp} suggests that any proof strategy that makes use of the Lovász optimizer's unicity for the class of odd $n$-cycle exclusivity graphs results in error bounds at least proportional to $n^{1/2}$. Despite this, the situation is not hopeless. As we argued in Section \ref{sec:spekkcont}, an exponentially large cycle length is sufficient for certifying quantumness, but far from necessary. It is our hopes that further research might yield a more economical, perhaps even linear trade-off. Another future line of research could be to determine the scaling of the constant of proportionality in Lemma \ref{lem:epssuboptgram} with the cycle length $n$.
+
+\section{Comparison to the assumptions in \cite{Saha2020}}
+
+Finally, we mention a third set of assumptions alleged to facillitate self-testing for the class of odd $n$-cycle scenarios \cite{Saha2020}.
+The protocol given in \cite{Saha2020} consists of repeatedly performing two randomly chosen, adjacent binary measurements $M_i, M_{i\oplus 1}$ in sequence. The outcomes are labeled $\pm 1$.
+To prove their self-testing statement, they give a sum-of-squares (SOS) decomposition for a Hermitian operator of the form
+\[B=-\frac{1}{2} \sum_i \{A_i, A_{i\oplus 1}\}-\alpha^2 \sum_i A_i.\] 
+Here, $A_i \coloneqq 2F_i-\mathbb{1}$, where $F_i$ is the positive semi-definite POVM element associated with the $+1$ outcome of $M_i$. The curly braces denote the matrix anti-commutator.  A general SOS decomposition is of the form \[\mu\mathbb{1} - B = \sum_k E_k^{\dag}E_k,\]
+where the $E_k$ are arbitrary linear operators. Apart from the Hermitian operator $B$, \cite{Saha2020} introduces the operational expression
+\[\mathcal{B}=-\frac{1}{2}\sum_i \left(\left<A_i A_{i\oplus 1}\right> + \left<A_{i\oplus 1}A_i\right>\right)-\alpha^2\sum_i \left<A_i\right>,\]
+where $\left<\,\cdot\,\right>$ denotes the expected value. Their claim is that 
+\begin{equation}
+\label{eq:falseimplication}
+\mathcal{B}=\mu \implies \langle \Psi \vert B \vert \Psi \rangle = \mu,
+\end{equation}
+which in turn implies $E_k\vert \Psi \rangle=0$ for all $k$. This property is their key proof ingredient.
+
+To arrive at their self-testing statement, \cite{Saha2020} assumes the unknown device to be quantum, and all accessible measurements $M_i$ are assumed to be implemented in a way that the final state conditioned on outcome $m_j$ is given by
+\[(F_{m_j\vert M_i})^{1/2}\rho \,(F_{m_j\vert M_i})^{1/2},\]
+for the initial state $\rho$.
+In general, given some POVM element $F_{m_j\vert M_i}$, there exists an infinite set of Kraus operators consistent with the statistical occurrence of $m_j$, $\{U(F_{m_j\vert M_i})^{1/2}\,\vert\, U \text{ unitary}\}$. Similarly to sharp and cyclically compatible measurements or approximate operational equivalences, this assumption is non-operational. Even worse, one cannot even perform a consistency check, as is straightforward in the case of operational equivalences.
+
+Problematically, for general, non-commuting $F_i$, $F_{i\oplus 1}$, we have that $\left<A_i \,A_{i\oplus 1}\right>\neq \langle \Psi \vert A_i\, A_{i\oplus 1}\vert \Psi \rangle$. This means that the implication \ref{eq:falseimplication} must not hold. A simple calculation yields
+\[
+\begin{split}
+\langle \mathcal{A}_i \,\mathcal{A}_{i\oplus1}\rangle & =  \thinspace  1 - 2\langle \Psi \vert\, F_i\, \vert \Psi \rangle + 2 \langle \Psi \vert \,F_i^{1/2} F_{i+1} F_i^{1/2}\, \vert  \Psi \rangle - 2 \langle \Psi \vert \, (\mathbb{1}-F_i)^{1/2} F_{i+1} (\mathbb{1}-F_i)^{1/2} \, \vert \Psi \rangle,\\[1em]
+\langle \Psi \vert\, A_i\, A_{i+1}\, \vert \Psi \rangle & =  \thinspace 1-2\langle \Psi \vert\, F_i \,\vert \Psi \rangle + \langle \Psi \vert \, F_i F_{i+1} \,\vert \Psi \rangle - 2 \langle \Psi \vert\, F_{i+1}\, \vert \Psi \rangle.
+\end{split}
+\]
+While both expressions are equal if $\left[F_i, F_{i\oplus 1}\right]=0$, this is in general not the case for non-commuting operators. As such, it appears that \cite{Saha2020} makes hidden assumptions regarding operator commutativity, in particular \[\left[F_i,F_{i\oplus 1}\right]=0,\] for all $i\in\{1,\dots,n\}$. Our protocol does not require any assumptions about commutation relations, as the operational parameter $\epsilon$ captures the degree to which $F_i$ and $F_{i\oplus 1}$ are orthogonal.
